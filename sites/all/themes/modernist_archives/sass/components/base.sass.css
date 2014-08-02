@@ -1,0 +1,20 @@
+/**
+ * 
+ * Modernist Archives Publishing Project 
+ * SASS files for site theme
+ *
+ * Mike Widner <mikewidner@gmail.com>
+ *
+ **/
+
+@import "zen";
+
+#header, 
+#main,
+#footer {
+	@include zen-grid-container;
+}
+
+a#logo img {
+	width: 50%;
+}

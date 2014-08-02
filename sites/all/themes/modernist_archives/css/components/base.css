@@ -1,0 +1,223 @@
+/**
+ * 
+ * Modernist Archives Publishing Project 
+ * SASS files for site theme
+ *
+ * Mike Widner <mikewidner@gmail.com>
+ *
+ **/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+/* line 29, ../../sass/components/base.scss */
+body {
+  background-color: #d1d2d4;
+}
+
+/* line 35, ../../sass/components/base.scss */
+#header,
+#main,
+#footer {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+/* line 46, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/* line 41, ../../sass/components/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Slab', serif;
+}
+
+/* line 45, ../../sass/components/base.scss */
+a {
+  text-decoration: none;
+  color: #4d71a2;
+}
+
+/* line 50, ../../sass/components/base.scss */
+a:hover {
+  color: #d36436;
+  text-decoration: underline;
+}
+
+/* line 55, ../../sass/components/base.scss */
+#main-menu {
+  float: left;
+  width: 28.57143%;
+  margin-left: 71.42857%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-top: -200px;
+}
+
+/* line 60, ../../sass/components/base.scss */
+nav#main-menu ul li a {
+  padding: .2em 1em;
+}
+
+/* line 64, ../../sass/components/base.scss */
+a#logo img {
+  padding-top: 10px;
+  float: left;
+  width: 57.14286%;
+  margin-left: 14.28571%;
+  margin-right: -71.42857%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 69, ../../sass/components/base.scss */
+img#splash {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: none;
+}
+
+/* line 77, ../../sass/components/base.scss */
+img.library-logo {
+  float: left;
+  width: 7.14286%;
+  margin-left: 0%;
+  margin-right: -7.14286%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: none;
+}
+
+/* line 82, ../../sass/components/base.scss */
+.mapp-button {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #6386b5), color-stop(51%, #4d71a2));
+  background: -webkit-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: -moz-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: -o-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: linear-gradient(#6386b5 50%, #4d71a2 51%);
+  -webkit-box-shadow: #97aecd 0 1px 0 inset;
+  -moz-box-shadow: #97aecd 0 1px 0 inset;
+  box-shadow: #97aecd 0 1px 0 inset;
+  border: 1px solid #456591;
+  color: white;
+  text-shadow: #304664 0 -1px 0;
+  text-decoration: none;
+}
+/* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.mapp-button:hover {
+  text-decoration: none;
+}
+/* line 30, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.mapp-button:hover {
+  background-color: #41608a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #4f73a5), color-stop(51%, #41608a));
+  background: -webkit-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: -moz-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: -o-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: linear-gradient(#4f73a5 50%, #41608a 51%);
+}
+/* line 33, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.mapp-button:active {
+  -webkit-box-shadow: #405e86 0 1px 2px inset;
+  -moz-box-shadow: #405e86 0 1px 2px inset;
+  box-shadow: #405e86 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.mapp-button.disabled, .mapp-button[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #4d71a2;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+.mapp-button::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 87, ../../sass/components/base.scss */
+#enter {
+  font-size: x-large;
+  float: left;
+  width: 28.57143%;
+  margin-left: 28.57143%;
+  margin-right: -57.14286%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: center;
+  float: none;
+}
+
+/* line 94, ../../sass/components/base.scss */
+a#enter:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 99, ../../sass/components/base.scss */
+div#content {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: justify;
+}

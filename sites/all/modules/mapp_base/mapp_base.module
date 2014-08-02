@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MAPP Base feature.
+ */
+
+include_once 'mapp_base.features.inc';
