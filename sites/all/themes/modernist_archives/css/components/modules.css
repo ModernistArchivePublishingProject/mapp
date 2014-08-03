@@ -1,0 +1,39 @@
+/* line 3, ../../sass/components/modules.scss */
+img#splash {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: none;
+}
+
+/* line 11, ../../sass/components/modules.scss */
+#enter {
+  font-size: x-large;
+  float: left;
+  width: 200%;
+  margin-left: 200%;
+  margin-right: -400%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: center;
+  float: none;
+}
+
+/* line 18, ../../sass/components/modules.scss */
+a#enter:hover {
+  color: white;
+  text-decoration: none;
+}

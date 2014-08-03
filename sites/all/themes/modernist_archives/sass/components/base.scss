@@ -31,22 +31,6 @@ body {
 	background-color: $background_color;
 }
 
-#header, 
-#main,
-#footer {
-	@include zen-grid-container;
-	font-family: 'Open Sans', sans-serif;
-}
-
-#header, 
-#main {
-	background-color: $content_bg_color;
-}
-
-#footer {
-	background-color: $footer_bg_color;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Josefin Slab', serif;
 }
@@ -61,51 +45,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-#main-menu {
-	@include zen-grid-item(2, $zen-column-count - 1);
-	margin-top: -200px;
-}
-
-nav#main-menu ul li a {
-	padding: .2em 1em;
-}
-
-a#logo img {
-	padding-top: 10px;
-	@include zen-grid-item(4, 2);
-}
-
-img#splash {
-	// display: block;
-	// margin-left: auto;
-	// margin-right: auto;
-	@include zen-grid-item($zen-column-count, 1);
-	float: none;
-}
-
-img.library-logo {
-	@include zen-grid-item(.5, 1);
-	float: none;
-}
-
 .mapp-button {
 	@include sassy-button("glass", 10px, 19px, $link_color);
 	text-decoration: none;
-}
-
-#enter {
-	font-size: x-large;
-	@include zen-grid-item(2, 3);
-	text-align: center;
-	float: none;
-}
-
-a#enter:hover {
-	color: white;
-	text-decoration: none;
-}
-
-div#content {
-	@include zen-grid-item($zen-column-count, 1);
-	text-align: justify;
 }

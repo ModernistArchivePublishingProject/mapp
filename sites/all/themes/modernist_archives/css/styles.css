@@ -1692,98 +1692,24 @@ body {
   background-color: #58585a;
 }
 
-/* line 36, ../sass/components/base.scss */
-#header,
-#main,
-#footer {
-  font-family: 'Open Sans', sans-serif;
-}
-/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:before, #header:after,
-#main:before,
-#main:after,
-#footer:before,
-#footer:after {
-  content: "";
-  display: table;
-}
-/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:after,
-#main:after,
-#footer:after {
-  clear: both;
-}
-
-/* line 42, ../sass/components/base.scss */
-#header,
-#main {
-  background-color: white;
-}
-
-/* line 46, ../sass/components/base.scss */
-#footer {
-  background-color: #d1d2d4;
-}
-
-/* line 50, ../sass/components/base.scss */
+/* line 34, ../sass/components/base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Slab', serif;
 }
 
-/* line 54, ../sass/components/base.scss */
+/* line 38, ../sass/components/base.scss */
 a {
   text-decoration: none;
   color: #4d71a2;
 }
 
-/* line 59, ../sass/components/base.scss */
+/* line 43, ../sass/components/base.scss */
 a:hover {
   color: #d36436;
   text-decoration: underline;
 }
 
-/* line 64, ../sass/components/base.scss */
-#main-menu {
-  float: left;
-  width: 28.57143%;
-  margin-left: 71.42857%;
-  margin-right: -100%;
-  margin-top: -200px;
-}
-
-/* line 69, ../sass/components/base.scss */
-nav#main-menu ul li a {
-  padding: .2em 1em;
-}
-
-/* line 73, ../sass/components/base.scss */
-a#logo img {
-  padding-top: 10px;
-  float: left;
-  width: 57.14286%;
-  margin-left: 14.28571%;
-  margin-right: -71.42857%;
-}
-
-/* line 78, ../sass/components/base.scss */
-img#splash {
-  float: left;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: -100%;
-  float: none;
-}
-
-/* line 86, ../sass/components/base.scss */
-img.library-logo {
-  float: left;
-  width: 7.14286%;
-  margin-left: 0%;
-  margin-right: -7.14286%;
-  float: none;
-}
-
-/* line 91, ../sass/components/base.scss */
+/* line 48, ../sass/components/base.scss */
 .mapp-button {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -1843,7 +1769,81 @@ img.library-logo {
   margin: -1px !important;
 }
 
-/* line 96, ../sass/components/base.scss */
+/* line 10, ../sass/components/layout.scss */
+#header,
+#main,
+#footer {
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/* line 16, ../sass/components/layout.scss */
+#header,
+#main {
+  background-color: white;
+}
+
+/* line 20, ../sass/components/layout.scss */
+#footer {
+  background-color: #d1d2d4;
+}
+
+/* line 24, ../sass/components/layout.scss */
+#content {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  text-align: justify;
+}
+
+/* line 29, ../sass/components/layout.scss */
+#main-menu {
+  float: left;
+  width: 28.57143%;
+  margin-left: 71.42857%;
+  margin-right: -100%;
+  margin-top: -200px;
+}
+
+/* line 34, ../sass/components/layout.scss */
+nav#main-menu ul li a {
+  padding: .2em 1em;
+}
+
+/* line 38, ../sass/components/layout.scss */
+a#logo img {
+  padding-top: 10px;
+  float: left;
+  width: 57.14286%;
+  margin-left: 14.28571%;
+  margin-right: -71.42857%;
+}
+
+/* line 43, ../sass/components/layout.scss */
+img#splash {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  float: none;
+}
+
+/* line 51, ../sass/components/layout.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -1854,19 +1854,36 @@ img.library-logo {
   float: none;
 }
 
-/* line 103, ../sass/components/base.scss */
+/* line 58, ../sass/components/layout.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 108, ../sass/components/base.scss */
-div#content {
+/* line 3, ../sass/components/modules.scss */
+img#splash {
   float: left;
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
-  text-align: justify;
+  float: none;
+}
+
+/* line 11, ../sass/components/modules.scss */
+#enter {
+  font-size: x-large;
+  float: left;
+  width: 28.57143%;
+  margin-left: 28.57143%;
+  margin-right: -57.14286%;
+  text-align: center;
+  float: none;
+}
+
+/* line 18, ../sass/components/modules.scss */
+a#enter:hover {
+  color: white;
+  text-decoration: none;
 }
 
 /**
