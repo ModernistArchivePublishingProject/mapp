@@ -20,8 +20,12 @@ a#enter:hover {
 	text-decoration: none;
 }
 
+.view-id-team .view-content .views-row {
+	overflow: hidden;
+}
+
 .profile-picture {
-	margin: 0px 5px 0px 5px;
+	margin: 10px 5px 10px 5px;
 }
 
 .profile-name {

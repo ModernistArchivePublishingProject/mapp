@@ -1769,7 +1769,7 @@ a:hover {
   margin: -1px !important;
 }
 
-/* line 10, ../sass/components/layout.scss */
+/* line 12, ../sass/components/layout.scss */
 #header,
 #main,
 #footer {
@@ -1791,18 +1791,18 @@ a:hover {
   clear: both;
 }
 
-/* line 16, ../sass/components/layout.scss */
+/* line 18, ../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 20, ../sass/components/layout.scss */
+/* line 22, ../sass/components/layout.scss */
 #footer {
   background-color: #d1d2d4;
 }
 
-/* line 24, ../sass/components/layout.scss */
+/* line 26, ../sass/components/layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -1811,7 +1811,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 29, ../sass/components/layout.scss */
+/* line 31, ../sass/components/layout.scss */
 #main-menu {
   float: left;
   width: 28.57143%;
@@ -1820,12 +1820,12 @@ a:hover {
   margin-top: -200px;
 }
 
-/* line 34, ../sass/components/layout.scss */
+/* line 36, ../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 38, ../sass/components/layout.scss */
+/* line 40, ../sass/components/layout.scss */
 a#logo img {
   padding-top: 10px;
   float: left;
@@ -1834,30 +1834,63 @@ a#logo img {
   margin-right: -71.42857%;
 }
 
-/* line 43, ../sass/components/layout.scss */
-img#splash {
-  float: left;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: -100%;
-  float: none;
-}
-
-/* line 51, ../sass/components/layout.scss */
-#enter {
-  font-size: x-large;
-  float: left;
-  width: 28.57143%;
-  margin-left: 28.57143%;
-  margin-right: -57.14286%;
-  text-align: center;
-  float: none;
-}
-
-/* line 58, ../sass/components/layout.scss */
-a#enter:hover {
+/* line 45, ../sass/components/layout.scss */
+#edit-actions input {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #6386b5), color-stop(51%, #4d71a2));
+  background: -webkit-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: -moz-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: -o-linear-gradient(#6386b5 50%, #4d71a2 51%);
+  background: linear-gradient(#6386b5 50%, #4d71a2 51%);
+  -webkit-box-shadow: #97aecd 0 1px 0 inset;
+  -moz-box-shadow: #97aecd 0 1px 0 inset;
+  box-shadow: #97aecd 0 1px 0 inset;
+  border: 1px solid #456591;
   color: white;
+  text-shadow: #304664 0 -1px 0;
+}
+/* line 15, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#edit-actions input:hover {
   text-decoration: none;
+}
+/* line 30, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#edit-actions input:hover {
+  background-color: #41608a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #4f73a5), color-stop(51%, #41608a));
+  background: -webkit-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: -moz-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: -o-linear-gradient(#4f73a5 50%, #41608a 51%);
+  background: linear-gradient(#4f73a5 50%, #41608a 51%);
+}
+/* line 33, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#edit-actions input:active {
+  -webkit-box-shadow: #405e86 0 1px 2px inset;
+  -moz-box-shadow: #405e86 0 1px 2px inset;
+  box-shadow: #405e86 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#edit-actions input.disabled, #edit-actions input[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #4d71a2;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+#edit-actions input::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
 }
 
 /* line 3, ../sass/components/modules.scss */
@@ -1887,28 +1920,33 @@ a#enter:hover {
 }
 
 /* line 23, ../sass/components/modules.scss */
-.profile-picture {
-  margin: 0px 5px 0px 5px;
+.view-id-team .view-content .views-row {
+  overflow: hidden;
 }
 
 /* line 27, ../sass/components/modules.scss */
+.profile-picture {
+  margin: 10px 5px 10px 5px;
+}
+
+/* line 31, ../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 33, ../sass/components/modules.scss */
+/* line 37, ../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 37, ../sass/components/modules.scss */
+/* line 41, ../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 41, ../sass/components/modules.scss */
+/* line 45, ../sass/components/modules.scss */
 .views-field-field-bio {
   border-bottom: 1px solid gray;
 }

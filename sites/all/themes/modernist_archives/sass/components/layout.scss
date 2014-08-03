@@ -1,4 +1,6 @@
 @import "zen";
+@import "sassy-buttons";
+
 $link_color: #4d71a2;
 $highlight_color: #d36436;
 $background_color: #58585a;
@@ -40,22 +42,6 @@ a#logo img {
 	@include zen-grid-item(4, 2);
 }
 
-img#splash {
-	// display: block;
-	// margin-left: auto;
-	// margin-right: auto;
-	@include zen-grid-item($zen-column-count, 1);
-	float: none;
-}
-
-#enter {
-	font-size: x-large;
-	@include zen-grid-item(2, 3);
-	text-align: center;
-	float: none;
-}
-
-a#enter:hover {
-	color: white;
-	text-decoration: none;
+#edit-actions input {
+	@include sassy-button("glass", 10px, 19px, $link_color);
 }

@@ -39,28 +39,33 @@ a#enter:hover {
 }
 
 /* line 23, ../../sass/components/modules.scss */
-.profile-picture {
-  margin: 0px 5px 0px 5px;
+.view-id-team .view-content .views-row {
+  overflow: hidden;
 }
 
 /* line 27, ../../sass/components/modules.scss */
+.profile-picture {
+  margin: 10px 5px 10px 5px;
+}
+
+/* line 31, ../../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 33, ../../sass/components/modules.scss */
+/* line 37, ../../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 37, ../../sass/components/modules.scss */
+/* line 41, ../../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 41, ../../sass/components/modules.scss */
+/* line 45, ../../sass/components/modules.scss */
 .views-field-field-bio {
   border-bottom: 1px solid gray;
 }
