@@ -19,3 +19,25 @@ a#enter:hover {
 	color: white;
 	text-decoration: none;
 }
+
+.profile-picture {
+	margin: 0px 5px 0px 5px;
+}
+
+.profile-name {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+}
+
+.views-row-odd .profile-picture {
+	float: left;
+}
+
+.views-row-even .profile-picture {
+	float: right;
+}
+
+.views-field-field-bio {
+	border-bottom: 1px solid gray;
+}
