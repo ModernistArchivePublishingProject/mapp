@@ -7,4 +7,4 @@ sites/*/files
 sites/*/private
 
 # Ignore cache
-.sass-cache/*
+sites/all/themes/*/.sass-cache/*
