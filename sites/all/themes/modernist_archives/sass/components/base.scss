@@ -46,6 +46,6 @@ a:hover {
 }
 
 .mapp-button {
-	@include sassy-button("glass", 10px, 19px, $link_color);
+	@include sassy-button("simple", 10px, 19px, $link_color);
 	text-decoration: none;
 }

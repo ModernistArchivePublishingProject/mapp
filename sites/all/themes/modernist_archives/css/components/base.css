@@ -42,43 +42,43 @@ a:hover {
   -o-border-radius: 10px;
   border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #6386b5), color-stop(51%, #4d71a2));
-  background: -webkit-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -moz-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -o-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: linear-gradient(#6386b5 50%, #4d71a2 51%);
-  -webkit-box-shadow: #97aecd 0 1px 0 inset;
-  -moz-box-shadow: #97aecd 0 1px 0 inset;
-  box-shadow: #97aecd 0 1px 0 inset;
-  border: 1px solid #456591;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d71a2), color-stop(100%, #3d597f));
+  background: -webkit-linear-gradient(#4d71a2, #3d597f);
+  background: -moz-linear-gradient(#4d71a2, #3d597f);
+  background: -o-linear-gradient(#4d71a2, #3d597f);
+  background: linear-gradient(#4d71a2, #3d597f);
+  -webkit-box-shadow: #7b98c0 0 1px 0 inset;
+  -moz-box-shadow: #7b98c0 0 1px 0 inset;
+  box-shadow: #7b98c0 0 1px 0 inset;
+  border: 1px solid #344d6e;
   color: white;
-  text-shadow: #304664 0 -1px 0;
+  text-shadow: #223248 0 -1px 0;
   text-decoration: none;
 }
 /* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:hover {
   text-decoration: none;
 }
-/* line 30, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 36, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:hover {
-  background-color: #41608a;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #4f73a5), color-stop(51%, #41608a));
-  background: -webkit-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -moz-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -o-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: linear-gradient(#4f73a5 50%, #41608a 51%);
+  background-color: #344d6e;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #456591), color-stop(100%, #344d6e));
+  background: -webkit-linear-gradient(#456591, #344d6e);
+  background: -moz-linear-gradient(#456591, #344d6e);
+  background: -o-linear-gradient(#456591, #344d6e);
+  background: linear-gradient(#456591, #344d6e);
 }
-/* line 33, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 39, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:active {
-  -webkit-box-shadow: #405e86 0 1px 2px inset;
-  -moz-box-shadow: #405e86 0 1px 2px inset;
-  box-shadow: #405e86 0 1px 2px inset;
+  -webkit-box-shadow: #2f4664 0 1px 2px inset;
+  -moz-box-shadow: #2f4664 0 1px 2px inset;
+  box-shadow: #2f4664 0 1px 2px inset;
 }
 /* line 6, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button.disabled, .mapp-button[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  background: #4d71a2;
+  background: #3d597f;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
