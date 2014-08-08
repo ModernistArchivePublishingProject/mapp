@@ -27,8 +27,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans);
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -1687,29 +1686,29 @@ tr.selected td {
  * Mike Widner <mikewidner@gmail.com>
  *
  **/
-/* line 30, ../sass/components/base.scss */
+/* line 27, ../sass/components/base.scss */
 body {
   background-color: #58585a;
 }
 
-/* line 34, ../sass/components/base.scss */
+/* line 31, ../sass/components/base.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
-/* line 38, ../sass/components/base.scss */
+/* line 35, ../sass/components/base.scss */
 a {
   text-decoration: none;
   color: #4d71a2;
 }
 
-/* line 43, ../sass/components/base.scss */
+/* line 40, ../sass/components/base.scss */
 a:hover {
   color: #d36436;
   text-decoration: underline;
 }
 
-/* line 48, ../sass/components/base.scss */
+/* line 45, ../sass/components/base.scss */
 .mapp-button {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -1769,7 +1768,7 @@ a:hover {
   margin: -1px !important;
 }
 
-/* line 12, ../sass/components/layout.scss */
+/* line 13, ../sass/components/layout.scss */
 #header,
 #main,
 #footer {
@@ -1791,18 +1790,18 @@ a:hover {
   clear: both;
 }
 
-/* line 18, ../sass/components/layout.scss */
+/* line 19, ../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 22, ../sass/components/layout.scss */
+/* line 23, ../sass/components/layout.scss */
 #footer {
   background-color: #d1d2d4;
 }
 
-/* line 26, ../sass/components/layout.scss */
+/* line 27, ../sass/components/layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -1811,7 +1810,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 31, ../sass/components/layout.scss */
+/* line 32, ../sass/components/layout.scss */
 #main-menu {
   float: left;
   width: 28.57143%;
@@ -1820,21 +1819,38 @@ a:hover {
   margin-top: -200px;
 }
 
-/* line 36, ../sass/components/layout.scss */
+/* line 37, ../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 40, ../sass/components/layout.scss */
-a#logo img {
+/* line 41, ../sass/components/layout.scss */
+#logo img {
   padding-top: 10px;
   float: left;
-  width: 57.14286%;
-  margin-left: 14.28571%;
-  margin-right: -71.42857%;
+  width: 28.57143%;
+  margin-left: 0%;
+  margin-right: -28.57143%;
+  min-width: 100px;
 }
 
-/* line 45, ../sass/components/layout.scss */
+/* line 47, ../sass/components/layout.scss */
+#site-name {
+  margin-top: 10%;
+  padding-left: 10px;
+}
+
+/* line 51, ../sass/components/layout.scss */
+#site-name a span {
+  color: #d36436;
+}
+
+/* line 55, ../sass/components/layout.scss */
+#site-name a:hover {
+  text-decoration: none;
+}
+
+/* line 59, ../sass/components/layout.scss */
 #edit-actions input {
   font-size: 19px;
   padding: 0.5em 1.5em;

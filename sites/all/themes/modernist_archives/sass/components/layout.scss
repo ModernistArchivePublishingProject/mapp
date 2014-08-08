@@ -6,6 +6,7 @@ $highlight_color: #d36436;
 $background_color: #58585a;
 $content_bg_color: white;
 $footer_bg_color: #d1d2d4;
+$logo_color: #d36436;
 
 #header, 
 #main,
@@ -37,9 +38,22 @@ nav#main-menu ul li a {
 	padding: .2em 1em;
 }
 
-a#logo img {
+#logo img {
 	padding-top: 10px;
-	@include zen-grid-item(4, 2);
+	@include zen-grid-item(2, 1);
+	min-width: 100px;
+}
+
+#site-name {
+	margin-top: 10%;
+	padding-left: 10px;
+}
+#site-name a span {
+	color: $logo_color;
+}
+
+#site-name a:hover {
+	text-decoration: none;
 }
 
 #edit-actions input {

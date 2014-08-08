@@ -9,11 +9,8 @@
 
 @import "zen";
 
-// body text font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
-// title font
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans);
 
 // Sass for buttons
 @import "sassy-buttons";
@@ -32,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 a {
