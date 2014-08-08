@@ -1,12 +1,16 @@
 @import "zen";
 @import "sassy-buttons";
 
-$link_color: #4d71a2;
-$highlight_color: #d36436;
-$background_color: #58585a;
-$content_bg_color: white;
-$footer_bg_color: #d1d2d4;
-$logo_color: #d36436;
+$link-color: #4d71a2;
+$highlight-color: #d36436;
+$background-color: #58585a;
+$content-bg-color: white;
+$footer-bg-color: #d1d2d4;
+$logo-color: #d36436;
+
+$break-small: 320px;
+$break-medium: 340px;
+$break-large: 980px;
 
 #header, 
 #main,
@@ -17,11 +21,11 @@ $logo_color: #d36436;
 
 #header, 
 #main {
-	background-color: $content_bg_color;
+	background-color: $content-bg-color;
 }
 
 #footer {
-	background-color: $footer_bg_color;
+	background-color: $footer-bg-color;
 }
 
 #content {
@@ -30,8 +34,18 @@ $logo_color: #d36436;
 }
 
 #main-menu {
-	@include zen-grid-item(2, $zen-column-count - 1);
-	margin-top: -200px;
+	@media screen and (min-width: $break-large) {
+		@include zen-grid-item(2, $zen-column-count - 1);
+		margin-top: -100px;
+	}
+	@media screen and (max-width: $break-medium) and (min-width: $break-small) {
+		@include zen-grid-item(3, 1);
+	    margin-top: 40px;
+	}
+	@media screen and (max-width: $break-small) {
+		@include zen-grid-item(1, 1);
+	    margin-top: 20px;
+	}
 }
 
 nav#main-menu ul li a {
@@ -49,7 +63,7 @@ nav#main-menu ul li a {
 	padding-left: 10px;
 }
 #site-name a span {
-	color: $logo_color;
+	color: $logo-color;
 }
 
 #site-name a:hover {
@@ -57,5 +71,5 @@ nav#main-menu ul li a {
 }
 
 #edit-actions input {
-	@include sassy-button("glass", 10px, 19px, $link_color);
+	@include sassy-button("glass", 10px, 19px, $link-color);
 }

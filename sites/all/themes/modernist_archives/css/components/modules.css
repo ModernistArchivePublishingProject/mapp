@@ -1,4 +1,4 @@
-/* line 3, ../../sass/components/modules.scss */
+/* line 6, ../../sass/components/modules.scss */
 img#splash {
   float: left;
   width: 100%;
@@ -13,8 +13,14 @@ img#splash {
   word-wrap: break-word;
   float: none;
 }
+@media screen and (max-width: 820px) {
+  /* line 6, ../../sass/components/modules.scss */
+  img#splash {
+    margin-top: 40px;
+  }
+}
 
-/* line 11, ../../sass/components/modules.scss */
+/* line 18, ../../sass/components/modules.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -32,40 +38,40 @@ img#splash {
   float: none;
 }
 
-/* line 18, ../../sass/components/modules.scss */
+/* line 25, ../../sass/components/modules.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 23, ../../sass/components/modules.scss */
+/* line 30, ../../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 27, ../../sass/components/modules.scss */
+/* line 34, ../../sass/components/modules.scss */
 .profile-picture {
   margin: 10px 5px 10px 5px;
 }
 
-/* line 31, ../../sass/components/modules.scss */
+/* line 38, ../../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 37, ../../sass/components/modules.scss */
+/* line 44, ../../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 41, ../../sass/components/modules.scss */
+/* line 48, ../../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 45, ../../sass/components/modules.scss */
+/* line 52, ../../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
