@@ -1937,18 +1937,18 @@ a#enter:hover {
 }
 
 /* line 37, ../sass/components/modules.scss */
+.views-row {
+  border-top: 1px solid gray;
+}
+
+/* line 41, ../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 41, ../sass/components/modules.scss */
+/* line 45, ../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
-}
-
-/* line 45, ../sass/components/modules.scss */
-.views-field-field-bio {
-  border-bottom: 1px solid gray;
 }
 
 /**

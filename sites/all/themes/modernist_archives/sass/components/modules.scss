@@ -34,6 +34,10 @@ a#enter:hover {
 	font-weight: bold;
 }
 
+.views-row {
+	border-top: 1px solid gray;
+}
+
 .views-row-odd .profile-picture {
 	float: left;
 }
@@ -43,5 +47,5 @@ a#enter:hover {
 }
 
 .views-field-field-bio {
-	border-bottom: 1px solid gray;
+	// border-bottom: 1px solid gray;
 }
