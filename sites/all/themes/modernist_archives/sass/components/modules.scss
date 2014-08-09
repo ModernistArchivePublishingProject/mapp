@@ -1,7 +1,8 @@
 @import "zen";
 
 $break-small: 320px;
-$break-large: 820px;
+$break-medium: 340px;
+$break-large: 980px;
 
 img#splash {
 	// display: block;
@@ -57,11 +58,28 @@ a#enter:hover {
 	// border-bottom: 1px solid gray;
 }
 
+.view-partners tr {
+	vertical-align: bottom;
+}
+
 .view-partners td {
+	position: relative;
 	padding-left: 10px;
 	padding-right: 10px;
-	width: 20%;
+	// @media screen and (max-width: $break-small) {
+	// 	@include zen-grid-item(1, 1);
+	//     margin-top: 20px;
+	// }
+	// @media screen and (max-width: $break-medium) and (min-width: $break-small) {
+	// 	@include zen-grid-item($zen-column-count, 1);
+		width: 20%;
+	// }
 }
+
+// .view-partners td div.views-field div.field-content {
+// 	// position: absolute;
+// 	// bottom: 100;
+// }
 
 .view-team p {
 	margin: .2em;

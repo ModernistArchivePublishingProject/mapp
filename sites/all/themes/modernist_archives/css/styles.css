@@ -1931,7 +1931,7 @@ nav#main-menu ul li a {
   margin: -1px !important;
 }
 
-/* line 6, ../sass/components/modules.scss */
+/* line 7, ../sass/components/modules.scss */
 img#splash {
   float: left;
   width: 100%;
@@ -1939,14 +1939,14 @@ img#splash {
   margin-right: -100%;
   float: none;
 }
-@media screen and (max-width: 820px) {
-  /* line 6, ../sass/components/modules.scss */
+@media screen and (max-width: 980px) {
+  /* line 7, ../sass/components/modules.scss */
   img#splash {
     margin-top: 40px;
   }
 }
 
-/* line 18, ../sass/components/modules.scss */
+/* line 19, ../sass/components/modules.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -1957,52 +1957,58 @@ img#splash {
   float: none;
 }
 
-/* line 25, ../sass/components/modules.scss */
+/* line 26, ../sass/components/modules.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 30, ../sass/components/modules.scss */
+/* line 31, ../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 34, ../sass/components/modules.scss */
+/* line 35, ../sass/components/modules.scss */
 .profile-picture {
   margin: 10px 5px 10px 5px;
 }
 
-/* line 38, ../sass/components/modules.scss */
+/* line 39, ../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 44, ../sass/components/modules.scss */
+/* line 45, ../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 48, ../sass/components/modules.scss */
+/* line 49, ../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 52, ../sass/components/modules.scss */
+/* line 53, ../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 60, ../sass/components/modules.scss */
+/* line 61, ../sass/components/modules.scss */
+.view-partners tr {
+  vertical-align: bottom;
+}
+
+/* line 65, ../sass/components/modules.scss */
 .view-partners td {
+  position: relative;
   padding-left: 10px;
   padding-right: 10px;
   width: 20%;
 }
 
-/* line 66, ../sass/components/modules.scss */
+/* line 84, ../sass/components/modules.scss */
 .view-team p {
   margin: .2em;
 }
