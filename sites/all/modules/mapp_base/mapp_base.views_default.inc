@@ -270,7 +270,7 @@ function mapp_base_views_default_views() {
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
-  $handler->display->display_options['fields']['picture']['image_style'] = 'thumbnail';
+  $handler->display->display_options['fields']['picture']['image_style'] = 'medium';
   /* Field: User: Bio */
   $handler->display->display_options['fields']['field_bio']['id'] = 'field_bio';
   $handler->display->display_options['fields']['field_bio']['table'] = 'field_data_field_bio';

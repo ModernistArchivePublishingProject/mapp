@@ -2002,6 +2002,11 @@ a#enter:hover {
   width: 20%;
 }
 
+/* line 66, ../sass/components/modules.scss */
+.view-team p {
+  margin: .2em;
+}
+
 /**
  * @file
  * Print styling

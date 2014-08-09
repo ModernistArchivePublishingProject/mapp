@@ -82,3 +82,8 @@ a#enter:hover {
   padding-right: 10px;
   width: 20%;
 }
+
+/* line 66, ../../sass/components/modules.scss */
+.view-team p {
+  margin: .2em;
+}
