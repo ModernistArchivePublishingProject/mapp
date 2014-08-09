@@ -75,3 +75,10 @@ a#enter:hover {
 .views-row-even .profile-picture {
   float: right;
 }
+
+/* line 60, ../../sass/components/modules.scss */
+.view-partners td {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 20%;
+}

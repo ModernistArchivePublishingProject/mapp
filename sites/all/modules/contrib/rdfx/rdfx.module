@@ -10,7 +10,7 @@
  * Path to the ARC2 PHP library.
  */
 if (module_exists('libraries')) {
-  define('RDF_ARC2_PATH', libraries_get_path('ARC2') . '/arc');
+  define('RDF_ARC2_PATH', libraries_get_path('ARC2'));
 }
 else {
   define('RDF_ARC2_PATH', drupal_get_path('module', 'rdfx') . '/vendor/arc');
