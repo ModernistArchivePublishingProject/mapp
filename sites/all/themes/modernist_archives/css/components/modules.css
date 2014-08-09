@@ -78,7 +78,7 @@ a#enter:hover {
 
 /* line 61, ../../sass/components/modules.scss */
 .view-partners tr {
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 /* line 65, ../../sass/components/modules.scss */
@@ -87,6 +87,11 @@ a#enter:hover {
   padding-left: 10px;
   padding-right: 10px;
   width: 20%;
+}
+
+/* line 79, ../../sass/components/modules.scss */
+.view-partners td div.views-field div.field-content img {
+  top: 0;
 }
 
 /* line 84, ../../sass/components/modules.scss */

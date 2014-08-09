@@ -59,7 +59,7 @@ a#enter:hover {
 }
 
 .view-partners tr {
-	vertical-align: bottom;
+	vertical-align: top;
 }
 
 .view-partners td {
@@ -76,10 +76,10 @@ a#enter:hover {
 	// }
 }
 
-// .view-partners td div.views-field div.field-content {
-// 	// position: absolute;
-// 	// bottom: 100;
-// }
+.view-partners td div.views-field div.field-content img {
+	// position: absolute;
+	top: 0;
+}
 
 .view-team p {
 	margin: .2em;
