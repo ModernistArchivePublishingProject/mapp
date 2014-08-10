@@ -74,6 +74,10 @@ nav#main-menu ul li a {
 #site-name {
 	margin-top: 10%;
 	padding-left: 10px;
+	@media screen and (max-width: $break-small) {
+		margin-top: 0px;
+		padding-left: 0px;
+	}
 }
 #site-name a span {
 	color: $logo-color;
