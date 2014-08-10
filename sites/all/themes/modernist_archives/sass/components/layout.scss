@@ -43,13 +43,22 @@ $break-large: 980px;
 	    margin-top: 40px;
 	}
 	@media screen and (max-width: $break-small) {
-		@include zen-grid-item(1, 1);
-	    margin-top: 20px;
+		// @include zen-grid-item(1, 1);
+	    position: absolute;
+	    top: 0;
 	}
 }
 
 nav#main-menu ul li a {
 	padding: .2em 1em;
+}
+
+// style the responsive menu for mobile
+// added by responsive_menus module
+#navigation .responsive-menus.responsified {
+	position: absolute;
+	@include zen-grid-item($zen-column-count, 1);
+	width: 95%;
 }
 
 #logo img {
