@@ -10,10 +10,13 @@
 @import "zen";
 
 // fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans);
+@import url("http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans");
 
 // Sass for buttons
 @import "sassy-buttons";
+
+// Responsive mobile menu
+@import "rmm-css/responsivemobilemenu.css";
 
 $zen-column-count: 7; // Set the total number of columns in the grid.
 $zen-gutter-width: 10px; 

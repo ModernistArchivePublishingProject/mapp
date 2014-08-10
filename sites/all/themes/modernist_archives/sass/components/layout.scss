@@ -56,6 +56,10 @@ nav#main-menu ul li a {
 	padding-top: 10px;
 	@include zen-grid-item(2, 1);
 	min-width: 100px;
+	@media screen and (max-width: $break-small) {
+	    position: absolute;
+	    top: 0;
+	}
 }
 
 #site-name {

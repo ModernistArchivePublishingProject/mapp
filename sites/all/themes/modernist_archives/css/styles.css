@@ -27,7 +27,8 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans);
+@import url("http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans");
+@import url(rmm-css/responsivemobilemenu.css);
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -1686,29 +1687,29 @@ tr.selected td {
  * Mike Widner <mikewidner@gmail.com>
  *
  **/
-/* line 27, ../sass/components/base.scss */
+/* line 30, ../sass/components/base.scss */
 body {
   background-color: #58585a;
 }
 
-/* line 31, ../sass/components/base.scss */
+/* line 34, ../sass/components/base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
-/* line 35, ../sass/components/base.scss */
+/* line 38, ../sass/components/base.scss */
 a {
   text-decoration: none;
   color: #4d71a2;
 }
 
-/* line 40, ../sass/components/base.scss */
+/* line 43, ../sass/components/base.scss */
 a:hover {
   color: #d36436;
   text-decoration: underline;
 }
 
-/* line 45, ../sass/components/base.scss */
+/* line 48, ../sass/components/base.scss */
 .mapp-button {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -1855,24 +1856,31 @@ nav#main-menu ul li a {
   margin-right: -28.57143%;
   min-width: 100px;
 }
+@media screen and (max-width: 320px) {
+  /* line 55, ../sass/components/layout.scss */
+  #logo img {
+    position: absolute;
+    top: 0;
+  }
+}
 
-/* line 61, ../sass/components/layout.scss */
+/* line 65, ../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 
-/* line 65, ../sass/components/layout.scss */
+/* line 69, ../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 69, ../sass/components/layout.scss */
+/* line 73, ../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 73, ../sass/components/layout.scss */
+/* line 77, ../sass/components/layout.scss */
 #edit-actions input {
   font-size: 19px;
   padding: 0.5em 1.5em;
