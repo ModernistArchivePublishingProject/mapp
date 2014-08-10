@@ -1,7 +1,7 @@
 @import "zen";
 
-$break-small: 320px;
-$break-medium: 340px;
+$break-small: 370px;
+$break-medium: 590px;
 $break-large: 980px;
 
 img#splash {
@@ -13,6 +13,9 @@ img#splash {
 	@media screen and (max-width: $break-large) {
 		// @include zen-grid-item(1, 1);
 	    margin-top: 40px;
+	}
+	@media screen and (max-width: $break-small) {
+		display: none;
 	}
 }
 

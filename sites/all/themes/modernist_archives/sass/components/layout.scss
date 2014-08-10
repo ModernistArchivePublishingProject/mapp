@@ -59,6 +59,7 @@ nav#main-menu ul li a {
 	position: absolute;
 	@include zen-grid-item($zen-column-count, 1);
 	width: 95%;
+	top: 0px;
 }
 
 #logo img {
@@ -67,7 +68,8 @@ nav#main-menu ul li a {
 	min-width: 100px;
 	@media screen and (max-width: $break-small) {
 	    position: absolute;
-	    top: 0;
+	    top: 20px;
+	    // display: none;
 	}
 }
 
@@ -75,8 +77,9 @@ nav#main-menu ul li a {
 	margin-top: 10%;
 	padding-left: 10px;
 	@media screen and (max-width: $break-small) {
-		margin-top: 0px;
-		padding-left: 0px;
+		// position: absolute;
+		display: none;
+		// @include zen-grid-item(3, $zen-column-count - 3);
 	}
 }
 #site-name a span {

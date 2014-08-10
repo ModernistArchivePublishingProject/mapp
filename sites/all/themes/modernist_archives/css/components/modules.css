@@ -19,8 +19,14 @@ img#splash {
     margin-top: 40px;
   }
 }
+@media screen and (max-width: 370px) {
+  /* line 7, ../../sass/components/modules.scss */
+  img#splash {
+    display: none;
+  }
+}
 
-/* line 19, ../../sass/components/modules.scss */
+/* line 22, ../../sass/components/modules.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -38,50 +44,50 @@ img#splash {
   float: none;
 }
 
-/* line 26, ../../sass/components/modules.scss */
+/* line 29, ../../sass/components/modules.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 31, ../../sass/components/modules.scss */
+/* line 34, ../../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 35, ../../sass/components/modules.scss */
+/* line 38, ../../sass/components/modules.scss */
 .profile-picture {
   margin: 10px 5px 10px 5px;
 }
 
-/* line 39, ../../sass/components/modules.scss */
+/* line 42, ../../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 45, ../../sass/components/modules.scss */
+/* line 48, ../../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 49, ../../sass/components/modules.scss */
+/* line 52, ../../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 53, ../../sass/components/modules.scss */
+/* line 56, ../../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 61, ../../sass/components/modules.scss */
+/* line 64, ../../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 65, ../../sass/components/modules.scss */
+/* line 68, ../../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -89,12 +95,12 @@ a#enter:hover {
   width: 20%;
 }
 
-/* line 79, ../../sass/components/modules.scss */
+/* line 82, ../../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 84, ../../sass/components/modules.scss */
+/* line 87, ../../sass/components/modules.scss */
 .view-team p {
   margin: .2em;
 }
