@@ -28,7 +28,6 @@
  */
 /* Correct `block` display not defined in IE 8/9. */
 @import url("http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans");
-@import url(rmm-css/responsivemobilemenu.css);
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -1687,29 +1686,29 @@ tr.selected td {
  * Mike Widner <mikewidner@gmail.com>
  *
  **/
-/* line 30, ../sass/components/base.scss */
+/* line 27, ../sass/components/base.scss */
 body {
   background-color: #58585a;
 }
 
-/* line 34, ../sass/components/base.scss */
+/* line 31, ../sass/components/base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
-/* line 38, ../sass/components/base.scss */
+/* line 35, ../sass/components/base.scss */
 a {
   text-decoration: none;
   color: #4d71a2;
 }
 
-/* line 43, ../sass/components/base.scss */
+/* line 40, ../sass/components/base.scss */
 a:hover {
   color: #d36436;
   text-decoration: underline;
 }
 
-/* line 48, ../sass/components/base.scss */
+/* line 45, ../sass/components/base.scss */
 .mapp-button {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -1720,18 +1719,18 @@ a:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d71a2), color-stop(100%, #3d597f));
-  background: -webkit-linear-gradient(#4d71a2, #3d597f);
-  background: -moz-linear-gradient(#4d71a2, #3d597f);
-  background: -o-linear-gradient(#4d71a2, #3d597f);
-  background: linear-gradient(#4d71a2, #3d597f);
-  -webkit-box-shadow: #7b98c0 0 1px 0 inset;
-  -moz-box-shadow: #7b98c0 0 1px 0 inset;
-  box-shadow: #7b98c0 0 1px 0 inset;
-  border: 1px solid #344d6e;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d36436), color-stop(100%, #b04f26));
+  background: -webkit-linear-gradient(#d36436, #b04f26);
+  background: -moz-linear-gradient(#d36436, #b04f26);
+  background: -o-linear-gradient(#d36436, #b04f26);
+  background: linear-gradient(#d36436, #b04f26);
+  -webkit-box-shadow: #e19475 0 1px 0 inset;
+  -moz-box-shadow: #e19475 0 1px 0 inset;
+  box-shadow: #e19475 0 1px 0 inset;
+  border: 1px solid #9b4522;
   color: white;
-  text-shadow: #223248 0 -1px 0;
+  text-shadow: #6d3118 0 -1px 0;
   text-decoration: none;
 }
 /* line 15, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
@@ -1740,24 +1739,24 @@ a:hover {
 }
 /* line 36, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:hover {
-  background-color: #344d6e;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #456591), color-stop(100%, #344d6e));
-  background: -webkit-linear-gradient(#456591, #344d6e);
-  background: -moz-linear-gradient(#456591, #344d6e);
-  background: -o-linear-gradient(#456591, #344d6e);
-  background: linear-gradient(#456591, #344d6e);
+  background-color: #9b4522;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4582b), color-stop(100%, #9b4522));
+  background: -webkit-linear-gradient(#c4582b, #9b4522);
+  background: -moz-linear-gradient(#c4582b, #9b4522);
+  background: -o-linear-gradient(#c4582b, #9b4522);
+  background: linear-gradient(#c4582b, #9b4522);
 }
 /* line 39, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:active {
-  -webkit-box-shadow: #2f4664 0 1px 2px inset;
-  -moz-box-shadow: #2f4664 0 1px 2px inset;
-  box-shadow: #2f4664 0 1px 2px inset;
+  -webkit-box-shadow: #8e401f 0 1px 2px inset;
+  -moz-box-shadow: #8e401f 0 1px 2px inset;
+  box-shadow: #8e401f 0 1px 2px inset;
 }
 /* line 6, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button.disabled, .mapp-button[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  background: #3d597f;
+  background: #b04f26;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1774,6 +1773,8 @@ a:hover {
 #main,
 #footer {
   font-family: 'Open Sans', sans-serif;
+  padding-right: 4em;
+  padding-left: 4em;
 }
 /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
@@ -1791,18 +1792,18 @@ a:hover {
   clear: both;
 }
 
-/* line 23, ../sass/components/layout.scss */
+/* line 25, ../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 27, ../sass/components/layout.scss */
+/* line 29, ../sass/components/layout.scss */
 #footer {
   background-color: #d1d2d4;
 }
 
-/* line 31, ../sass/components/layout.scss */
+/* line 33, ../sass/components/layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -1812,17 +1813,17 @@ a:hover {
 }
 
 @media screen and (min-width: 980px) {
-  /* line 36, ../sass/components/layout.scss */
+  /* line 38, ../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 28.57143%;
-    margin-left: 71.42857%;
-    margin-right: -100%;
+    margin-left: 57.14286%;
+    margin-right: -85.71429%;
     margin-top: -100px;
   }
 }
 @media screen and (max-width: 340px) and (min-width: 320px) {
-  /* line 36, ../sass/components/layout.scss */
+  /* line 38, ../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 42.85714%;
@@ -1832,19 +1833,19 @@ a:hover {
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 36, ../sass/components/layout.scss */
+  /* line 38, ../sass/components/layout.scss */
   #main-menu {
     position: absolute;
     top: 0;
   }
 }
 
-/* line 52, ../sass/components/layout.scss */
+/* line 54, ../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 58, ../sass/components/layout.scss */
+/* line 60, ../sass/components/layout.scss */
 #navigation .responsive-menus.responsified {
   position: absolute;
   float: left;
@@ -1855,46 +1856,46 @@ nav#main-menu ul li a {
   top: 0px;
 }
 
-/* line 65, ../sass/components/layout.scss */
+/* line 67, ../sass/components/layout.scss */
 #logo img {
-  padding-top: 10px;
+  padding-top: 4em;
   float: left;
-  width: 28.57143%;
-  margin-left: 0%;
-  margin-right: -28.57143%;
-  min-width: 100px;
+  width: 42.85714%;
+  margin-left: 14.28571%;
+  margin-right: -57.14286%;
+  min-width: 150px;
 }
 @media screen and (max-width: 320px) {
-  /* line 65, ../sass/components/layout.scss */
+  /* line 67, ../sass/components/layout.scss */
   #logo img {
     position: absolute;
     top: 20px;
   }
 }
 
-/* line 76, ../sass/components/layout.scss */
+/* line 78, ../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
-  /* line 76, ../sass/components/layout.scss */
+  /* line 78, ../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 85, ../sass/components/layout.scss */
+/* line 87, ../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 89, ../sass/components/layout.scss */
+/* line 91, ../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 93, ../sass/components/layout.scss */
+/* line 95, ../sass/components/layout.scss */
 #edit-actions input {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -1905,18 +1906,18 @@ nav#main-menu ul li a {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #6386b5), color-stop(51%, #4d71a2));
-  background: -webkit-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -moz-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -o-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: linear-gradient(#6386b5 50%, #4d71a2 51%);
-  -webkit-box-shadow: #97aecd 0 1px 0 inset;
-  -moz-box-shadow: #97aecd 0 1px 0 inset;
-  box-shadow: #97aecd 0 1px 0 inset;
-  border: 1px solid #456591;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #da7e57), color-stop(51%, #d36436));
+  background: -webkit-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: -moz-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: -o-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: linear-gradient(#da7e57 50%, #d36436 51%);
+  -webkit-box-shadow: #e8ae96 0 1px 0 inset;
+  -moz-box-shadow: #e8ae96 0 1px 0 inset;
+  box-shadow: #e8ae96 0 1px 0 inset;
+  border: 1px solid #c4582b;
   color: white;
-  text-shadow: #304664 0 -1px 0;
+  text-shadow: #8f401f 0 -1px 0;
 }
 /* line 15, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
@@ -1924,24 +1925,24 @@ nav#main-menu ul li a {
 }
 /* line 30, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
-  background-color: #41608a;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #4f73a5), color-stop(51%, #41608a));
-  background: -webkit-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -moz-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -o-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: linear-gradient(#4f73a5 50%, #41608a 51%);
+  background-color: #bc5429;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #d4673a), color-stop(51%, #bc5429));
+  background: -webkit-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: -moz-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: -o-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: linear-gradient(#d4673a 50%, #bc5429 51%);
 }
 /* line 33, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:active {
-  -webkit-box-shadow: #405e86 0 1px 2px inset;
-  -moz-box-shadow: #405e86 0 1px 2px inset;
-  box-shadow: #405e86 0 1px 2px inset;
+  -webkit-box-shadow: #b85228 0 1px 2px inset;
+  -moz-box-shadow: #b85228 0 1px 2px inset;
+  box-shadow: #b85228 0 1px 2px inset;
 }
 /* line 6, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input.disabled, #edit-actions input[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  background: #4d71a2;
+  background: #d36436;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1953,7 +1954,7 @@ nav#main-menu ul li a {
   margin: -1px !important;
 }
 
-/* line 7, ../sass/components/modules.scss */
+/* line 15, ../sass/components/modules.scss */
 img#splash {
   float: left;
   width: 100%;
@@ -1962,19 +1963,19 @@ img#splash {
   float: none;
 }
 @media screen and (max-width: 980px) {
-  /* line 7, ../sass/components/modules.scss */
+  /* line 15, ../sass/components/modules.scss */
   img#splash {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 370px) {
-  /* line 7, ../sass/components/modules.scss */
+  /* line 15, ../sass/components/modules.scss */
   img#splash {
     display: none;
   }
 }
 
-/* line 22, ../sass/components/modules.scss */
+/* line 30, ../sass/components/modules.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -1985,50 +1986,72 @@ img#splash {
   float: none;
 }
 
-/* line 29, ../sass/components/modules.scss */
+/* line 37, ../sass/components/modules.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 34, ../sass/components/modules.scss */
+/* line 43, ../sass/components/modules.scss */
+.block-title {
+  text-align: center;
+  border-top: 1px solid #58585a;
+  float: left;
+  width: 128.57143%;
+  margin-left: -14.28571%;
+  margin-right: -114.28571%;
+  float: none;
+}
+
+/* line 50, ../sass/components/modules.scss */
+article.node {
+  padding: 2em;
+}
+
+/* line 54, ../sass/components/modules.scss */
+.node-sticky {
+  background-color: rgba(211, 100, 54, 0.1);
+  border: 1px solid #d36436;
+}
+
+/* line 59, ../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 38, ../sass/components/modules.scss */
+/* line 63, ../sass/components/modules.scss */
 .profile-picture {
   margin: 10px 5px 10px 5px;
 }
 
-/* line 42, ../sass/components/modules.scss */
+/* line 67, ../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 48, ../sass/components/modules.scss */
+/* line 73, ../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 52, ../sass/components/modules.scss */
+/* line 77, ../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 56, ../sass/components/modules.scss */
+/* line 81, ../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 64, ../sass/components/modules.scss */
+/* line 89, ../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 68, ../sass/components/modules.scss */
+/* line 93, ../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -2036,12 +2059,12 @@ a#enter:hover {
   width: 20%;
 }
 
-/* line 82, ../sass/components/modules.scss */
+/* line 107, ../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 87, ../sass/components/modules.scss */
+/* line 112, ../sass/components/modules.scss */
 .view-team p {
   margin: .2em;
 }

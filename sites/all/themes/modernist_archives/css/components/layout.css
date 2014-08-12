@@ -3,6 +3,8 @@
 #main,
 #footer {
   font-family: 'Open Sans', sans-serif;
+  padding-right: 4em;
+  padding-left: 4em;
 }
 /* line 46, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
@@ -20,18 +22,18 @@
   clear: both;
 }
 
-/* line 23, ../../sass/components/layout.scss */
+/* line 25, ../../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 27, ../../sass/components/layout.scss */
+/* line 29, ../../sass/components/layout.scss */
 #footer {
   background-color: #d1d2d4;
 }
 
-/* line 31, ../../sass/components/layout.scss */
+/* line 33, ../../sass/components/layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -48,12 +50,12 @@
 }
 
 @media screen and (min-width: 980px) {
-  /* line 36, ../../sass/components/layout.scss */
+  /* line 38, ../../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 200%;
-    margin-left: -100%;
-    margin-right: -100%;
+    margin-left: -200%;
+    margin-right: 0%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -65,7 +67,7 @@
   }
 }
 @media screen and (max-width: 340px) and (min-width: 320px) {
-  /* line 36, ../../sass/components/layout.scss */
+  /* line 38, ../../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 300%;
@@ -82,19 +84,19 @@
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 36, ../../sass/components/layout.scss */
+  /* line 38, ../../sass/components/layout.scss */
   #main-menu {
     position: absolute;
     top: 0;
   }
 }
 
-/* line 52, ../../sass/components/layout.scss */
+/* line 54, ../../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 58, ../../sass/components/layout.scss */
+/* line 60, ../../sass/components/layout.scss */
 #navigation .responsive-menus.responsified {
   position: absolute;
   float: left;
@@ -112,13 +114,13 @@ nav#main-menu ul li a {
   top: 0px;
 }
 
-/* line 65, ../../sass/components/layout.scss */
+/* line 67, ../../sass/components/layout.scss */
 #logo img {
-  padding-top: 10px;
+  padding-top: 4em;
   float: left;
-  width: 200%;
-  margin-left: 0%;
-  margin-right: -200%;
+  width: 300%;
+  margin-left: 100%;
+  margin-right: -400%;
   padding-left: 10px;
   padding-right: 10px;
   -moz-box-sizing: border-box;
@@ -126,39 +128,39 @@ nav#main-menu ul li a {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  min-width: 100px;
+  min-width: 150px;
 }
 @media screen and (max-width: 320px) {
-  /* line 65, ../../sass/components/layout.scss */
+  /* line 67, ../../sass/components/layout.scss */
   #logo img {
     position: absolute;
     top: 20px;
   }
 }
 
-/* line 76, ../../sass/components/layout.scss */
+/* line 78, ../../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
-  /* line 76, ../../sass/components/layout.scss */
+  /* line 78, ../../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 85, ../../sass/components/layout.scss */
+/* line 87, ../../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 89, ../../sass/components/layout.scss */
+/* line 91, ../../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 93, ../../sass/components/layout.scss */
+/* line 95, ../../sass/components/layout.scss */
 #edit-actions input {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -169,18 +171,18 @@ nav#main-menu ul li a {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D71A2', endColorstr='#FF2C415D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #6386b5), color-stop(51%, #4d71a2));
-  background: -webkit-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -moz-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: -o-linear-gradient(#6386b5 50%, #4d71a2 51%);
-  background: linear-gradient(#6386b5 50%, #4d71a2 51%);
-  -webkit-box-shadow: #97aecd 0 1px 0 inset;
-  -moz-box-shadow: #97aecd 0 1px 0 inset;
-  box-shadow: #97aecd 0 1px 0 inset;
-  border: 1px solid #456591;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #da7e57), color-stop(51%, #d36436));
+  background: -webkit-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: -moz-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: -o-linear-gradient(#da7e57 50%, #d36436 51%);
+  background: linear-gradient(#da7e57 50%, #d36436 51%);
+  -webkit-box-shadow: #e8ae96 0 1px 0 inset;
+  -moz-box-shadow: #e8ae96 0 1px 0 inset;
+  box-shadow: #e8ae96 0 1px 0 inset;
+  border: 1px solid #c4582b;
   color: white;
-  text-shadow: #304664 0 -1px 0;
+  text-shadow: #8f401f 0 -1px 0;
 }
 /* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
@@ -188,24 +190,24 @@ nav#main-menu ul li a {
 }
 /* line 30, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
-  background-color: #41608a;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #4f73a5), color-stop(51%, #41608a));
-  background: -webkit-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -moz-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: -o-linear-gradient(#4f73a5 50%, #41608a 51%);
-  background: linear-gradient(#4f73a5 50%, #41608a 51%);
+  background-color: #bc5429;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #d4673a), color-stop(51%, #bc5429));
+  background: -webkit-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: -moz-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: -o-linear-gradient(#d4673a 50%, #bc5429 51%);
+  background: linear-gradient(#d4673a 50%, #bc5429 51%);
 }
 /* line 33, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:active {
-  -webkit-box-shadow: #405e86 0 1px 2px inset;
-  -moz-box-shadow: #405e86 0 1px 2px inset;
-  box-shadow: #405e86 0 1px 2px inset;
+  -webkit-box-shadow: #b85228 0 1px 2px inset;
+  -moz-box-shadow: #b85228 0 1px 2px inset;
+  box-shadow: #b85228 0 1px 2px inset;
 }
 /* line 6, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input.disabled, #edit-actions input[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  background: #4d71a2;
+  background: #d36436;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

@@ -15,9 +15,6 @@
 // Sass for buttons
 @import "sassy-buttons";
 
-// Responsive mobile menu
-@import "rmm-css/responsivemobilemenu.css";
-
 $zen-column-count: 7; // Set the total number of columns in the grid.
 $zen-gutter-width: 10px; 
 
@@ -46,6 +43,6 @@ a:hover {
 }
 
 .mapp-button {
-	@include sassy-button("simple", 10px, 19px, $link_color);
+	@include sassy-button("simple", 10px, 19px, $highlight_color);
 	text-decoration: none;
 }

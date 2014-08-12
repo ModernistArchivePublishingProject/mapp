@@ -4,6 +4,14 @@ $break-small: 370px;
 $break-medium: 590px;
 $break-large: 980px;
 
+$link_color: #4d71a2;
+$highlight_color: #d36436;
+$background_color: #58585a;
+$content_bg_color: white;
+$footer_bg_color: #d1d2d4;
+$light_bg_color: #d1d2d4;
+$transparent_orange: rgba(211, 100, 54, .1);
+
 img#splash {
 	// display: block;
 	// margin-left: auto;
@@ -29,6 +37,23 @@ img#splash {
 a#enter:hover {
 	color: white;
 	text-decoration: none;
+}
+
+
+.block-title {
+	text-align: center;
+	border-top: 1px solid $background_color;
+	@include zen-grid-item($zen-column-count + 2, 0);
+	float: none;
+}
+
+article.node {
+	padding: 2em;
+}
+
+.node-sticky {
+	background-color: $transparent_orange;
+	border: 1px solid $highlight_color;
 }
 
 .view-id-team .view-content .views-row {

@@ -1,4 +1,4 @@
-/* line 7, ../../sass/components/modules.scss */
+/* line 15, ../../sass/components/modules.scss */
 img#splash {
   float: left;
   width: 100%;
@@ -14,19 +14,19 @@ img#splash {
   float: none;
 }
 @media screen and (max-width: 980px) {
-  /* line 7, ../../sass/components/modules.scss */
+  /* line 15, ../../sass/components/modules.scss */
   img#splash {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 370px) {
-  /* line 7, ../../sass/components/modules.scss */
+  /* line 15, ../../sass/components/modules.scss */
   img#splash {
     display: none;
   }
 }
 
-/* line 22, ../../sass/components/modules.scss */
+/* line 30, ../../sass/components/modules.scss */
 #enter {
   font-size: x-large;
   float: left;
@@ -44,50 +44,79 @@ img#splash {
   float: none;
 }
 
-/* line 29, ../../sass/components/modules.scss */
+/* line 37, ../../sass/components/modules.scss */
 a#enter:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 34, ../../sass/components/modules.scss */
+/* line 43, ../../sass/components/modules.scss */
+.block-title {
+  text-align: center;
+  border-top: 1px solid #58585a;
+  float: left;
+  width: 300%;
+  margin-left: -100%;
+  margin-right: -200%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: none;
+}
+
+/* line 50, ../../sass/components/modules.scss */
+article.node {
+  padding: 2em;
+}
+
+/* line 54, ../../sass/components/modules.scss */
+.node-sticky {
+  background-color: rgba(211, 100, 54, 0.1);
+  border: 1px solid #d36436;
+}
+
+/* line 59, ../../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 38, ../../sass/components/modules.scss */
+/* line 63, ../../sass/components/modules.scss */
 .profile-picture {
   margin: 10px 5px 10px 5px;
 }
 
-/* line 42, ../../sass/components/modules.scss */
+/* line 67, ../../sass/components/modules.scss */
 .profile-name {
   text-align: center;
   font-size: large;
   font-weight: bold;
 }
 
-/* line 48, ../../sass/components/modules.scss */
+/* line 73, ../../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 52, ../../sass/components/modules.scss */
+/* line 77, ../../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 56, ../../sass/components/modules.scss */
+/* line 81, ../../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 64, ../../sass/components/modules.scss */
+/* line 89, ../../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 68, ../../sass/components/modules.scss */
+/* line 93, ../../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -95,12 +124,12 @@ a#enter:hover {
   width: 20%;
 }
 
-/* line 82, ../../sass/components/modules.scss */
+/* line 107, ../../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 87, ../../sass/components/modules.scss */
+/* line 112, ../../sass/components/modules.scss */
 .view-team p {
   margin: .2em;
 }

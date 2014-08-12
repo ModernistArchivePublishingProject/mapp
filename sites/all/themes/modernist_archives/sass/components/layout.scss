@@ -17,6 +17,8 @@ $break-large: 980px;
 #footer {
 	@include zen-grid-container;
 	font-family: 'Open Sans', sans-serif;
+	padding-right: 4em;
+	padding-left: 4em;
 }
 
 #header, 
@@ -35,7 +37,7 @@ $break-large: 980px;
 
 #main-menu {
 	@media screen and (min-width: $break-large) {
-		@include zen-grid-item(2, $zen-column-count - 1);
+		@include zen-grid-item(2, $zen-column-count - 2);
 		margin-top: -100px;
 	}
 	@media screen and (max-width: $break-medium) and (min-width: $break-small) {
@@ -63,9 +65,9 @@ nav#main-menu ul li a {
 }
 
 #logo img {
-	padding-top: 10px;
-	@include zen-grid-item(2, 1);
-	min-width: 100px;
+	padding-top: 4em;
+	@include zen-grid-item(3, 2);
+	min-width: 150px;
 	@media screen and (max-width: $break-small) {
 	    position: absolute;
 	    top: 20px;
@@ -91,5 +93,5 @@ nav#main-menu ul li a {
 }
 
 #edit-actions input {
-	@include sassy-button("glass", 10px, 19px, $link-color);
+	@include sassy-button("glass", 10px, 19px, $logo-color);
 }
