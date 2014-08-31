@@ -133,3 +133,31 @@ article.node {
 .view-team p {
   margin: .2em;
 }
+
+/* line 116, ../../sass/components/modules.scss */
+article.node-press img {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 123, ../../sass/components/modules.scss */
+article.node-press h3.field-label {
+  clear: left;
+}
+
+/* line 127, ../../sass/components/modules.scss */
+article.node-press cite {
+  margin-top: 50px;
+}
+
+/* line 131, ../../sass/components/modules.scss */
+div.view-presses div.views-field-title {
+  text-align: center;
+}
+
+/* line 135, ../../sass/components/modules.scss */
+li.comment_forbidden {
+  display: block;
+  padding-top: 50px;
+}

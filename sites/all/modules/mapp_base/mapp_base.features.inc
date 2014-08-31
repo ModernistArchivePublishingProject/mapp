@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function mapp_base_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "boxes" && $api == "box") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -70,6 +73,14 @@ function mapp_base_node_info() {
       'name' => t('Partner'),
       'base' => 'node_content',
       'description' => t('Add information about partners, funders, and other supporters of the project. For display in the footers.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'press' => array(
+      'name' => t('Press'),
+      'base' => 'node_content',
+      'description' => t('Information about a press. Used to group together works, books, other materials.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

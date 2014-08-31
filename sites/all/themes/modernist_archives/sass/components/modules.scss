@@ -112,3 +112,27 @@ article.node {
 .view-team p {
 	margin: .2em;
 }
+
+article.node-press img {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+
+article.node-press h3.field-label {
+  clear: left;
+}
+
+article.node-press cite {
+	margin-top: 50px;
+}
+
+div.view-presses div.views-field-title {
+	text-align: center;
+}
+
+li.comment_forbidden {
+	display: block;
+	padding-top: 50px;
+}

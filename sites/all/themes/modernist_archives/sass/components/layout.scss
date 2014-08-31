@@ -12,7 +12,7 @@ $break-small: 320px;
 $break-medium: 340px;
 $break-large: 980px;
 
-#header, 
+#header,
 #main,
 #footer {
 	@include zen-grid-container;
@@ -21,7 +21,7 @@ $break-large: 980px;
 	padding-left: 4em;
 }
 
-#header, 
+#header,
 #main {
 	background-color: $content-bg-color;
 }
@@ -94,4 +94,18 @@ nav#main-menu ul li a {
 
 #edit-actions input {
 	@include sassy-button("glass", 10px, 19px, $logo-color);
+}
+
+#presses-banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body#tinymce {
+  background-color: white;
+}
+
+h1#page-title {
+  text-align: center;
 }
