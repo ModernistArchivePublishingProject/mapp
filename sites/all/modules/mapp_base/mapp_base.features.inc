@@ -55,37 +55,3 @@ function mapp_base_image_default_styles() {
 
   return $styles;
 }
-
-/**
- * Implements hook_node_info().
- */
-function mapp_base_node_info() {
-  $items = array(
-    'bp_book' => array(
-      'name' => t('Book'),
-      'base' => 'node_content',
-      'description' => t('The metadata and files for a single book. Not to be confused with Drupal\'s core book structure. Used by Bibliopedia.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'partner' => array(
-      'name' => t('Partner'),
-      'base' => 'node_content',
-      'description' => t('Add information about partners, funders, and other supporters of the project. For display in the footers.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'press' => array(
-      'name' => t('Press'),
-      'base' => 'node_content',
-      'description' => t('Information about a press. Used to group together works, books, other materials.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
-}

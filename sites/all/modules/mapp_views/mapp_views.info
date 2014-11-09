@@ -1,0 +1,13 @@
+name = MAPP Views
+core = 7.x
+package = MAPP
+version = 7.x-0.1-alpha20141109
+project = mapp_views
+dependencies[] = content_types
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = partners
+features[views_view][] = presses
+features[views_view][] = team
+features_exclude[dependencies][ctools] = ctools
