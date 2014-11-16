@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * content_types.features.taxonomy.inc
+ * mapp_content_types.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function content_types_taxonomy_default_vocabularies() {
+function mapp_content_types_taxonomy_default_vocabularies() {
   return array(
     'business_type' => array(
       'name' => 'Business Type',

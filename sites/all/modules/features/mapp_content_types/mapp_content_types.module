@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MAPP Content Types feature.
+ */
+
+include_once 'mapp_content_types.features.inc';

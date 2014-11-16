@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * content_types.features.field_instance.inc
+ * mapp_content_types.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function content_types_field_default_field_instances() {
+function mapp_content_types_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-business-field_address'
@@ -3319,6 +3319,47 @@ function content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-related_materials-field_identifier'
+  $field_instances['node-related_materials-field_identifier'] = array(
+    'bundle' => 'related_materials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'span',
+    'field_name' => 'field_identifier',
+    'label' => 'Identifier',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-related_materials-field_images'
   $field_instances['node-related_materials-field_images'] = array(
     'bundle' => 'related_materials',
@@ -3456,7 +3497,7 @@ function content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 

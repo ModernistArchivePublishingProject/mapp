@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * content_types.features.inc
+ * mapp_content_types.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function content_types_ctools_plugin_api($module = NULL, $api = NULL) {
+function mapp_content_types_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
@@ -19,16 +19,8 @@ function content_types_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function content_types_node_info() {
+function mapp_content_types_node_info() {
   $items = array(
-    'association_copy' => array(
-      'name' => t('Association Copy'),
-      'base' => 'node_content',
-      'description' => t('A book once belonging to the author, or signed or annotated by the author to someone closely associated with the author of the book or the book itself in some way. Also, a book inscribed by its author to a famous person, or owned by someone of interest.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'business' => array(
       'name' => t('Business'),
       'base' => 'node_content',
