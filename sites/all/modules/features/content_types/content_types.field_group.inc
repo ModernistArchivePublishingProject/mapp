@@ -74,18 +74,52 @@ function content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|edition|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_publication_date',
+      1 => 'field_size',
+      2 => 'field_pages',
+      3 => 'field_print_run',
+      4 => 'field_edition',
+      5 => 'field_price',
+      6 => 'field_language',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-details field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_details|node|edition|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_libraries|node|bp_book|form';
   $field_group->group_name = 'group_libraries';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'bp_book';
+  $field_group->bundle = 'primary_object';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Libraries',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_library',
       1 => 'field_link_digitized',
+      2 => 'field_identifier',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -98,6 +132,66 @@ function content_types_field_group_info() {
     ),
   );
   $export['group_libraries|node|bp_book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_libraries|node|edition|form';
+  $field_group->group_name = 'group_libraries';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_links';
+  $field_group->data = array(
+    'label' => 'Libraries',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_library',
+      1 => 'field_identifier',
+      2 => 'field_link_digitized',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-libraries field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_libraries|node|edition|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_links|node|edition|form';
+  $field_group->group_name = 'group_links';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Links',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_work',
+      1 => 'field_publisher',
+      2 => 'field_printer',
+      3 => 'field_illustrator',
+      4 => 'group_libraries',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-links field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_links|node|edition|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -148,6 +242,8 @@ function content_types_field_group_info() {
       1 => 'field_copyright_status',
       2 => 'field_call_number',
       3 => 'field_copyright_date',
+      4 => 'field_work_type',
+      5 => 'field_identifier',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -283,6 +379,36 @@ function content_types_field_group_info() {
     ),
   );
   $export['group_publication|node|bp_book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_reception|node|material_expression|form';
+  $field_group->group_name = 'group_reception';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'primary_object';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Reception History',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_damage',
+      1 => 'field_condition',
+      2 => 'field_reader',
+      3 => 'field_owner',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-reception field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_reception|node|material_expression|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

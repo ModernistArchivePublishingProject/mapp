@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Views feature.
+ * Code for the MAPP Views feature.
  */
 
 include_once 'mapp_views.features.inc';

@@ -9,6 +9,29 @@
  */
 function content_types_taxonomy_default_vocabularies() {
   return array(
+    'business_type' => array(
+      'name' => 'Business Type',
+      'machine_name' => 'business_type',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'condition' => array(
       'name' => 'Condition',
       'machine_name' => 'condition',
@@ -124,6 +147,29 @@ function content_types_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'gender' => array(
+      'name' => 'Gender',
+      'machine_name' => 'gender',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'genre' => array(
       'name' => 'Genre',
       'machine_name' => 'genre',
@@ -220,6 +266,29 @@ function content_types_taxonomy_default_vocabularies() {
       'name' => 'Themes',
       'machine_name' => 'tags',
       'description' => 'Themes that relate to a piece of content',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'work_type' => array(
+      'name' => 'Work Type',
+      'machine_name' => 'work_type',
+      'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
