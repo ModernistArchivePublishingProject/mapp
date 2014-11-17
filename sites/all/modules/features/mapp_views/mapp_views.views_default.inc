@@ -42,7 +42,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_url']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_url']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_url']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_url']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_url']['type'] = 'link_plain';
   $handler->display->display_options['fields']['field_url']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_url']['field_api_classes'] = TRUE;
   /* Field: Content: Image */
@@ -71,8 +71,8 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '[field_image]
 [title]';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_url]';
   $handler->display->display_options['fields']['title']['alter']['external'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['link_class'] = '[field_url]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
