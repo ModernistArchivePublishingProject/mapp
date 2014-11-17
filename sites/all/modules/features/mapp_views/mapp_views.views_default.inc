@@ -256,7 +256,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['picture']['field'] = 'picture';
   $handler->display->display_options['fields']['picture']['label'] = '';
   $handler->display->display_options['fields']['picture']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['picture']['alter']['text'] = '[picture]
+  $handler->display->display_options['fields']['picture']['alter']['text'] = '[picture]<br/>
 <span class="profile-name">[name]</span>';
   $handler->display->display_options['fields']['picture']['element_type'] = 'span';
   $handler->display->display_options['fields']['picture']['element_class'] = 'profile-picture';

@@ -94,29 +94,30 @@ article.node {
   text-align: center;
   font-size: large;
   font-weight: bold;
+  display: block;
 }
 
-/* line 73, ../../sass/components/modules.scss */
+/* line 74, ../../sass/components/modules.scss */
 .views-row {
   border-top: 1px solid gray;
 }
 
-/* line 77, ../../sass/components/modules.scss */
+/* line 78, ../../sass/components/modules.scss */
 .views-row-odd .profile-picture {
   float: left;
 }
 
-/* line 81, ../../sass/components/modules.scss */
+/* line 82, ../../sass/components/modules.scss */
 .views-row-even .profile-picture {
   float: right;
 }
 
-/* line 89, ../../sass/components/modules.scss */
+/* line 90, ../../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 93, ../../sass/components/modules.scss */
+/* line 94, ../../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -124,39 +125,39 @@ article.node {
   width: 20%;
 }
 
-/* line 107, ../../sass/components/modules.scss */
+/* line 108, ../../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 112, ../../sass/components/modules.scss */
+/* line 113, ../../sass/components/modules.scss */
 .view-team p {
   margin: .2em;
 }
 
-/* line 116, ../../sass/components/modules.scss */
+/* line 117, ../../sass/components/modules.scss */
 article.node-press img {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 123, ../../sass/components/modules.scss */
+/* line 124, ../../sass/components/modules.scss */
 article.node-press h3.field-label {
   clear: left;
 }
 
-/* line 127, ../../sass/components/modules.scss */
+/* line 128, ../../sass/components/modules.scss */
 article.node-press cite {
   margin-top: 50px;
 }
 
-/* line 131, ../../sass/components/modules.scss */
+/* line 132, ../../sass/components/modules.scss */
 div.view-presses div.views-field-title {
   text-align: center;
 }
 
-/* line 135, ../../sass/components/modules.scss */
+/* line 136, ../../sass/components/modules.scss */
 li.comment_forbidden {
   display: block;
   padding-top: 50px;
