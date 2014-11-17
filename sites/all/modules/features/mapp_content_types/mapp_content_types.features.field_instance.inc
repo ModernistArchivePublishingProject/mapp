@@ -111,7 +111,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'year_only',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -165,7 +165,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'year_only',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -260,9 +260,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'media_original',
+        ),
+        'type' => 'file_rendered',
         'weight' => 0,
       ),
       'teaser' => array(
