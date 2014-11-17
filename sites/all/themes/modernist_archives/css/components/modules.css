@@ -162,3 +162,8 @@ li.comment_forbidden {
   display: block;
   padding-top: 50px;
 }
+
+/* line 141, ../../sass/components/modules.scss */
+pre {
+  font-family: inherit;
+}

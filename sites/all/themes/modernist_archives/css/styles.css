@@ -2115,6 +2115,11 @@ li.comment_forbidden {
   padding-top: 50px;
 }
 
+/* line 141, ../sass/components/modules.scss */
+pre {
+  font-family: inherit;
+}
+
 /**
  * @file
  * Print styling
