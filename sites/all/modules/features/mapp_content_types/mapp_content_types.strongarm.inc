@@ -14,14 +14,21 @@ function mapp_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_node_correspondence';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['auto_entitylabel_node_correspondence'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_edition';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_edition'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_node_primary_object';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['auto_entitylabel_node_primary_object'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -34,8 +41,15 @@ function mapp_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_edition';
+  $strongarm->value = 'Edition of [node:field_work]';
+  $export['auto_entitylabel_pattern_node_edition'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_primary_object';
-  $strongarm->value = '[node:field_work:title]';
+  $strongarm->value = 'Copy of [node:field_edition_ref]';
   $export['auto_entitylabel_pattern_node_primary_object'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -44,6 +58,13 @@ function mapp_content_types_strongarm() {
   $strongarm->name = 'auto_entitylabel_php_node_correspondence';
   $strongarm->value = 0;
   $export['auto_entitylabel_php_node_correspondence'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_edition';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_edition'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -518,7 +539,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '8',
         ),
       ),
       'display' => array(),

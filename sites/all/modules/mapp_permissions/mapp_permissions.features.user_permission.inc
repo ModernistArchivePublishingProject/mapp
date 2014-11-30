@@ -61,7 +61,10 @@ function mapp_permissions_user_default_permissions() {
   $permissions['access biblio content'] = array(
     'name' => 'access biblio content',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'biblio',
   );
@@ -193,6 +196,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['administer biblio'] = array(
     'name' => 'administer biblio',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -252,6 +256,33 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'administer feeds'.
+  $permissions['administer feeds'] = array(
+    'name' => 'administer feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'administer feeds_tamper'.
+  $permissions['administer feeds_tamper'] = array(
+    'name' => 'administer feeds_tamper',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'administer field collections'.
+  $permissions['administer field collections'] = array(
+    'name' => 'administer field collections',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_collection',
   );
 
   // Exported permission: 'administer fieldgroups'.
@@ -513,6 +544,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -538,21 +570,12 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create bp_book content'.
-  $permissions['create bp_book content'] = array(
-    'name' => 'create bp_book content',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create business content'.
   $permissions['create business content'] = array(
     'name' => 'create business content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -562,6 +585,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create correspondence content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -569,7 +593,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'create edition content'.
   $permissions['create edition content'] = array(
     'name' => 'create edition content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -578,6 +605,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create library content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -607,6 +635,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create person content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -614,7 +643,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'create primary_object content'.
   $permissions['create primary_object content'] = array(
     'name' => 'create primary_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -623,6 +655,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create related_materials content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -641,6 +674,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create work content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -674,21 +708,12 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any bp_book content'.
-  $permissions['delete any bp_book content'] = array(
-    'name' => 'delete any bp_book content',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any business content'.
   $permissions['delete any business content'] = array(
     'name' => 'delete any business content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -698,6 +723,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete any correspondence content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -705,7 +731,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete any edition content'.
   $permissions['delete any edition content'] = array(
     'name' => 'delete any edition content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -714,6 +743,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete any library content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -743,6 +773,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete any person content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -750,7 +781,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete any primary_object content'.
   $permissions['delete any primary_object content'] = array(
     'name' => 'delete any primary_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -759,6 +793,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete any related_materials content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -768,6 +803,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete any work content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -801,21 +837,12 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete own bp_book content'.
-  $permissions['delete own bp_book content'] = array(
-    'name' => 'delete own bp_book content',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete own business content'.
   $permissions['delete own business content'] = array(
     'name' => 'delete own business content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -825,6 +852,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own correspondence content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -832,7 +860,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete own edition content'.
   $permissions['delete own edition content'] = array(
     'name' => 'delete own edition content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -841,6 +872,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own library content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -870,6 +902,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own person content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -877,7 +910,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete own primary_object content'.
   $permissions['delete own primary_object content'] = array(
     'name' => 'delete own primary_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -886,6 +922,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own related_materials content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -895,6 +932,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own work content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -912,7 +950,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in business_type'.
   $permissions['delete terms in business_type'] = array(
     'name' => 'delete terms in business_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -969,7 +1010,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in gender'.
   $permissions['delete terms in gender'] = array(
     'name' => 'delete terms in gender',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1026,7 +1070,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in work_type'.
   $permissions['delete terms in work_type'] = array(
     'name' => 'delete terms in work_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1059,21 +1106,12 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any bp_book content'.
-  $permissions['edit any bp_book content'] = array(
-    'name' => 'edit any bp_book content',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any business content'.
   $permissions['edit any business content'] = array(
     'name' => 'edit any business content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1083,6 +1121,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any correspondence content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1090,7 +1129,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit any edition content'.
   $permissions['edit any edition content'] = array(
     'name' => 'edit any edition content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1099,6 +1141,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any library content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1128,6 +1171,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any person content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1135,7 +1179,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit any primary_object content'.
   $permissions['edit any primary_object content'] = array(
     'name' => 'edit any primary_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1144,6 +1191,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any related_materials content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1153,6 +1201,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any work content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1205,21 +1254,12 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit own bp_book content'.
-  $permissions['edit own bp_book content'] = array(
-    'name' => 'edit own bp_book content',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit own business content'.
   $permissions['edit own business content'] = array(
     'name' => 'edit own business content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1239,6 +1279,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own correspondence content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1246,7 +1287,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit own edition content'.
   $permissions['edit own edition content'] = array(
     'name' => 'edit own edition content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1255,6 +1299,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own library content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1284,6 +1329,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own person content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1291,7 +1337,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit own primary_object content'.
   $permissions['edit own primary_object content'] = array(
     'name' => 'edit own primary_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1300,6 +1349,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own related_materials content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1309,6 +1359,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own work content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1316,7 +1367,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in business_type'.
   $permissions['edit terms in business_type'] = array(
     'name' => 'edit terms in business_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1373,7 +1427,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in gender'.
   $permissions['edit terms in gender'] = array(
     'name' => 'edit terms in gender',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1430,7 +1487,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in work_type'.
   $permissions['edit terms in work_type'] = array(
     'name' => 'edit terms in work_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1456,6 +1516,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['geocoder_service_all_handlers'] = array(
     'name' => 'geocoder_service_all_handlers',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
     'module' => 'geocoder',
@@ -1686,7 +1747,10 @@ function mapp_permissions_user_default_permissions() {
   $permissions['show filter tab'] = array(
     'name' => 'show filter tab',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'biblio',
   );
@@ -1704,7 +1768,10 @@ function mapp_permissions_user_default_permissions() {
   $permissions['show sort links'] = array(
     'name' => 'show sort links',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'biblio',
   );
@@ -1727,6 +1794,24 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'shortcut',
+  );
+
+  // Exported permission: 'unique_field_perm_admin'.
+  $permissions['unique_field_perm_admin'] = array(
+    'name' => 'unique_field_perm_admin',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'unique_field',
+  );
+
+  // Exported permission: 'unique_field_perm_bypass'.
+  $permissions['unique_field_perm_bypass'] = array(
+    'name' => 'unique_field_perm_bypass',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'unique_field',
   );
 
   // Exported permission: 'use PHP for label patterns'.
