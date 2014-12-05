@@ -1,6 +1,6 @@
 /**
- * 
- * Modernist Archives Publishing Project 
+ *
+ * Modernist Archives Publishing Project
  * SASS files for site theme
  *
  * Mike Widner <mikewidner@gmail.com>
@@ -53,6 +53,11 @@ a:hover {
   color: white;
   text-shadow: #6d3118 0 -1px 0;
   text-decoration: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 15%;
 }
 /* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .mapp-button:hover {
@@ -87,4 +92,13 @@ a:hover {
 .mapp-button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
+}
+/* line 53, ../../sass/components/base.scss */
+.mapp-button a {
+  color: white;
+}
+/* line 56, ../../sass/components/base.scss */
+.mapp-button a:hover {
+  text-decoration: none !important;
+  color: transparent !important;
 }

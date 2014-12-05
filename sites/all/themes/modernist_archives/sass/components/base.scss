@@ -1,6 +1,6 @@
 /**
- * 
- * Modernist Archives Publishing Project 
+ *
+ * Modernist Archives Publishing Project
  * SASS files for site theme
  *
  * Mike Widner <mikewidner@gmail.com>
@@ -16,7 +16,7 @@
 @import "sassy-buttons";
 
 $zen-column-count: 7; // Set the total number of columns in the grid.
-$zen-gutter-width: 10px; 
+$zen-gutter-width: 10px;
 
 $link_color: #4d71a2;
 $highlight_color: #d36436;
@@ -45,4 +45,16 @@ a:hover {
 .mapp-button {
 	@include sassy-button("simple", 10px, 19px, $highlight_color);
 	text-decoration: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 15%;
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: transparent !important;
+  }
 }
