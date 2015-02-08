@@ -1,0 +1,41 @@
+diff -u remote_stream_wrapper-7.x-1.0-rc1/remote_stream_wrapper.module remote_stream_wrapper/remote_stream_wrapper.module
+--- remote_stream_wrapper-7.x-1.0-rc1/remote_stream_wrapper.module	2014-04-22 02:29:49.000000000 +0200
++++ remote_stream_wrapper/remote_stream_wrapper.module	2014-09-16 21:55:39.000000000 +0200
+@@ -251,6 +251,8 @@
+   // @todo Validate against file field allowed types.
+   $form['#validators'] = array();
+ 
++  $form['#render'] = isset($options['render']) && $options['render'] == 'media-popup' ? 'media-popup' : 'standalone';
++
+   $form['actions'] = array('#type' => 'actions');
+   $form['actions']['submit'] = array(
+     '#type' => 'submit',
+@@ -289,15 +291,20 @@
+     $form_state['file'] = $file;
+   }
+ 
+-  if (drupal_valid_path('file/' . $file->fid . '/edit')) {
+-    $destination = array('destination' => 'admin/content/file');
+-    if (isset($_GET['destination'])) {
+-      $destination = drupal_get_destination();
+-      unset($_GET['destination']);
++  if ($form['#render'] == 'standalone') {
++    if (drupal_valid_path('file/' . $file->fid . '/edit')) {
++      $destination = array('destination' => 'admin/content/file');
++      if (isset($_GET['destination'])) {
++        $destination = drupal_get_destination();
++        unset($_GET['destination']);
++      }
++      $form_state['redirect'] = array('file/' . $file->fid . '/edit', array('query' => $destination));
++    }
++    else {
++      $form_state['redirect'] = 'admin/content/file';
+     }
+-    $form_state['redirect'] = array('file/' . $file->fid . '/edit', array('query' => $destination));
+   }
+-  else {
+-    $form_state['redirect'] = 'admin/content/file';
++  else if ($form['#render'] == 'media-popup') {
++    $form_state['redirect'] = array('media/browser', array('query' => array('render' => 'media-popup', 'fid' => $file->fid)));
+   }
+ }
