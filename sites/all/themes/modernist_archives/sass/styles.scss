@@ -8,6 +8,8 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
@@ -22,8 +24,14 @@
 @import "components/base";
 @import "components/layout";
 @import "components/modules";
+@import "components/sidebar";
 
 @import "print";
+
+@mixin fa($icon) {
+    @extend .fa;
+    @extend .fa-#{$icon}
+}
 
 /* SMACSS theme rules */
 /* @import "theme-A"; */

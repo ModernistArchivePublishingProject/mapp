@@ -1,0 +1,20 @@
+$link_color: #4d71a2;
+$highlight_color: #d36436;
+$background_color: #58585a;
+$content_bg_color: white;
+$footer_bg_color: #d1d2d4;
+
+div#block-system-main-menu {
+  background-color: $highlight_color;
+  ul.menu {
+    list-style-type: none;
+    li.menu__item {
+      list-style-image: none;
+      list-style-type: none;
+      font-variant: small-caps;
+      a {
+        color: white;
+      }
+    }
+  }
+}

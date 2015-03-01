@@ -1,0 +1,18 @@
+/* line 7, ../../sass/components/sidebar.scss */
+div#block-system-main-menu {
+  background-color: #d36436;
+}
+/* line 9, ../../sass/components/sidebar.scss */
+div#block-system-main-menu ul.menu {
+  list-style-type: none;
+}
+/* line 11, ../../sass/components/sidebar.scss */
+div#block-system-main-menu ul.menu li.menu__item {
+  list-style-image: none;
+  list-style-type: none;
+  font-variant: small-caps;
+}
+/* line 15, ../../sass/components/sidebar.scss */
+div#block-system-main-menu ul.menu li.menu__item a {
+  color: white;
+}
