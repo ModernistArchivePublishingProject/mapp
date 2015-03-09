@@ -4,16 +4,27 @@ $background_color: #58585a;
 $content_bg_color: white;
 $footer_bg_color: #d1d2d4;
 
-div#block-system-main-menu {
+// section.region-sidebar-first.column.sidebar {
+section.region-sidebar-first {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100%;
+  position: absolute;
   background-color: $highlight_color;
-  ul.menu {
-    list-style-type: none;
-    li.menu__item {
-      list-style-image: none;
+  img.header__logo-image {
+    padding-bottom: 10px;
+  }
+  div#block-system-main-menu {
+    ul.menu {
       list-style-type: none;
-      font-variant: small-caps;
-      a {
-        color: white;
+      li.menu__item {
+        list-style-image: none;
+        list-style-type: none;
+        font-variant: small-caps;
+        a {
+          color: white;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@
 #footer {
   font-family: 'Open Sans', sans-serif;
   padding-right: 4em;
-  padding-left: 4em;
+  padding-left: 0em;
 }
 /* line 46, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
@@ -47,10 +47,16 @@
   box-sizing: border-box;
   word-wrap: break-word;
   text-align: justify;
+  padding-left: 20px;
+}
+
+/* line 40, ../../sass/components/layout.scss */
+#main {
+  min-height: 600px;
 }
 
 @media screen and (min-width: 980px) {
-  /* line 38, ../../sass/components/layout.scss */
+  /* line 44, ../../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 200%;
@@ -67,7 +73,7 @@
   }
 }
 @media screen and (max-width: 340px) and (min-width: 320px) {
-  /* line 38, ../../sass/components/layout.scss */
+  /* line 44, ../../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 300%;
@@ -84,19 +90,19 @@
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 38, ../../sass/components/layout.scss */
+  /* line 44, ../../sass/components/layout.scss */
   #main-menu {
     position: absolute;
     top: 0;
   }
 }
 
-/* line 54, ../../sass/components/layout.scss */
+/* line 60, ../../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 60, ../../sass/components/layout.scss */
+/* line 66, ../../sass/components/layout.scss */
 #navigation .responsive-menus.responsified {
   position: absolute;
   float: left;
@@ -114,55 +120,31 @@ nav#main-menu ul li a {
   top: 0px;
 }
 
-/* line 67, ../../sass/components/layout.scss */
-#logo img {
-  padding-top: 4em;
-  float: left;
-  width: 300%;
-  margin-left: 200%;
-  margin-right: -500%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  min-width: 150px;
-}
-@media screen and (max-width: 320px) {
-  /* line 67, ../../sass/components/layout.scss */
-  #logo img {
-    position: absolute;
-    top: 20px;
-  }
-}
-
-/* line 78, ../../sass/components/layout.scss */
+/* line 84, ../../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
-  /* line 78, ../../sass/components/layout.scss */
+  /* line 84, ../../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 87, ../../sass/components/layout.scss */
+/* line 93, ../../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 91, ../../sass/components/layout.scss */
+/* line 97, ../../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 95, ../../sass/components/layout.scss */
+/* line 101, ../../sass/components/layout.scss */
 #edit-actions input {
-  font-size: 19px;
+  font-size: 15px;
   padding: 0.5em 1.5em;
   display: inline-block;
   cursor: pointer;
@@ -172,32 +154,32 @@ nav#main-menu ul li a {
   -o-border-radius: 10px;
   border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #da7e57), color-stop(51%, #d36436));
-  background: -webkit-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: -moz-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: -o-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: linear-gradient(#da7e57 50%, #d36436 51%);
-  -webkit-box-shadow: #e8ae96 0 1px 0 inset;
-  -moz-box-shadow: #e8ae96 0 1px 0 inset;
-  box-shadow: #e8ae96 0 1px 0 inset;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e19475), color-stop(70%, #d36436));
+  background: -webkit-linear-gradient(#e19475, #d36436 70%);
+  background: -moz-linear-gradient(#e19475, #d36436 70%);
+  background: -o-linear-gradient(#e19475, #d36436 70%);
+  background: linear-gradient(#e19475, #d36436 70%);
+  -webkit-box-shadow: #eec5b4 0 1px 0 inset;
+  -moz-box-shadow: #eec5b4 0 1px 0 inset;
+  box-shadow: #eec5b4 0 1px 0 inset;
   border: 1px solid #c4582b;
   color: white;
-  text-shadow: #8f401f 0 -1px 0;
+  text-shadow: #a94c25 0 -1px 0;
 }
 /* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
   text-decoration: none;
 }
-/* line 30, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 18, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
-  background-color: #bc5429;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #d4673a), color-stop(51%, #bc5429));
-  background: -webkit-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: -moz-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: -o-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: linear-gradient(#d4673a 50%, #bc5429 51%);
+  background-color: #c4582b;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #dc8460), color-stop(75%, #c4582b));
+  background: -webkit-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: -moz-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: -o-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: linear-gradient(#dc8460 3%, #c4582b 75%);
 }
-/* line 33, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 21, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:active {
   -webkit-box-shadow: #b85228 0 1px 2px inset;
   -moz-box-shadow: #b85228 0 1px 2px inset;
@@ -219,19 +201,24 @@ nav#main-menu ul li a {
   margin: -1px !important;
 }
 
-/* line 99, ../../sass/components/layout.scss */
+/* line 106, ../../sass/components/layout.scss */
+form#search-block-form div.form-actions {
+  display: none;
+}
+
+/* line 111, ../../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 105, ../../sass/components/layout.scss */
+/* line 117, ../../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }
 
-/* line 109, ../../sass/components/layout.scss */
+/* line 121, ../../sass/components/layout.scss */
 h1#page-title {
   text-align: center;
 }

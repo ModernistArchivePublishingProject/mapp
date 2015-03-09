@@ -28,11 +28,6 @@
 
 @import "print";
 
-@mixin fa($icon) {
-    @extend .fa;
-    @extend .fa-#{$icon}
-}
-
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */

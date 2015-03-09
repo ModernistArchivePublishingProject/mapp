@@ -3509,8 +3509,8 @@ table {
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 2px;
+  padding-right: 3px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -3540,7 +3540,7 @@ table {
   /* line 60, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: 3em;
+    padding-top: 0em;
     position: relative;
   }
 
@@ -3549,7 +3549,7 @@ table {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
     top: 0;
-    height: 3em;
+    height: 0em;
     width: 100%;
   }
 }
@@ -3583,95 +3583,9 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 101, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
-  /* line 103, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 0%;
-    margin-right: -66.66667%;
-  }
-  /* line 108, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
-
   /**
    * The layout when there are two sidebars.
    */
-  /* line 116, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
-  /* line 118, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
-  }
-  /* line 123, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
-  }
-  /* line 128, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: left;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
-  }
-  /* line 134, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 138, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
-    clear: left;
-  }
-  /* line 143, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -66.66667%;
-  }
-  /* line 147, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
 }
 /**
  * Use 5 grid columns for larger screens.
@@ -3703,56 +3617,9 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 179, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
-  /* line 181, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: left;
-    width: 80%;
-    margin-left: 0%;
-    margin-right: -80%;
-  }
-  /* line 186, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 20%;
-    margin-left: 80%;
-    margin-right: -100%;
-  }
-
   /**
    * The layout when there are two sidebars.
    */
-  /* line 194, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
-  /* line 196, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: -80%;
-  }
-  /* line 201, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 20%;
-    margin-left: 0%;
-    margin-right: -20%;
-  }
-  /* line 206, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 20%;
-    margin-left: 80%;
-    margin-right: -100%;
-  }
 }
 /* Component (SMACSS module) rules */
 /**
@@ -4690,7 +4557,7 @@ a:hover {
 #footer {
   font-family: 'Open Sans', sans-serif;
   padding-right: 4em;
-  padding-left: 4em;
+  padding-left: 0em;
 }
 /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
@@ -4726,10 +4593,16 @@ a:hover {
   margin-left: 0%;
   margin-right: -100%;
   text-align: justify;
+  padding-left: 20px;
+}
+
+/* line 40, ../sass/components/layout.scss */
+#main {
+  min-height: 600px;
 }
 
 @media screen and (min-width: 980px) {
-  /* line 38, ../sass/components/layout.scss */
+  /* line 44, ../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 28.57143%;
@@ -4739,7 +4612,7 @@ a:hover {
   }
 }
 @media screen and (max-width: 340px) and (min-width: 320px) {
-  /* line 38, ../sass/components/layout.scss */
+  /* line 44, ../sass/components/layout.scss */
   #main-menu {
     float: left;
     width: 42.85714%;
@@ -4749,19 +4622,19 @@ a:hover {
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 38, ../sass/components/layout.scss */
+  /* line 44, ../sass/components/layout.scss */
   #main-menu {
     position: absolute;
     top: 0;
   }
 }
 
-/* line 54, ../sass/components/layout.scss */
+/* line 60, ../sass/components/layout.scss */
 nav#main-menu ul li a {
   padding: .2em 1em;
 }
 
-/* line 60, ../sass/components/layout.scss */
+/* line 66, ../sass/components/layout.scss */
 #navigation .responsive-menus.responsified {
   position: absolute;
   float: left;
@@ -4772,48 +4645,31 @@ nav#main-menu ul li a {
   top: 0px;
 }
 
-/* line 67, ../sass/components/layout.scss */
-#logo img {
-  padding-top: 4em;
-  float: left;
-  width: 42.85714%;
-  margin-left: 28.57143%;
-  margin-right: -71.42857%;
-  min-width: 150px;
-}
-@media screen and (max-width: 320px) {
-  /* line 67, ../sass/components/layout.scss */
-  #logo img {
-    position: absolute;
-    top: 20px;
-  }
-}
-
-/* line 78, ../sass/components/layout.scss */
+/* line 84, ../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
-  /* line 78, ../sass/components/layout.scss */
+  /* line 84, ../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 87, ../sass/components/layout.scss */
+/* line 93, ../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 91, ../sass/components/layout.scss */
+/* line 97, ../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 95, ../sass/components/layout.scss */
+/* line 101, ../sass/components/layout.scss */
 #edit-actions input {
-  font-size: 19px;
+  font-size: 15px;
   padding: 0.5em 1.5em;
   display: inline-block;
   cursor: pointer;
@@ -4823,32 +4679,32 @@ nav#main-menu ul li a {
   -o-border-radius: 10px;
   border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #da7e57), color-stop(51%, #d36436));
-  background: -webkit-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: -moz-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: -o-linear-gradient(#da7e57 50%, #d36436 51%);
-  background: linear-gradient(#da7e57 50%, #d36436 51%);
-  -webkit-box-shadow: #e8ae96 0 1px 0 inset;
-  -moz-box-shadow: #e8ae96 0 1px 0 inset;
-  box-shadow: #e8ae96 0 1px 0 inset;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e19475), color-stop(70%, #d36436));
+  background: -webkit-linear-gradient(#e19475, #d36436 70%);
+  background: -moz-linear-gradient(#e19475, #d36436 70%);
+  background: -o-linear-gradient(#e19475, #d36436 70%);
+  background: linear-gradient(#e19475, #d36436 70%);
+  -webkit-box-shadow: #eec5b4 0 1px 0 inset;
+  -moz-box-shadow: #eec5b4 0 1px 0 inset;
+  box-shadow: #eec5b4 0 1px 0 inset;
   border: 1px solid #c4582b;
   color: white;
-  text-shadow: #8f401f 0 -1px 0;
+  text-shadow: #a94c25 0 -1px 0;
 }
 /* line 15, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
   text-decoration: none;
 }
-/* line 30, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 18, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:hover {
-  background-color: #bc5429;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #d4673a), color-stop(51%, #bc5429));
-  background: -webkit-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: -moz-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: -o-linear-gradient(#d4673a 50%, #bc5429 51%);
-  background: linear-gradient(#d4673a 50%, #bc5429 51%);
+  background-color: #c4582b;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #dc8460), color-stop(75%, #c4582b));
+  background: -webkit-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: -moz-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: -o-linear-gradient(#dc8460 3%, #c4582b 75%);
+  background: linear-gradient(#dc8460 3%, #c4582b 75%);
 }
-/* line 33, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 21, ../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #edit-actions input:active {
   -webkit-box-shadow: #b85228 0 1px 2px inset;
   -moz-box-shadow: #b85228 0 1px 2px inset;
@@ -4870,19 +4726,24 @@ nav#main-menu ul li a {
   margin: -1px !important;
 }
 
-/* line 99, ../sass/components/layout.scss */
+/* line 106, ../sass/components/layout.scss */
+form#search-block-form div.form-actions {
+  display: none;
+}
+
+/* line 111, ../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 105, ../sass/components/layout.scss */
+/* line 117, ../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }
 
-/* line 109, ../sass/components/layout.scss */
+/* line 121, ../sass/components/layout.scss */
 h1#page-title {
   text-align: center;
 }
@@ -5036,22 +4897,31 @@ pre {
   font-family: inherit;
 }
 
-/* line 7, ../sass/components/sidebar.scss */
-div#block-system-main-menu {
+/* line 8, ../sass/components/sidebar.scss */
+section.region-sidebar-first {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100%;
+  position: absolute;
   background-color: #d36436;
 }
-/* line 9, ../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu {
+/* line 15, ../sass/components/sidebar.scss */
+section.region-sidebar-first img.header__logo-image {
+  padding-bottom: 10px;
+}
+/* line 19, ../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 11, ../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu li.menu__item {
+/* line 21, ../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
   font-variant: small-caps;
 }
-/* line 15, ../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu li.menu__item a {
+/* line 25, ../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }
 

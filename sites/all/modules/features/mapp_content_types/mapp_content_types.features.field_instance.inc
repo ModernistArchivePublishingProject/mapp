@@ -165,15 +165,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-business-field_address'
   $field_instances['node-business-field_address'] = array(
     'bundle' => 'business',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|business|field_address|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -203,6 +195,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 0,
@@ -1164,15 +1157,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-correspondence-field_sent_from'
   $field_instances['node-correspondence-field_sent_from'] = array(
     'bundle' => 'correspondence',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|correspondence|field_sent_from|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1208,6 +1193,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 0,
@@ -1224,15 +1210,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-correspondence-field_sent_to'
   $field_instances['node-correspondence-field_sent_to'] = array(
     'bundle' => 'correspondence',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|correspondence|field_sent_to|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1268,6 +1246,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 0,
@@ -2410,15 +2389,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-person-field_birth_place'
   $field_instances['node-person-field_birth_place'] = array(
     'bundle' => 'person',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|person|field_birth_place|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2448,6 +2419,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 0,
@@ -2624,15 +2596,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-person-field_death_place'
   $field_instances['node-person-field_death_place'] = array(
     'bundle' => 'person',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|person|field_death_place|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2662,6 +2626,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 0,

@@ -1,18 +1,27 @@
-/* line 7, ../../sass/components/sidebar.scss */
-div#block-system-main-menu {
+/* line 8, ../../sass/components/sidebar.scss */
+section.region-sidebar-first {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100%;
+  position: absolute;
   background-color: #d36436;
 }
-/* line 9, ../../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu {
+/* line 15, ../../sass/components/sidebar.scss */
+section.region-sidebar-first img.header__logo-image {
+  padding-bottom: 10px;
+}
+/* line 19, ../../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 11, ../../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu li.menu__item {
+/* line 21, ../../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
   font-variant: small-caps;
 }
-/* line 15, ../../sass/components/sidebar.scss */
-div#block-system-main-menu ul.menu li.menu__item a {
+/* line 25, ../../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }

@@ -101,12 +101,13 @@ function modernist_archives_preprocess_comment(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function modernist_archives_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
   //if (strpos($variables['region'], 'sidebar_') === 0) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
   //}
+  $variables['logo'] = theme_get_setting('logo');
+  $variables['front_page'] = variable_get('site_frontpage', 'node');
 }
 // */
 
@@ -130,3 +131,22 @@ function modernist_archives_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+function modernist_archives_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
+    $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
+    $form['search_block_form']['#size'] = 40;  // define size of the textfield
+    // $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+    // Add extra attributes to the text box
+    // $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+    // $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    // Add font-awesome icons
+    $form['search_block_form']['#attributes']['class'][] = 'fa';
+    $form['search_block_form']['#attributes']['class'][] = 'fa-search';
+    // Prevent user from searching the default text
+    // $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+  }
+}

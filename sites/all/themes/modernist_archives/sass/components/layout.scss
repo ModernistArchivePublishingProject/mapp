@@ -18,7 +18,7 @@ $break-large: 980px;
 	@include zen-grid-container;
 	font-family: 'Open Sans', sans-serif;
 	padding-right: 4em;
-	padding-left: 4em;
+	padding-left: 0em;
 }
 
 #header,
@@ -33,6 +33,12 @@ $break-large: 980px;
 #content {
 	@include zen-grid-item($zen-column-count, 1);
 	text-align: justify;
+	// Because we're absolute positioning the sidebar
+	padding-left: 20px;
+}
+
+#main {
+	min-height: 600px;
 }
 
 #main-menu {
@@ -64,16 +70,16 @@ nav#main-menu ul li a {
 	top: 0px;
 }
 
-#logo img {
-	padding-top: 4em;
-	@include zen-grid-item(3, 3);
-	min-width: 150px;
-	@media screen and (max-width: $break-small) {
-	    position: absolute;
-	    top: 20px;
-	    // display: none;
-	}
-}
+// #logo img {
+// 	padding-top: 4em;
+// 	@include zen-grid-item(3, 3);
+// 	min-width: 150px;
+// 	@media screen and (max-width: $break-small) {
+// 	    position: absolute;
+// 	    top: 20px;
+// 	    // display: none;
+// 	}
+// }
 
 #site-name {
 	margin-top: 10%;
@@ -93,7 +99,13 @@ nav#main-menu ul li a {
 }
 
 #edit-actions input {
-	@include sassy-button("glass", 10px, 19px, $logo-color);
+	@include sassy-button("matte", 10px, 15px, $logo-color);
+}
+
+form#search-block-form {
+	div.form-actions {
+		display: none;
+	}
 }
 
 #presses-banner {

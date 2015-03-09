@@ -1,7 +1,7 @@
 name = MAPP Views
 core = 7.x
 package = MAPP
-version = 7.x-0.1-alpha20141116
+version = 7.x-1.0
 project = mapp_views
 dependencies[] = mapp_content_types
 dependencies[] = views
@@ -11,5 +11,4 @@ features[views_view][] = partners
 features[views_view][] = presses
 features[views_view][] = team
 features_exclude[dependencies][ctools] = ctools
-mtime = 1416198244
 project path = sites/all/modules/features
