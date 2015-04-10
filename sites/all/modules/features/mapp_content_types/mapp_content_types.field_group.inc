@@ -74,6 +74,64 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_birth|node|person|form';
+  $field_group->group_name = 'group_birth';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_biographical';
+  $field_group->data = array(
+    'label' => 'Birth',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_birth_location',
+      1 => 'field_birth_place',
+      2 => 'field_birth_date',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-birth field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_birth|node|person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_death|node|person|form';
+  $field_group->group_name = 'group_death';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_biographical';
+  $field_group->data = array(
+    'label' => 'Death',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_death_location',
+      1 => 'field_death_place',
+      2 => 'field_death_date',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-death field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_death|node|person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|edition|form';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'node';

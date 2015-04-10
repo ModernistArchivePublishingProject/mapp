@@ -550,6 +550,13 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'clear person feeds'.
+  $permissions['clear person feeds'] = array(
+    'name' => 'clear person feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'create article content'.
   $permissions['create article content'] = array(
     'name' => 'create article content',
@@ -1057,6 +1064,13 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in relationship_type'.
+  $permissions['delete terms in relationship_type'] = array(
+    'name' => 'delete terms in relationship_type',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in tags'.
   $permissions['delete terms in tags'] = array(
     'name' => 'delete terms in tags',
@@ -1474,6 +1488,13 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in relationship_type'.
+  $permissions['edit terms in relationship_type'] = array(
+    'name' => 'edit terms in relationship_type',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in tags'.
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
@@ -1629,6 +1650,13 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'import person feeds'.
+  $permissions['import person feeds'] = array(
+    'name' => 'import person feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'manage features'.
@@ -1796,6 +1824,13 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'tamper person'.
+  $permissions['tamper person'] = array(
+    'name' => 'tamper person',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'unique_field_perm_admin'.
   $permissions['unique_field_perm_admin'] = array(
     'name' => 'unique_field_perm_admin',
@@ -1812,6 +1847,13 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'unique_field',
+  );
+
+  // Exported permission: 'unlock person feeds'.
+  $permissions['unlock person feeds'] = array(
+    'name' => 'unlock person feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'use PHP for label patterns'.

@@ -89,12 +89,12 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_relationship-field_relationship_type'
-  $field_instances['field_collection_item-field_relationship-field_relationship_type'] = array(
-    'bundle' => 'field_relationship',
+  // Exported field_instance: 'field_collection_item-field_relationships-field_relationship_type'
+  $field_instances['field_collection_item-field_relationships-field_relationship_type'] = array(
+    'bundle' => 'field_relationships',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What was the nature of the relationship?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -108,28 +108,25 @@ function mapp_content_types_field_default_field_instances() {
     'fences_wrapper' => 'span',
     'field_name' => 'field_relationship_type',
     'label' => 'Relationship Type',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 3,
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_relationship-field_relationship_with'
-  $field_instances['field_collection_item-field_relationship-field_relationship_with'] = array(
-    'bundle' => 'field_relationship',
+  // Exported field_instance: 'field_collection_item-field_relationships-field_relationship_with'
+  $field_instances['field_collection_item-field_relationships-field_relationship_with'] = array(
+    'bundle' => 'field_relationships',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'With which person or organization did this individual have a relationship?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -145,7 +142,7 @@ function mapp_content_types_field_default_field_instances() {
     'fences_wrapper' => 'div',
     'field_name' => 'field_relationship_with',
     'label' => 'Relationship With',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -158,14 +155,22 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
   // Exported field_instance: 'node-business-field_address'
   $field_instances['node-business-field_address'] = array(
     'bundle' => 'business',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|business|field_address|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'country' => 'AF',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -407,7 +412,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'file_view_mode' => 'media_original',
+          'file_view_mode' => 'media_large',
         ),
         'type' => 'file_rendered',
         'weight' => 0,
@@ -1157,7 +1162,15 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-correspondence-field_sent_from'
   $field_instances['node-correspondence-field_sent_from'] = array(
     'bundle' => 'correspondence',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|correspondence|field_sent_from|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'country' => 'AF',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1210,7 +1223,15 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-correspondence-field_sent_to'
   $field_instances['node-correspondence-field_sent_to'] = array(
     'bundle' => 'correspondence',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|correspondence|field_sent_to|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'country' => 'AF',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2330,7 +2351,93 @@ function mapp_content_types_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-person-field_birth_date'
+  $field_instances['node-person-field_birth_date'] = array(
+    'bundle' => 'person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'span',
+    'field_name' => 'field_birth_date',
+    'label' => 'Birth Date',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
+      'weight' => 6,
     ),
   );
 
@@ -2382,7 +2489,7 @@ function mapp_content_types_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -2394,10 +2501,16 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'label' => 'inline',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2422,35 +2535,37 @@ function mapp_content_types_field_default_field_instances() {
         'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
+          'address-hide-postal-code' => 'address-hide-postal-code',
+          'address-hide-street' => 'address-hide-street',
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
+          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-person-field_date_birth'
-  $field_instances['node-person-field_date_birth'] = array(
+  // Exported field_instance: 'node-person-field_death_date'
+  $field_instances['node-person-field_death_date'] = array(
     'bundle' => 'person',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
+        'module' => 'partial_date',
         'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
         ),
-        'type' => 'date_default',
-        'weight' => 3,
+        'type' => 'partial_date_default',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2460,84 +2575,63 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'span',
-    'field_name' => 'field_date_birth',
-    'label' => 'Date of Birth',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_death_date',
+    'label' => 'Death Date',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
+      'module' => 'partial_date',
       'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_text',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-person-field_date_death'
-  $field_instances['node-person-field_date_death'] = array(
-    'bundle' => 'person',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
         ),
-        'type' => 'date_default',
-        'weight' => 4,
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'none',
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'span',
-    'field_name' => 'field_date_death',
-    'label' => 'Date of Death',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_text',
-      'weight' => 10,
+      'type' => 'partial_date',
+      'weight' => 8,
     ),
   );
 
@@ -2551,7 +2645,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2589,7 +2683,7 @@ function mapp_content_types_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -2601,10 +2695,16 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
+        'label' => 'inline',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2629,14 +2729,17 @@ function mapp_content_types_field_default_field_instances() {
         'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
+          'address-hide-postal-code' => 'address-hide-postal-code',
+          'address-hide-street' => 'address-hide-street',
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
+          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2648,11 +2751,11 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2674,7 +2777,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -2717,13 +2820,9 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'feed' => 0,
-          'http' => 'http',
-          'https' => 'https',
           'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -2732,81 +2831,7 @@ function mapp_content_types_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-person-field_location_birth'
-  $field_instances['node-person-field_location_birth'] = array(
-    'bundle' => 'person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_location_birth',
-    'label' => 'Location of Birth',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'geofield',
-      'settings' => array(),
-      'type' => 'geofield_wkt',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-person-field_location_death'
-  $field_instances['node-person-field_location_death'] = array(
-    'bundle' => 'person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_location_death',
-    'label' => 'Location of Death',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'geofield',
-      'settings' => array(),
-      'type' => 'geofield_wkt',
-      'weight' => 9,
+      'weight' => 3,
     ),
   );
 
@@ -2837,7 +2862,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
     'field_name' => 'field_name_authority',
-    'label' => 'Link to External Records',
+    'label' => 'Authority Record',
     'required' => 0,
     'settings' => array(
       'title_fetch' => 0,
@@ -2855,8 +2880,8 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-person-field_relationship'
-  $field_instances['node-person-field_relationship'] = array(
+  // Exported field_instance: 'node-person-field_relationships'
+  $field_instances['node-person-field_relationships'] = array(
     'bundle' => 'person',
     'default_value' => array(),
     'deleted' => 0,
@@ -2866,10 +2891,13 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
-          'view_mode' => 'full',
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => 1,
+          'edit' => 'Edit',
         ),
-        'type' => 'field_collection_fields',
-        'weight' => 13,
+        'type' => 'field_collection_list',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2879,9 +2907,9 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_relationship',
-    'label' => 'Relationship',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_relationships',
+    'label' => 'Relationships',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2891,7 +2919,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 14,
+      'weight' => 11,
     ),
   );
 
@@ -4426,8 +4454,10 @@ function mapp_content_types_field_default_field_instances() {
   t('Annotations');
   t('Any images of the book.');
   t('Author');
+  t('Authority Record');
   t('Biographical details about this person.');
   t('Biography');
+  t('Birth Date');
   t('Birth Location');
   t('Birth Place');
   t('Body');
@@ -4444,8 +4474,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Date Created');
   t('Date Opened');
   t('Date Written');
-  t('Date of Birth');
-  t('Date of Death');
+  t('Death Date');
   t('Death Location');
   t('Death Place');
   t('Description');
@@ -4463,13 +4492,10 @@ function mapp_content_types_field_default_field_instances() {
   t('Impression');
   t('Language');
   t('Library');
-  t('Link to External Records');
   t('Link(s) to Digitized Materials');
   t('Link(s) to external authorities describing this person.');
   t('Link(s) to external sites that have digitized copies of this book.');
   t('Location');
-  t('Location of Birth');
-  t('Location of Death');
   t('Marginalia');
   t('May be another business or a person. May have multiple owners.');
   t('Number of pages');
@@ -4488,9 +4514,9 @@ function mapp_content_types_field_default_field_instances() {
   t('Reader');
   t('Recipient');
   t('Related To');
-  t('Relationship');
   t('Relationship Type');
   t('Relationship With');
+  t('Relationships');
   t('Sent From');
   t('Sent To');
   t('Size');
@@ -4507,6 +4533,8 @@ function mapp_content_types_field_default_field_instances() {
   t('Type of Edition');
   t('URL');
   t('Website');
+  t('What was the nature of the relationship?');
+  t('With which person or organization did this individual have a relationship?');
   t('Work');
 
   return $field_instances;

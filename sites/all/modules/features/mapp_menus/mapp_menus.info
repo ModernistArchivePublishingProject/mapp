@@ -1,0 +1,13 @@
+name = MAPP Menus
+description = Menu items
+core = 7.x
+package = MAPP
+version = 7.x-1.0-a150309
+project = mapp_menus
+dependencies[] = features
+dependencies[] = mapp_base
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_links][] = main-menu_presses:presses
+features[menu_links][] = main-menu_team:team
+project path = sites/all/modules/features

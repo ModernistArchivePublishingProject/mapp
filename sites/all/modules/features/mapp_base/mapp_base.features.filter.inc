@@ -62,11 +62,6 @@ function mapp_base_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_htmlcorrector' => array(
         'weight' => 10,
         'status' => 1,
