@@ -1,5 +1,7 @@
 .view-presses {
-  div.views-field-title {
+  div.views-field-title,
+  div.views-field-field-number-of-related-items {
     padding: 0px 10px 0px 10px;
+    text-align: left;
   }
 }
