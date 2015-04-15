@@ -188,7 +188,6 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_number_of_related_items']['field'] = 'field_number_of_related_items';
   $handler->display->display_options['fields']['field_number_of_related_items']['label'] = '';
   $handler->display->display_options['fields']['field_number_of_related_items']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_number_of_related_items']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_number_of_related_items']['empty'] = 'No items';
   $handler->display->display_options['fields']['field_number_of_related_items']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_number_of_related_items']['type'] = 'entityreference_count_default';
