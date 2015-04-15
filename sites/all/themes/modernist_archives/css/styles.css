@@ -4929,7 +4929,11 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
 .view-presses div.views-field-title,
 .view-presses div.views-field-field-number-of-related-items {
   padding: 0px 10px 0px 10px;
-  text-align: left;
+  text-align: center;
+}
+/* line 7, ../sass/components/views.scss */
+.view-presses td {
+  padding-bottom: 3em;
 }
 
 /**
