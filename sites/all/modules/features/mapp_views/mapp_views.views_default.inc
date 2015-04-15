@@ -146,7 +146,10 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Image(s) */
@@ -179,6 +182,22 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Number of Related Items */
+  $handler->display->display_options['fields']['field_number_of_related_items']['id'] = 'field_number_of_related_items';
+  $handler->display->display_options['fields']['field_number_of_related_items']['table'] = 'field_data_field_number_of_related_items';
+  $handler->display->display_options['fields']['field_number_of_related_items']['field'] = 'field_number_of_related_items';
+  $handler->display->display_options['fields']['field_number_of_related_items']['label'] = '';
+  $handler->display->display_options['fields']['field_number_of_related_items']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_number_of_related_items']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_number_of_related_items']['empty'] = 'No items';
+  $handler->display->display_options['fields']['field_number_of_related_items']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_number_of_related_items']['type'] = 'entityreference_count_default';
+  $handler->display->display_options['fields']['field_number_of_related_items']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Number of Related Items (field_number_of_related_items) */
+  $handler->display->display_options['sorts']['field_number_of_related_items_count']['id'] = 'field_number_of_related_items_count';
+  $handler->display->display_options['sorts']['field_number_of_related_items_count']['table'] = 'field_data_field_number_of_related_items';
+  $handler->display->display_options['sorts']['field_number_of_related_items_count']['field'] = 'field_number_of_related_items_count';
+  $handler->display->display_options['sorts']['field_number_of_related_items_count']['order'] = 'DESC';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
