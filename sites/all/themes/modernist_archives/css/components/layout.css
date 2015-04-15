@@ -46,7 +46,7 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  text-align: justify;
+  text-align: left;
   padding-left: 20px;
 }
 
