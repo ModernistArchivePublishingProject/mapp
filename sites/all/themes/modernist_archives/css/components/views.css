@@ -8,3 +8,13 @@
 .view-presses td {
   padding-bottom: 3em;
 }
+
+/* line 15, ../../sass/components/views.scss */
+.view-works-authored table tr td {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 22, ../../sass/components/views.scss */
+.view-works-authored .views-field-title {
+  text-align: center;
+}

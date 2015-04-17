@@ -4027,10 +4027,10 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4072,7 +4072,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4111,8 +4111,8 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
+          'format_type' => 'year_only',
+          'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -4167,7 +4167,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4200,11 +4200,13 @@ function mapp_content_types_field_default_field_instances() {
     'description' => 'An image used for browsing works.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 5,
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4253,11 +4255,11 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4299,10 +4301,10 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4344,7 +4346,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4382,7 +4384,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4423,7 +4425,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4464,7 +4466,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
