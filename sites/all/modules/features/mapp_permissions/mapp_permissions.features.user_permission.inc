@@ -240,6 +240,15 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer contexts'.
+  $permissions['administer contexts'] = array(
+    'name' => 'administer contexts',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'context_ui',
+  );
+
   // Exported permission: 'administer date tools'.
   $permissions['administer date tools'] = array(
     'name' => 'administer date tools',
@@ -555,6 +564,15 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'clear person feeds',
     'roles' => array(),
     'module' => 'feeds',
+  );
+
+  // Exported permission: 'context ajax block access'.
+  $permissions['context ajax block access'] = array(
+    'name' => 'context ajax block access',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'context_ui',
   );
 
   // Exported permission: 'create article content'.
