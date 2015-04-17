@@ -92,7 +92,7 @@ function mapp_content_types_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_relationships-field_relationship_type'
   $field_instances['field_collection_item-field_relationships-field_relationship_type'] = array(
     'bundle' => 'field_relationships',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'What was the nature of the relationship?',
     'display' => array(
@@ -116,7 +116,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_buttons',
+      'type' => 'options_select',
       'weight' => 2,
     ),
   );
