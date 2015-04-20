@@ -28,6 +28,26 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_blog:blog
+  $menu_links['main-menu_blog:blog'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'blog',
+    'router_path' => 'blog',
+    'link_title' => 'Blog',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_blog:blog',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_contact:contact
   $menu_links['main-menu_contact:contact'] = array(
     'menu_name' => 'main-menu',
@@ -45,7 +65,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: main-menu_presses:presses
@@ -62,8 +82,8 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 4,
-    'customized' => 0,
+    'weight' => -46,
+    'customized' => 1,
   );
   // Exported menu link: main-menu_team:team
   $menu_links['main-menu_team:team'] = array(
@@ -79,12 +99,13 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
+    'weight' => -45,
+    'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
+  t('Blog');
   t('Contact');
   t('Presses');
   t('Team');
