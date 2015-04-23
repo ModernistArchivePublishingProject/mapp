@@ -578,10 +578,10 @@ function mapp_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '9',
         ),
       ),
       'display' => array(),

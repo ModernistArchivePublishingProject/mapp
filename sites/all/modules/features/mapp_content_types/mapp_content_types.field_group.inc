@@ -79,7 +79,7 @@ function mapp_content_types_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'person';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_biographical';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Birth',
     'weight' => '5',
@@ -108,7 +108,7 @@ function mapp_content_types_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'person';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_biographical';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Death',
     'weight' => '6',
