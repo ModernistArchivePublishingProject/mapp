@@ -314,6 +314,38 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_metadata|node|work|default';
+  $field_group->group_name = 'group_metadata';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'work';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Metadata',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_call_number',
+      1 => 'field_copyright_date',
+      2 => 'field_copyright_status',
+      3 => 'field_genre',
+      4 => 'field_language',
+      5 => 'field_identifier',
+      6 => 'field_work_type',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-metadata field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_metadata|node|work|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_metadata|node|work|form';
   $field_group->group_name = 'group_metadata';
   $field_group->entity_type = 'node';
@@ -328,8 +360,9 @@ function mapp_content_types_field_group_info() {
       1 => 'field_copyright_date',
       2 => 'field_copyright_status',
       3 => 'field_genre',
-      4 => 'field_identifier',
-      5 => 'field_work_type',
+      4 => 'field_language',
+      5 => 'field_identifier',
+      6 => 'field_work_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -370,6 +403,33 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_people|node|correspondence|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_people|node|work|default';
+  $field_group->group_name = 'group_people';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'work';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'People',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_author',
+      1 => 'field_editor',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-people field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_people|node|work|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
