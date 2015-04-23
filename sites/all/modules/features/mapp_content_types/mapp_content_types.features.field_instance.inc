@@ -2709,7 +2709,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -2941,7 +2941,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -2995,7 +2995,7 @@ function mapp_content_types_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -3041,6 +3041,44 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'url_external',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-person-field_occupation'
+  $field_instances['node-person-field_occupation'] = array(
+    'bundle' => 'person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'span',
+    'field_name' => 'field_occupation',
+    'label' => 'Occupation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
     ),
   );
 
@@ -4754,6 +4792,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Narrative');
   t('Number of Related Items');
   t('Number of pages');
+  t('Occupation');
   t('Original Language');
   t('Owned By');
   t('Owner');
