@@ -140,7 +140,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_edition',
       1 => 'field_language',
@@ -173,11 +173,11 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Libraries',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_library',
-      1 => 'field_link_digitized',
-      2 => 'field_identifier',
+      0 => 'field_identifier',
+      1 => 'field_library',
+      2 => 'field_link_digitized',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -223,6 +223,34 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_libraries|node|primary_object|default';
+  $field_group->group_name = 'group_libraries';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'primary_object';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Libraries',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_identifier',
+      1 => 'field_library',
+      2 => 'field_link_digitized',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-libraries field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_libraries|node|primary_object|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_links|node|edition|form';
   $field_group->group_name = 'group_links';
   $field_group->entity_type = 'node';
@@ -231,7 +259,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_illustrator',
       1 => 'field_printer',
@@ -294,14 +322,14 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Metadata',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
-      0 => 'field_genre',
-      1 => 'field_copyright_status',
-      2 => 'field_call_number',
-      3 => 'field_copyright_date',
-      4 => 'field_work_type',
-      5 => 'field_identifier',
+      0 => 'field_call_number',
+      1 => 'field_copyright_date',
+      2 => 'field_copyright_status',
+      3 => 'field_genre',
+      4 => 'field_identifier',
+      5 => 'field_work_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -354,7 +382,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'People',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_author',
       1 => 'field_editor',
@@ -411,12 +439,12 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Reception History',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
-      0 => 'field_damage',
-      1 => 'field_condition',
-      2 => 'field_reader',
-      3 => 'field_owner',
+      0 => 'field_condition',
+      1 => 'field_damage',
+      2 => 'field_owner',
+      3 => 'field_reader',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -429,6 +457,35 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_reception|node|material_expression|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_reception|node|primary_object|default';
+  $field_group->group_name = 'group_reception';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'primary_object';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Reception History',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_condition',
+      1 => 'field_damage',
+      2 => 'field_owner',
+      3 => 'field_reader',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-reception field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_reception|node|primary_object|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
