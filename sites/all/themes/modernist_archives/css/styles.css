@@ -4909,18 +4909,19 @@ section.region-sidebar-first {
 /* line 15, ../sass/components/sidebar.scss */
 section.region-sidebar-first img.header__logo-image {
   padding-bottom: 10px;
+  width: 90%;
 }
-/* line 19, ../sass/components/sidebar.scss */
+/* line 20, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 21, ../sass/components/sidebar.scss */
+/* line 22, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
   font-variant: small-caps;
 }
-/* line 25, ../sass/components/sidebar.scss */
+/* line 26, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }
