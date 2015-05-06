@@ -187,6 +187,8 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_number_of_related_items']['table'] = 'field_data_field_number_of_related_items';
   $handler->display->display_options['fields']['field_number_of_related_items']['field'] = 'field_number_of_related_items';
   $handler->display->display_options['fields']['field_number_of_related_items']['label'] = '';
+  $handler->display->display_options['fields']['field_number_of_related_items']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_number_of_related_items']['alter']['text'] = '[field_number_of_related_items] item(s)';
   $handler->display->display_options['fields']['field_number_of_related_items']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_number_of_related_items']['empty'] = 'No items';
   $handler->display->display_options['fields']['field_number_of_related_items']['empty_zero'] = TRUE;
