@@ -241,7 +241,7 @@ function entityreference_count_get_count($settings, $entity_type, $entity) {
       $alias = $select->innerJoin($d['table'], 'nr', '%alias.entity_id = e.' . $entity_key_id);
       $select->condition("{$alias}.{$d['column']}", $entity->{$entity_key_id});
       if ($settings['count_only_published']) {
-        $select->condition('n.status', 1);
+        $select->condition('e.status', 1);
       }
 
       $query->union($select, 'UNION ALL');
