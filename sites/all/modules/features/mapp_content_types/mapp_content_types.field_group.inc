@@ -13,6 +13,35 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|correspondence|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'correspondence';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_correspondence_type',
+      1 => 'field_publication_date',
+      2 => 'field_related_to',
+      3 => 'field_tags',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_about|node|correspondence|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|correspondence|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -39,6 +68,36 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_about|node|correspondence|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|related_materials|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'related_materials';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_author',
+      1 => 'field_description',
+      2 => 'field_genre',
+      3 => 'field_publication_date',
+      4 => 'field_tags',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_about|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,6 +133,33 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_birth|node|person|default';
+  $field_group->group_name = 'group_birth';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Birth',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_birth_place',
+      1 => 'field_birth_date',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-birth field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_birth|node|person|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_birth|node|person|form';
   $field_group->group_name = 'group_birth';
   $field_group->entity_type = 'node';
@@ -99,6 +185,33 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_birth|node|person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_death|node|person|default';
+  $field_group->group_name = 'group_death';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Death',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_death_place',
+      1 => 'field_death_date',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-death field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_death|node|person|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,6 +245,30 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|edition|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '20',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-details field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_details|node|edition|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|edition|form';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'node';
@@ -145,10 +282,11 @@ function mapp_content_types_field_group_info() {
       0 => 'field_edition',
       1 => 'field_language',
       2 => 'field_pages',
-      3 => 'field_price',
-      4 => 'field_print_run',
-      5 => 'field_publication_date',
-      6 => 'field_size',
+      3 => 'field_print_run',
+      4 => 'field_publication_date',
+      5 => 'field_size',
+      6 => 'field_purchasers',
+      7 => 'field_price',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -190,6 +328,30 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_libraries|node|bp_book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_libraries|node|edition|default';
+  $field_group->group_name = 'group_libraries';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Libraries',
+    'weight' => '20',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-libraries field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_libraries|node|edition|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -251,6 +413,30 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_links|node|edition|default';
+  $field_group->group_name = 'group_links';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'edition';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Links',
+    'weight' => '20',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-links field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_links|node|edition|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_links|node|edition|form';
   $field_group->group_name = 'group_links';
   $field_group->entity_type = 'node';
@@ -278,6 +464,35 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_links|node|edition|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_locations|node|correspondence|default';
+  $field_group->group_name = 'group_locations';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'correspondence';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Locations',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_library',
+      1 => 'field_link_digitized',
+      2 => 'field_sent_from',
+      3 => 'field_sent_to',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-locations field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_locations|node|correspondence|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -356,13 +571,12 @@ function mapp_content_types_field_group_info() {
     'label' => 'Metadata',
     'weight' => '6',
     'children' => array(
-      0 => 'field_call_number',
-      1 => 'field_copyright_date',
-      2 => 'field_copyright_status',
-      3 => 'field_genre',
-      4 => 'field_language',
-      5 => 'field_identifier',
-      6 => 'field_work_type',
+      0 => 'field_copyright_date',
+      1 => 'field_copyright_status',
+      2 => 'field_genre',
+      3 => 'field_language',
+      4 => 'field_identifier',
+      5 => 'field_work_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -375,6 +589,33 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_metadata|node|work|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_people|node|correspondence|default';
+  $field_group->group_name = 'group_people';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'correspondence';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'People',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_author',
+      1 => 'field_recipient',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-people field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_people|node|correspondence|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -446,6 +687,7 @@ function mapp_content_types_field_group_info() {
     'children' => array(
       0 => 'field_author',
       1 => 'field_editor',
+      2 => 'field_translator',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -455,10 +697,37 @@ function mapp_content_types_field_group_info() {
         'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'open',
     ),
   );
   $export['group_people|node|work|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_publication_process|node|related_materials|default';
+  $field_group->group_name = 'group_publication_process';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'related_materials';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Publication Process',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_material_related_to',
+      1 => 'field_publication_process',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-publication-process field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_publication_process|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -546,6 +815,35 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_reception|node|primary_object|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_resources|node|related_materials|default';
+  $field_group->group_name = 'group_resources';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'related_materials';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Resources',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_images',
+      1 => 'field_library',
+      2 => 'field_link_digitized',
+      3 => 'field_identifier',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-resources field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_resources|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
