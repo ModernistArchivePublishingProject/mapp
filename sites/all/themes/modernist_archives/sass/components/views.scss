@@ -7,6 +7,17 @@
   td {
     padding-bottom: 3em;
   }
+  img {
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: grayscale(100%);
+    filter: url(desaturate.svg#greyscale);
+  }
+  .row-1 .col-1 img {
+    -webkit-filter: none;
+    filter: none;
+  }
 }
 
 .view-works-authored {
