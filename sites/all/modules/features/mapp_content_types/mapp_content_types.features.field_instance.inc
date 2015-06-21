@@ -661,9 +661,8 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference_count',
         'settings' => array(),
-        'type' => 'entityreference_count_default',
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
