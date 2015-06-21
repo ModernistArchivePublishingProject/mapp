@@ -13,42 +13,6 @@ function mapp_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'bibliography';
-  $context->description = 'Bibliographic Item references';
-  $context->tag = '';
-  $context->conditions = array(
-    'node' => array(
-      'values' => array(
-        'business' => 'business',
-        'person' => 'person',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-bibliography-block' => array(
-          'module' => 'views',
-          'delta' => 'bibliography-block',
-          'region' => 'content',
-          'weight' => '2',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Bibliographic Item references');
-  $export['bibliography'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'press_editions';
   $context->description = 'Show editions related to a press';
   $context->tag = '';
