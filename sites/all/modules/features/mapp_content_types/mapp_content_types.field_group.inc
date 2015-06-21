@@ -189,6 +189,34 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_business|node|business|default';
+  $field_group->group_name = 'group_business';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'business';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Business Information',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_website',
+      1 => 'field_owned_by',
+      2 => 'field_person_involved',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-business field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_business|node|business|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_death|node|person|default';
   $field_group->group_name = 'group_death';
   $field_group->entity_type = 'node';
@@ -241,6 +269,34 @@ function mapp_content_types_field_group_info() {
     ),
   );
   $export['group_death|node|person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_description|node|business|default';
+  $field_group->group_name = 'group_description';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'business';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Description',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_description',
+      1 => 'field_images',
+      2 => 'field_business_history',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-description field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_description|node|business|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
