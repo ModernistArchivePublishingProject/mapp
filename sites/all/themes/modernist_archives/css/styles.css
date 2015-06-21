@@ -4943,7 +4943,7 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
   filter: gray;
   filter: grayscale(100%);
   filter: url(desaturate.svg#greyscale);
-  opacity: .5;
+  opacity: .2;
 }
 /* line 18, ../sass/components/views.scss */
 .view-presses .row-1 .col-1 img {
