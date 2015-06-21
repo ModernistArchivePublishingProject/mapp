@@ -21,7 +21,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_correspondence_type',
       1 => 'field_publication_date',
@@ -53,8 +53,8 @@ function mapp_content_types_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_correspondence_type',
-      1 => 'field_related_to',
-      2 => 'field_publication_date',
+      1 => 'field_publication_date',
+      2 => 'field_related_to',
       3 => 'field_tags',
     ),
     'format_type' => 'fieldset',
@@ -114,9 +114,9 @@ function mapp_content_types_field_group_info() {
     'children' => array(
       0 => 'field_author',
       1 => 'field_description',
-      2 => 'field_publication_date',
-      3 => 'field_tags',
-      4 => 'field_genre',
+      2 => 'field_genre',
+      3 => 'field_publication_date',
+      4 => 'field_tags',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -141,7 +141,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Birth',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_birth_place',
       1 => 'field_birth_date',
@@ -168,7 +168,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Birth',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_birth_location',
       1 => 'field_birth_place',
@@ -225,7 +225,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Death',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_death_place',
       1 => 'field_death_date',
@@ -252,7 +252,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Death',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_death_location',
       1 => 'field_death_place',
@@ -286,6 +286,7 @@ function mapp_content_types_field_group_info() {
       0 => 'field_description',
       1 => 'field_images',
       2 => 'field_business_history',
+      3 => 'field_fc_images',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -309,8 +310,17 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '20',
-    'children' => array(),
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_edition',
+      1 => 'field_language',
+      2 => 'field_pages',
+      3 => 'field_print_run',
+      4 => 'field_publication_date',
+      5 => 'field_size',
+      6 => 'field_purchasers',
+      7 => 'field_price',
+    ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -333,7 +343,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_edition',
       1 => 'field_language',
@@ -367,7 +377,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Libraries',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_identifier',
       1 => 'field_library',
@@ -393,11 +403,15 @@ function mapp_content_types_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'edition';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_links';
   $field_group->data = array(
     'label' => 'Libraries',
-    'weight' => '20',
-    'children' => array(),
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_identifier',
+      1 => 'field_library',
+      2 => 'field_link_digitized',
+    ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -449,7 +463,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Libraries',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_identifier',
       1 => 'field_library',
@@ -477,8 +491,14 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '20',
-    'children' => array(),
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_illustrator',
+      1 => 'field_printer',
+      2 => 'field_publisher',
+      3 => 'field_work',
+      4 => 'group_libraries',
+    ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -501,7 +521,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_illustrator',
       1 => 'field_printer',
@@ -532,7 +552,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Locations',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_library',
       1 => 'field_link_digitized',
@@ -563,12 +583,12 @@ function mapp_content_types_field_group_info() {
     'label' => 'Locations',
     'weight' => '6',
     'children' => array(
-      0 => 'field_library',
-      1 => 'field_link_digitized',
-      2 => 'field_geocoded_from',
-      3 => 'field_sent_from',
-      4 => 'field_sent_to',
-      5 => 'field_geocoded_to',
+      0 => 'field_geocoded_from',
+      1 => 'field_geocoded_to',
+      2 => 'field_library',
+      3 => 'field_link_digitized',
+      4 => 'field_sent_from',
+      5 => 'field_sent_to',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -593,15 +613,14 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Metadata',
-    'weight' => '8',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_call_number',
-      1 => 'field_copyright_date',
-      2 => 'field_copyright_status',
-      3 => 'field_genre',
-      4 => 'field_language',
-      5 => 'field_identifier',
-      6 => 'field_work_type',
+      0 => 'field_copyright_date',
+      1 => 'field_copyright_status',
+      2 => 'field_genre',
+      3 => 'field_language',
+      4 => 'field_identifier',
+      5 => 'field_work_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -625,7 +644,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Metadata',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_copyright_date',
       1 => 'field_copyright_status',
@@ -657,7 +676,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'People',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_author',
       1 => 'field_recipient',
@@ -712,7 +731,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'People',
-    'weight' => '7',
+    'weight' => '3',
     'children' => array(
       0 => 'field_author',
       1 => 'field_editor',
@@ -739,7 +758,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'People',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_author',
       1 => 'field_editor',
@@ -798,8 +817,8 @@ function mapp_content_types_field_group_info() {
     'label' => 'Publication Process',
     'weight' => '2',
     'children' => array(
-      0 => 'field_publication_process',
-      1 => 'field_material_related_to',
+      0 => 'field_material_related_to',
+      1 => 'field_publication_process',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -824,7 +843,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Reception History',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_condition',
       1 => 'field_damage',
@@ -854,7 +873,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Reception History',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_condition',
       1 => 'field_damage',
@@ -889,6 +908,7 @@ function mapp_content_types_field_group_info() {
       1 => 'field_library',
       2 => 'field_link_digitized',
       3 => 'field_identifier',
+      4 => 'field_fc_images',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -914,10 +934,11 @@ function mapp_content_types_field_group_info() {
     'label' => 'Resources',
     'weight' => '3',
     'children' => array(
-      0 => 'field_link_digitized',
-      1 => 'field_images',
-      2 => 'field_library',
+      0 => 'field_images',
+      1 => 'field_library',
+      2 => 'field_link_digitized',
       3 => 'field_identifier',
+      4 => 'field_fc_images',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
