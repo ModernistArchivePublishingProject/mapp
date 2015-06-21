@@ -499,7 +499,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -645,7 +645,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
