@@ -541,10 +541,10 @@ function mapp_content_types_field_default_field_instances() {
     'description' => 'What was the nature of the relationship?',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
     ),
@@ -574,10 +574,10 @@ function mapp_content_types_field_default_field_instances() {
     'description' => 'With which person or organization did this individual have a relationship?',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 0,
