@@ -21,19 +21,20 @@
 .view-presses .row-1 .col-1 img {
   -webkit-filter: none;
   filter: none;
+  opacity: 1 !important;
 }
 
-/* line 24, ../../sass/components/views.scss */
+/* line 25, ../../sass/components/views.scss */
 .view-press-related-objects table {
   width: 100%;
 }
 
-/* line 31, ../../sass/components/views.scss */
+/* line 32, ../../sass/components/views.scss */
 .view-works-authored table tr td {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 38, ../../sass/components/views.scss */
+/* line 39, ../../sass/components/views.scss */
 .view-works-authored .views-field-title {
   text-align: center;
 }
