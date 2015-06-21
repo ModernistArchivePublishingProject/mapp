@@ -4950,12 +4950,17 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
   filter: none;
 }
 
-/* line 26, ../sass/components/views.scss */
+/* line 23, ../sass/components/views.scss */
+.view-press-related-objects table {
+  width: 100%;
+}
+
+/* line 30, ../sass/components/views.scss */
 .view-works-authored table tr td {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 33, ../sass/components/views.scss */
+/* line 37, ../sass/components/views.scss */
 .view-works-authored .views-field-title {
   text-align: center;
 }
