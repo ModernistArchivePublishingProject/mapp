@@ -28,6 +28,26 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_bibliography:biblio
+  $menu_links['main-menu_bibliography:biblio'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'biblio',
+    'router_path' => 'biblio',
+    'link_title' => 'Bibliography',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_bibliography:biblio',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_blog:blog
   $menu_links['main-menu_blog:blog'] = array(
     'menu_name' => 'main-menu',
@@ -45,7 +65,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: main-menu_contact:contact
@@ -65,7 +85,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -46,
     'customized' => 1,
   );
   // Exported menu link: main-menu_presses:presses
@@ -82,7 +102,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_team:team
@@ -99,12 +119,13 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -44,
     'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
+  t('Bibliography');
   t('Blog');
   t('Contact');
   t('Presses');
