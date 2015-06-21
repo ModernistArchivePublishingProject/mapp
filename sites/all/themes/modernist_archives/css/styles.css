@@ -4943,24 +4943,25 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
   filter: gray;
   filter: grayscale(100%);
   filter: url(desaturate.svg#greyscale);
+  opacity: .5;
 }
-/* line 17, ../sass/components/views.scss */
+/* line 18, ../sass/components/views.scss */
 .view-presses .row-1 .col-1 img {
   -webkit-filter: none;
   filter: none;
 }
 
-/* line 23, ../sass/components/views.scss */
+/* line 24, ../sass/components/views.scss */
 .view-press-related-objects table {
   width: 100%;
 }
 
-/* line 30, ../sass/components/views.scss */
+/* line 31, ../sass/components/views.scss */
 .view-works-authored table tr td {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 37, ../sass/components/views.scss */
+/* line 38, ../sass/components/views.scss */
 .view-works-authored .views-field-title {
   text-align: center;
 }
