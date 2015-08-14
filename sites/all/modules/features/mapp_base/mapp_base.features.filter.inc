@@ -18,6 +18,11 @@ function mapp_base_filter_default_formats() {
     'status' => 1,
     'weight' => 0,
     'filters' => array(
+      'biblio_filter_reference' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_url' => array(
         'weight' => 0,
         'status' => 1,
@@ -35,6 +40,11 @@ function mapp_base_filter_default_formats() {
         ),
       ),
       'filter_autop' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
         'weight' => 2,
         'status' => 1,
         'settings' => array(),
