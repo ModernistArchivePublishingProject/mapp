@@ -395,6 +395,15 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer openlayers'.
+  $permissions['administer openlayers'] = array(
+    'name' => 'administer openlayers',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'openlayers_ui',
+  );
+
   // Exported permission: 'administer pathauto'.
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
@@ -595,6 +604,16 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create blog content'.
+  $permissions['create blog content'] = array(
+    'name' => 'create blog content',
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create business content'.
   $permissions['create business content'] = array(
     'name' => 'create business content',
@@ -733,6 +752,15 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any blog content'.
+  $permissions['delete any blog content'] = array(
+    'name' => 'delete any blog content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any business content'.
   $permissions['delete any business content'] = array(
     'name' => 'delete any business content',
@@ -855,6 +883,16 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete own biblio content'.
   $permissions['delete own biblio content'] = array(
     'name' => 'delete own biblio content',
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own blog content'.
+  $permissions['delete own blog content'] = array(
+    'name' => 'delete own blog content',
     'roles' => array(
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
@@ -1062,6 +1100,13 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in occupation'.
+  $permissions['delete terms in occupation'] = array(
+    'name' => 'delete terms in occupation',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in partner_type'.
   $permissions['delete terms in partner_type'] = array(
     'name' => 'delete terms in partner_type',
@@ -1133,6 +1178,15 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any biblio content',
     'roles' => array(
       'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any blog content'.
+  $permissions['edit any blog content'] = array(
+    'name' => 'edit any blog content',
+    'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1279,6 +1333,16 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit own biblio content'.
   $permissions['edit own biblio content'] = array(
     'name' => 'edit own biblio content',
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own blog content'.
+  $permissions['edit own blog content'] = array(
+    'name' => 'edit own blog content',
     'roles' => array(
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
@@ -1483,6 +1547,13 @@ function mapp_permissions_user_default_permissions() {
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in occupation'.
+  $permissions['edit terms in occupation'] = array(
+    'name' => 'edit terms in occupation',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
