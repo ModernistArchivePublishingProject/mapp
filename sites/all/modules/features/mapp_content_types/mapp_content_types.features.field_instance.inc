@@ -416,6 +416,45 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_fc_images-field_rights_holder'
+  $field_instances['field_collection_item-field_fc_images-field_rights_holder'] = array(
+    'bundle' => 'field_fc_images',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_rights_holder',
+    'label' => 'Rights Holder',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_fc_images-field_source'
   $field_instances['field_collection_item-field_fc_images-field_source'] = array(
     'bundle' => 'field_fc_images',
@@ -5464,6 +5503,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Relationship Type');
   t('Relationship With');
   t('Relationships');
+  t('Rights Holder');
   t('Sent From');
   t('Sent To');
   t('Size');
