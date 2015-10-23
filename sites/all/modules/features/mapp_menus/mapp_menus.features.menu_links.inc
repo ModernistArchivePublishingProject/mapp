@@ -10,7 +10,7 @@
 function mapp_menus_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_about:node/1
+  // Exported menu link: main-menu_about:node/1.
   $menu_links['main-menu_about:node/1'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'node/1',
@@ -28,7 +28,7 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_bibliography:biblio
+  // Exported menu link: main-menu_bibliography:biblio.
   $menu_links['main-menu_bibliography:biblio'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'biblio',
@@ -45,10 +45,10 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -44,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_blog:blog
+  // Exported menu link: main-menu_blog:blog.
   $menu_links['main-menu_blog:blog'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'blog',
@@ -68,7 +68,7 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_contact:contact
+  // Exported menu link: main-menu_contact:contact.
   $menu_links['main-menu_contact:contact'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'contact',
@@ -85,10 +85,10 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_presses:presses
+  // Exported menu link: main-menu_presses:presses.
   $menu_links['main-menu_presses:presses'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'presses',
@@ -102,10 +102,10 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_team:team
+  // Exported menu link: main-menu_team:team.
   $menu_links['main-menu_team:team'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'team',
@@ -119,9 +119,10 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -46,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -130,7 +131,6 @@ function mapp_menus_menu_default_menu_links() {
   t('Contact');
   t('Presses');
   t('Team');
-
 
   return $menu_links;
 }
