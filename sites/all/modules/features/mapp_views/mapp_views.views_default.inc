@@ -106,7 +106,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Library Catalog */
+  /* Field: Content: URL */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
   $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
@@ -120,7 +120,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_url']['type'] = 'link_plain';
   $handler->display->display_options['fields']['field_url']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_url']['field_api_classes'] = TRUE;
-  /* Field: Content: Image */
+  /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -445,6 +445,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_number_of_related_items']['table'] = 'field_data_field_number_of_related_items';
   $handler->display->display_options['fields']['field_number_of_related_items']['field'] = 'field_number_of_related_items';
   $handler->display->display_options['fields']['field_number_of_related_items']['label'] = '';
+  $handler->display->display_options['fields']['field_number_of_related_items']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_number_of_related_items']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_number_of_related_items']['alter']['text'] = '[field_number_of_related_items] item(s)';
   $handler->display->display_options['fields']['field_number_of_related_items']['element_label_colon'] = FALSE;
