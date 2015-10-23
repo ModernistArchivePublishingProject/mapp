@@ -4,6 +4,7 @@ package = MAPP
 version = 7.x-1.0
 project = mapp_views
 dependencies[] = mapp_content_types
+dependencies[] = strongarm
 dependencies[] = views
 features[context][] = bibliography
 features[context][] = press_editions
