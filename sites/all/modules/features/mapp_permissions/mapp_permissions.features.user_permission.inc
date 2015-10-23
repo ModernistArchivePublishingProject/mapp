@@ -598,6 +598,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create biblio content'] = array(
     'name' => 'create biblio content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -884,6 +885,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own biblio content'] = array(
     'name' => 'delete own biblio content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1334,6 +1336,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own biblio content'] = array(
     'name' => 'edit own biblio content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -2046,6 +2049,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),

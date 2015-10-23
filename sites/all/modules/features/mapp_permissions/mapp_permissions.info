@@ -1,7 +1,7 @@
 name = MAPP Permissions
 core = 7.x
 package = MAPP
-version = 7.x-1.0-a150813
+version = 7.x-1.0
 project = mapp_permissions
 dependencies[] = admin_menu
 dependencies[] = advanced_help
@@ -258,5 +258,6 @@ features[user_permission][] = view media
 features[user_permission][] = view own unpublished content
 features[user_permission][] = view revisions
 features[user_permission][] = view the administration theme
+features[user_role][] = Student Member
 features[user_role][] = Team Member
 project path = sites/all/modules/features
