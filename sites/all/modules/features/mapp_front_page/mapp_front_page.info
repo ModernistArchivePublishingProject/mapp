@@ -1,0 +1,15 @@
+name = MAPP Front Page
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = empty_front_page
+dependencies[] = views
+features[context][] = front_page
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = front_page_content_feed
+project path = sites/all/modules/features

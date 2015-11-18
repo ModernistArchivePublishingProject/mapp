@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MAPP Front Page feature.
+ */
+
+include_once 'mapp_front_page.features.inc';
