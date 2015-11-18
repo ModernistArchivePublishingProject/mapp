@@ -4967,6 +4967,16 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
   text-align: center;
 }
 
+/* line 45, ../sass/components/views.scss */
+.view-id-front_page_content_feed .views-row {
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  padding-bottom: 10px;
+}
+/* line 49, ../sass/components/views.scss */
+.view-id-front_page_content_feed .views-row-first {
+  border: none;
+}
+
 /**
  * @file
  * Print styling

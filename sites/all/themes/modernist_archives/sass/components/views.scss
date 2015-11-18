@@ -40,3 +40,13 @@
     text-align: center;
   }
 }
+
+.view-id-front_page_content_feed {
+  .views-row {
+    border-top: 1px solid rgba(200,200,200,.5);
+    padding-bottom: 10px;
+  }
+  .views-row-first {
+    border: none;
+  }
+}
