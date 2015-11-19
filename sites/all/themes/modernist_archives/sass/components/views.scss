@@ -28,16 +28,16 @@
 
 .view-works-authored {
   table {
+    width: 100%;
+    th {
+      padding-right: 2em;
+      min-width: 50px;
+    }
     tr {
       td {
-        padding-left: 1em;
         padding-right: 1em;
       }
     }
-  }
-
-  .views-field-title {
-    text-align: center;
   }
 }
 

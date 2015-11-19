@@ -4957,14 +4957,18 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
   width: 100%;
 }
 
-/* line 32, ../sass/components/views.scss */
-.view-works-authored table tr td {
-  padding-left: 1em;
-  padding-right: 1em;
+/* line 30, ../sass/components/views.scss */
+.view-works-authored table {
+  width: 100%;
 }
-/* line 39, ../sass/components/views.scss */
-.view-works-authored .views-field-title {
-  text-align: center;
+/* line 32, ../sass/components/views.scss */
+.view-works-authored table th {
+  padding-right: 2em;
+  min-width: 50px;
+}
+/* line 37, ../sass/components/views.scss */
+.view-works-authored table tr td {
+  padding-right: 1em;
 }
 
 /* line 45, ../sass/components/views.scss */
