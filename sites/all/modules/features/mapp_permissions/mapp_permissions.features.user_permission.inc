@@ -1298,6 +1298,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit biblio authors'] = array(
     'name' => 'edit biblio authors',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
