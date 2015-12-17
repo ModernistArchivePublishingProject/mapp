@@ -31,19 +31,9 @@ class PersonTermMigration extends MAPPMigration {
 class PersonNodeMigration extends MAPPMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->columns = array(
-      'Original Name',
-      'Birth Date',
-      'Death Date',
-      'Birth City',
-      'Birth Nation',
-      'Death City',
-      'Death Nation',
-      'Identifiers'
-    );
     $this->description = t('Migrate Person nodes from CSV');
     $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $this->source = new MigrateSourceCSV($this->path, $this->columns, array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV($this->path, array(), array('header_rows' => 1));
     $this->destination = new MigrateDestinationNode('person');
     $this->map = new MigrateSQLMap($this->machineName,
       array(
@@ -65,6 +55,9 @@ class PersonNodeMigration extends MAPPMigration {
     $this->addFieldMapping('field_death_place', 'Death Nation');
     $this->addFieldMapping('field_death_place:locality', 'Death City');
 
+    // Avoid warnings about unused fields
+    $this->addFieldMapping(NULL, 'Birth Address');
+    $this->addFieldMapping(NULL, 'Death Address');
 // Birth Address       Birth Address
 // Death Address       Death Address
 // Image(s)            Image(s)
