@@ -1,0 +1,17 @@
+name = MAPP Data Import
+description = Import metadata from CSV
+core = 7.x
+
+dependencies[] = migrate
+
+files[] = mapp_data_import.migrate.inc
+files[] = includes/mapp.inc
+files[] = includes/person.inc
+files[] = includes/business.inc
+files[] = includes/library.inc
+files[] = includes/work.inc
+files[] = includes/edition.inc
+files[] = includes/primary_object.inc
+files[] = includes/related_materials.inc
+files[] = includes/correspondence.inc
+
