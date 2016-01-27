@@ -9,8 +9,7 @@ class PersonTermMigration extends MAPPMigration {
     $this->description = t('Migrate Person terms from CSV');
     $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
     $this->source = new MigrateSourceCSV($this->path, $this->columns, array('header_rows' => 1));
-    $this->destination =
-      new MigrateDestinationTerm('field_gender');
+    $this->destination = new MigrateDestinationTerm('field_gender');
 //    field_occupation
     $this->map = new MigrateSQLMap($this->machineName,
       array(
