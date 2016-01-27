@@ -150,3 +150,7 @@ function modernist_archives_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
   }
 }
+
+function modernist_archives_date_combo($variables) {
+  return theme('form_element', $variables);
+}
