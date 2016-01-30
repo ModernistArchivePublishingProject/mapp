@@ -1527,28 +1527,6 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'url',
   );
 
-  // Exported field_base: 'field_narrative'
-  $field_bases['field_narrative'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_narrative',
-    'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'path' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'field_collection',
-  );
-
   // Exported field_base: 'field_number_of_related_items'
   $field_bases['field_number_of_related_items'] = array(
     'active' => 1,
@@ -1848,7 +1826,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_publication_process'
   $field_bases['field_publication_process'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_publication_process',

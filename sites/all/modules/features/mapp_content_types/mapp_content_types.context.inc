@@ -32,8 +32,8 @@ function mapp_content_types_context_default_contexts() {
         'views-works_authored-block' => array(
           'module' => 'views',
           'delta' => 'works_authored-block',
-          'region' => 'content',
-          'weight' => '1',
+          'region' => 'content_supplemental',
+          'weight' => '0',
         ),
       ),
     ),

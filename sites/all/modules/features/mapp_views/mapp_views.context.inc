@@ -33,8 +33,8 @@ function mapp_views_context_default_contexts() {
         'views-bibliography-block' => array(
           'module' => 'views',
           'delta' => 'bibliography-block',
-          'region' => 'content',
-          'weight' => '2',
+          'region' => 'content_supplemental',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -76,8 +76,8 @@ function mapp_views_context_default_contexts() {
         'views-press_related_objects-block' => array(
           'module' => 'views',
           'delta' => 'press_related_objects-block',
-          'region' => 'content',
-          'weight' => '1',
+          'region' => 'content_supplemental',
+          'weight' => '-10',
         ),
       ),
     ),

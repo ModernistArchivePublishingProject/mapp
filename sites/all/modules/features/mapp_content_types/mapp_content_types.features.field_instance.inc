@@ -77,6 +77,7 @@ function mapp_content_types_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -126,6 +127,7 @@ function mapp_content_types_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -796,7 +798,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -836,7 +838,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -873,7 +875,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -916,7 +918,7 @@ function mapp_content_types_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -956,7 +958,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -1010,47 +1012,7 @@ function mapp_content_types_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-business-field_narrative'
-  $field_instances['node-business-field_narrative'] = array(
-    'bundle' => 'business',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_narrative',
-    'label' => 'Narrative',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -1096,7 +1058,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'entityreference_count',
       'settings' => array(),
       'type' => 'entityreference_count_widget',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -1140,7 +1102,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -1184,7 +1146,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1229,7 +1191,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -1660,6 +1622,7 @@ function mapp_content_types_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 9,
@@ -2535,6 +2498,7 @@ function mapp_content_types_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 16,
@@ -4854,6 +4818,7 @@ function mapp_content_types_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -5067,11 +5032,12 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'year_only',
-          'fromto' => 'value',
+          'format_type' => 'long',
+          'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 17,
@@ -5637,7 +5603,6 @@ function mapp_content_types_field_default_field_instances() {
   t('Birth Location');
   t('Birth Place');
   t('Body');
-  t('Call Number');
   t('Call numbers, DOI, indices in bibliographies, and other ways of identifying this work.');
   t('Caption');
   t('Condition');
