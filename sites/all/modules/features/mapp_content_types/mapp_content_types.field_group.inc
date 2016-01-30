@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function mapp_content_types_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -37,7 +37,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_about|node|correspondence|default'] = $field_group;
+  $field_groups['group_about|node|correspondence|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,7 +67,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_about|node|correspondence|form'] = $field_group;
+  $field_groups['group_about|node|correspondence|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -97,7 +97,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_about|node|related_materials|default'] = $field_group;
+  $field_groups['group_about|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -128,7 +128,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_about|node|related_materials|form'] = $field_group;
+  $field_groups['group_about|node|related_materials|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -155,7 +155,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_birth|node|person|default'] = $field_group;
+  $field_groups['group_birth|node|person|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -184,7 +184,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_birth|node|person|form'] = $field_group;
+  $field_groups['group_birth|node|person|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -212,7 +212,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_business|node|business|default'] = $field_group;
+  $field_groups['group_business|node|business|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -239,7 +239,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_death|node|person|default'] = $field_group;
+  $field_groups['group_death|node|person|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -268,7 +268,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_death|node|person|form'] = $field_group;
+  $field_groups['group_death|node|person|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -297,7 +297,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_description|node|business|default'] = $field_group;
+  $field_groups['group_description|node|business|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -330,7 +330,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_details|node|edition|default'] = $field_group;
+  $field_groups['group_details|node|edition|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -364,7 +364,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_details|node|edition|form'] = $field_group;
+  $field_groups['group_details|node|edition|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -393,7 +393,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_libraries|node|bp_book|form'] = $field_group;
+  $field_groups['group_libraries|node|bp_book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -421,7 +421,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_libraries|node|edition|default'] = $field_group;
+  $field_groups['group_libraries|node|edition|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -450,7 +450,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_libraries|node|edition|form'] = $field_group;
+  $field_groups['group_libraries|node|edition|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -478,7 +478,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_libraries|node|primary_object|default'] = $field_group;
+  $field_groups['group_libraries|node|primary_object|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -508,7 +508,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_links|node|edition|default'] = $field_group;
+  $field_groups['group_links|node|edition|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -539,7 +539,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_links|node|edition|form'] = $field_group;
+  $field_groups['group_links|node|edition|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -568,7 +568,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_locations|node|correspondence|default'] = $field_group;
+  $field_groups['group_locations|node|correspondence|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -600,7 +600,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_locations|node|correspondence|form'] = $field_group;
+  $field_groups['group_locations|node|correspondence|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -631,7 +631,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_metadata|node|work|default'] = $field_group;
+  $field_groups['group_metadata|node|work|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -663,7 +663,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_metadata|node|work|form'] = $field_group;
+  $field_groups['group_metadata|node|work|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -690,7 +690,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_people|node|correspondence|default'] = $field_group;
+  $field_groups['group_people|node|correspondence|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -718,7 +718,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_people|node|correspondence|form'] = $field_group;
+  $field_groups['group_people|node|correspondence|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -745,7 +745,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_people|node|work|default'] = $field_group;
+  $field_groups['group_people|node|work|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -775,7 +775,7 @@ function mapp_content_types_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_people|node|work|form'] = $field_group;
+  $field_groups['group_people|node|work|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -802,7 +802,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_publication_process|node|related_materials|default'] = $field_group;
+  $field_groups['group_publication_process|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -830,7 +830,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_publication_process|node|related_materials|form'] = $field_group;
+  $field_groups['group_publication_process|node|related_materials|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -860,7 +860,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_reception|node|material_expression|form'] = $field_group;
+  $field_groups['group_reception|node|material_expression|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -889,7 +889,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_reception|node|primary_object|default'] = $field_group;
+  $field_groups['group_reception|node|primary_object|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -919,7 +919,7 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_resources|node|related_materials|default'] = $field_group;
+  $field_groups['group_resources|node|related_materials|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -950,7 +950,24 @@ function mapp_content_types_field_group_info() {
       ),
     ),
   );
-  $export['group_resources|node|related_materials|form'] = $field_group;
+  $field_groups['group_resources|node|related_materials|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('About');
+  t('Birth');
+  t('Business Information');
+  t('Death');
+  t('Description');
+  t('Details');
+  t('Libraries');
+  t('Links');
+  t('Locations');
+  t('Metadata');
+  t('People');
+  t('Publication Process');
+  t('Reception History');
+  t('Resources');
+
+  return $field_groups;
 }
