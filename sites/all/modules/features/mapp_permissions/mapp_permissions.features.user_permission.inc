@@ -177,17 +177,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'access workbench'.
-  $permissions['access workbench'] = array(
-    'name' => 'access workbench',
-    'roles' => array(
-      'Student Member' => 'Student Member',
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'workbench',
-  );
-
   // Exported permission: 'administer actions'.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
@@ -534,15 +523,6 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'views',
-  );
-
-  // Exported permission: 'administer workbench'.
-  $permissions['administer workbench'] = array(
-    'name' => 'administer workbench',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'workbench',
   );
 
   // Exported permission: 'block IP addresses'.
