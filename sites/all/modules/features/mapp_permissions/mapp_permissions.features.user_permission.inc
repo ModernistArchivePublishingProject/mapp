@@ -14,6 +14,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -24,6 +25,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -97,6 +99,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -609,6 +612,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -619,6 +623,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create business content'] = array(
     'name' => 'create business content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -629,6 +634,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create correspondence content'] = array(
     'name' => 'create correspondence content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -639,6 +645,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create edition content'] = array(
     'name' => 'create edition content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -649,6 +656,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create library content'] = array(
     'name' => 'create library content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -679,6 +687,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create person content'] = array(
     'name' => 'create person content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -689,6 +698,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create primary_object content'] = array(
     'name' => 'create primary_object content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -699,6 +709,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create related_materials content'] = array(
     'name' => 'create related_materials content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -718,6 +729,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['create work content'] = array(
     'name' => 'create work content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -896,6 +908,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own blog content'] = array(
     'name' => 'delete own blog content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -906,6 +919,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own business content'] = array(
     'name' => 'delete own business content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -916,6 +930,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own correspondence content'] = array(
     'name' => 'delete own correspondence content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -926,6 +941,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own edition content'] = array(
     'name' => 'delete own edition content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -936,6 +952,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own library content'] = array(
     'name' => 'delete own library content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -966,6 +983,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own person content'] = array(
     'name' => 'delete own person content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -976,6 +994,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own primary_object content'] = array(
     'name' => 'delete own primary_object content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -986,6 +1005,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own related_materials content'] = array(
     'name' => 'delete own related_materials content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -996,6 +1016,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['delete own work content'] = array(
     'name' => 'delete own work content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1105,7 +1126,9 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in occupation'.
   $permissions['delete terms in occupation'] = array(
     'name' => 'delete terms in occupation',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1132,7 +1155,9 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in relationship_type'.
   $permissions['delete terms in relationship_type'] = array(
     'name' => 'delete terms in relationship_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1348,6 +1373,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own blog content'] = array(
     'name' => 'edit own blog content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1358,6 +1384,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own business content'] = array(
     'name' => 'edit own business content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1378,6 +1405,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own correspondence content'] = array(
     'name' => 'edit own correspondence content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1388,6 +1416,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own edition content'] = array(
     'name' => 'edit own edition content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1398,6 +1427,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own library content'] = array(
     'name' => 'edit own library content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1428,6 +1458,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own person content'] = array(
     'name' => 'edit own person content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1438,6 +1469,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own primary_object content'] = array(
     'name' => 'edit own primary_object content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1448,6 +1480,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own related_materials content'] = array(
     'name' => 'edit own related_materials content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1458,6 +1491,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit own work content'] = array(
     'name' => 'edit own work content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1557,7 +1591,9 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in occupation'.
   $permissions['edit terms in occupation'] = array(
     'name' => 'edit terms in occupation',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1584,7 +1620,9 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in relationship_type'.
   $permissions['edit terms in relationship_type'] = array(
     'name' => 'edit terms in relationship_type',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1831,6 +1869,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1971,6 +2010,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -2061,6 +2101,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
