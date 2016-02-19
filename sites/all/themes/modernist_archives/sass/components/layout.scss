@@ -1,5 +1,4 @@
-@import "zen";
-@import "sassy-buttons";
+
 
 $link-color: #4d71a2;
 $highlight-color: #d36436;
@@ -12,82 +11,40 @@ $break-small: 320px;
 $break-medium: 340px;
 $break-large: 980px;
 
-#header,
-#main,
-#footer {
-	@include zen-grid-container;
-	font-family: 'Open Sans', sans-serif;
-	padding-right: 4em;
-	padding-left: 0em;
-}
 
 #header,
 #main {
 	background-color: $content-bg-color;
 }
 
-#footer {
-	background-color: $footer-bg-color;
+
+#main {
+	width: 80%;
+	margin-left: 20%;
+	background-color: rgb(252, 252, 252);
 }
 
 #content {
-	@include zen-grid-item($zen-column-count, 1);
 	text-align: left;
-	// Because we're absolute positioning the sidebar
-	padding-left: 20px;
+	margin: 0 auto;
+	max-width: 40em;
 }
 
-#main {
-	min-height: 600px;
+
+#navigation {
+	display: none;
 }
 
-#main-menu {
-	@media screen and (min-width: $break-large) {
-		@include zen-grid-item(2, $zen-column-count - 2);
-		margin-top: -100px;
-	}
-	@media screen and (max-width: $break-medium) and (min-width: $break-small) {
-		@include zen-grid-item(3, 1);
-	    margin-top: 40px;
-	}
-	@media screen and (max-width: $break-small) {
-		// @include zen-grid-item(1, 1);
-	    position: absolute;
-	    top: 0;
-	}
-}
 
-nav#main-menu ul li a {
-	padding: .2em 1em;
-}
 
-// style the responsive menu for mobile
-// added by responsive_menus module
-#navigation .responsive-menus.responsified {
-	position: absolute;
-	@include zen-grid-item($zen-column-count, 1);
-	width: 95%;
-	top: 0px;
-}
 
-// #logo img {
-// 	padding-top: 4em;
-// 	@include zen-grid-item(3, 3);
-// 	min-width: 150px;
-// 	@media screen and (max-width: $break-small) {
-// 	    position: absolute;
-// 	    top: 20px;
-// 	    // display: none;
-// 	}
-// }
+
 
 #site-name {
 	margin-top: 10%;
 	padding-left: 10px;
 	@media screen and (max-width: $break-small) {
-		// position: absolute;
 		display: none;
-		// @include zen-grid-item(3, $zen-column-count - 3);
 	}
 }
 #site-name a span {
@@ -99,7 +56,6 @@ nav#main-menu ul li a {
 }
 
 #edit-actions input {
-	@include sassy-button("matte", 10px, 15px, $logo-color);
 }
 
 form#search-block-form {
@@ -116,8 +72,4 @@ form#search-block-form {
 
 body#tinymce {
   background-color: white;
-}
-
-h1#page-title {
-  text-align: center;
 }
