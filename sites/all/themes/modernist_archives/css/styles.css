@@ -97,12 +97,17 @@ body {
 }
 
 /* line 34, ../sass/components/base.scss */
+article {
+  margin-bottom: 5em;
+}
+
+/* line 38, ../sass/components/base.scss */
 p#skip-link {
   margin: 0;
   display: none;
 }
 
-/* line 41, ../sass/components/base.scss */
+/* line 45, ../sass/components/base.scss */
 .mapp-button {
   text-decoration: none;
   text-align: center;
@@ -111,18 +116,18 @@ p#skip-link {
   display: block;
   width: 15%;
 }
-/* line 48, ../sass/components/base.scss */
+/* line 52, ../sass/components/base.scss */
 .mapp-button a {
   color: white;
 }
-/* line 51, ../sass/components/base.scss */
+/* line 55, ../sass/components/base.scss */
 .mapp-button a:hover {
   text-decoration: none !important;
   color: transparent !important;
 }
 
 /* Contact */
-/* line 61, ../sass/components/base.scss */
+/* line 65, ../sass/components/base.scss */
 input, textarea {
   height: 3em;
   border-radius: 2px;
@@ -135,24 +140,24 @@ input, textarea {
   font-weight: 300;
 }
 
-/* line 73, ../sass/components/base.scss */
+/* line 77, ../sass/components/base.scss */
 textarea {
   height: 6em;
   resize: vertical;
 }
 
-/* line 78, ../sass/components/base.scss */
+/* line 82, ../sass/components/base.scss */
 label {
   margin-top: 1.5em;
   display: block;
 }
 
-/* line 83, ../sass/components/base.scss */
+/* line 87, ../sass/components/base.scss */
 .form-required {
   color: red;
 }
 
-/* line 87, ../sass/components/base.scss */
+/* line 91, ../sass/components/base.scss */
 input[type="submit"] {
   margin-top: 3em;
   color: white;
@@ -163,13 +168,13 @@ input[type="submit"] {
   padding: 0.25em 1em;
   font-size: 1em;
 }
-/* line 96, ../sass/components/base.scss */
+/* line 100, ../sass/components/base.scss */
 input[type="submit"]:hover {
   background-color: #b04f26;
 }
 
 /* Bibolography */
-/* line 103, ../sass/components/base.scss */
+/* line 107, ../sass/components/base.scss */
 .biblio-separator-bar {
   margin: 1.5em 0 0.5em 0;
   border: none;
@@ -180,41 +185,50 @@ input[type="submit"]:hover {
   color: #d36436;
 }
 
-/* line 113, ../sass/components/base.scss */
+/* line 117, ../sass/components/base.scss */
 .biblio-entry {
   margin-top: 0.75em;
 }
 
-/* line 117, ../sass/components/base.scss */
+/* line 121, ../sass/components/base.scss */
 .biblio-export {
   float: right;
 }
 
-/* line 122, ../sass/components/base.scss */
+/* line 125, ../sass/components/base.scss */
+ul.pager {
+  margin-top: 1em;
+}
+/* line 127, ../sass/components/base.scss */
 ul.pager li {
   display: inline-block;
 }
-/* line 124, ../sass/components/base.scss */
+/* line 129, ../sass/components/base.scss */
 ul.pager li.pager-current {
   color: #4d71a2;
   font-weight: 600;
 }
 
+/* line 136, ../sass/components/base.scss */
+.views-field-citation {
+  margin-top: 1em;
+}
+
 /* Footer */
-/* line 133, ../sass/components/base.scss */
+/* line 142, ../sass/components/base.scss */
 #footer {
   background-color: whitesmoke;
   padding: 1em;
   margin-top: 2em;
 }
-/* line 138, ../sass/components/base.scss */
+/* line 147, ../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
 
 /* Hacks */
-/* line 152, ../sass/components/base.scss */
+/* line 161, ../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
@@ -309,6 +323,66 @@ a:hover {
   text-decoration: none;
   border-bottom: 1px dotted;
   border-color: #2c415d;
+}
+
+/* line 80, ../sass/components/typography.scss */
+pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
+/* line 86, ../sass/components/typography.scss */
+.block-title {
+  text-align: left;
+  border-top: 1px dotted #969696;
+  width: auto;
+  margin: 2em 0 1em 0;
+  padding: 0.5em 0 0 0;
+  float: none;
+  display: block;
+}
+
+/* line 100, ../sass/components/typography.scss */
+.view-press-related-objects table thead tr {
+  border-bottom: 1px solid #141414;
+}
+/* line 102, ../sass/components/typography.scss */
+.view-press-related-objects table thead tr th {
+  padding: 0.25em 0.5em 0.25em 0;
+  font-weight: 600;
+}
+/* line 109, ../sass/components/typography.scss */
+.view-press-related-objects table tbody tr {
+  border-bottom: 1px solid #969696;
+}
+/* line 111, ../sass/components/typography.scss */
+.view-press-related-objects table tbody tr td {
+  padding: 0.25em 0;
+}
+/* line 113, ../sass/components/typography.scss */
+.view-press-related-objects table tbody tr td p {
+  margin: 0;
+}
+/* line 116, ../sass/components/typography.scss */
+.view-press-related-objects table tbody tr td br {
+  display: none;
+}
+
+/* line 127, ../sass/components/typography.scss */
+fieldset {
+  border: 1px dotted #969696;
+  margin: 2em 0 1em 0;
+  padding: 1em;
+  display: block;
+  position: relative;
+}
+/* line 134, ../sass/components/typography.scss */
+fieldset legend {
+  font-weight: 600;
+  font-size: 1.2em;
+  display: block;
+  position: relative;
+  padding: 0 1em;
 }
 
 /* line 15, ../sass/components/layout.scss */
@@ -427,41 +501,23 @@ a#enter:hover {
   text-decoration: none;
 }
 
-/* line 43, ../sass/components/modules.scss */
-.block-title {
-  text-align: center;
-  border-top: 1px solid #58585a;
-  float: left;
-  width: 128.57143%;
-  margin-left: -14.28571%;
-  margin-right: -114.28571%;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  float: none;
-}
-
-/* line 51, ../sass/components/modules.scss */
+/* line 44, ../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 58, ../sass/components/modules.scss */
+/* line 51, ../sass/components/modules.scss */
 .profile-picture {
   float: right;
   margin: 1em 1em 1em 1em;
 }
 
-/* line 69, ../sass/components/modules.scss */
+/* line 62, ../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 73, ../sass/components/modules.scss */
+/* line 66, ../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -469,40 +525,40 @@ a#enter:hover {
   width: 20%;
 }
 
-/* line 87, ../sass/components/modules.scss */
+/* line 80, ../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 93, ../sass/components/modules.scss */
+/* line 86, ../sass/components/modules.scss */
 article.node-press img {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 100, ../sass/components/modules.scss */
+/* line 93, ../sass/components/modules.scss */
 article.node-press h3.field-label {
   clear: left;
 }
 
-/* line 104, ../sass/components/modules.scss */
+/* line 97, ../sass/components/modules.scss */
 article.node-press cite {
   margin-top: 50px;
 }
 
-/* line 108, ../sass/components/modules.scss */
+/* line 101, ../sass/components/modules.scss */
 div.view-presses div.views-field-title {
   text-align: center;
 }
 
-/* line 112, ../sass/components/modules.scss */
+/* line 105, ../sass/components/modules.scss */
 li.comment_forbidden {
   display: block;
   padding-top: 50px;
 }
 
-/* line 117, ../sass/components/modules.scss */
+/* line 110, ../sass/components/modules.scss */
 pre {
   font-family: inherit;
 }

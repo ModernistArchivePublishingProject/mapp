@@ -40,13 +40,6 @@ a#enter:hover {
 }
 
 
-.block-title {
-	text-align: center;
-	border-top: 1px solid $background_color;
-	@include zen-grid-item($zen-column-count + 2, 0);
-	float: none;
-}
-
 
 .view-id-team .view-content .views-row {
 	overflow: hidden;

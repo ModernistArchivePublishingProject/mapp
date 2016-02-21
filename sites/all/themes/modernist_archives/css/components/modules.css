@@ -50,41 +50,23 @@ a#enter:hover {
   text-decoration: none;
 }
 
-/* line 43, ../../sass/components/modules.scss */
-.block-title {
-  text-align: center;
-  border-top: 1px solid #58585a;
-  float: left;
-  width: 300%;
-  margin-left: -100%;
-  margin-right: -200%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  float: none;
-}
-
-/* line 51, ../../sass/components/modules.scss */
+/* line 44, ../../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 58, ../../sass/components/modules.scss */
+/* line 51, ../../sass/components/modules.scss */
 .profile-picture {
   float: right;
   margin: 1em 1em 1em 1em;
 }
 
-/* line 69, ../../sass/components/modules.scss */
+/* line 62, ../../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 73, ../../sass/components/modules.scss */
+/* line 66, ../../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -92,40 +74,40 @@ a#enter:hover {
   width: 20%;
 }
 
-/* line 87, ../../sass/components/modules.scss */
+/* line 80, ../../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 93, ../../sass/components/modules.scss */
+/* line 86, ../../sass/components/modules.scss */
 article.node-press img {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 100, ../../sass/components/modules.scss */
+/* line 93, ../../sass/components/modules.scss */
 article.node-press h3.field-label {
   clear: left;
 }
 
-/* line 104, ../../sass/components/modules.scss */
+/* line 97, ../../sass/components/modules.scss */
 article.node-press cite {
   margin-top: 50px;
 }
 
-/* line 108, ../../sass/components/modules.scss */
+/* line 101, ../../sass/components/modules.scss */
 div.view-presses div.views-field-title {
   text-align: center;
 }
 
-/* line 112, ../../sass/components/modules.scss */
+/* line 105, ../../sass/components/modules.scss */
 li.comment_forbidden {
   display: block;
   padding-top: 50px;
 }
 
-/* line 117, ../../sass/components/modules.scss */
+/* line 110, ../../sass/components/modules.scss */
 pre {
   font-family: inherit;
 }

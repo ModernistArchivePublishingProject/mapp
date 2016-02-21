@@ -31,6 +31,10 @@ body {
   background-color: rgb(252, 252, 252);
 }
 
+article {
+  margin-bottom: 5em;
+}
+
 p#skip-link {
   margin: 0;
   display: none;
@@ -119,6 +123,7 @@ input[type="submit"] {
 }
 
 ul.pager {
+  margin-top: 1em;
   li {
     display: inline-block;
     &.pager-current {
@@ -126,6 +131,10 @@ ul.pager {
       font-weight: 600;
     }
   }
+}
+
+.views-field-citation {
+  margin-top: 1em;
 }
 
 /* Footer */ 
