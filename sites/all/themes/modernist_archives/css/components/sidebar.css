@@ -1,28 +1,79 @@
 /* line 8, ../../sass/components/sidebar.scss */
 section.region-sidebar-first {
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 2em;
+  box-sizing: border-box;
+  width: 20%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 0;
   background-color: #d36436;
+  overflow-y: auto;
 }
-/* line 15, ../../sass/components/sidebar.scss */
+/* line 18, ../../sass/components/sidebar.scss */
 section.region-sidebar-first img.header__logo-image {
-  padding-bottom: 10px;
-  width: 90%;
+  width: 80%;
+  margin-bottom: 24px;
 }
-/* line 20, ../../sass/components/sidebar.scss */
+/* line 22, ../../sass/components/sidebar.scss */
+section.region-sidebar-first a.header__logo:hover {
+  border-bottom: none;
+}
+/* line 26, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 22, ../../sass/components/sidebar.scss */
+/* line 28, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
+  font-size: 1.2em;
+  line-height: 0.9em;
+  margin-bottom: 0.5em;
   font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
 }
-/* line 26, ../../sass/components/sidebar.scss */
+/* line 37, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
+}
+/* line 39, ../../sass/components/sidebar.scss */
+section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a:hover {
+  color: #e5a58a;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  /* line 51, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first.column.sidebar {
+    width: 25%;
+  }
+}
+@media (max-width: 800px) {
+  /* line 57, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first.column.sidebar {
+    width: 30%;
+  }
+}
+@media (max-width: 660px) {
+  /* line 63, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first.column.sidebar {
+    width: 35%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 69, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first.column.sidebar {
+    width: 100%;
+    position: relative;
+    display: block;
+    height: auto;
+  }
+  /* line 74, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first.column.sidebar img.header__logo-image {
+    width: 50%;
+    margin-bottom: 24px;
+  }
 }

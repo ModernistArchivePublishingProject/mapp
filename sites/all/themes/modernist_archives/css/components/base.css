@@ -6,52 +6,28 @@
  * Mike Widner <mikewidner@gmail.com>
  *
  **/
-@import url("http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans");
-/* line 27, ../../sass/components/base.scss */
+/* line 26, ../../sass/components/base.scss */
 body {
-  background-color: #58585a;
+  font-family: "Roboto", sans-serf;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6em;
+  background-color: #fcfcfc;
 }
 
-/* line 31, ../../sass/components/base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quattrocento Sans', sans-serif;
+/* line 34, ../../sass/components/base.scss */
+article {
+  margin-bottom: 5em;
 }
 
-/* line 35, ../../sass/components/base.scss */
-a {
-  text-decoration: none;
-  color: #4d71a2;
-}
-
-/* line 40, ../../sass/components/base.scss */
-a:hover {
-  color: #d36436;
-  text-decoration: underline;
+/* line 38, ../../sass/components/base.scss */
+p#skip-link {
+  margin: 0;
+  display: none;
 }
 
 /* line 45, ../../sass/components/base.scss */
 .mapp-button {
-  font-size: 19px;
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d36436), color-stop(100%, #b04f26));
-  background: -webkit-linear-gradient(#d36436, #b04f26);
-  background: -moz-linear-gradient(#d36436, #b04f26);
-  background: -o-linear-gradient(#d36436, #b04f26);
-  background: linear-gradient(#d36436, #b04f26);
-  -webkit-box-shadow: #e19475 0 1px 0 inset;
-  -moz-box-shadow: #e19475 0 1px 0 inset;
-  box-shadow: #e19475 0 1px 0 inset;
-  border: 1px solid #9b4522;
-  color: white;
-  text-shadow: #6d3118 0 -1px 0;
   text-decoration: none;
   text-align: center;
   margin-left: auto;
@@ -59,46 +35,119 @@ a:hover {
   display: block;
   width: 15%;
 }
-/* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.mapp-button:hover {
-  text-decoration: none;
-}
-/* line 36, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.mapp-button:hover {
-  background-color: #9b4522;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4582b), color-stop(100%, #9b4522));
-  background: -webkit-linear-gradient(#c4582b, #9b4522);
-  background: -moz-linear-gradient(#c4582b, #9b4522);
-  background: -o-linear-gradient(#c4582b, #9b4522);
-  background: linear-gradient(#c4582b, #9b4522);
-}
-/* line 39, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.mapp-button:active {
-  -webkit-box-shadow: #8e401f 0 1px 2px inset;
-  -moz-box-shadow: #8e401f 0 1px 2px inset;
-  box-shadow: #8e401f 0 1px 2px inset;
-}
-/* line 6, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.mapp-button.disabled, .mapp-button[disabled] {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  background: #b04f26;
-  cursor: default;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-/* line 74, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
-.mapp-button::-moz-focus-inner {
-  padding: 0 !important;
-  margin: -1px !important;
-}
-/* line 53, ../../sass/components/base.scss */
+/* line 52, ../../sass/components/base.scss */
 .mapp-button a {
   color: white;
 }
-/* line 56, ../../sass/components/base.scss */
+/* line 55, ../../sass/components/base.scss */
 .mapp-button a:hover {
   text-decoration: none !important;
   color: transparent !important;
+}
+
+/* Contact */
+/* line 65, ../../sass/components/base.scss */
+input, textarea {
+  height: 3em;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #e6e6e6;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.25em;
+  font-family: "Roboto", sans-serf;
+  font-weight: 300;
+}
+
+/* line 77, ../../sass/components/base.scss */
+textarea {
+  height: 6em;
+  resize: vertical;
+}
+
+/* line 82, ../../sass/components/base.scss */
+label {
+  margin-top: 1.5em;
+  display: block;
+}
+
+/* line 87, ../../sass/components/base.scss */
+.form-required {
+  color: red;
+}
+
+/* line 91, ../../sass/components/base.scss */
+input[type="submit"] {
+  margin-top: 3em;
+  color: white;
+  border-radius: 2px;
+  border: 1px solid #d36436;
+  background-color: #d36436;
+  width: auto;
+  padding: 0.25em 1em;
+  font-size: 1em;
+}
+/* line 100, ../../sass/components/base.scss */
+input[type="submit"]:hover {
+  background-color: #b04f26;
+}
+
+/* Bibolography */
+/* line 107, ../../sass/components/base.scss */
+.biblio-separator-bar {
+  margin: 1.5em 0 0.5em 0;
+  border: none;
+  background-color: transparent;
+  border-top: 1px dotted #c8c8c8;
+  padding: 0.5em 0 0 0;
+  font-weight: 600;
+  color: #d36436;
+}
+
+/* line 117, ../../sass/components/base.scss */
+.biblio-entry {
+  margin-top: 0.75em;
+}
+
+/* line 121, ../../sass/components/base.scss */
+.biblio-export {
+  float: right;
+}
+
+/* line 125, ../../sass/components/base.scss */
+ul.pager {
+  margin-top: 1em;
+}
+/* line 127, ../../sass/components/base.scss */
+ul.pager li {
+  display: inline-block;
+}
+/* line 129, ../../sass/components/base.scss */
+ul.pager li.pager-current {
+  color: #4d71a2;
+  font-weight: 600;
+}
+
+/* line 136, ../../sass/components/base.scss */
+.views-field-citation {
+  margin-top: 1em;
+}
+
+/* Footer */
+/* line 142, ../../sass/components/base.scss */
+#footer {
+  background-color: whitesmoke;
+  padding: 1em;
+  margin-top: 2em;
+}
+/* line 147, ../../sass/components/base.scss */
+#footer block p {
+  text-align: right !important;
+  margin-top: 0px;
+}
+
+/* Hacks */
+/* line 161, ../../sass/components/base.scss */
+.block-menu .block__title {
+  display: none;
 }

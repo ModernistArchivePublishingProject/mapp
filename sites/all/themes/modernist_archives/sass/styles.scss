@@ -7,27 +7,30 @@
  */
 
 /* Import Sass mixins, variables, Compass modules, etc. */
-@import "init";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+/* @import "init";
+/* @import "font-awesome-sprockets";
+/* @import "font-awesome"; */
 
 /* HTML element (SMACSS base) rules */
-@import "normalize";
+/* @import "normalize"; */
 
 /* Layout rules */
-@import "layouts/responsive";
+/* @import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
-@import "components/misc";
-// Optionally, add your own components here.
+/* @import "components/misc";
+// Optionally, add your own components here. */
 
+@import "reset";
+@import "components/variables";
 @import "components/base";
+@import "components/typography";
 @import "components/layout";
 @import "components/modules";
 @import "components/sidebar";
 @import "components/views";
 
-@import "print";
+/* @import "print";
 
 /* SMACSS theme rules */
 /* @import "theme-A"; */
