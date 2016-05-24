@@ -1283,6 +1283,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any person content'] = array(
     'name' => 'edit any person content',
     'roles' => array(
+      'Student Member' => 'Student Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
