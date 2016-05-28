@@ -263,7 +263,7 @@ function mapp_content_types_taxonomy_default_vocabularies() {
       ),
     ),
     'publication_process' => array(
-      'name' => 'Publication Process',
+      'name' => 'Kind',
       'machine_name' => 'publication_process',
       'description' => '',
       'hierarchy' => 0,
