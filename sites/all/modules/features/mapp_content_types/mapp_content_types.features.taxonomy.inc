@@ -9,6 +9,29 @@
  */
 function mapp_content_types_taxonomy_default_vocabularies() {
   return array(
+    'business_relationship_type' => array(
+      'name' => 'Business Relationship Type',
+      'machine_name' => 'business_relationship_type',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'business_type' => array(
       'name' => 'Business Type',
       'machine_name' => 'business_type',
