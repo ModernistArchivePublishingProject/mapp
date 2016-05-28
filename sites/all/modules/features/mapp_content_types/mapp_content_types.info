@@ -213,7 +213,6 @@ features[field_instance][] = node-edition-field_identifier
 features[field_instance][] = node-edition-field_illustrator
 features[field_instance][] = node-edition-field_images
 features[field_instance][] = node-edition-field_language
-features[field_instance][] = node-edition-field_library
 features[field_instance][] = node-edition-field_link_digitized
 features[field_instance][] = node-edition-field_pages
 features[field_instance][] = node-edition-field_price
