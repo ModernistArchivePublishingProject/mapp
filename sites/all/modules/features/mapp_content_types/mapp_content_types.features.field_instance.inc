@@ -716,7 +716,9 @@ function mapp_content_types_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -1954,47 +1956,6 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'addressfield_standard',
       'weight' => 18,
-    ),
-  );
-
-  // Exported field_instance: 'node-correspondence-field_tags'.
-  $field_instances['node-correspondence-field_tags'] = array(
-    'bundle' => 'correspondence',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'dt',
-    'field_name' => 'field_tags',
-    'label' => 'Themes',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
     ),
   );
 
@@ -4983,47 +4944,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-related_materials-field_tags'.
-  $field_instances['node-related_materials-field_tags'] = array(
-    'bundle' => 'related_materials',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'dt',
-    'field_name' => 'field_tags',
-    'label' => 'Themes',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-work-field_author'.
   $field_instances['node-work-field_author'] = array(
     'bundle' => 'work',
@@ -5770,7 +5690,6 @@ function mapp_content_types_field_default_field_instances() {
   t('The library that holds this correspondence.');
   t('The link to the partner\'s website');
   t('The original language in which the work was written.');
-  t('Themes');
   t('Translator');
   t('Type');
   t('Type of Edition');
