@@ -761,6 +761,50 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-biblio-field_further_reading'.
+  $field_instances['node-biblio-field_further_reading'] = array(
+    'bundle' => 'biblio',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Associate this bibliographic item with an entity in the MAPP database. Used to create "Further Reading" lists.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_further_reading',
+    'label' => 'Further Reading For',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-business-field_bibliographic_item'.
   $field_instances['node-business-field_bibliographic_item'] = array(
     'bundle' => 'business',
@@ -5635,6 +5679,7 @@ function mapp_content_types_field_default_field_instances() {
   t('An object to which this letter refers. May be a person, library, book, work, publisher, etc.');
   t('Annotations');
   t('Any images of the book.');
+  t('Associate this bibliographic item with an entity in the MAPP database. Used to create "Further Reading" lists.');
   t('Author');
   t('Authored By');
   t('Authority Record');
@@ -5666,6 +5711,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Edited By');
   t('Edition');
   t('Editor');
+  t('Further Reading For');
   t('Gender');
   t('Genre');
   t('Geocoded From');
