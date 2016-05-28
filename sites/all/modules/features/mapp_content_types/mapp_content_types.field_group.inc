@@ -168,7 +168,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Birth',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_birth_location',
       1 => 'field_birth_place',
@@ -252,7 +252,7 @@ function mapp_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Death',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_death_location',
       1 => 'field_death_place',
