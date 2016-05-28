@@ -1126,6 +1126,7 @@ function mapp_content_types_field_default_field_instances() {
     'label' => 'Number of Related Items',
     'required' => 0,
     'settings' => array(
+      'allowed_bundles' => array(),
       'count_only_published' => 1,
       'counted_reference_fields' => array(
         'field_illustrator' => 'field_illustrator',

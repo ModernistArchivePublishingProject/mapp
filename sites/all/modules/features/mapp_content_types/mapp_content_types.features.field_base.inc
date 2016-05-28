@@ -2230,6 +2230,7 @@ function mapp_content_types_field_default_field_bases() {
         'target_bundles' => array(
           'business' => 'business',
           'library' => 'library',
+          'person' => 'person',
         ),
       ),
       'target_type' => 'node',
