@@ -835,50 +835,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-biblio-field_further_reading'.
-  $field_instances['node-biblio-field_further_reading'] = array(
-    'bundle' => 'biblio',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Associate this bibliographic item with an entity in the MAPP database. Used to create "Further Reading" lists.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
-    'field_name' => 'field_further_reading',
-    'label' => 'Further Reading For',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'node-business-field_bibliographic_item'.
   $field_instances['node-business-field_bibliographic_item'] = array(
     'bundle' => 'business',
@@ -3136,7 +3092,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
     'field_name' => 'field_bibliographic_item',
-    'label' => 'Bibliographic Item',
+    'label' => 'Further Reading',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3697,60 +3653,6 @@ function mapp_content_types_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-person-field_images'.
-  $field_instances['node-person-field_images'] = array(
-    'bundle' => 'person',
-    'deleted' => 0,
-    'description' => 'Images of this person.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'default',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'figure',
-    'field_name' => 'field_images',
-    'label' => 'Image(s)',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'jpg jpeg png',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 4,
     ),
   );
 
@@ -5711,7 +5613,6 @@ function mapp_content_types_field_default_field_instances() {
   t('An object to which this letter refers. May be a person, library, book, work, publisher, etc.');
   t('Annotations');
   t('Any images of the book.');
-  t('Associate this bibliographic item with an entity in the MAPP database. Used to create "Further Reading" lists.');
   t('Author');
   t('Authored By');
   t('Authority Record');
@@ -5745,7 +5646,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Edited By');
   t('Edition');
   t('Editor');
-  t('Further Reading For');
+  t('Further Reading');
   t('Gender');
   t('Genre');
   t('Geocoded From');
@@ -5755,7 +5656,6 @@ function mapp_content_types_field_default_field_instances() {
   t('Illustrator');
   t('Image');
   t('Image(s)');
-  t('Images of this person.');
   t('Impression');
   t('Language');
   t('Library');
