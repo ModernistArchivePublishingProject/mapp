@@ -13,6 +13,38 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|business|form';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'business';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_website',
+      1 => 'field_business_type',
+      2 => 'field_bibliographic_item',
+      3 => 'field_fc_images',
+      4 => 'field_narrative',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_about|node|business|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|correspondence|default';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -894,6 +926,35 @@ function mapp_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_relationships|node|business|form';
+  $field_group->group_name = 'group_relationships';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'business';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Relationships',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_person_involved',
+      1 => 'field_business_relationship',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-relationships field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_relationships|node|business|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_resources|node|related_materials|default';
   $field_group->group_name = 'group_resources';
   $field_group->entity_type = 'node';
@@ -967,6 +1028,7 @@ function mapp_content_types_field_group_info() {
   t('People');
   t('Publication Process');
   t('Reception History');
+  t('Relationships');
   t('Resources');
 
   return $field_groups;
