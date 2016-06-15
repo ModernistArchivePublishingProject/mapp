@@ -1214,6 +1214,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any blog content'] = array(
     'name' => 'edit any blog content',
     'roles' => array(
+      'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
