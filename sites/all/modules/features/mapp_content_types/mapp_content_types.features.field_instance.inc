@@ -703,6 +703,121 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_identifier'.
+  $field_instances['field_collection_item-field_library_identifier-field_identifier'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_identifier',
+    'label' => 'Identifier',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_library'.
+  $field_instances['field_collection_item-field_library_identifier-field_library'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_library',
+    'label' => 'Library',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_link_digitized'.
+  $field_instances['field_collection_item-field_library_identifier-field_link_digitized'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'url',
+        'settings' => array(
+          'nofollow' => FALSE,
+          'trim_length' => 80,
+        ),
+        'type' => 'url_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_link_digitized',
+    'label' => 'Link(s) to Digitized Materials',
+    'required' => 0,
+    'settings' => array(
+      'title_fetch' => 0,
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'url',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'url_external',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_narrative-field_authored_by'.
   $field_instances['field_collection_item-field_narrative-field_authored_by'] = array(
     'bundle' => 'field_narrative',
@@ -2094,47 +2209,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-edition-field_identifier'.
-  $field_instances['node-edition-field_identifier'] = array(
-    'bundle' => 'edition',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'cite',
-    'field_name' => 'field_identifier',
-    'label' => 'Identifier',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-edition-field_illustrator'.
   $field_instances['node-edition-field_illustrator'] = array(
     'bundle' => 'edition',
@@ -2220,8 +2294,8 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-edition-field_link_digitized'.
-  $field_instances['node-edition-field_link_digitized'] = array(
+  // Exported field_instance: 'node-edition-field_library_identifier'.
+  $field_instances['node-edition-field_library_identifier'] = array(
     'bundle' => 'edition',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2229,13 +2303,12 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'url',
+        'module' => 'field_collection',
         'settings' => array(
-          'nofollow' => FALSE,
-          'trim_length' => 80,
+          'view_mode' => 'full',
         ),
-        'type' => 'url_default',
-        'weight' => 11,
+        'type' => 'field_collection_fields',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2246,22 +2319,18 @@ function mapp_content_types_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
-    'field_name' => 'field_link_digitized',
-    'label' => 'Link(s) to Digitized Materials',
+    'field_name' => 'field_library_identifier',
+    'label' => 'Libraries',
     'required' => 0,
     'settings' => array(
-      'title_fetch' => 0,
-      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'url',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'url_external',
-      'weight' => 9,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 7,
     ),
   );
 
@@ -5481,6 +5550,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Image(s)');
   t('Impression');
   t('Language');
+  t('Libraries');
   t('Library');
   t('Library Catalog');
   t('Link(s) to Digitized Materials');

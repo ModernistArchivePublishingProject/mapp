@@ -559,7 +559,8 @@ function mapp_content_types_field_group_info() {
       1 => 'field_printer',
       2 => 'field_publisher',
       3 => 'field_work',
-      4 => 'group_libraries',
+      4 => 'field_library_identifier',
+      5 => 'group_libraries',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
