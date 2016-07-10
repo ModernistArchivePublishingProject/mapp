@@ -179,6 +179,7 @@ function mapp_content_types_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'business' => 'business',
           'person' => 'person',
         ),
       ),
@@ -2248,6 +2249,7 @@ function mapp_content_types_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'business' => 'business',
           'person' => 'person',
         ),
       ),

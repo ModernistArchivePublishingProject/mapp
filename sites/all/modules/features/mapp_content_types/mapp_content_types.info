@@ -271,7 +271,6 @@ features[field_instance][] = node-primary_object-field_marginalia
 features[field_instance][] = node-primary_object-field_owner
 features[field_instance][] = node-primary_object-field_reader
 features[field_instance][] = node-primary_object-field_tei
-features[field_instance][] = node-related_materials-field_author
 features[field_instance][] = node-related_materials-field_description
 features[field_instance][] = node-related_materials-field_fc_images
 features[field_instance][] = node-related_materials-field_file_attachments
