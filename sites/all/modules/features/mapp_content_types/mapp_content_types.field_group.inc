@@ -143,10 +143,10 @@ function mapp_content_types_field_group_info() {
     'label' => 'About',
     'weight' => '1',
     'children' => array(
-      0 => 'field_author',
-      1 => 'field_description',
-      2 => 'field_genre',
-      3 => 'field_publication_date',
+      0 => 'field_description',
+      1 => 'field_genre',
+      2 => 'field_publication_date',
+      3 => 'field_date_variable',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

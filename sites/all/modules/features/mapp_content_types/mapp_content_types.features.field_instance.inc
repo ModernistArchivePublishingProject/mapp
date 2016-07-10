@@ -422,45 +422,6 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_coll_biography-field_authored_by'.
-  $field_instances['field_collection_item-field_coll_biography-field_authored_by'] = array(
-    'bundle' => 'field_coll_biography',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'cite',
-    'field_name' => 'field_authored_by',
-    'label' => 'Authored By',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
   // 'field_collection_item-field_coll_biography-field_biography'.
   $field_instances['field_collection_item-field_coll_biography-field_biography'] = array(
     'bundle' => 'field_coll_biography',
@@ -499,8 +460,8 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_coll_biography-field_edited_by'.
-  $field_instances['field_collection_item-field_coll_biography-field_edited_by'] = array(
+  // 'field_collection_item-field_coll_biography-field_content_authored_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_content_authored_by'] = array(
     'bundle' => 'field_coll_biography',
     'default_value' => NULL,
     'deleted' => 0,
@@ -508,32 +469,214 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_authored_by',
+    'label' => 'Authored By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_content_edited_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_content_edited_by'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'cite',
-    'field_name' => 'field_edited_by',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_edited_by',
     'label' => 'Edited By',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
+      'active' => 0,
+      'module' => 'taxonomy',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_date_variable-field_approximate_date'.
+  $field_instances['field_collection_item-field_date_variable-field_approximate_date'] = array(
+    'bundle' => 'field_date_variable',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_approximate_date',
+    'label' => 'Approximate Date',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 1,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 1,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_date_variable-field_publication_date'.
+  $field_instances['field_collection_item-field_date_variable-field_publication_date'] = array(
+    'bundle' => 'field_date_variable',
+    'deleted' => 0,
+    'description' => 'If you know the precise date, use this field. If your date is approximate, use the "Approximate Date" field instead.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_publication_date',
+    'label' => 'Date Created',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 2,
     ),
   );
 
@@ -818,8 +961,8 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_narrative-field_authored_by'.
-  $field_instances['field_collection_item-field_narrative-field_authored_by'] = array(
+  // 'field_collection_item-field_narrative-field_content_authored_by'.
+  $field_instances['field_collection_item-field_narrative-field_content_authored_by'] = array(
     'bundle' => 'field_narrative',
     'default_value' => NULL,
     'deleted' => 0,
@@ -827,32 +970,65 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_authored_by',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_authored_by',
     'label' => 'Authored By',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
+      'active' => 0,
+      'module' => 'taxonomy',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 1,
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_narrative-field_content_edited_by'.
+  $field_instances['field_collection_item-field_narrative-field_content_edited_by'] = array(
+    'bundle' => 'field_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_edited_by',
+    'label' => 'Edited By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 6,
     ),
   );
 
@@ -891,45 +1067,6 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_narrative-field_edited_by'.
-  $field_instances['field_collection_item-field_narrative-field_edited_by'] = array(
-    'bundle' => 'field_narrative',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_edited_by',
-    'label' => 'Edited By',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 2,
     ),
   );
 
@@ -4671,6 +4808,46 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-related_materials-field_date_variable'.
+  $field_instances['node-related_materials-field_date_variable'] = array(
+    'bundle' => 'related_materials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_date_variable',
+    'label' => 'Date Created',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-related_materials-field_description'.
   $field_instances['node-related_materials-field_description'] = array(
     'bundle' => 'related_materials',
@@ -4840,7 +5017,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -5861,6 +6038,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Geocoded To');
   t('History');
   t('Identifier');
+  t('If you know the precise date, use this field. If your date is approximate, use the "Approximate Date" field instead.');
   t('If you\'re unsure of the dates or have a fuzzy date or range of dates, use this field instead of the more precise "date" fields.');
   t('Illustrator');
   t('Image');
