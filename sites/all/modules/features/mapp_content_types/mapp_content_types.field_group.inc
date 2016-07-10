@@ -87,7 +87,6 @@ function mapp_content_types_field_group_info() {
       0 => 'field_correspondence_type',
       1 => 'field_publication_date',
       2 => 'field_related_to',
-      3 => 'field_tags',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -148,7 +147,6 @@ function mapp_content_types_field_group_info() {
       1 => 'field_description',
       2 => 'field_genre',
       3 => 'field_publication_date',
-      4 => 'field_tags',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -560,7 +558,6 @@ function mapp_content_types_field_group_info() {
       2 => 'field_publisher',
       3 => 'field_work',
       4 => 'field_library_identifier',
-      5 => 'group_libraries',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -996,11 +993,10 @@ function mapp_content_types_field_group_info() {
     'label' => 'Resources',
     'weight' => '3',
     'children' => array(
-      0 => 'field_images',
-      1 => 'field_library',
-      2 => 'field_link_digitized',
-      3 => 'field_identifier',
-      4 => 'field_fc_images',
+      0 => 'field_library',
+      1 => 'field_link_digitized',
+      2 => 'field_identifier',
+      3 => 'field_fc_images',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
