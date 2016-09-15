@@ -18,24 +18,30 @@ class PersonNodeMigration extends MAPPMigration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+
+    // Simple mappings
     $this->addFieldMapping('title', 'Original Name');
-    $this->addFieldMapping('field_name_authority:url', 'Identifiers');
+    $this->addFieldMapping('field_name_authority', 'Identifiers');
     $this->addFieldMapping('field_birth_date:year', 'Birth Date');
     $this->addFieldMapping('field_death_date:year', 'Death Date');
 
     $this->addFieldMapping('field_birth_place', 'Birth Nation');
     $this->addFieldMapping('field_birth_place:locality', 'Birth City');
+    $this->addFieldMapping('field_birth_place:thoroughfare', 'Birth Address');
     $this->addFieldMapping('field_death_place', 'Death Nation');
     $this->addFieldMapping('field_death_place:locality', 'Death City');
+    $this->addFieldMapping('field_death_place:thoroughfare', 'Death Address');
 
-    // Avoid warnings about unused fields
-    $this->addFieldMapping(NULL, 'Birth Address');
-    $this->addFieldMapping(NULL, 'Death Address');
-// Birth Address       Birth Address
-// Death Address       Death Address
-// Image(s)            Image(s)
-// Relationships       Relationships
-// Bibliographic Item  Bibliographic Item
+    // Tax term references
+    $this->addFieldMapping('field_gender', 'Gender');
+      //->sourceMigration('tax_specialization');
+    $this->addFieldMapping('field_occupation', 'Occupation');
+      //->sourceMigration('tax_specialization')
+
+    // Entity references
+    $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
+      // ->sourceMigration(array('node_person_to_profile2'));
+
 
   }
 }
