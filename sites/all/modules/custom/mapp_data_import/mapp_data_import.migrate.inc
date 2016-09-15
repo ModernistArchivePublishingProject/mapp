@@ -4,30 +4,31 @@
  */
 function mapp_data_import_migrate_api() {
   module_load_include('inc', 'mapp_data_import', 'includes/person');
-  module_load_include('inc', 'mapp_data_import', 'includes/business');
-  module_load_include('inc', 'mapp_data_import', 'includes/library');
-  module_load_include('inc', 'mapp_data_import', 'includes/work');
-  module_load_include('inc', 'mapp_data_import', 'includes/edition');
-  module_load_include('inc', 'mapp_data_import', 'includes/primary_object');
-  module_load_include('inc', 'mapp_data_import', 'includes/related_materials');
-  module_load_include('inc', 'mapp_data_import', 'includes/correspondence');
+//  module_load_include('inc', 'mapp_data_import', 'includes/business');
+//  module_load_include('inc', 'mapp_data_import', 'includes/library');
+//  module_load_include('inc', 'mapp_data_import', 'includes/work');
+//  module_load_include('inc', 'mapp_data_import', 'includes/edition');
+//  module_load_include('inc', 'mapp_data_import', 'includes/primary_object');
+//  module_load_include('inc', 'mapp_data_import', 'includes/related_materials');
+//  module_load_include('inc', 'mapp_data_import', 'includes/correspondence');
 
   // Migrations class and dependencies
   $migrations = array(
-    'PersonTerm' => array(
-      'class_name' => 'PersonTermMigration',
-      'group_name' => 'people'
-    ),
+
     'PersonNode' => array(
       'class_name' => 'PersonNodeMigration',
-      'group_name' => 'people',
-      'dependencies' => array('PersonTerm')
+      'group_name' => 'nodes',
+      //'dependencies' => array('PersonTerm')
     ),
-    'PersonBiography' => array(
-      'class_name' => 'PersonBiographyMigration',
-      'group_name' => 'people',
-      'dependencies' => array('PersonNode')
-    ),
+//    'PersonBiography' => array(
+//      'class_name' => 'PersonBiographyMigration',
+//      'group_name' => 'people',
+//      'dependencies' => array('PersonNode')
+//    ),
+//    'PersonTerm' => array(
+//      'class_name' => 'PersonTermMigration',
+//      'group_name' => 'people'
+//    ),
 //    'BusinessTerm' => array(
 //      'class_name' => 'BusinessTermMigration',
 //      'group_name' => 'organizations',
@@ -92,23 +93,8 @@ function mapp_data_import_migrate_api() {
   $api = array(
     'api' => 2,
     'groups' => array(
-      'people' => array(
-        'title' => t('People Migrations'),
-      ),
-      'organizations' => array(
-        'title' => t('Organization Migrations (Businesses, Libraries)'),
-      ),
-      'works' => array(
-        'title' => t('Works Migrations')
-      ),
-      'editions' => array(
-        'title' => t('Editions Migrations')
-      ),
-      'primary_objects' => array(
-        'title' => t('Primary Object Migrations')
-      ),
-      'related' => array(
-        'title' => t('Related Materials and Correspondence')
+      'nodes' => array(
+        'title' => t('Node Migrations'),
       ),
     ),
     'migrations' => $migrations,
