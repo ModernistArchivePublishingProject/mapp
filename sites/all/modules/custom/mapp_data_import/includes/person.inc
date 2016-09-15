@@ -35,7 +35,8 @@ class PersonNodeMigration extends MAPPMigration {
     // Tax term references
     $this->addFieldMapping('field_gender', 'Gender');
       //->sourceMigration('tax_specialization');
-    $this->addFieldMapping('field_occupation', 'Occupation');
+    $this->addFieldMapping('field_occupation', 'Occupation')
+      ->separator(',');
       //->sourceMigration('tax_specialization')
 
     // Entity references
