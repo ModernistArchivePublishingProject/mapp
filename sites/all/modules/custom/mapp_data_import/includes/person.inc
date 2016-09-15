@@ -27,10 +27,8 @@ class PersonNodeMigration extends MAPPMigration {
 
     $this->addFieldMapping('field_birth_place', 'Birth Nation');
     $this->addFieldMapping('field_birth_place:locality', 'Birth City');
-    $this->addFieldMapping('field_birth_place:thoroughfare', 'Birth Address');
     $this->addFieldMapping('field_death_place', 'Death Nation');
     $this->addFieldMapping('field_death_place:locality', 'Death City');
-    $this->addFieldMapping('field_death_place:thoroughfare', 'Death Address');
 
     // Tax term references
     $this->addFieldMapping('field_gender', 'Gender');
