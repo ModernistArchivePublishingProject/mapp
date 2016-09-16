@@ -17,7 +17,7 @@ function mapp_data_import_migrate_api() {
 
     'PersonNode' => array(
       'class_name' => 'PersonNodeMigration',
-      'group_name' => 'nodes',
+      'group_name' => 'mapp',
       //'dependencies' => array('PersonTerm')
     ),
 //    'PersonBiography' => array(
@@ -93,8 +93,8 @@ function mapp_data_import_migrate_api() {
   $api = array(
     'api' => 2,
     'groups' => array(
-      'nodes' => array(
-        'title' => t('Node Migrations'),
+      'mapp' => array(
+        'title' => t('MAPP'),
       ),
     ),
     'migrations' => $migrations,
