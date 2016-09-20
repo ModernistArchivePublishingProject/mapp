@@ -22,7 +22,7 @@ function mapp_data_import_migrate_api() {
     'BiographyFc' => array(
       'class_name' => 'BiographyFcMigration',
       'group_name' => 'mapp',
-      //'dependencies' => array('PersonNode')
+      'dependencies' => array('PersonNode')
     ),
 //    'PersonTerm' => array(
 //      'class_name' => 'PersonTermMigration',
