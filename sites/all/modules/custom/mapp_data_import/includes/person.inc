@@ -22,13 +22,19 @@ class PersonNodeMigration extends MAPPMigration {
     // Basic mappings
     $this->addFieldMapping('title', 'Original Name');
     $this->addFieldMapping('field_name_authority', 'Identifiers');
-    $this->addFieldMapping('field_birth_date:year', 'Birth Date');
-    $this->addFieldMapping('field_death_date:year', 'Death Date');
 
     $this->addFieldMapping('field_birth_place', 'Birth Nation');
     $this->addFieldMapping('field_birth_place:locality', 'Birth City');
     $this->addFieldMapping('field_death_place', 'Death Nation');
     $this->addFieldMapping('field_death_place:locality', 'Death City');
+
+    // Partial date
+    $this->addFieldMapping('field_birth_date')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_birth_date:year', 'Birth Date');
+    $this->addFieldMapping('field_death_date')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_death_date:year', 'Death Date');
 
     // Tax term references
     $this->addFieldMapping('field_gender', 'Gender');
