@@ -30,6 +30,17 @@ class BiographyFcMigration extends MAPPMigration {
     // Basic mappings
     $this->addFieldMapping('field_biography', 'Biography Narrative');
 
+    // Tax term references
+    $this->addFieldMapping('field_content_authored_by', 'Authored By');
+    $this->addFieldMapping('field_content_authored_by:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_content_authored_by:ignore_case')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_content_edited_by', 'Edited By');
+    $this->addFieldMapping('field_content_edited_by:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_content_edited_by:ignore_case')
+      ->defaultValue(TRUE);
 
   }
 }

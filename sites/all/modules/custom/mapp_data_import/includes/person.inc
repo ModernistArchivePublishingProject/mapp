@@ -38,13 +38,10 @@ class PersonNodeMigration extends MAPPMigration {
 
     // Tax term references
     $this->addFieldMapping('field_gender', 'Gender');
-      //->sourceMigration('tax_specialization');
     $this->addFieldMapping('field_gender:ignore_case')
       ->defaultValue(TRUE);
-
     $this->addFieldMapping('field_occupation', 'Occupation')
       ->separator(',');
-      //->sourceMigration('tax_specialization')
     $this->addFieldMapping('field_occupation:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_occupation:ignore_case')
