@@ -54,5 +54,15 @@ class PersonNodeMigration extends MAPPMigration {
 
 
   }
+
+  public function prepareRow($row) {
+
+    // Skip manually entered rows
+    if (!empty($row->{"Manually Entered?"})) {
+      return FALSE;
+    }
+
+  }
+
 }
 

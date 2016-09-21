@@ -43,4 +43,14 @@ class BiographyFcMigration extends MAPPMigration {
       ->defaultValue(TRUE);
 
   }
+
+  public function prepareRow($row) {
+
+    // Skip manually entered rows
+    if (!empty($row->{"Manually Entered?"})) {
+      return FALSE;
+    }
+
+  }
+
 }
