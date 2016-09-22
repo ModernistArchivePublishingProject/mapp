@@ -9,7 +9,11 @@ class BiographyFcMigration extends MAPPMigration {
     parent::__construct($arguments);
     $this->description = t('Migrate Biography FC from CSV');
     $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $this->source = new MigrateSourceCSV($this->path, array(), array('header_rows' => 1));
+    $options = array(
+      'header_rows' => TRUE,
+      'embedded_newlines' => TRUE,
+    );
+    $this->source = new MigrateSourceCSV($this->path, array(), $options);
     $this->destination = new MigrateDestinationFieldCollection(
       'field_coll_biography',
       array('host_entity_type' => 'node'));

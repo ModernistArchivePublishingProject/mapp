@@ -6,7 +6,11 @@ class PersonNodeMigration extends MAPPMigration {
     parent::__construct($arguments);
     $this->description = t('Migrate Person nodes from CSV');
     $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $this->source = new MigrateSourceCSV($this->path, array(), array('header_rows' => 1));
+    $options = array(
+      'header_rows' => TRUE,
+      'embedded_newlines' => TRUE,
+    );
+    $this->source = new MigrateSourceCSV($this->path, array(), $options);
     $this->destination = new MigrateDestinationNode('person');
     $this->map = new MigrateSQLMap($this->machineName,
       array(
