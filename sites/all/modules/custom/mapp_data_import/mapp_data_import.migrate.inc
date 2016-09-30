@@ -15,6 +15,11 @@ function mapp_data_import_migrate_api() {
   // Migrations class and dependencies
   $migrations = array(
 
+    'Images' => array(
+      'class_name' => 'ImagesMigration',
+      'group_name' => 'mapp',
+    ),
+
     'PersonNode' => array(
       'class_name' => 'PersonNodeMigration',
       'group_name' => 'mapp',
