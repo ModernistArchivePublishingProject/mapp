@@ -58,3 +58,53 @@ class BiographyFcMigration extends MAPPMigration {
   }
 
 }
+
+/*
+ * Migrate the Image field into the correct field collection
+ */
+class ImagesFcMigration extends MAPPMigration {
+  public function __construct($arguments) {
+    parent::__construct($arguments);
+    $this->description = t('Migrate Images FC from CSV');
+    $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
+    $options = array(
+      'header_rows' => TRUE,
+      'embedded_newlines' => TRUE,
+    );
+    $this->source = new MigrateSourceCSV($this->path, array(), $options);
+    $this->destination = new MigrateDestinationFieldCollection(
+      'field_fc_images',
+      array('host_entity_type' => 'node'));
+    $this->map = new MigrateSQLMap($this->machineName,
+      array(
+        'csvrownum' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        )
+      ),
+      MigrateDestinationFieldCollection::getKeySchema()
+    );
+
+    $this->addFieldMapping('host_entity_id', 'csvrownum')
+      ->sourceMigration('PersonNode');
+
+    // Image file mapping
+
+
+    // Basic mappings
+    $this->addFieldMapping('field_caption', 'Image Caption');
+    $this->addFieldMapping('field_source', 'Image Source');
+
+  }
+
+  public function prepareRow($row) {
+
+    // Skip manually entered rows
+    if (!empty($row->{"Manually Entered?"})) {
+      return FALSE;
+    }
+
+  }
+
+}
