@@ -24,10 +24,15 @@ function mapp_data_import_migrate_api() {
       'class_name' => 'PersonNodeMigration',
       'group_name' => 'mapp',
     ),
-    'BiographyFc' => array(
-      'class_name' => 'BiographyFcMigration',
+    'PersonBiographyFc' => array(
+      'class_name' => 'PersonBiographyFcMigration',
       'group_name' => 'mapp',
       'dependencies' => array('PersonNode')
+    ),
+    'PersonImagesFc' => array(
+      'class_name' => 'PersonImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('PersonNode', 'Images')
     ),
 //    'PersonTerm' => array(
 //      'class_name' => 'PersonTermMigration',
