@@ -14,9 +14,9 @@ class PersonNodeMigration extends MAPPMigration {
     $this->destination = new MigrateDestinationNode('person');
     $this->map = new MigrateSQLMap($this->machineName,
       array(
-        'csvrownum' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
+        'name' => array(
+          'type' => 'varchar',
+          'length' => 255,
           'not null' => TRUE,
         )
       ),
@@ -24,7 +24,7 @@ class PersonNodeMigration extends MAPPMigration {
     );
 
     // Basic mappings
-    $this->addFieldMapping('title', 'Original Name');
+    $this->addFieldMapping('title', 'name');
     $this->addFieldMapping('field_name_authority', 'Identifiers');
 
     $this->addFieldMapping('field_birth_place', 'Birth Nation');
@@ -86,16 +86,16 @@ class PersonBiographyFcMigration extends MAPPMigration {
       array('host_entity_type' => 'node'));
     $this->map = new MigrateSQLMap($this->machineName,
       array(
-        'csvrownum' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
+        'name' => array(
+          'type' => 'varchar',
+          'length' => 255,
           'not null' => TRUE,
         )
       ),
       MigrateDestinationFieldCollection::getKeySchema()
     );
 
-    $this->addFieldMapping('host_entity_id', 'csvrownum')
+    $this->addFieldMapping('host_entity_id', 'name')
       ->sourceMigration('PersonNode');
 
     // Basic mappings
@@ -142,16 +142,16 @@ class PersonImagesFcMigration extends MAPPMigration {
       array('host_entity_type' => 'node'));
     $this->map = new MigrateSQLMap($this->machineName,
       array(
-        'csvrownum' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
+        'name' => array(
+          'type' => 'varchar',
+          'length' => 255,
           'not null' => TRUE,
         )
       ),
       MigrateDestinationFieldCollection::getKeySchema()
     );
 
-    $this->addFieldMapping('host_entity_id', 'csvrownum')
+    $this->addFieldMapping('host_entity_id', 'name')
       ->sourceMigration('PersonNode');
 
     // Image file mapping
