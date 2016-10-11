@@ -64,6 +64,10 @@ class WorkNodeMigration extends MAPPMigration {
       return FALSE;
     }
 
+    if (isset($row->{'Copyright Date'})) {
+      $row->{'Copyright Date'} .= '-01-01T00:00:00';
+    }
+
   }
 
 }
