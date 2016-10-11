@@ -46,13 +46,13 @@ class WorkNodeMigration extends MAPPMigration {
 
     // Entity references
     $this->addFieldMapping('field_author', 'Author')
-      ->separator(',')
+      ->separator('|')
       ->sourceMigration(array('PersonNode')); // TODO: add business migration
     $this->addFieldMapping('field_editor', 'Editor')
-      ->separator(',')
+      ->separator('|')
       ->sourceMigration(array('PersonNode'));
     $this->addFieldMapping('field_translator', 'Translator')
-      ->separator(',')
+      ->separator('|')
       ->sourceMigration(array('PersonNode'));
 
   }
