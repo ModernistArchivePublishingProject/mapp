@@ -51,11 +51,9 @@ class PersonNodeMigration extends MAPPMigration {
     $this->addFieldMapping('field_occupation:ignore_case')
       ->defaultValue(TRUE);
 
-
     // Entity references
     $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
-      // ->sourceMigration(array('node_person_to_profile2'));
-
+      // ->sourceMigration(array('node_person_to_profile2')); //TODO: add biblio migration
 
   }
 
