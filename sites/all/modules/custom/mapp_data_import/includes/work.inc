@@ -138,7 +138,13 @@ class WorkImagesFcMigration extends MAPPMigration {
       ->sourceMigration('WorkNode');
 
     // Image file mapping
-
+    $this->addFieldMapping('field_image', 'Image');
+    $this->addFieldMapping('field_image:source_dir')
+      ->defaultValue(drupal_get_path('module', 'mapp_data_import') . '/images');
+    $this->addFieldMapping('field_image:destination_dir')
+      ->defaultValue(variable_get('file_default_scheme', 'public') . '://images/work');
+    $this->addFieldMapping('field_image:file_replace')
+      ->defaultValue(MigrateFile::FILE_EXISTS_REUSE);
 
     // Basic mappings
     $this->addFieldMapping('field_caption', 'Image Caption');

@@ -15,11 +15,6 @@ function mapp_data_import_migrate_api() {
   // Migrations class and dependencies
   $migrations = array(
 
-    'Images' => array(
-      'class_name' => 'ImagesMigration',
-      'group_name' => 'mapp',
-    ),
-
     'PersonNode' => array(
       'class_name' => 'PersonNodeMigration',
       'group_name' => 'mapp',
@@ -32,7 +27,7 @@ function mapp_data_import_migrate_api() {
     'PersonImagesFc' => array(
       'class_name' => 'PersonImagesFcMigration',
       'group_name' => 'mapp',
-      'dependencies' => array('PersonNode', 'Images')
+      'dependencies' => array('PersonNode')
     ),
 
     'WorkNode' => array(
@@ -42,7 +37,7 @@ function mapp_data_import_migrate_api() {
     'WorkImagesFc' => array(
       'class_name' => 'WorkImagesFcMigration',
       'group_name' => 'mapp',
-      'dependencies' => array('WorkNode', 'Images')
+      'dependencies' => array('WorkNode')
     ),
 
   );
