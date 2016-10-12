@@ -422,6 +422,45 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_authored_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_authored_by'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_authored_by',
+    'label' => 'Authored By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_coll_biography-field_biography'.
   $field_instances['field_collection_item-field_coll_biography-field_biography'] = array(
     'bundle' => 'field_coll_biography',
@@ -455,7 +494,45 @@ function mapp_content_types_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_biography_display'.
+  $field_instances['field_collection_item-field_coll_biography-field_biography_display'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_biography_display',
+    'label' => 'Display this Biography?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 0,
     ),
   );
 
@@ -491,7 +568,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -528,6 +605,45 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_edited_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_edited_by'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_edited_by',
+    'label' => 'Edited By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
     ),
   );
 
@@ -961,6 +1077,45 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_narrative-field_authored_by'.
+  $field_instances['field_collection_item-field_narrative-field_authored_by'] = array(
+    'bundle' => 'field_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_authored_by',
+    'label' => 'Authored By',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_narrative-field_content_authored_by'.
   $field_instances['field_collection_item-field_narrative-field_content_authored_by'] = array(
     'bundle' => 'field_narrative',
@@ -1067,6 +1222,45 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_narrative-field_edited_by'.
+  $field_instances['field_collection_item-field_narrative-field_edited_by'] = array(
+    'bundle' => 'field_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_edited_by',
+    'label' => 'Edited By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
     ),
   );
 
@@ -1383,6 +1577,49 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-business-field_description'.
+  $field_instances['node-business-field_description'] = array(
+    'bundle' => 'business',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'pre',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-business-field_fc_images'.
   $field_instances['node-business-field_fc_images'] = array(
     'bundle' => 'business',
@@ -1471,6 +1708,60 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-business-field_images'.
+  $field_instances['node-business-field_images'] = array(
+    'bundle' => 'business',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'media_large',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-business-field_narrative'.
   $field_instances['node-business-field_narrative'] = array(
     'bundle' => 'business',
@@ -1554,6 +1845,50 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'entityreference_count',
       'settings' => array(),
       'type' => 'entityreference_count_widget',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-business-field_owned_by'.
+  $field_instances['node-business-field_owned_by'] = array(
+    'bundle' => 'business',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'May be another business or a person. May have multiple owners.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_owned_by',
+    'label' => 'Owned By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
       'weight' => 9,
     ),
   );
@@ -1965,6 +2300,60 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'geocoder',
       'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-correspondence-field_images'.
+  $field_instances['node-correspondence-field_images'] = array(
+    'bundle' => 'correspondence',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
   );
 
@@ -2498,6 +2887,47 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-edition-field_identifier'.
+  $field_instances['node-edition-field_identifier'] = array(
+    'bundle' => 'edition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_identifier',
+    'label' => 'Identifier',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-edition-field_illustrator'.
   $field_instances['node-edition-field_illustrator'] = array(
     'bundle' => 'edition',
@@ -2539,6 +2969,58 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-edition-field_images'.
+  $field_instances['node-edition-field_images'] = array(
+    'bundle' => 'edition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
   );
 
@@ -2620,6 +3102,51 @@ function mapp_content_types_field_default_field_instances() {
       'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-edition-field_link_digitized'.
+  $field_instances['node-edition-field_link_digitized'] = array(
+    'bundle' => 'edition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'url',
+        'settings' => array(
+          'nofollow' => FALSE,
+          'trim_length' => 80,
+        ),
+        'type' => 'url_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'cite',
+    'field_name' => 'field_link_digitized',
+    'label' => 'Link(s) to Digitized Materials',
+    'required' => 0,
+    'settings' => array(
+      'title_fetch' => 0,
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'url',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'url_external',
+      'weight' => 9,
     ),
   );
 
@@ -3997,6 +4524,60 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-person-field_images'.
+  $field_instances['node-person-field_images'] = array(
+    'bundle' => 'person',
+    'deleted' => 0,
+    'description' => 'Images of this person.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-person-field_name_authority'.
   $field_instances['node-person-field_name_authority'] = array(
     'bundle' => 'person',
@@ -4506,6 +5087,60 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-primary_object-field_images'.
+  $field_instances['node-primary_object-field_images'] = array(
+    'bundle' => 'primary_object',
+    'deleted' => 0,
+    'description' => 'Any images of the book.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-primary_object-field_impression'.
   $field_instances['node-primary_object-field_impression'] = array(
     'bundle' => 'primary_object',
@@ -4808,6 +5443,50 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-related_materials-field_author'.
+  $field_instances['node-related_materials-field_author'] = array(
+    'bundle' => 'related_materials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_author',
+    'label' => 'Author',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-related_materials-field_date_variable'.
   $field_instances['node-related_materials-field_date_variable'] = array(
     'bundle' => 'related_materials',
@@ -5059,6 +5738,60 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-related_materials-field_images'.
+  $field_instances['node-related_materials-field_images'] = array(
+    'bundle' => 'related_materials',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_images',
+    'label' => 'Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'jpg jpeg png',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 16,
     ),
   );
 
@@ -5997,6 +6730,7 @@ function mapp_content_types_field_default_field_instances() {
   t('An image used for browsing works.');
   t('An object to which this letter refers. May be a person, library, book, work, publisher, etc.');
   t('Annotations');
+  t('Any images of the book.');
   t('Approximate Date');
   t('Attachments');
   t('Author');
@@ -6028,6 +6762,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Death Location');
   t('Death Place');
   t('Description');
+  t('Display this Biography?');
   t('Edited By');
   t('Edition');
   t('Editor');
@@ -6043,6 +6778,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Illustrator');
   t('Image');
   t('Image(s)');
+  t('Images of this person.');
   t('Impression');
   t('Language');
   t('Libraries');
@@ -6054,6 +6790,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Links');
   t('Location');
   t('Marginalia');
+  t('May be another business or a person. May have multiple owners.');
   t('Narrative');
   t('Number of Related Items');
   t('Number of pages');
