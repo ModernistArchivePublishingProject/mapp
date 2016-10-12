@@ -89,16 +89,20 @@ class WorkNodeMigration extends MAPPMigration {
           ->propertyCondition('title', $row->{$source_field})
           ->propertyCondition('status', 1)
           ->execute();
-        switch (count($target_entities['node'])) {
+        $match_count = 0;
+        if (isset($target_entities['node'])) {
+          $match_count = count($target_entities['node']);
+        }
+        switch ($match_count) {
           case 0:
-            print "\nNo match for $source_field: " . $row->{$source_field};
+            $this->queueMessage('No match for ' . $source_field . ': ' . $row->{$source_field}, 2);
             break;
           case 1:
             //print "\n1 match for $source_field: " . $row->{$source_field};
             $entity->{$target_field}[LANGUAGE_NONE][0]['target_id'] = key($target_entities['node']);
             break;
           default:
-            die ("\nThere are " . count($target_entities['node']) . "1 match for $source_field: " . $row->{$source_field});
+            die ("\nThere are " . $match_count. "matches for $source_field: " . $row->{$source_field});
         }
       }
     }
