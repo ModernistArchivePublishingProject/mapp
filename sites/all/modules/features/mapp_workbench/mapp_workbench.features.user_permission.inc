@@ -14,7 +14,7 @@ function mapp_workbench_user_default_permissions() {
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
     'roles' => array(
-      'Student Member' => 'Student Member',
+      'Affiliate Member' => 'Affiliate Member',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
