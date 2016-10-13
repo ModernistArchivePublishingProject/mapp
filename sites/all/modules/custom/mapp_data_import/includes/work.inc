@@ -71,40 +71,12 @@ class WorkNodeMigration extends WorkMigration {
 
   public function prepare($entity, $row) {
 
-    // Populate entity reference fields in cases where the referenced content
-    // was entered manually (ie. does not get populated by sourceMigration)
     $entity_reference_fields = array (
       'Author' => 'field_author',
       'Editor' => 'field_editor',
       'Translator' => 'field_translator',
     );
-    foreach ($entity_reference_fields as $source_field => $target_field) {
-      if (!empty ($row->{$source_field}) && empty($entity->{$target_field})) {
-        $target_types = field_info_field($target_field)['settings']['handler_settings']['target_bundles'];
-        //print "target types for $target_field: " . print_r ($target_types);
-        $query = new EntityFieldQuery();
-        $target_entities = $query->entityCondition('entity_type', 'node')
-          ->propertyCondition('type', $target_types)
-          ->propertyCondition('title', $row->{$source_field})
-          ->propertyCondition('status', 1)
-          ->execute();
-        $match_count = 0;
-        if (isset($target_entities['node'])) {
-          $match_count = count($target_entities['node']);
-        }
-        switch ($match_count) {
-          case 0:
-            $this->queueMessage('No match for ' . $source_field . ': ' . $row->{$source_field}, 2);
-            break;
-          case 1:
-            //print "\n1 match for $source_field: " . $row->{$source_field};
-            $entity->{$target_field}[LANGUAGE_NONE][0]['target_id'] = key($target_entities['node']);
-            break;
-          default:
-            die ("\nThere are " . $match_count. "matches for $source_field: " . $row->{$source_field});
-        }
-      }
-    }
+    $this->MAPP_populate_entity_refs($entity_reference_fields, $entity, $row);
 
   }
 
