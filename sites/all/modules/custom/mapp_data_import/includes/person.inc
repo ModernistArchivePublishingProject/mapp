@@ -1,17 +1,11 @@
 <?php
 
-
-class PersonNodeMigration extends MAPPMigration {
+abstract class PersonMigration extends MAPPMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->description = t('Migrate Person nodes from CSV');
+
     $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $options = array(
-      'header_rows' => TRUE,
-      'embedded_newlines' => TRUE,
-    );
-    $this->source = new MigrateSourceCSV($this->path, array(), $options);
-    $this->destination = new MigrateDestinationNode('person');
+    $this->source = new MigrateSourceCSV($this->path, array(), $this->csv_options);
     $this->map = new MigrateSQLMap($this->machineName,
       array(
         'name' => array(
@@ -22,6 +16,15 @@ class PersonNodeMigration extends MAPPMigration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+  }
+}
+
+class PersonNodeMigration extends PersonMigration {
+  public function __construct($arguments) {
+    parent::__construct($arguments);
+
+    $this->description = t('Migrate Person nodes from CSV');
+    $this->destination = new MigrateDestinationNode('person');
 
     // Basic mappings
     $this->addFieldMapping('title', 'name');
@@ -52,46 +55,20 @@ class PersonNodeMigration extends MAPPMigration {
       ->defaultValue(TRUE);
 
     // Entity references
-    $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
-      // ->sourceMigration(array('node_person_to_profile2')); //TODO: add biblio migration
+    // $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
+    // ->sourceMigration(array('node_person_to_profile2')); //TODO: add biblio migration
 
   }
-
-  public function prepareRow($row) {
-
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
-  }
-
 }
 
-
-class PersonBiographyFcMigration extends MAPPMigration {
+class PersonBiographyFcMigration extends PersonMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
+
     $this->description = t('Migrate Biography FC from CSV');
-    $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $options = array(
-      'header_rows' => TRUE,
-      'embedded_newlines' => TRUE,
-    );
-    $this->source = new MigrateSourceCSV($this->path, array(), $options);
     $this->destination = new MigrateDestinationFieldCollection(
       'field_coll_biography',
       array('host_entity_type' => 'node'));
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'name' => array(
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => TRUE,
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
-    );
 
     $this->addFieldMapping('host_entity_id', 'name')
       ->sourceMigration('PersonNode');
@@ -112,69 +89,18 @@ class PersonBiographyFcMigration extends MAPPMigration {
       ->defaultValue(TRUE);
 
   }
-
-  public function prepareRow($row) {
-
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
-  }
-
 }
 
-
-class PersonImagesFcMigration extends MAPPMigration {
+class PersonImagesFcMigration extends PersonMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->description = t('Migrate Images FC from CSV');
-    $this->path .= '/person.csv'; // Append CSV filename to path set in MAPPMigration
-    $options = array(
-      'header_rows' => TRUE,
-      'embedded_newlines' => TRUE,
-    );
-    $this->source = new MigrateSourceCSV($this->path, array(), $options);
-    $this->destination = new MigrateDestinationFieldCollection(
-      'field_fc_images',
-      array('host_entity_type' => 'node'));
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'name' => array(
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => TRUE,
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
-    );
+
+    $this->MAPPImageMigration();
 
     $this->addFieldMapping('host_entity_id', 'name')
       ->sourceMigration('PersonNode');
-
-    // Image file mapping
-    $this->addFieldMapping('field_image', 'Image(s)');
-    $this->addFieldMapping('field_image:source_dir')
-      ->defaultValue(drupal_get_path('module', 'mapp_data_import') . '/images');
     $this->addFieldMapping('field_image:destination_dir')
       ->defaultValue(variable_get('file_default_scheme', 'public') . '://images/person');
-    $this->addFieldMapping('field_image:file_replace')
-      ->defaultValue(MigrateFile::FILE_EXISTS_REUSE);
-
-    // Basic mappings
-    $this->addFieldMapping('field_caption', 'Image Caption');
-    $this->addFieldMapping('field_source', 'Image Source');
-
   }
-
-  public function prepareRow($row) {
-
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
-  }
-
 }
 

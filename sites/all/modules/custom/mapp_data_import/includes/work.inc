@@ -1,17 +1,11 @@
 <?php
 
-
-class WorkNodeMigration extends MAPPMigration {
+abstract class WorkMigration extends MAPPMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->description = t('Migrate Work nodes from CSV');
+
     $this->path .= '/work.csv'; // Append CSV filename to path set in MAPPMigration
-    $options = array(
-      'header_rows' => TRUE,
-      'embedded_newlines' => TRUE,
-    );
-    $this->source = new MigrateSourceCSV($this->path, array(), $options);
-    $this->destination = new MigrateDestinationNode('work');
+    $this->source = new MigrateSourceCSV($this->path, array(), $this->csv_options);
     $this->map = new MigrateSQLMap($this->machineName,
       array(
         'csvrownum' => array(
@@ -21,6 +15,15 @@ class WorkNodeMigration extends MAPPMigration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+  }
+}
+
+class WorkNodeMigration extends WorkMigration {
+  public function __construct($arguments) {
+    parent::__construct($arguments);
+
+    $this->description = t('Migrate Work nodes from CSV');
+    $this->destination = new MigrateDestinationNode('work');
 
     // Basic mappings
     $this->addFieldMapping('title', 'title');
@@ -59,11 +62,7 @@ class WorkNodeMigration extends MAPPMigration {
 
   public function prepareRow($row) {
 
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
+    // Convert the date into ISO format.
     if (isset($row->{'Copyright Date'})) {
       $row->{'Copyright Date'} .= '-01-01T00:00:00';
     }
@@ -111,58 +110,15 @@ class WorkNodeMigration extends MAPPMigration {
 
 }
 
-class WorkImagesFcMigration extends MAPPMigration {
+class WorkImagesFcMigration extends WorkMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->description = t('Migrate Images FC from CSV');
-    $this->path .= '/work.csv'; // Append CSV filename to path set in MAPPMigration
-    $options = array(
-      'header_rows' => TRUE,
-      'embedded_newlines' => TRUE,
-    );
-    $this->source = new MigrateSourceCSV($this->path, array(), $options);
-    $this->destination = new MigrateDestinationFieldCollection(
-      'field_fc_images',
-      array('host_entity_type' => 'node'));
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'csvrownum' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
-    );
+
+    $this->MAPPImageMigration();
 
     $this->addFieldMapping('host_entity_id', 'csvrownum')
       ->sourceMigration('WorkNode');
-
-    // Image file mapping
-    $this->addFieldMapping('field_image', 'Image');
-    $this->addFieldMapping('field_image:source_dir')
-      ->defaultValue(drupal_get_path('module', 'mapp_data_import') . '/images');
     $this->addFieldMapping('field_image:destination_dir')
       ->defaultValue(variable_get('file_default_scheme', 'public') . '://images/work');
-    $this->addFieldMapping('field_image:file_replace')
-      ->defaultValue(MigrateFile::FILE_EXISTS_REUSE);
-
-    // Basic mappings
-    $this->addFieldMapping('field_caption', 'Image Caption');
-    $this->addFieldMapping('field_source', 'Image Source');
-
-    // Entity references
-    $this->addFieldMapping('field_rights_holder', 'Rights Holder')
-      ->sourceMigration(array('PersonNode')); // TODO: add business & library migration
   }
-
-  public function prepareRow($row) {
-
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
-  }
-
 }
-
