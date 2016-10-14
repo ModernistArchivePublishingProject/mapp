@@ -39,7 +39,8 @@ abstract class MAPPMigration extends Migration {
       array('host_entity_type' => 'node'));
 
     // Image file mapping
-    $this->addFieldMapping('field_image', 'Image');
+    $this->addFieldMapping('field_image', 'Image')
+      ->separator('|');
     $this->addFieldMapping('field_image:source_dir')
       ->defaultValue(drupal_get_path('module', 'mapp_data_import') . '/images');
     $this->addFieldMapping('field_image:file_replace')
