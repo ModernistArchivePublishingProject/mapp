@@ -47,6 +47,12 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
       ->defaultValue(TRUE);
 
     // Entity references
+    $this->entity_reference_fields = array (
+      'Author' => 'field_author',
+      'Recipient' => 'field_recipient',
+      'Related to' => 'field_related_to',
+      'Library' => 'field_library',
+    );
     $this->addFieldMapping('field_author', 'Author')
       ->separator('|')
       ->sourceMigration(array('PersonNode')); // TODO: add business migration
@@ -74,13 +80,7 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
 
   public function prepare($entity, $row) {
 
-    $entity_reference_fields = array (
-      'Author' => 'field_author',
-      'Recipient' => 'field_recipient',
-      'Related to' => 'field_related_to',
-      'Library' => 'field_library',
-    );
-    $this->MAPP_populate_entity_refs($entity_reference_fields, $entity, $row);
+    $this->MAPP_populate_entity_refs($entity, $row);
 
   }
 

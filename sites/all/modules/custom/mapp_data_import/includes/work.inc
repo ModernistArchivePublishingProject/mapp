@@ -48,6 +48,11 @@ class WorkNodeMigration extends WorkMigration {
       ->defaultValue(TRUE);
 
     // Entity references
+    $this->entity_reference_fields = array (
+      'Author' => 'field_author',
+      'Editor' => 'field_editor',
+      'Translator' => 'field_translator',
+    );
     $this->addFieldMapping('field_author', 'Author')
       ->separator('|')
       ->sourceMigration(array('PersonNode')); // TODO: add business migration
@@ -71,12 +76,7 @@ class WorkNodeMigration extends WorkMigration {
 
   public function prepare($entity, $row) {
 
-    $entity_reference_fields = array (
-      'Author' => 'field_author',
-      'Editor' => 'field_editor',
-      'Translator' => 'field_translator',
-    );
-    $this->MAPP_populate_entity_refs($entity_reference_fields, $entity, $row);
+    $this->MAPP_populate_entity_refs($entity, $row);
 
   }
 
