@@ -48,7 +48,7 @@ class PersonNodeMigration extends PersonMigration {
     $this->addFieldMapping('field_gender:ignore_case')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_occupation', 'Occupation')
-      ->separator(',');
+      ->separator('|');
     $this->addFieldMapping('field_occupation:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_occupation:ignore_case')
