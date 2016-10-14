@@ -65,7 +65,14 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
 
   }
 
-  public function prepareRow($row) {
+  public function prepareRow($row)  {
+
+    // Skip manually entered rows
+    if (!empty($row->{"Manually Entered?"})) {
+      return FALSE;
+    }
+
+    parent::prepareRow($row);
 
     // Append "Address 2" fields to their "Address 1" fields.
     // TODO: should these be better organized in the spreadsheet? eg. Address components can be mapped to subfields of address as defined in https://www.drupal.org/node/1996546

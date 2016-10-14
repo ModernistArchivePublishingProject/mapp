@@ -67,6 +67,13 @@ class WorkNodeMigration extends WorkMigration {
 
   public function prepareRow($row) {
 
+    // Skip manually entered rows
+    if (!empty($row->{"Manually Entered?"})) {
+      return FALSE;
+    }
+
+    parent::prepareRow($row);
+
     // Convert the date into ISO format.
     if (isset($row->{'Copyright Date'})) {
       $row->{'Copyright Date'} .= '-01-01T00:00:00';

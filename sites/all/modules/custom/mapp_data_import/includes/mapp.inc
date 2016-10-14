@@ -16,15 +16,17 @@ abstract class MAPPMigration extends Migration {
   public function prepareRow($row) {
 
     // Skip manually entered rows
+    // If the child class has its own prepareRow, it needs to do this on its own, even though it calls this code.
     if (!empty($row->{"Manually Entered?"})) {
       return FALSE;
     }
 
     // For entity references to CSV row numbers, substract one from the row number since the migration does not count the header row.
-    foreach ($this->entity_reference_fields as $source_field => $target_field) {
-      if (is_numeric ($row->{$source_field})) {
-        $row->{$source_field}-=1;
-        print $row->{$source_field} . " ";
+    if (isset ($this->entity_reference_fields)) {
+      foreach ($this->entity_reference_fields as $source_field => $target_field) {
+        if (is_numeric ($row->{$source_field})) {
+          $row->{$source_field}-=1;
+        }
       }
     }
 
