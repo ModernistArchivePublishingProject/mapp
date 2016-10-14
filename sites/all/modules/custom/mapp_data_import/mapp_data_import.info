@@ -11,3 +11,4 @@ files[] = includes/mapp.inc
 files[] = includes/person.inc
 files[] = includes/work.inc
 files[] = includes/correspondence.inc
+files[] = includes/related_materials.inc

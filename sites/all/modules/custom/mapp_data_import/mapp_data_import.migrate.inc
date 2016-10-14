@@ -50,6 +50,16 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('CorrespondenceNode')
     ),
 
+    'RelatedMaterialsNode' => array(
+      'class_name' => 'RelatedMaterialsNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'RelatedMaterialsImagesFc' => array(
+      'class_name' => 'RelatedMaterialsImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('RelatedMaterialsNode')
+    ),
+
   );
 
   // API and groups information
