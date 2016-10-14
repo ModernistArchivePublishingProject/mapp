@@ -39,7 +39,8 @@ abstract class MAPPMigration extends Migration {
 
     // Entity references
     $this->addFieldMapping('field_rights_holder', 'Rights Holder')
-      ->sourceMigration(array('PersonNode')); // TODO: add business & library migration
+      ->separator('|')
+      ->sourceMigration(array('PersonNode')); // TODO: add business & library (if created) migrations
 
   }
 

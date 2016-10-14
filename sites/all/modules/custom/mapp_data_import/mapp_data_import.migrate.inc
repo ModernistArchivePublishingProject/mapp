@@ -40,6 +40,16 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('WorkNode')
     ),
 
+    'CorrespondenceNode' => array(
+      'class_name' => 'CorrespondenceNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'CorrespondenceImagesFc' => array(
+      'class_name' => 'CorrespondenceImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('CorrespondenceNode')
+    ),
+
   );
 
   // API and groups information
