@@ -61,7 +61,7 @@ abstract class MAPPMigration extends Migration {
   // was entered manually (ie. does not get populated by sourceMigration)
   public function MAPP_populate_entity_refs($entity, $row) {
     foreach ($this->entity_reference_fields as $source_field => $target_field) {
-      if (!empty ($row->{$source_field}) && empty($entity->{$target_field})) {
+      if (!empty ($row->{$source_field}) && empty($entity->{$target_field}[LANGUAGE_NONE])) {
         $target_types = field_info_field($target_field)['settings']['handler_settings']['target_bundles'];
         //print "target types for $target_field: " . print_r ($target_types);
         $query = new EntityFieldQuery();
