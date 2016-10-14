@@ -70,7 +70,9 @@ abstract class MAPPMigration extends Migration {
             $entity->{$target_field}[LANGUAGE_NONE][0]['target_id'] = key($target_entities['node']);
             break;
           default:
-            die ("\nThere are " . $match_count. "matches for $source_field: " . $row->{$source_field});
+            $this->queueMessage('There are ' . $match_count. ' matches for $source_field: ' . $row->{$source_field} . '. NIDS: ' . implode(', ', array_keys($target_entities['node'])) . '. Using the first one.', 2);
+            $entity->{$target_field}[LANGUAGE_NONE][0]['target_id'] = key($target_entities['node']);
+            break;
         }
       }
     }
