@@ -80,6 +80,22 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('BusinessNode')
     ),
 
+    'EditionNode' => array(
+      'class_name' => 'EditionNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'EditionPurchaserFc' => array(
+      'class_name' => 'EditionPurchaserFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('EditionNode')
+    ),
+    'EditionImagesFc' => array(
+      'class_name' => 'EditionImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('EditionNode')
+    ),
+
+
   );
 
   // API and groups information
