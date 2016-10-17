@@ -75,7 +75,7 @@ class WorkNodeMigration extends WorkMigration {
     parent::prepareRow($row);
 
     // Convert the date into ISO format.
-    if (isset($row->{'Copyright Date'})) {
+    if (!empty($row->{'Copyright Date'})) {
       $row->{'Copyright Date'} .= '-01-01T00:00:00';
     }
 
