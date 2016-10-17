@@ -58,12 +58,12 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
     );
     $this->addFieldMapping('field_author', 'Author')
       ->separator('|')
-      ->sourceMigration(array('PersonNode')); // TODO: add business migration
+      ->sourceMigration(array('PersonNode', 'BusinessNode'));
     $this->addFieldMapping('field_recipient', 'Recipient')
       ->separator('|')
-      ->sourceMigration(array('PersonNode')); // TODO: add business migration
+      ->sourceMigration(array('PersonNode', 'BusinessNode'));
     $this->addFieldMapping('field_related_to', 'Related to')
-      ->sourceMigration(array('WorkNode')); // TODO: add business and library (if created) migrations
+      ->sourceMigration(array('WorkNode', 'BusinessNode')); // TODO: Add library (if created) migration
     $this->addFieldMapping('field_library', 'Library'); // TODO: Add library (if created) migration
 
   }

@@ -55,7 +55,7 @@ class WorkNodeMigration extends WorkMigration {
     );
     $this->addFieldMapping('field_author', 'Author')
       ->separator('|')
-      ->sourceMigration(array('PersonNode')); // TODO: add business migration
+      ->sourceMigration(array('PersonNode', 'BusinessNode'));
     $this->addFieldMapping('field_editor', 'Editor')
       ->separator('|')
       ->sourceMigration(array('PersonNode'));

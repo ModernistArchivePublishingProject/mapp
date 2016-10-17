@@ -55,10 +55,20 @@ class PersonNodeMigration extends PersonMigration {
       ->defaultValue(TRUE);
 
     // Entity references
-    // $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
-    // ->sourceMigration(array('node_person_to_profile2')); //TODO: add biblio migration
+    $this->entity_reference_fields = array (
+      'Bibliographic Item' => 'field_bibliographic_item',
+    );
+    $this->addFieldMapping('field_bibliographic_item', 'Bibliographic Item');
+    // ->sourceMigration(array('BiblioNode')); //TODO: add biblio migration if a spreadsheet is created for it
 
   }
+
+  public function prepare($entity, $row) {
+
+    $this->MAPP_populate_entity_refs($entity, $row);
+
+  }
+  
 }
 
 class PersonBiographyFcMigration extends PersonMigration {
