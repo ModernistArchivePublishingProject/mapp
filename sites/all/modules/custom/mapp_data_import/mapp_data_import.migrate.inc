@@ -60,6 +60,26 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('RelatedMaterialsNode')
     ),
 
+    'BusinessNode' => array(
+      'class_name' => 'BusinessNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'BusinessNarrativeFc' => array(
+      'class_name' => 'BusinessNarrativeFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+    'BusinessHistoryFc' => array(
+      'class_name' => 'BusinessHistoryFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+    'BusinessImagesFc' => array(
+      'class_name' => 'BusinessImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+
   );
 
   // API and groups information
