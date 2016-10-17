@@ -14,4 +14,5 @@ files[] = includes/correspondence.inc
 files[] = includes/related_materials.inc
 files[] = includes/business.inc
 files[] = includes/edition.inc
+files[] = includes/primary_object.inc
 

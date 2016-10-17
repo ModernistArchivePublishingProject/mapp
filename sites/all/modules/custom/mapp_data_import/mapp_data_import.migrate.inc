@@ -95,7 +95,16 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('EditionNode')
     ),
 
-
+    'PrimaryObjectNode' => array(
+      'class_name' => 'PrimaryObjectNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'PrimaryObjectImagesFc' => array(
+      'class_name' => 'PrimaryObjectImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('PrimaryObjectNode')
+    ),
+    
   );
 
   // API and groups information
