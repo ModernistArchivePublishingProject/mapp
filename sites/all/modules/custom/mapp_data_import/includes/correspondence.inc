@@ -29,15 +29,18 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
     $this->addFieldMapping('field_description', 'Description');
     $this->addFieldMapping('field_publication_date', 'Date written');
 
+    // Address fields
     $this->addFieldMapping('field_sent_from', 'From Country');
     $this->addFieldMapping('field_sent_from:locality', 'From City');
     $this->addFieldMapping('field_sent_from:postal_code', 'From Postcode');
-    $this->addFieldMapping('field_sent_from:thoroughfare', 'From Address 1'); // "From Address 2" is appended in prepareRow
+    $this->addFieldMapping('field_sent_from:thoroughfare', 'From Address 1');
+    $this->addFieldMapping('field_sent_from:premise', 'From Address 2');
 
     $this->addFieldMapping('field_sent_to', 'To Country');
     $this->addFieldMapping('field_sent_to:locality', 'To City');
     $this->addFieldMapping('field_sent_to:postal_code', 'To Postcode');
-    $this->addFieldMapping('field_sent_to:thoroughfare', 'To Address 1'); // "To Address 2" is appended in prepareRow
+    $this->addFieldMapping('field_sent_to:thoroughfare', 'To Address 1');
+    $this->addFieldMapping('field_sent_to:premise', 'To Address 2');
 
     // Tax term references
     $this->addFieldMapping('field_correspondence_type', 'Correspondence Type');
@@ -62,26 +65,6 @@ class CorrespondenceNodeMigration extends CorrespondenceMigration {
     $this->addFieldMapping('field_related_to', 'Related to')
       ->sourceMigration(array('WorkNode')); // TODO: add business and library (if created) migrations
     $this->addFieldMapping('field_library', 'Library'); // TODO: Add library (if created) migration
-
-  }
-
-  public function prepareRow($row)  {
-
-    // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
-
-    parent::prepareRow($row);
-
-    // Append "Address 2" fields to their "Address 1" fields.
-    // TODO: should these be better organized in the spreadsheet? eg. Address components can be mapped to subfields of address as defined in https://www.drupal.org/node/1996546
-    if (isset($row->{'From Address 2'})) {
-      $row->{'From Address 1'} .= "\n" . $row->{'From Address 2'};
-    }
-    if (isset($row->{'To Address 2'})) {
-      $row->{'To Address 1'} .= "\n" . $row->{'To Address 2'};
-    }
 
   }
 
