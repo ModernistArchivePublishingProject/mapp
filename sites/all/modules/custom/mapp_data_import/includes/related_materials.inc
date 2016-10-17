@@ -51,7 +51,7 @@ class RelatedMaterialsNodeMigration extends RelatedMaterialsMigration {
     $this->addFieldMapping('field_library', 'Library'); // TODO: Add library (if created) migration
     $this->addFieldMapping('field_material_related_to', 'Related to')
       ->separator('|')
-      ->sourceMigration(array('PersonNode', 'CorrespondenceNode', 'RelatedMaterialsNode', 'WorkNode', 'BusinessNode', 'EditionNode', 'PrimaryObject')); // TODO: Add library (if created) migration
+      ->sourceMigration(array('PersonNode', 'CorrespondenceNode', 'RelatedMaterialsNode', 'WorkNode', 'BusinessNode', 'EditionNode', 'PrimaryObjectNode')); // TODO: Add library (if created) migration
   }
 
 
