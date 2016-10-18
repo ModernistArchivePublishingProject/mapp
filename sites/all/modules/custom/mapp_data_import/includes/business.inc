@@ -95,10 +95,10 @@ class BusinessHistoryFcMigration extends BusinessMigration {
     $this->addFieldMapping('field_address:postal_code', 'Postal code');
 
     // Partial date
-    // TODO: futher patch partial date to work with migration of start & end dates. Otherwise end dates need to be entered manually for these.
-//    $this->addFieldMapping('field_approximate_date')
-//      ->defaultValue(TRUE);
-//    $this->addFieldMapping('field_approximate_date:year', 'Approximate date opened year');
+    $this->addFieldMapping('field_approximate_date')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_approximate_date:year', 'Approximate date opened year');
+    $this->addFieldMapping('field_approximate_date:year_to', 'Approximate date closed year');
 
   }
 
@@ -107,7 +107,6 @@ class BusinessHistoryFcMigration extends BusinessMigration {
     // Skip manually entered rows
     if (!empty($row->{"Manually Entered?"})) {
       return FALSE;
-
     }
 
     parent::prepareRow($row);
