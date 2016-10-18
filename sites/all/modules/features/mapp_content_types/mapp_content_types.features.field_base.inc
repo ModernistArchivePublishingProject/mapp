@@ -2500,6 +2500,9 @@ function mapp_content_types_field_default_field_bases() {
       'timestamp' => array(
         0 => 'timestamp',
       ),
+      'timestamp_to' => array(
+        0 => 'timestamp_to',
+      ),
     ),
     'locked' => 0,
     'module' => 'partial_date',
@@ -2550,13 +2553,26 @@ function mapp_content_types_field_default_field_bases() {
         'from_granularity_month' => 0,
         'from_granularity_second' => 0,
         'from_granularity_timezone' => 0,
-        'from_granularity_year' => 1,
+        'from_granularity_year' => 0,
+        'to_estimates_day' => 0,
+        'to_estimates_hour' => 0,
+        'to_estimates_minute' => 0,
+        'to_estimates_month' => 0,
+        'to_estimates_second' => 0,
+        'to_estimates_year' => 0,
+        'to_granularity_day' => 0,
+        'to_granularity_hour' => 0,
+        'to_granularity_minute' => 0,
+        'to_granularity_month' => 0,
+        'to_granularity_second' => 0,
+        'to_granularity_timezone' => 0,
+        'to_granularity_year' => 0,
         'txt_long' => 0,
         'txt_short' => 0,
       ),
     ),
     'translatable' => 0,
-    'type' => 'partial_date',
+    'type' => 'partial_date_range',
   );
 
   // Exported field_base: 'field_sent_from'.

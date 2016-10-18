@@ -6071,9 +6071,26 @@ function mapp_content_types_field_default_field_instances() {
             'second' => 0,
             'year' => 0,
           ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
         ),
         'granularity' => array(
           'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
             'day' => 'day',
             'hour' => 0,
             'minute' => 0,
