@@ -29,12 +29,11 @@ class RelatedMaterialsNodeMigration extends RelatedMaterialsMigration {
     $this->addFieldMapping('field_description', 'Description');
     $this->addFieldMapping('field_copyright_date', 'Copyright Date');
 
-//    // Partial date
-//    $this->addFieldMapping('field_rm_date_created')
-//      ->defaultValue(TRUE);
-//    $this->addFieldMapping('field_rm_date_created', 'Date created')
-//      ->separator('|');
-//    $this->addFieldMapping('field_rm_date_created:year', 'Date created');
+    // Partial date
+    $this->addFieldMapping('field_rm_date_created')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_rm_date_created:year', 'Date created');
+    $this->addFieldMapping('field_rm_date_created:year_to', 'Leave blank');
 
     // Tax term references
     $this->addFieldMapping('field_genre', 'Type');
@@ -63,6 +62,15 @@ class RelatedMaterialsNodeMigration extends RelatedMaterialsMigration {
     }
 
     parent::prepareRow($row);
+
+    // Split Date created into to and from if range is provided
+    if (!empty($row->{'Date created'})) {
+      $date_parts = explode ('-', $row->{'Date created'});
+      if (count ($date_parts)) {
+        $row->{'Date created'} = $date_parts[0];
+        $row->{'Leave blank'} = $date_parts[1];
+      }
+    }
 
   }
 
