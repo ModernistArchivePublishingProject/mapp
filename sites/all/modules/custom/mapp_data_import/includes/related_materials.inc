@@ -74,12 +74,6 @@ class RelatedMaterialsNodeMigration extends RelatedMaterialsMigration {
 
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
-
 }
 
 class RelatedMaterialsImagesFcMigration extends RelatedMaterialsMigration {

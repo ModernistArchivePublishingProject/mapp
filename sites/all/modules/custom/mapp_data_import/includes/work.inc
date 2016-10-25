@@ -81,12 +81,6 @@ class WorkNodeMigration extends WorkMigration {
 
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
-
 }
 
 class WorkImagesFcMigration extends WorkMigration {

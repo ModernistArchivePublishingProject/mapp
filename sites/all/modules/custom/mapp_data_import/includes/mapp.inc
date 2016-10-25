@@ -32,6 +32,12 @@ abstract class MAPPMigration extends Migration {
 
   }
 
+  public function prepare($entity, $row) {
+
+    $this->MAPP_populate_entity_refs($entity, $row);
+
+  }
+
   public function MAPPImageMigration() {
 
     $this->destination = new MigrateDestinationFieldCollection(
@@ -51,6 +57,9 @@ abstract class MAPPMigration extends Migration {
     $this->addFieldMapping('field_source', 'Image Source');
 
     // Entity references
+    $this->entity_reference_fields = array (
+      'Rights Holder' => 'field_rights_holder',
+    );
     $this->addFieldMapping('field_rights_holder', 'Rights Holder')
       ->separator('|')
       ->sourceMigration(array('PersonNode', 'BusinessNode')); // TODO: Add library (if created) migration
@@ -60,6 +69,9 @@ abstract class MAPPMigration extends Migration {
   // Populate entity reference fields in cases where the referenced content
   // was entered manually (ie. does not get populated by sourceMigration)
   public function MAPP_populate_entity_refs($entity, $row) {
+    if (empty ($this->entity_reference_fields)) {
+      return;
+    }
     foreach ($this->entity_reference_fields as $source_field => $target_field) {
       if (!empty ($row->{$source_field}) && empty($entity->{$target_field}[LANGUAGE_NONE])) {
         $target_types = field_info_field($target_field);

@@ -66,12 +66,6 @@ class EditionNodeMigration extends EditionMigration {
       ->sourceMigration(array('BusinessNode', 'PersonNode'));
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
-
 }
 
 class EditionPurchaserFcMigration extends EditionMigration {
@@ -95,11 +89,6 @@ class EditionPurchaserFcMigration extends EditionMigration {
       ->sourceMigration(array('PersonNode'));
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
 }
 
 class EditionImagesFcMigration extends EditionMigration {

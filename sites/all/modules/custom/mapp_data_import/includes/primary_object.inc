@@ -65,12 +65,6 @@ class PrimaryObjectNodeMigration extends PrimaryObjectMigration {
 
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
-
 }
 
 class PrimaryObjectPurchaserFcMigration extends PrimaryObjectMigration {
@@ -94,11 +88,6 @@ class PrimaryObjectPurchaserFcMigration extends PrimaryObjectMigration {
       ->sourceMigration(array('PersonNode'));
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
 }
 
 class PrimaryObjectImagesFcMigration extends PrimaryObjectMigration {

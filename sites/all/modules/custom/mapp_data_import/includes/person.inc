@@ -63,12 +63,6 @@ class PersonNodeMigration extends PersonMigration {
 
   }
 
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
-
-  }
-  
 }
 
 class PersonBiographyFcMigration extends PersonMigration {
