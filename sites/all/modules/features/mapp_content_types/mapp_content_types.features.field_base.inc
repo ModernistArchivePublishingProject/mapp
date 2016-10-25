@@ -27,7 +27,7 @@ function mapp_content_types_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'text_with_summary',
   );
 
@@ -1218,7 +1218,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_fc_images'.
   $field_bases['field_fc_images'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fc_images',
@@ -1474,7 +1474,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
@@ -2455,7 +2455,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_rights_holder'.
   $field_bases['field_rights_holder'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_rights_holder',
