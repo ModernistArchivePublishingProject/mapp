@@ -92,7 +92,7 @@ abstract class MAPPMigration extends Migration {
           }
           switch ($match_count) {
             case 0:
-              $this->queueMessage('No match for ' . $source_field . ': ' . $source_value, 2);
+              $this->queueMessage('No match for ' . $source_field . ': ' . $source_value . '.', 2);
               break;
             case 1:
               //print "\n1 match for $source_field: " . $row->{$source_field};
