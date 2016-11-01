@@ -21,6 +21,14 @@ abstract class MAPPMigration extends Migration {
       return FALSE;
     }
 
+    // Trim all values
+    foreach($row as $row_prop_name => $row_prop) {
+      $row_prop2 = trim($row_prop);
+      if ($row_prop <> $row_prop2) {
+        $row->{$row_prop_name} = $row_prop2;
+      }
+    }
+
     // For entity references to CSV row numbers, substract one from the row number since the migration does not count the header row.
     if (isset ($this->entity_reference_fields)) {
       foreach ($this->entity_reference_fields as $source_field => $target_field) {
