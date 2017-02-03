@@ -281,6 +281,7 @@ function _partial_date_field_presave($entity_type, $entity, $field, $instance, $
     $items[$delta] = array();
     $items[$delta]['txt_short'] = isset($item['txt_short']) ? $item['txt_short'] : NULL;
     $items[$delta]['txt_long'] = isset($item['txt_long']) ? $item['txt_long'] : NULL;
+    $item['from'] = empty($item['from']) ? array() : $item['from'];
     $items[$delta] += partial_date_field_presave_generate_storage_date($item['from']);
 
     if ($has_range) {
@@ -1125,42 +1126,6 @@ function _partial_date_field_formatter_settings_summary($field, $instance, $view
     '%text' => $txt[$settings['use_override']],
     '%example' => $example,
   ));
-/*
-            'long' => array(
-      'display' => array(
-        'year' => 'estimate_label',
-        'month' => 'estimate_label',
-        'day' => 'estimate_label',
-        'hour' => 'estimate_label',
-        'minute' => 'estimate_label',
-        'second' => 'estimate_label',
-        'timezone' => 'date_only',
-      ),
-      'components' => array(
-        'year' => array('format' => 'Y-ce', 'weight' => 0, 'empty' => ''),
-        'month' => array('format' => 'F', 'weight' => 1, 'empty' => ''),
-        'day' => array('format' => 'j-S', 'weight' => 2, 'empty' => ''),
-        'hour' => array('format' => 'h', 'weight' => 3, 'empty' => ''),
-        'minute' => array('format' => 'i', 'weight' => 4, 'empty' => ''),
-        'second' => array('format' => 's', 'weight' => 5, 'empty' => ''),
-        'timezone' => array('format' => 'e', 'weight' => 6, 'empty' => ''),
-        'c1' => array('value' => '', 'weight' => 7),
-        'c2' => array('value' => '', 'weight' => 8),
-        'c3' => array('value' => '', 'weight' => 9),
-      ),
-      'separator' => array(
-        'date' => ' ',
-        'time' => ':',
-        'datetime' => ', ',
-        'other' => ' ',
-        'range' => '',
-      ),
-      'meridiem' => 1,
-      'year_designation' => 'ce',
-    ),
-
-
- */
 }
 
 ################################################################################

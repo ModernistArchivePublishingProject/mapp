@@ -117,7 +117,8 @@ function mapp_content_types_field_group_info() {
       1 => 'field_description',
       2 => 'field_genre',
       3 => 'field_publication_date',
-      4 => 'field_tags',
+      4 => 'field_date_variable',
+      5 => 'field_rm_date_created',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -147,6 +148,7 @@ function mapp_content_types_field_group_info() {
       1 => 'field_genre',
       2 => 'field_publication_date',
       3 => 'field_date_variable',
+      4 => 'field_rm_date_created',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
