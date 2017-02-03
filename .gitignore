@@ -6,4 +6,4 @@ sites/*/files
 sites/*/private
 
 .idea/*
-
+*/.sass-cache/*
