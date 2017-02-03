@@ -65,6 +65,92 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_approximate_date'.
+  $field_bases['field_approximate_date'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_approximate_date',
+    'indexes' => array(
+      'timestamp' => array(
+        0 => 'timestamp',
+      ),
+      'timestamp_to' => array(
+        0 => 'timestamp_to',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'partial_date',
+    'settings' => array(
+      'estimates' => array(
+        'day' => array(
+          '0|12' => 'The start of the month',
+          '10|20' => 'The middle of the month',
+          '18|31' => 'The end of the month',
+        ),
+        'hour' => array(
+          '0|1' => 'Midnight',
+          '6|12' => 'Morning',
+          '6|18' => 'Day time',
+          '12|13' => 'Noon',
+          '12|18' => 'Afternoon',
+          '18|6' => 'Night',
+          '18|22' => 'Evening',
+        ),
+        'minute' => array(),
+        'month' => array(
+          '2|4' => 'Spring',
+          '5|7' => 'Summer',
+          '8|10' => 'Autumn',
+          '11|1' => 'Winter',
+        ),
+        'second' => array(),
+        'year' => array(
+          '-60000|1600' => 'Pre-colonial',
+          '1500|1599' => '16th century',
+          '1600|1699' => '17th century',
+          '1700|1799' => '18th century',
+          '1800|1899' => '19th century',
+          '1900|1999' => '20th century',
+          '2000|2099' => '21st century',
+        ),
+      ),
+      'minimum_components' => array(
+        'from_estimates_day' => 0,
+        'from_estimates_hour' => 0,
+        'from_estimates_minute' => 0,
+        'from_estimates_month' => 0,
+        'from_estimates_second' => 0,
+        'from_estimates_year' => 0,
+        'from_granularity_day' => 0,
+        'from_granularity_hour' => 0,
+        'from_granularity_minute' => 0,
+        'from_granularity_month' => 0,
+        'from_granularity_second' => 0,
+        'from_granularity_timezone' => 0,
+        'from_granularity_year' => 0,
+        'to_estimates_day' => 0,
+        'to_estimates_hour' => 0,
+        'to_estimates_minute' => 0,
+        'to_estimates_month' => 0,
+        'to_estimates_second' => 0,
+        'to_estimates_year' => 0,
+        'to_granularity_day' => 0,
+        'to_granularity_hour' => 0,
+        'to_granularity_minute' => 0,
+        'to_granularity_month' => 0,
+        'to_granularity_second' => 0,
+        'to_granularity_timezone' => 0,
+        'to_granularity_year' => 0,
+        'txt_long' => 0,
+        'txt_short' => 0,
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'partial_date_range',
+  );
+
   // Exported field_base: 'field_author'.
   $field_bases['field_author'] = array(
     'active' => 1,
@@ -93,6 +179,7 @@ function mapp_content_types_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'business' => 'business',
           'person' => 'person',
         ),
       ),
@@ -210,6 +297,31 @@ function mapp_content_types_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_with_summary',
+  );
+
+  // Exported field_base: 'field_biography_display'.
+  $field_bases['field_biography_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_biography_display',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_birth_date'.
@@ -347,6 +459,67 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
+  // Exported field_base: 'field_biz_relationship_type'.
+  $field_bases['field_biz_relationship_type'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_biz_relationship_type',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'business_relationship_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_business'.
+  $field_bases['field_business'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_business',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'business' => 'business',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_business_history'.
   $field_bases['field_business_history'] = array(
     'active' => 1,
@@ -369,10 +542,32 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
+  // Exported field_base: 'field_business_relationship'.
+  $field_bases['field_business_relationship'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_business_relationship',
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_business_type'.
   $field_bases['field_business_type'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_business_type',
@@ -688,6 +883,28 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'date',
   );
 
+  // Exported field_base: 'field_date_variable'.
+  $field_bases['field_date_variable'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_date_variable',
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_death_date'.
   $field_bases['field_death_date'] = array(
     'active' => 1,
@@ -901,7 +1118,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_edition'.
   $field_bases['field_edition'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_edition',
@@ -1018,6 +1235,29 @@ function mapp_content_types_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'field_collection',
+  );
+
+  // Exported field_base: 'field_file_attachments'.
+  $field_bases['field_file_attachments'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_file_attachments',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
   );
 
   // Exported field_base: 'field_gender'.
@@ -1360,6 +1600,28 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_library_identifier'.
+  $field_bases['field_library_identifier'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_library_identifier',
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_link_digitized'.
   $field_bases['field_link_digitized'] = array(
     'active' => 1,
@@ -1501,8 +1763,12 @@ function mapp_content_types_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
-          'association_copy' => 'association_copy',
-          'bp_book' => 'bp_book',
+          'business' => 'business',
+          'correspondence' => 'correspondence',
+          'edition' => 'edition',
+          'person' => 'person',
+          'primary_object' => 'primary_object',
+          'related_materials' => 'related_materials',
           'work' => 'work',
         ),
       ),
@@ -1525,6 +1791,28 @@ function mapp_content_types_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'url',
+  );
+
+  // Exported field_base: 'field_narrative'.
+  $field_bases['field_narrative'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_narrative',
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
   );
 
   // Exported field_base: 'field_number_of_related_items'.
@@ -1566,6 +1854,27 @@ function mapp_content_types_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_other_names'.
+  $field_bases['field_other_names'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_other_names',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_owned_by'.
@@ -2010,6 +2319,7 @@ function mapp_content_types_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'business' => 'business',
           'person' => 'person',
         ),
       ),
@@ -2170,6 +2480,7 @@ function mapp_content_types_field_default_field_bases() {
         'target_bundles' => array(
           'business' => 'business',
           'library' => 'library',
+          'person' => 'person',
         ),
       ),
       'target_type' => 'node',

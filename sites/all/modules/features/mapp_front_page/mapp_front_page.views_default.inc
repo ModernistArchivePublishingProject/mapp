@@ -74,7 +74,7 @@ function mapp_front_page_views_default_views() {
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
+    'trim_length' => '1200',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
   /* Field: Content: Comment count */

@@ -4,111 +4,60 @@
  */
 function mapp_data_import_migrate_api() {
   module_load_include('inc', 'mapp_data_import', 'includes/person');
-  module_load_include('inc', 'mapp_data_import', 'includes/business');
-  module_load_include('inc', 'mapp_data_import', 'includes/library');
-  module_load_include('inc', 'mapp_data_import', 'includes/work');
-  module_load_include('inc', 'mapp_data_import', 'includes/edition');
-  module_load_include('inc', 'mapp_data_import', 'includes/primary_object');
-  module_load_include('inc', 'mapp_data_import', 'includes/related_materials');
-  module_load_include('inc', 'mapp_data_import', 'includes/correspondence');
+//  module_load_include('inc', 'mapp_data_import', 'includes/business');
+//  module_load_include('inc', 'mapp_data_import', 'includes/library');
+//  module_load_include('inc', 'mapp_data_import', 'includes/work');
+//  module_load_include('inc', 'mapp_data_import', 'includes/edition');
+//  module_load_include('inc', 'mapp_data_import', 'includes/primary_object');
+//  module_load_include('inc', 'mapp_data_import', 'includes/related_materials');
+//  module_load_include('inc', 'mapp_data_import', 'includes/correspondence');
 
   // Migrations class and dependencies
   $migrations = array(
-    'PersonTerm' => array(
-      'class_name' => 'PersonTermMigration',
-      'group_name' => 'people'
-    ),
+
     'PersonNode' => array(
       'class_name' => 'PersonNodeMigration',
-      'group_name' => 'people',
-      'dependencies' => array('PersonTerm')
+      'group_name' => 'mapp',
     ),
-    'PersonBiography' => array(
-      'class_name' => 'PersonBiographyMigration',
-      'group_name' => 'people',
+    'PersonBiographyFc' => array(
+      'class_name' => 'PersonBiographyFcMigration',
+      'group_name' => 'mapp',
       'dependencies' => array('PersonNode')
     ),
-//    'BusinessTerm' => array(
-//      'class_name' => 'BusinessTermMigration',
-//      'group_name' => 'organizations',
-//    ),
-//    'BusinessNode' => array(
-//      'class_name' => 'BusinessNodeMigration',
-//      'group_name' => 'organizations',
-//      'dependencies' => array('BusinessTerm')
-//    ),
-//    'LibraryNode' => array(
-//      'class_name' => 'LibraryNodeMigration',
-//      'group_name' => 'organizations',
-//    ),
-//    'WorkTerm' => array(
-//      'class_name' => 'WorkTermMigration',
-//      'group_name' => 'works',
-//    ),
-//    'WorkNode' => array(
-//      'class_name' => 'WorkNodeMigration',
-//      'group_name' => 'works',
-//      'dependencies' => array('WorkTerm')
-//    ),
-//    'EditionTerm' => array(
-//      'class_name' => 'EditionTermMigration',
-//      'group_name' => 'editions',
-//    ),
-//    'EditionNode' => array(
-//      'class_name' => 'EditionNodeMigration',
-//      'group_name' => 'editions',
-//      'dependencies' => array('EditionTerm')
-//    ),
-//    'PrimaryObjectTerm' => array(
-//      'class_name' => 'PrimaryObjectTermMigration',
-//      'group_name' => 'primary_objects',
-//    ),
-//    'PrimaryObjectNode' => array(
-//      'class_name' => 'PrimaryObjectNodeMigration',
-//      'group_name' => 'primary_objects',
-//      'dependencies' => array('PrimaryObjectTerm')
-//    ),
-//    'RelatedMaterialsTerm' => array(
-//      'class_name' => 'RelatedMaterialsTermMigration',
-//      'group_name' => 'related',
-//    ),
-//    'RelatedMaterialsNode' => array(
-//      'class_name' => 'RelatedMaterialsNodeMigration',
-//      'group_name' => 'related',
-//      'dependencies' => array('RelatedMaterialsTerm')
-//    ),
-//    'CorrespondenceTerm' => array(
-//      'class_name' => 'CorrespondenceTermMigration',
-//      'group_name' => 'related',
-//    ),
-//    'CorrespondenceNode' => array(
-//      'class_name' => 'CorrespondenceNodeMigration',
-//      'group_name' => 'related',
-//      'dependencies' => array('CorrespondenceTerm')
-//    ),
+    'PersonImagesFc' => array(
+      'class_name' => 'PersonImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('PersonNode')
+    ),
+
+    'WorkNode' => array(
+      'class_name' => 'WorkNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'WorkImagesFc' => array(
+      'class_name' => 'WorkImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('WorkNode')
+    ),
+
+    'CorrespondenceNode' => array(
+      'class_name' => 'CorrespondenceNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'CorrespondenceImagesFc' => array(
+      'class_name' => 'CorrespondenceImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('CorrespondenceNode')
+    ),
+
   );
 
   // API and groups information
   $api = array(
     'api' => 2,
     'groups' => array(
-      'people' => array(
-        'title' => t('People Migrations'),
-      ),
-      'organizations' => array(
-        'title' => t('Organization Migrations (Businesses, Libraries)'),
-      ),
-      'works' => array(
-        'title' => t('Works Migrations')
-      ),
-      'editions' => array(
-        'title' => t('Editions Migrations')
-      ),
-      'primary_objects' => array(
-        'title' => t('Primary Object Migrations')
-      ),
-      'related' => array(
-        'title' => t('Related Materials and Correspondence')
+      'mapp' => array(
+        'title' => t('MAPP'),
       ),
     ),
     'migrations' => $migrations,
