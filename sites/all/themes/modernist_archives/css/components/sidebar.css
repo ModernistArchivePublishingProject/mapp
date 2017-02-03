@@ -14,15 +14,17 @@ section.region-sidebar-first img.header__logo-image {
 }
 /* line 20, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu {
+  padding-top: 300px;
   list-style-type: none;
+  width: 250px;
 }
-/* line 22, ../../sass/components/sidebar.scss */
+/* line 24, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
   font-variant: small-caps;
 }
-/* line 26, ../../sass/components/sidebar.scss */
+/* line 28, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }
