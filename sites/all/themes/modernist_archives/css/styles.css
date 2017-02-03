@@ -5840,6 +5840,10 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
 .view-id-front_page_content_feed .views-row-first {
   border: none;
 }
+/* line 52, ../sass/components/views.scss */
+.view-id-front_page_content_feed h2 {
+  line-height: 1em;
+}
 
 /**
  * @file

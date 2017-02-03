@@ -1,4 +1,4 @@
-/* line 2, ../../sass/components/views.scss */
+/* line 3, ../../sass/components/views.scss */
 .view-presses div.views-field-title,
 .view-presses div.views-field-field-number-of-related-items {
   padding: 0px 10px 0px 10px;
@@ -51,4 +51,8 @@
 /* line 49, ../../sass/components/views.scss */
 .view-id-front_page_content_feed .views-row-first {
   border: none;
+}
+/* line 52, ../../sass/components/views.scss */
+.view-id-front_page_content_feed h2 {
+  line-height: 1em;
 }
