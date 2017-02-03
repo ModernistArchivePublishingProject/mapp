@@ -55,7 +55,7 @@ class WorkNodeMigration extends WorkMigration {
     );
     $this->addFieldMapping('field_author', 'Author')
       ->separator('|')
-      ->sourceMigration(array('PersonNode')); // TODO: add business migration
+      ->sourceMigration(array('PersonNode', 'BusinessNode'));
     $this->addFieldMapping('field_editor', 'Editor')
       ->separator('|')
       ->sourceMigration(array('PersonNode'));
@@ -75,15 +75,9 @@ class WorkNodeMigration extends WorkMigration {
     parent::prepareRow($row);
 
     // Convert the date into ISO format.
-    if (isset($row->{'Copyright Date'})) {
+    if (!empty($row->{'Copyright Date'})) {
       $row->{'Copyright Date'} .= '-01-01T00:00:00';
     }
-
-  }
-
-  public function prepare($entity, $row) {
-
-    $this->MAPP_populate_entity_refs($entity, $row);
 
   }
 

@@ -50,6 +50,61 @@ function mapp_data_import_migrate_api() {
       'dependencies' => array('CorrespondenceNode')
     ),
 
+    'RelatedMaterialsNode' => array(
+      'class_name' => 'RelatedMaterialsNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'RelatedMaterialsImagesFc' => array(
+      'class_name' => 'RelatedMaterialsImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('RelatedMaterialsNode')
+    ),
+
+    'BusinessNode' => array(
+      'class_name' => 'BusinessNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'BusinessNarrativeFc' => array(
+      'class_name' => 'BusinessNarrativeFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+    'BusinessHistoryFc' => array(
+      'class_name' => 'BusinessHistoryFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+    'BusinessImagesFc' => array(
+      'class_name' => 'BusinessImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('BusinessNode')
+    ),
+
+    'EditionNode' => array(
+      'class_name' => 'EditionNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'EditionPurchaserFc' => array(
+      'class_name' => 'EditionPurchaserFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('EditionNode')
+    ),
+    'EditionImagesFc' => array(
+      'class_name' => 'EditionImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('EditionNode')
+    ),
+
+    'PrimaryObjectNode' => array(
+      'class_name' => 'PrimaryObjectNodeMigration',
+      'group_name' => 'mapp',
+    ),
+    'PrimaryObjectImagesFc' => array(
+      'class_name' => 'PrimaryObjectImagesFcMigration',
+      'group_name' => 'mapp',
+      'dependencies' => array('PrimaryObjectNode')
+    ),
+    
   );
 
   // API and groups information
