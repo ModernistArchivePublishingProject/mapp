@@ -1,0 +1,17 @@
+name = Correspondence
+description = Views related to letters
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = mapp_views
+dependencies[] = views
+features[context][] = letters_received
+features[context][] = letters_related_to
+features[context][] = letters_sent
+features[ctools][] = context:context:3
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = correspondence
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/features
