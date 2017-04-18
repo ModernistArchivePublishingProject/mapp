@@ -52,3 +52,8 @@
 .view-id-front_page_content_feed .views-row-first {
   border: none;
 }
+
+/* line 55, ../../sass/components/views.scss */
+div.view-content td {
+  padding: 5px;
+}
