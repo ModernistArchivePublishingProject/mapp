@@ -106,7 +106,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: URL */
+  /* Field: Content: Library Catalog */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
   $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
@@ -332,7 +332,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['title_1']['relationship'] = 'field_author_target_id';
   $handler->display->display_options['fields']['title_1']['label'] = 'Author';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  /* Field: Content: Date Created */
+  /* Field: Field: Date Created */
   $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
@@ -350,7 +350,7 @@ function mapp_views_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_publication_date']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Date Created (field_publication_date) */
+  /* Sort criterion: Field: Date Created (field_publication_date) */
   $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
   $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';

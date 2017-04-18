@@ -197,7 +197,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'Y/m/d - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -247,7 +247,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'Y/m/d - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -783,7 +783,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'd/m/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -881,6 +881,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -1703,6 +1704,7 @@ function mapp_content_types_field_default_field_instances() {
         'allowed_types' => array(
           0 => 'image',
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -1718,11 +1720,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'file',
         'settings' => array(
           'file_view_mode' => 'media_large',
         ),
-        'type' => 'file_rendered',
+        'type' => 'file_default',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -1757,6 +1759,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -2194,6 +2197,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -2313,11 +2317,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'file',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
-        'type' => 'file_rendered',
+        'type' => 'file_default',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -2352,6 +2356,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -2491,7 +2496,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -2882,6 +2887,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -3322,7 +3328,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -3468,7 +3474,9 @@ function mapp_content_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'media',
-        'settings' => array(),
+        'settings' => array(
+          'image_style' => '',
+        ),
         'type' => 'media_large_icon',
         'weight' => 3,
       ),
@@ -4429,6 +4437,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -4935,6 +4944,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -5251,7 +5261,9 @@ function mapp_content_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'media',
-        'settings' => array(),
+        'settings' => array(
+          'image_style' => '',
+        ),
         'type' => 'media_large_icon',
         'weight' => 3,
       ),
@@ -5497,6 +5509,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -5760,7 +5773,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -6043,7 +6056,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -6102,11 +6115,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'file',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
-        'type' => 'file_rendered',
+        'type' => 'file_default',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -6141,6 +6154,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -6320,6 +6334,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',

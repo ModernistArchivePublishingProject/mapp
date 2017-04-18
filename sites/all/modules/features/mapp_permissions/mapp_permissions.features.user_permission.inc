@@ -351,16 +351,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: 'administer media'.
-  $permissions['administer media'] = array(
-    'name' => 'administer media',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -1340,16 +1330,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'biblio',
   );
 
-  // Exported permission: 'edit media'.
-  $permissions['edit media'] = array(
-    'name' => 'edit media',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'edit own article content'.
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
@@ -1775,16 +1755,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'biblio',
   );
 
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'import person feeds'.
   $permissions['import person feeds'] = array(
     'name' => 'import person feeds',
@@ -2074,18 +2044,6 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
-  );
-
-  // Exported permission: 'view media'.
-  $permissions['view media'] = array(
-    'name' => 'view media',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'media',
   );
 
   // Exported permission: 'view own unpublished content'.
