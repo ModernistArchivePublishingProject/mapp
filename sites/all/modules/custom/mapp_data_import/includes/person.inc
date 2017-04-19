@@ -28,7 +28,7 @@ class PersonNodeMigration extends PersonMigration {
 
     // Basic mappings
     $this->addFieldMapping('title', 'name');
-    $this->addFieldMapping('field_name_authority', 'Identifiers');
+    $this->addFieldMapping('field_name_authority', 'Authority Record');
 
     $this->addFieldMapping('field_birth_place', 'Birth Nation');
     $this->addFieldMapping('field_birth_place:locality', 'Birth City');
