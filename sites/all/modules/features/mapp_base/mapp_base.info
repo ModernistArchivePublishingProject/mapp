@@ -42,6 +42,7 @@ dependencies[] = libraries
 dependencies[] = link
 dependencies[] = list
 dependencies[] = media
+dependencies[] = media_wysiwyg
 dependencies[] = menu
 dependencies[] = module_filter
 dependencies[] = number
