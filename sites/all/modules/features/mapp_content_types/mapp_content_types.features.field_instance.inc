@@ -1720,11 +1720,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
+        'module' => 'file_entity',
         'settings' => array(
-          'file_view_mode' => 'media_large',
+          'file_view_mode' => 'full',
         ),
-        'type' => 'file_default',
+        'type' => 'file_rendered',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -2317,11 +2317,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
+        'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
-        'type' => 'file_default',
+        'type' => 'file_rendered',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -6115,11 +6115,11 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
+        'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
-        'type' => 'file_default',
+        'type' => 'file_rendered',
         'weight' => 1,
       ),
       'teaser' => array(

@@ -17,6 +17,7 @@ dependencies[] = feeds_tamper
 dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = file
+dependencies[] = file_entity
 dependencies[] = geocoder
 dependencies[] = geofield
 dependencies[] = image
