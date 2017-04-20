@@ -50,7 +50,7 @@ function correspondence_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'letters_related_to';
   $context->description = 'Letters related to Work';
-  $context->tag = 'correspondence';
+  $context->tag = 'Work';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -78,7 +78,7 @@ function correspondence_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Letters related to Work');
-  t('correspondence');
+  t('Work');
   $export['letters_related_to'] = $context;
 
   $context = new stdClass();

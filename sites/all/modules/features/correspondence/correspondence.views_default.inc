@@ -118,6 +118,14 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['field_correspondence_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_correspondence_type']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_correspondence_type']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Author (field_author) */
+  $handler->display->display_options['sorts']['field_author_target_id']['id'] = 'field_author_target_id';
+  $handler->display->display_options['sorts']['field_author_target_id']['table'] = 'field_data_field_author';
+  $handler->display->display_options['sorts']['field_author_target_id']['field'] = 'field_author_target_id';
+  /* Sort criterion: Content: Recipient (field_recipient) */
+  $handler->display->display_options['sorts']['field_recipient_target_id']['id'] = 'field_recipient_target_id';
+  $handler->display->display_options['sorts']['field_recipient_target_id']['table'] = 'field_data_field_recipient';
+  $handler->display->display_options['sorts']['field_recipient_target_id']['field'] = 'field_recipient_target_id';
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -180,7 +188,7 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['text'] = 'View Letter(s)';
+  $handler->display->display_options['fields']['view_node']['text'] = 'View';
   /* Field: Content: Author */
   $handler->display->display_options['fields']['field_author']['id'] = 'field_author';
   $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
@@ -193,6 +201,7 @@ function correspondence_views_default_views() {
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_author']['separator'] = ',';
   $handler->display->display_options['fields']['field_author']['field_api_classes'] = TRUE;
   /* Field: Content: Recipient */
   $handler->display->display_options['fields']['field_recipient']['id'] = 'field_recipient';
