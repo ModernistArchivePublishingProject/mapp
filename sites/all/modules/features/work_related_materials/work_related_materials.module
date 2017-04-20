@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Work Related Materials feature.
+ */
+
+include_once 'work_related_materials.features.inc';
