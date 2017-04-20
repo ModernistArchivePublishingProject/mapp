@@ -52,7 +52,10 @@
 }
 
 div.view-content {
-  td {
-    padding: 5px;
+  table {
+    width: 100%;
+    td {
+      padding: 5px;
+    }
   }
 }

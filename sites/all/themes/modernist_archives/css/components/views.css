@@ -54,6 +54,10 @@
 }
 
 /* line 55, ../../sass/components/views.scss */
-div.view-content td {
+div.view-content table {
+  width: 100%;
+}
+/* line 57, ../../sass/components/views.scss */
+div.view-content table td {
   padding: 5px;
 }

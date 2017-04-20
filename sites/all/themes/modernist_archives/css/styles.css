@@ -5840,7 +5840,11 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a 
 }
 
 /* line 55, ../sass/components/views.scss */
-div.view-content td {
+div.view-content table {
+  width: 100%;
+}
+/* line 57, ../sass/components/views.scss */
+div.view-content table td {
   padding: 5px;
 }
 
