@@ -55,7 +55,7 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['text'] = 'View Letter(s)';
+  $handler->display->display_options['fields']['view_node']['text'] = 'View';
   /* Field: Content: Author */
   $handler->display->display_options['fields']['field_author']['id'] = 'field_author';
   $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
