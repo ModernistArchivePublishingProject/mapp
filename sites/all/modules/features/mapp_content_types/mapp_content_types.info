@@ -179,7 +179,6 @@ features[field_instance][] = node-business-field_business_type
 features[field_instance][] = node-business-field_description
 features[field_instance][] = node-business-field_fc_images
 features[field_instance][] = node-business-field_file_attachments
-features[field_instance][] = node-business-field_images
 features[field_instance][] = node-business-field_narrative
 features[field_instance][] = node-business-field_number_of_related_items
 features[field_instance][] = node-business-field_owned_by
