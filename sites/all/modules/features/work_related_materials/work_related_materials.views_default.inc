@@ -15,7 +15,7 @@ function work_related_materials_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Related Materials';
+  $view->human_name = 'Work-Related Materials';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -42,18 +42,6 @@ function work_related_materials_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
-  /* Field: Content: Author */
-  $handler->display->display_options['fields']['field_author']['id'] = 'field_author';
-  $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
-  $handler->display->display_options['fields']['field_author']['field'] = 'field_author';
-  $handler->display->display_options['fields']['field_author']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_author']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_author']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_author']['settings'] = array(
-    'link' => 1,
-  );
-  $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_author']['field_api_classes'] = TRUE;
   /* Field: Content: Genre */
   $handler->display->display_options['fields']['field_genre']['id'] = 'field_genre';
   $handler->display->display_options['fields']['field_genre']['table'] = 'field_data_field_genre';
@@ -189,8 +177,8 @@ function work_related_materials_views_default_views() {
     'related_materials' => 'related_materials',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Block - Related Materials */
+  $handler = $view->new_display('block', 'Block - Related Materials', 'block');
   $export['related_materials'] = $view;
 
   return $export;
