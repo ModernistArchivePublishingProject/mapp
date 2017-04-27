@@ -255,5 +255,7 @@ features[user_permission][] = view full text
 features[user_permission][] = view own unpublished content
 features[user_permission][] = view revisions
 features[user_permission][] = view the administration theme
+features[user_role][] = Affiliate Member
+features[user_role][] = Research Fellow
 features[user_role][] = Team Member
 project path = sites/all/modules/features
