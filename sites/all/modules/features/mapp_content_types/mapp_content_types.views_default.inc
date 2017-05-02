@@ -177,7 +177,7 @@ function mapp_content_types_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Original Language */
+  /* Field: Content: Language */
   $handler->display->display_options['fields']['field_language']['id'] = 'field_language';
   $handler->display->display_options['fields']['field_language']['table'] = 'field_data_field_language';
   $handler->display->display_options['fields']['field_language']['field'] = 'field_language';
