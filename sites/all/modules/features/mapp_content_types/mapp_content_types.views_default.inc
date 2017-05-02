@@ -161,7 +161,7 @@ function mapp_content_types_views_default_views() {
   $handler->display->display_options['fields']['field_work_type']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_work_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_work_type']['field_api_classes'] = TRUE;
-  /* Field: Content: Copyright Date */
+  /* Field: Content: Publication Date */
   $handler->display->display_options['fields']['field_copyright_date']['id'] = 'field_copyright_date';
   $handler->display->display_options['fields']['field_copyright_date']['table'] = 'field_data_field_copyright_date';
   $handler->display->display_options['fields']['field_copyright_date']['field'] = 'field_copyright_date';

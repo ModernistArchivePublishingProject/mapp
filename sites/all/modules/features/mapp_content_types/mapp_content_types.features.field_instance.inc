@@ -6207,7 +6207,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_copyright_date',
-    'label' => 'Copyright Date',
+    'label' => 'Publication Date',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -6821,7 +6821,6 @@ function mapp_content_types_field_default_field_instances() {
   t('Caption');
   t('Condition');
   t('Copies Purchased');
-  t('Copyright Date');
   t('Copyright Status');
   t('Correspondence Type');
   t('Cover Image');
@@ -6879,6 +6878,7 @@ function mapp_content_types_field_default_field_instances() {
   t('Price');
   t('Print run');
   t('Printer');
+  t('Publication Date');
   t('Publication Process');
   t('Publisher');
   t('Purchaser');
