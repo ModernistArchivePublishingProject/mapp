@@ -42,7 +42,7 @@ function mapp_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_correspondence';
-  $strongarm->value = 'Correspondence from [node:field_author] to [node:field_recipient] on [node:field_publication_date]';
+  $strongarm->value = 'Correspondence from [node:field_author] to [node:field_recipient]';
   $export['auto_entitylabel_pattern_node_correspondence'] = $strongarm;
 
   $strongarm = new stdClass();
