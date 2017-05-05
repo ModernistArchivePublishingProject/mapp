@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Search feature.
  */
+
+include_once 'mapp_search.features.inc';
