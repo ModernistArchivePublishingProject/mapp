@@ -433,15 +433,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'responsive_menus',
   );
 
-  // Exported permission: 'administer search'.
-  $permissions['administer search'] = array(
-    'name' => 'administer search',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'search',
-  );
-
   // Exported permission: 'administer shortcuts'.
   $permissions['administer shortcuts'] = array(
     'name' => 'administer shortcuts',
@@ -1837,17 +1828,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'search content'.
-  $permissions['search content'] = array(
-    'name' => 'search content',
-    'roles' => array(
-      'Affiliate Member' => 'Affiliate Member',
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'search',
-  );
-
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
@@ -1976,17 +1956,6 @@ function mapp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'googleanalytics',
-  );
-
-  // Exported permission: 'use advanced search'.
-  $permissions['use advanced search'] = array(
-    'name' => 'use advanced search',
-    'roles' => array(
-      'Affiliate Member' => 'Affiliate Member',
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'search',
   );
 
   // Exported permission: 'use text format filtered_html'.
