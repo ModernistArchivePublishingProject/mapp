@@ -1,0 +1,15 @@
+name = Work Related Materials
+description = Materials related to a work
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = mapp_content_types
+dependencies[] = views
+features[context][] = work_related_materials
+features[ctools][] = context:context:3
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = related_materials
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/features

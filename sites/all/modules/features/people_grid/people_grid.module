@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the People Grid feature.
+ */
+
+include_once 'people_grid.features.inc';

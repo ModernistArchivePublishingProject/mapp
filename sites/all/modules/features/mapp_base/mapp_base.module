@@ -5,3 +5,12 @@
  */
 
 include_once 'mapp_base.features.inc';
+
+// Hide Biographies unless Display has been set to TRUE.
+function mapp_base_field_collection_item_view($field_collection_item, $view_mode, $langcode) {
+  if (property_exists($field_collection_item, 'field_biography_display')) {
+    if (!$field_collection_item->field_biography_display[LANGUAGE_NONE][0]['value']) {
+      $field_collection_item->content = array();
+    }
+  }
+}

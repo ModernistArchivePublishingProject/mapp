@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Correspondence feature.
+ */
+
+include_once 'correspondence.features.inc';

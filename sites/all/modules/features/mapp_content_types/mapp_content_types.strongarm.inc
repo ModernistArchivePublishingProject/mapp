@@ -34,6 +34,13 @@ function mapp_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_related_materials';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_related_materials'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_correspondence';
   $strongarm->value = 'Correspondence from [node:field_author] to [node:field_recipient]';
   $export['auto_entitylabel_pattern_node_correspondence'] = $strongarm;
@@ -55,6 +62,13 @@ function mapp_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_related_materials';
+  $strongarm->value = '[node:field_description]';
+  $export['auto_entitylabel_pattern_node_related_materials'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_php_node_correspondence';
   $strongarm->value = 0;
   $export['auto_entitylabel_php_node_correspondence'] = $strongarm;
@@ -72,6 +86,13 @@ function mapp_content_types_strongarm() {
   $strongarm->name = 'auto_entitylabel_php_node_primary_object';
   $strongarm->value = 0;
   $export['auto_entitylabel_php_node_primary_object'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_related_materials';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_related_materials'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -468,6 +489,27 @@ function mapp_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_partner';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_partner';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_partner';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__business';
   $strongarm->value = array(
     'view_modes' => array(
@@ -499,7 +541,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -645,7 +687,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '13',
         ),
       ),
       'display' => array(),

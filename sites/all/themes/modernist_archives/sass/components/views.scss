@@ -43,10 +43,18 @@
 
 .view-id-front_page_content_feed {
   .views-row {
-    border-top: 1px solid rgba(200,200,200,.5);
-    padding-bottom: 10px;
+    border: 1px solid rgba(200,200,200,.5);
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
   }
-  .views-row-first {
-    border: none;
+}
+
+div.view-content {
+  table {
+    width: 100%;
+    td {
+      padding: 5px;
+    }
   }
 }

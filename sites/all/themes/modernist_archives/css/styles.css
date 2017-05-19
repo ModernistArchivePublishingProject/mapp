@@ -15,14 +15,12 @@
 /* @import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
-/* @import "components/misc";
-// Optionally, add your own components here. */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,600,900);
-/* line 6, ../sass/_reset.scss */
+/* line 18, ../sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,7 +43,7 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, ../sass/_reset.scss */
+/* line 28, ../sass/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -66,7 +64,7 @@ blockquote, q {
   quotes: none;
 }
 
-/* line 40, ../sass/_reset.scss */
+/* line 41, ../sass/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -87,7 +85,12 @@ table {
  * Mike Widner <mikewidner@gmail.com>
  *
  **/
-/* line 26, ../sass/components/base.scss */
+/* line 25, ../sass/components/base.scss */
+div#page {
+  width: 100%;
+}
+
+/* line 30, ../sass/components/base.scss */
 body {
   font-family: "Roboto", sans-serf;
   font-size: 20px;
@@ -96,18 +99,18 @@ body {
   background-color: #fcfcfc;
 }
 
-/* line 34, ../sass/components/base.scss */
+/* line 38, ../sass/components/base.scss */
 article {
   margin-bottom: 5em;
 }
 
-/* line 38, ../sass/components/base.scss */
+/* line 42, ../sass/components/base.scss */
 p#skip-link {
   margin: 0;
   display: none;
 }
 
-/* line 45, ../sass/components/base.scss */
+/* line 49, ../sass/components/base.scss */
 .mapp-button {
   text-decoration: none;
   text-align: center;
@@ -116,18 +119,18 @@ p#skip-link {
   display: block;
   width: 15%;
 }
-/* line 52, ../sass/components/base.scss */
+/* line 56, ../sass/components/base.scss */
 .mapp-button a {
   color: white;
 }
-/* line 55, ../sass/components/base.scss */
+/* line 59, ../sass/components/base.scss */
 .mapp-button a:hover {
   text-decoration: none !important;
   color: transparent !important;
 }
 
 /* Contact */
-/* line 65, ../sass/components/base.scss */
+/* line 69, ../sass/components/base.scss */
 input, textarea {
   height: 3em;
   border-radius: 2px;
@@ -140,24 +143,24 @@ input, textarea {
   font-weight: 300;
 }
 
-/* line 77, ../sass/components/base.scss */
+/* line 81, ../sass/components/base.scss */
 textarea {
   height: 6em;
   resize: vertical;
 }
 
-/* line 82, ../sass/components/base.scss */
+/* line 86, ../sass/components/base.scss */
 label {
   margin-top: 1.5em;
   display: block;
 }
 
-/* line 87, ../sass/components/base.scss */
+/* line 91, ../sass/components/base.scss */
 .form-required {
   color: red;
 }
 
-/* line 91, ../sass/components/base.scss */
+/* line 95, ../sass/components/base.scss */
 input[type="submit"] {
   margin-top: 3em;
   color: white;
@@ -168,13 +171,13 @@ input[type="submit"] {
   padding: 0.25em 1em;
   font-size: 1em;
 }
-/* line 100, ../sass/components/base.scss */
+/* line 104, ../sass/components/base.scss */
 input[type="submit"]:hover {
   background-color: #b04f26;
 }
 
 /* Bibolography */
-/* line 107, ../sass/components/base.scss */
+/* line 111, ../sass/components/base.scss */
 .biblio-separator-bar {
   margin: 1.5em 0 0.5em 0;
   border: none;
@@ -185,50 +188,50 @@ input[type="submit"]:hover {
   color: #d36436;
 }
 
-/* line 117, ../sass/components/base.scss */
+/* line 121, ../sass/components/base.scss */
 .biblio-entry {
   margin-top: 0.75em;
 }
 
-/* line 121, ../sass/components/base.scss */
+/* line 125, ../sass/components/base.scss */
 .biblio-export {
   float: right;
 }
 
-/* line 125, ../sass/components/base.scss */
+/* line 129, ../sass/components/base.scss */
 ul.pager {
   margin-top: 1em;
 }
-/* line 127, ../sass/components/base.scss */
+/* line 131, ../sass/components/base.scss */
 ul.pager li {
   display: inline-block;
 }
-/* line 129, ../sass/components/base.scss */
+/* line 133, ../sass/components/base.scss */
 ul.pager li.pager-current {
   color: #4d71a2;
   font-weight: 600;
 }
 
-/* line 136, ../sass/components/base.scss */
+/* line 140, ../sass/components/base.scss */
 .views-field-citation {
   margin-top: 1em;
 }
 
 /* Footer */
-/* line 142, ../sass/components/base.scss */
+/* line 146, ../sass/components/base.scss */
 #footer {
   background-color: whitesmoke;
   padding: 1em;
   margin-top: 2em;
 }
-/* line 147, ../sass/components/base.scss */
+/* line 151, ../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
 
 /* Hacks */
-/* line 161, ../sass/components/base.scss */
+/* line 165, ../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
@@ -385,66 +388,89 @@ fieldset legend {
   padding: 0 1em;
 }
 
-/* line 15, ../sass/components/layout.scss */
+/* line 16, ../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 21, ../sass/components/layout.scss */
-#main {
-  width: 80%;
-  margin-left: 20%;
-  background-color: #fcfcfc;
+/* line 20, ../sass/components/layout.scss */
+img {
+  max-width: 95%;
 }
 
-/* line 27, ../sass/components/layout.scss */
+/* line 24, ../sass/components/layout.scss */
+#main {
+  background-color: #fcfcfc;
+}
+@media screen and (max-width: 320px) {
+  /* line 24, ../sass/components/layout.scss */
+  #main {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) {
+  /* line 24, ../sass/components/layout.scss */
+  #main {
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+/* line 35, ../sass/components/layout.scss */
 #content {
   text-align: left;
   margin: 0 auto;
   max-width: 40em;
 }
+@media screen and (max-width: 320px) {
+  /* line 35, ../sass/components/layout.scss */
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+}
 
-/* line 34, ../sass/components/layout.scss */
+/* line 46, ../sass/components/layout.scss */
 #navigation {
   display: none;
 }
 
-/* line 43, ../sass/components/layout.scss */
+/* line 55, ../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
-  /* line 43, ../sass/components/layout.scss */
+  /* line 55, ../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 50, ../sass/components/layout.scss */
+/* line 62, ../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 54, ../sass/components/layout.scss */
+/* line 66, ../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 62, ../sass/components/layout.scss */
+/* line 74, ../sass/components/layout.scss */
 form#search-block-form div.form-actions {
   display: none;
 }
 
-/* line 67, ../sass/components/layout.scss */
+/* line 79, ../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 73, ../sass/components/layout.scss */
+/* line 85, ../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }
@@ -563,32 +589,49 @@ pre {
   font-family: inherit;
 }
 
-/* line 8, ../sass/components/sidebar.scss */
+/* line 12, ../sass/components/sidebar.scss */
 section.region-sidebar-first {
   padding: 2em;
   box-sizing: border-box;
-  width: 20%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
   background-color: #d36436;
   overflow-y: auto;
 }
-/* line 18, ../sass/components/sidebar.scss */
+@media screen and (max-width: 375px) {
+  /* line 12, ../sass/components/sidebar.scss */
+  section.region-sidebar-first {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 400px) {
+  /* line 12, ../sass/components/sidebar.scss */
+  section.region-sidebar-first {
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+/* line 28, ../sass/components/sidebar.scss */
 section.region-sidebar-first img.header__logo-image {
   width: 80%;
   margin-bottom: 24px;
 }
-/* line 22, ../sass/components/sidebar.scss */
+@media screen and (max-width: 375px) {
+  /* line 28, ../sass/components/sidebar.scss */
+  section.region-sidebar-first img.header__logo-image {
+    display: none;
+  }
+}
+/* line 35, ../sass/components/sidebar.scss */
 section.region-sidebar-first a.header__logo:hover {
   border-bottom: none;
 }
-/* line 26, ../sass/components/sidebar.scss */
+/* line 39, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 28, ../sass/components/sidebar.scss */
+/* line 41, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
@@ -599,18 +642,24 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   text-transform: lowercase;
   letter-spacing: 0.1em;
 }
-/* line 37, ../sass/components/sidebar.scss */
+@media screen and (max-width: 375px) {
+  /* line 41, ../sass/components/sidebar.scss */
+  section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
+    font-size: 2em;
+  }
+}
+/* line 53, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }
-/* line 39, ../sass/components/sidebar.scss */
+/* line 55, ../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a:hover {
   color: #e5a58a;
   text-decoration: none;
   border-bottom: none;
 }
 
-/* line 2, ../sass/components/views.scss */
+/* line 3, ../sass/components/views.scss */
 .view-presses div.views-field-title,
 .view-presses div.views-field-field-number-of-related-items {
   padding: 0px 10px 0px 10px;
@@ -657,12 +706,26 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a:
 
 /* line 45, ../sass/components/views.scss */
 .view-id-front_page_content_feed .views-row {
-  border-top: 1px solid rgba(200, 200, 200, 0.5);
-  padding-bottom: 10px;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 5px;
 }
-/* line 49, ../sass/components/views.scss */
-.view-id-front_page_content_feed .views-row-first {
-  border: none;
+
+/* line 54, ../sass/components/views.scss */
+div.view-content table {
+  width: 100%;
+}
+/* line 56, ../sass/components/views.scss */
+div.view-content table td {
+  padding: 5px;
+}
+
+/* line 4, ../sass/components/nodes.scss */
+article.node span.field-type-taxonomy-term-reference,
+article.node .field-type-entityreference,
+article.node .field-name-field-name-authority {
+  display: block;
 }
 
 /* @import "print";

@@ -28,7 +28,7 @@ function mapp_content_types_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -57,7 +57,105 @@ function mapp_content_types_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 2,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_business_history-field_approximate_date'.
+  $field_instances['field_collection_item-field_business_history-field_approximate_date'] = array(
+    'bundle' => 'field_business_history',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If you\'re unsure of the dates or have a fuzzy date or range of dates, use this field instead of the more precise "date" fields.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_approximate_date',
+    'label' => 'Approximate Date',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 'timezone',
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 'timezone',
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 1,
+          'range_inline' => 1,
+          'txt_long' => 0,
+          'txt_short' => 1,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
+      'weight' => 3,
     ),
   );
 
@@ -99,7 +197,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'Y/m/d - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -107,7 +205,7 @@ function mapp_content_types_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 8,
+      'weight' => 2,
     ),
   );
 
@@ -149,15 +247,16 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'Y/m/d - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 6,
+      'weight' => 1,
     ),
   );
 
@@ -173,9 +272,10 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'geofield',
         'settings' => array(
           'data' => 'full',
+          'map_preset' => 'geofield_formatter_map',
         ),
-        'type' => 'geofield_wkt',
-        'weight' => 1,
+        'type' => 'geofield_openlayers',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -207,7 +307,118 @@ function mapp_content_types_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 4,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_business_history-field_owned_by'.
+  $field_instances['field_collection_item-field_business_history-field_owned_by'] = array(
+    'bundle' => 'field_business_history',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_owned_by',
+    'label' => 'Owned By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_business_relationship-field_biz_relationship_type'.
+  $field_instances['field_collection_item-field_business_relationship-field_biz_relationship_type'] = array(
+    'bundle' => 'field_business_relationship',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_biz_relationship_type',
+    'label' => 'Relationship Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_business_relationship-field_business'.
+  $field_instances['field_collection_item-field_business_relationship-field_business'] = array(
+    'bundle' => 'field_business_relationship',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_business',
+    'label' => 'Business',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
     ),
   );
 
@@ -226,7 +437,7 @@ function mapp_content_types_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -284,7 +495,117 @@ function mapp_content_types_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_biography_display'.
+  $field_instances['field_collection_item-field_coll_biography-field_biography_display'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_biography_display',
+    'label' => 'Display this Biography?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_content_authored_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_content_authored_by'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_authored_by',
+    'label' => 'Authored By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_coll_biography-field_content_edited_by'.
+  $field_instances['field_collection_item-field_coll_biography-field_content_edited_by'] = array(
+    'bundle' => 'field_coll_biography',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_edited_by',
+    'label' => 'Edited By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 4,
     ),
   );
 
@@ -303,7 +624,7 @@ function mapp_content_types_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -323,7 +644,156 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_date_variable-field_approximate_date'.
+  $field_instances['field_collection_item-field_date_variable-field_approximate_date'] = array(
+    'bundle' => 'field_date_variable',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_approximate_date',
+    'label' => 'Approximate Date',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 1,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 1,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_date_variable-field_publication_date'.
+  $field_instances['field_collection_item-field_date_variable-field_publication_date'] = array(
+    'bundle' => 'field_date_variable',
+    'deleted' => 0,
+    'description' => 'If you know the precise date, use this field. If your date is approximate, use the "Approximate Date" field instead.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_publication_date',
+    'label' => 'Date Created',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 1,
+        'input_format' => 'd/m/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 2,
     ),
   );
 
@@ -403,17 +873,73 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          0 => 'public',
-          1 => 'private',
+          'private' => 'private',
+          'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 'image',
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
         ),
-        'preview_image_style' => 'thumbnail',
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_fc_images-field_image_url'.
+  $field_instances['field_collection_item-field_fc_images-field_image_url'] = array(
+    'bundle' => 'field_fc_images',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'For adding PURLs for canonical image, etc.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_image_url',
+    'label' => 'URL',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 6,
     ),
   );
 
@@ -493,6 +1019,121 @@ function mapp_content_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_identifier'.
+  $field_instances['field_collection_item-field_library_identifier-field_identifier'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_identifier',
+    'label' => 'Identifier',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_library'.
+  $field_instances['field_collection_item-field_library_identifier-field_library'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_library',
+    'label' => 'Library',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_library_identifier-field_link_digitized'.
+  $field_instances['field_collection_item-field_library_identifier-field_link_digitized'] = array(
+    'bundle' => 'field_library_identifier',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'url',
+        'settings' => array(
+          'nofollow' => FALSE,
+          'trim_length' => 80,
+        ),
+        'type' => 'url_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_link_digitized',
+    'label' => 'Link(s) to Digitized Materials',
+    'required' => 0,
+    'settings' => array(
+      'title_fetch' => 0,
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'url',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'url_external',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_narrative-field_authored_by'.
   $field_instances['field_collection_item-field_narrative-field_authored_by'] = array(
     'bundle' => 'field_narrative',
@@ -528,6 +1169,78 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_narrative-field_content_authored_by'.
+  $field_instances['field_collection_item-field_narrative-field_content_authored_by'] = array(
+    'bundle' => 'field_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_authored_by',
+    'label' => 'Authored By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_narrative-field_content_edited_by'.
+  $field_instances['field_collection_item-field_narrative-field_content_edited_by'] = array(
+    'bundle' => 'field_narrative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_content_edited_by',
+    'label' => 'Edited By',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 6,
     ),
   );
 
@@ -716,7 +1429,9 @@ function mapp_content_types_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -772,7 +1487,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -784,7 +1499,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
     'field_name' => 'field_bibliographic_item',
-    'label' => 'Bibliographic Item',
+    'label' => 'Further Reading',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -798,7 +1513,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 9,
     ),
   );
 
@@ -816,7 +1531,7 @@ function mapp_content_types_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -838,7 +1553,47 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-business-field_business_relationship'.
+  $field_instances['node-business-field_business_relationship'] = array(
+    'bundle' => 'business',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_business_relationship',
+    'label' => 'Business Relationships',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 9,
     ),
   );
 
@@ -853,7 +1608,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -875,7 +1630,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -887,11 +1642,11 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -936,7 +1691,7 @@ function mapp_content_types_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -958,24 +1713,22 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-business-field_images'.
-  $field_instances['node-business-field_images'] = array(
+  // Exported field_instance: 'node-business-field_file_attachments'.
+  $field_instances['node-business-field_file_attachments'] = array(
     'bundle' => 'business',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'media_large',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 6,
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -985,34 +1738,31 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'figure',
-    'field_name' => 'field_images',
-    'label' => 'Image(s)',
-    'required' => 0,
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => FALSE,
     'settings' => array(
       'description_field' => 0,
       'file_directory' => '',
-      'file_extensions' => 'jpg jpeg png',
+      'file_extensions' => 'txt',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'public' => 'public',
+          0 => 'public',
+          1 => 'private',
         ),
         'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
+          0 => 'image',
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 12,
     ),
   );
 
@@ -1030,7 +1780,7 @@ function mapp_content_types_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 9,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1052,7 +1802,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
@@ -1067,7 +1817,7 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1082,6 +1832,7 @@ function mapp_content_types_field_default_field_instances() {
     'label' => 'Number of Related Items',
     'required' => 0,
     'settings' => array(
+      'allowed_bundles' => array(),
       'count_only_published' => 1,
       'counted_reference_fields' => array(
         'field_illustrator' => 'field_illustrator',
@@ -1098,7 +1849,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'entityreference_count',
       'settings' => array(),
       'type' => 'entityreference_count_widget',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -1116,7 +1867,7 @@ function mapp_content_types_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1160,7 +1911,7 @@ function mapp_content_types_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1172,7 +1923,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
     'field_name' => 'field_person_involved',
-    'label' => 'Person Involved',
+    'label' => 'People Involved',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1205,7 +1956,7 @@ function mapp_content_types_field_default_field_instances() {
           'trim_length' => 80,
         ),
         'type' => 'url_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1231,7 +1982,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -1400,6 +2151,59 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-correspondence-field_file_attachments'.
+  $field_instances['node-correspondence-field_file_attachments'] = array(
+    'bundle' => 'correspondence',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-correspondence-field_geocoded_from'.
   $field_instances['node-correspondence-field_geocoded_from'] = array(
     'bundle' => 'correspondence',
@@ -1551,6 +2355,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -1690,7 +2495,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -1912,47 +2717,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-correspondence-field_tags'.
-  $field_instances['node-correspondence-field_tags'] = array(
-    'bundle' => 'correspondence',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'dt',
-    'field_name' => 'field_tags',
-    'label' => 'Themes',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-edition-field_description'.
   $field_instances['node-edition-field_description'] = array(
     'bundle' => 'edition',
@@ -2074,6 +2838,59 @@ function mapp_content_types_field_default_field_instances() {
       'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-edition-field_file_attachments'.
+  $field_instances['node-edition-field_file_attachments'] = array(
+    'bundle' => 'edition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 24,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 19,
     ),
   );
 
@@ -2207,6 +3024,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -2255,8 +3073,8 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-edition-field_library'.
-  $field_instances['node-edition-field_library'] = array(
+  // Exported field_instance: 'node-edition-field_library_identifier'.
+  $field_instances['node-edition-field_library_identifier'] = array(
     'bundle' => 'edition',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2264,12 +3082,12 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'field_collection',
         'settings' => array(
-          'link' => 1,
+          'view_mode' => 'full',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 9,
+        'type' => 'field_collection_fields',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2280,21 +3098,17 @@ function mapp_content_types_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
-    'field_name' => 'field_library',
-    'label' => 'Library',
+    'field_name' => 'field_library_identifier',
+    'label' => 'Libraries',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
       'weight' => 7,
     ),
   );
@@ -2566,7 +3380,7 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -2712,7 +3526,9 @@ function mapp_content_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'media',
-        'settings' => array(),
+        'settings' => array(
+          'image_style' => '',
+        ),
         'type' => 'media_large_icon',
         'weight' => 3,
       ),
@@ -3102,7 +3918,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'cite',
     'field_name' => 'field_bibliographic_item',
-    'label' => 'Bibliographic Item',
+    'label' => 'Further Reading',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3116,7 +3932,7 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -3302,15 +4118,55 @@ function mapp_content_types_field_default_field_instances() {
           'address' => 'address',
           'address-hide-postal-code' => 'address-hide-postal-code',
           'address-hide-street' => 'address-hide-street',
+          'address-optional' => 'address-optional',
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-person-field_business_relationship'.
+  $field_instances['node-person-field_business_relationship'] = array(
+    'bundle' => 'person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_business_relationship',
+    'label' => 'Business Relationships',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 10,
     ),
   );
 
@@ -3350,7 +4206,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3536,11 +4392,11 @@ function mapp_content_types_field_default_field_instances() {
           'address' => 'address',
           'address-hide-postal-code' => 'address-hide-postal-code',
           'address-hide-street' => 'address-hide-street',
+          'address-optional' => 'address-optional',
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
@@ -3584,7 +4440,60 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 2,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-person-field_file_attachments'.
+  $field_instances['node-person-field_file_attachments'] = array(
+    'bundle' => 'person',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 15,
     ),
   );
 
@@ -3622,7 +4531,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -3673,10 +4582,11 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -3721,14 +4631,14 @@ function mapp_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
   // Exported field_instance: 'node-person-field_occupation'.
   $field_instances['node-person-field_occupation'] = array(
     'bundle' => 'person',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3757,9 +4667,52 @@ function mapp_content_types_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-person-field_other_names'.
+  $field_instances['node-person-field_other_names'] = array(
+    'bundle' => 'person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Other names by which this person was known. Example: a nom de plume.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_other_names',
+    'label' => 'Other Names',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -3799,7 +4752,7 @@ function mapp_content_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -4053,6 +5006,59 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-primary_object-field_file_attachments'.
+  $field_instances['node-primary_object-field_file_attachments'] = array(
+    'bundle' => 'primary_object',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 22,
+    ),
+  );
+
   // Exported field_instance: 'node-primary_object-field_identifier'.
   $field_instances['node-primary_object-field_identifier'] = array(
     'bundle' => 'primary_object',
@@ -4141,6 +5147,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -4416,7 +5423,9 @@ function mapp_content_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'media',
-        'settings' => array(),
+        'settings' => array(
+          'image_style' => '',
+        ),
         'type' => 'media_large_icon',
         'weight' => 3,
       ),
@@ -4491,6 +5500,46 @@ function mapp_content_types_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-related_materials-field_date_variable'.
+  $field_instances['node-related_materials-field_date_variable'] = array(
+    'bundle' => 'related_materials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_date_variable',
+    'label' => 'Date Created (old FC)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 6,
     ),
   );
 
@@ -4577,6 +5626,59 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-related_materials-field_file_attachments'.
+  $field_instances['node-related_materials-field_file_attachments'] = array(
+    'bundle' => 'related_materials',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 21,
+    ),
+  );
+
   // Exported field_instance: 'node-related_materials-field_genre'.
   $field_instances['node-related_materials-field_genre'] = array(
     'bundle' => 'related_materials',
@@ -4589,7 +5691,7 @@ function mapp_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4703,6 +5805,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -4862,7 +5965,7 @@ function mapp_content_types_field_default_field_instances() {
           'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4874,7 +5977,7 @@ function mapp_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'span',
     'field_name' => 'field_publication_date',
-    'label' => 'Date Created',
+    'label' => 'Date Created (old ISO)',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -4887,15 +5990,16 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -4938,8 +6042,8 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-related_materials-field_tags'.
-  $field_instances['node-related_materials-field_tags'] = array(
+  // Exported field_instance: 'node-related_materials-field_rm_date_created'.
+  $field_instances['node-related_materials-field_rm_date_created'] = array(
     'bundle' => 'related_materials',
     'default_value' => NULL,
     'deleted' => 0,
@@ -4947,10 +6051,14 @@ function mapp_content_types_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4960,22 +6068,80 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'dt',
-    'field_name' => 'field_tags',
-    'label' => 'Themes',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_rm_date_created',
+    'label' => 'Date Created',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'partial_date',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 1,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 1,
+        ),
+        'tz_handling' => 'none',
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 7,
+      'type' => 'partial_date',
+      'weight' => 5,
     ),
   );
 
@@ -5074,12 +6240,12 @@ function mapp_content_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'year_only',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 17,
@@ -5092,9 +6258,9 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'details',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_copyright_date',
-    'label' => 'Copyright Date',
+    'label' => 'Publication Date',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -5107,10 +6273,11 @@ function mapp_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -5204,6 +6371,7 @@ function mapp_content_types_field_default_field_instances() {
           'image' => 'image',
           'video' => 0,
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -5219,7 +6387,7 @@ function mapp_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5335,6 +6503,59 @@ function mapp_content_types_field_default_field_instances() {
       'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-work-field_file_attachments'.
+  $field_instances['node-work-field_file_attachments'] = array(
+    'bundle' => 'work',
+    'deleted' => 0,
+    'description' => 'Upload any related files (PDF, DOC, etc.) here.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_file_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt pdf docx doc odt rtf tsv csv',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 16,
     ),
   );
 
@@ -5635,49 +6856,59 @@ function mapp_content_types_field_default_field_instances() {
   t('An object to which this letter refers. May be a person, library, book, work, publisher, etc.');
   t('Annotations');
   t('Any images of the book.');
+  t('Approximate Date');
+  t('Attachments');
   t('Author');
   t('Authored By');
   t('Authority Record');
-  t('Bibliographic Item');
   t('Bio');
   t('Biography');
   t('Birth Date');
   t('Birth Location');
   t('Birth Place');
   t('Body');
+  t('Business');
+  t('Business Relationships');
   t('Call Number');
   t('Call numbers, DOI, indices in bibliographies, and other ways of identifying this work.');
   t('Caption');
   t('Condition');
   t('Copies Purchased');
-  t('Copyright Date');
   t('Copyright Status');
   t('Correspondence Type');
   t('Cover Image');
   t('Damage');
   t('Date Closed');
   t('Date Created');
+  t('Date Created (old FC)');
+  t('Date Created (old ISO)');
   t('Date Opened');
   t('Date Written');
   t('Death Date');
   t('Death Location');
   t('Death Place');
   t('Description');
+  t('Display this Biography?');
   t('Edited By');
   t('Edition');
   t('Editor');
+  t('For adding PURLs for canonical image, etc.');
+  t('Further Reading');
   t('Gender');
   t('Genre');
   t('Geocoded From');
   t('Geocoded To');
   t('History');
   t('Identifier');
+  t('If you know the precise date, use this field. If your date is approximate, use the "Approximate Date" field instead.');
+  t('If you\'re unsure of the dates or have a fuzzy date or range of dates, use this field instead of the more precise "date" fields.');
   t('Illustrator');
   t('Image');
   t('Image(s)');
   t('Images of this person.');
   t('Impression');
   t('Language');
+  t('Libraries');
   t('Library');
   t('Library Catalog');
   t('Link(s) to Digitized Materials');
@@ -5692,13 +6923,16 @@ function mapp_content_types_field_default_field_instances() {
   t('Number of pages');
   t('Occupation');
   t('Original Language');
+  t('Other Names');
+  t('Other names by which this person was known. Example: a nom de plume.');
   t('Owned By');
   t('Owner');
   t('Partner Type');
-  t('Person Involved');
+  t('People Involved');
   t('Price');
   t('Print run');
   t('Printer');
+  t('Publication Date');
   t('Publication Process');
   t('Publisher');
   t('Purchaser');
@@ -5723,11 +6957,11 @@ function mapp_content_types_field_default_field_instances() {
   t('The library that holds this correspondence.');
   t('The link to the partner\'s website');
   t('The original language in which the work was written.');
-  t('Themes');
   t('Translator');
   t('Type');
   t('Type of Edition');
   t('URL');
+  t('Upload any related files (PDF, DOC, etc.) here.');
   t('Website');
   t('What was the nature of the relationship?');
   t('With which person or organization did this individual have a relationship?');

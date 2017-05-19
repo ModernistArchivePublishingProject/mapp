@@ -5,11 +5,12 @@ core = 7.x
 dependencies[] = date
 
 files[] = includes/partial_date.views.year_period_handler.inc
+files[] = partial_date.migrate.inc
 
 
-; Information added by drupal.org packaging script on 2012-07-18
-version = "7.x-1.0-beta1"
+; Information added by Drupal.org packaging script on 2013-12-17
+version = "7.x-1.0-beta1+3-dev"
 core = "7.x"
 project = "partial_date"
-datestamp = "1342599117"
+datestamp = "1387283667"
 

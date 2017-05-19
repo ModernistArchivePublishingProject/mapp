@@ -10,10 +10,16 @@
 function mapp_permissions_user_default_roles() {
   $roles = array();
 
-  // Exported role: Student Member.
-  $roles['Student Member'] = array(
-    'name' => 'Student Member',
+  // Exported role: Affiliate Member.
+  $roles['Affiliate Member'] = array(
+    'name' => 'Affiliate Member',
     'weight' => 4,
+  );
+
+  // Exported role: Research Fellow.
+  $roles['Research Fellow'] = array(
+    'name' => 'Research Fellow',
+    'weight' => 5,
   );
 
   // Exported role: Team Member.

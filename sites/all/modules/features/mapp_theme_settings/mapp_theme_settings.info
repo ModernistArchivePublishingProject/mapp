@@ -1,0 +1,12 @@
+name = MAPP Theme Settings
+description = Settings for appearance
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = theme_default
+features[variable][] = theme_modernist_archives_settings
+project path = sites/all/modules/features
