@@ -7,8 +7,8 @@ $content-bg-color: white;
 $footer-bg-color: #d1d2d4;
 $logo-color: #d36436;
 
-$break-small: 320px;
-$break-medium: 340px;
+$break-small: 375px;
+$break-medium: 400px;
 $break-large: 980px;
 
 
@@ -23,9 +23,11 @@ img {
 
 #main {
 	@media screen and (max-width: $break-small) {
-		width: 100%;
+		width: 95%;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
-	@media screen and (min-width: $break-small) {
+	@media screen and (min-width: $break-medium) {
 		width: 80%;
 		margin-left: 20%;
 	}
