@@ -9,7 +9,7 @@ $logo-color: #d36436;
 
 $break-small: 375px;
 $break-medium: 400px;
-$break-large: 980px;
+$break-large: 765px;
 
 
 #header,
@@ -23,21 +23,21 @@ img {
 
 #main {
 	@media screen and (max-width: $break-small) {
-		width: 95%;
+		width: 90%;
 		margin-left: 10px;
 		margin-right: 10px;
 	}
 	@media screen and (min-width: $break-medium) {
-		width: 80%;
+		width: 75%;
 		margin-left: 20%;
 	}
 	background-color: rgb(252, 252, 252);
+	padding-left: .5em;
 }
 
 #content {
 	text-align: left;
 	margin: 0 auto;
-	max-width: 40em;
 	@media screen and (max-width: $break-small) {
 		width: 100%;
 		margin: 0;
@@ -48,10 +48,6 @@ img {
 #navigation {
 	display: none;
 }
-
-
-
-
 
 
 #site-name {

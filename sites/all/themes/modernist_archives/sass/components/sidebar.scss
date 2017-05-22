@@ -6,7 +6,7 @@ $footer_bg_color: #d1d2d4;
 
 $break-small: 375px;
 $break-medium: 400px;
-$break-large: 980px;
+$break-large: 768px;
 
 // section.region-sidebar-first.column.sidebar {
 section.region-sidebar-first {
@@ -22,8 +22,12 @@ section.region-sidebar-first {
     top: 0;
     height: 100%;
   }
+  @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+    padding: 1em;
+    width: 19%;
+  }
 
-  background-color: $highlight_color;
+    background-color: $highlight_color;
   overflow-y: auto;
   img.header__logo-image {
     width: 80%;
@@ -50,7 +54,11 @@ section.region-sidebar-first {
         @media screen and (max-width: $break-small) {
           font-size: 2em;
         }
-        a {
+        @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+          font-size: 1em;
+        }
+
+          a {
           color: white;
           &:hover {
               color: lighten($highlight_color, 20);

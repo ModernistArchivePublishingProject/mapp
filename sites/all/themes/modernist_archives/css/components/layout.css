@@ -12,11 +12,12 @@ img {
 /* line 24, ../../sass/components/layout.scss */
 #main {
   background-color: #fcfcfc;
+  padding-left: .5em;
 }
 @media screen and (max-width: 375px) {
   /* line 24, ../../sass/components/layout.scss */
   #main {
-    width: 95%;
+    width: 90%;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -24,19 +25,18 @@ img {
 @media screen and (min-width: 400px) {
   /* line 24, ../../sass/components/layout.scss */
   #main {
-    width: 80%;
+    width: 75%;
     margin-left: 20%;
   }
 }
 
-/* line 37, ../../sass/components/layout.scss */
+/* line 38, ../../sass/components/layout.scss */
 #content {
   text-align: left;
   margin: 0 auto;
-  max-width: 40em;
 }
 @media screen and (max-width: 375px) {
-  /* line 37, ../../sass/components/layout.scss */
+  /* line 38, ../../sass/components/layout.scss */
   #content {
     width: 100%;
     margin: 0;
@@ -48,41 +48,41 @@ img {
   display: none;
 }
 
-/* line 57, ../../sass/components/layout.scss */
+/* line 53, ../../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 375px) {
-  /* line 57, ../../sass/components/layout.scss */
+  /* line 53, ../../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 64, ../../sass/components/layout.scss */
+/* line 60, ../../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 68, ../../sass/components/layout.scss */
+/* line 64, ../../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 76, ../../sass/components/layout.scss */
+/* line 72, ../../sass/components/layout.scss */
 form#search-block-form div.form-actions {
   display: none;
 }
 
-/* line 81, ../../sass/components/layout.scss */
+/* line 77, ../../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 87, ../../sass/components/layout.scss */
+/* line 83, ../../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }

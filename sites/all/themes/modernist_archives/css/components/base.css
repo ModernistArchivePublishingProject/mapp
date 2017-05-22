@@ -9,9 +9,11 @@
 /* line 25, ../../sass/components/base.scss */
 div#page {
   width: 100%;
+  min-width: 30em;
+  overflow-wrap: break-word;
 }
 
-/* line 30, ../../sass/components/base.scss */
+/* line 32, ../../sass/components/base.scss */
 body {
   font-family: "Roboto", sans-serf;
   font-size: 20px;
@@ -20,18 +22,18 @@ body {
   background-color: #fcfcfc;
 }
 
-/* line 38, ../../sass/components/base.scss */
+/* line 40, ../../sass/components/base.scss */
 article {
   margin-bottom: 5em;
 }
 
-/* line 42, ../../sass/components/base.scss */
+/* line 44, ../../sass/components/base.scss */
 p#skip-link {
   margin: 0;
   display: none;
 }
 
-/* line 49, ../../sass/components/base.scss */
+/* line 51, ../../sass/components/base.scss */
 .mapp-button {
   text-decoration: none;
   text-align: center;
@@ -40,18 +42,18 @@ p#skip-link {
   display: block;
   width: 15%;
 }
-/* line 56, ../../sass/components/base.scss */
+/* line 58, ../../sass/components/base.scss */
 .mapp-button a {
   color: white;
 }
-/* line 59, ../../sass/components/base.scss */
+/* line 61, ../../sass/components/base.scss */
 .mapp-button a:hover {
   text-decoration: none !important;
   color: transparent !important;
 }
 
 /* Contact */
-/* line 69, ../../sass/components/base.scss */
+/* line 71, ../../sass/components/base.scss */
 input, textarea {
   height: 3em;
   border-radius: 2px;
@@ -64,24 +66,24 @@ input, textarea {
   font-weight: 300;
 }
 
-/* line 81, ../../sass/components/base.scss */
+/* line 83, ../../sass/components/base.scss */
 textarea {
   height: 6em;
   resize: vertical;
 }
 
-/* line 86, ../../sass/components/base.scss */
+/* line 88, ../../sass/components/base.scss */
 label {
   margin-top: 1.5em;
   display: block;
 }
 
-/* line 91, ../../sass/components/base.scss */
+/* line 93, ../../sass/components/base.scss */
 .form-required {
   color: red;
 }
 
-/* line 95, ../../sass/components/base.scss */
+/* line 97, ../../sass/components/base.scss */
 input[type="submit"] {
   margin-top: 3em;
   color: white;
@@ -92,13 +94,13 @@ input[type="submit"] {
   padding: 0.25em 1em;
   font-size: 1em;
 }
-/* line 104, ../../sass/components/base.scss */
+/* line 106, ../../sass/components/base.scss */
 input[type="submit"]:hover {
   background-color: #b04f26;
 }
 
 /* Bibolography */
-/* line 111, ../../sass/components/base.scss */
+/* line 113, ../../sass/components/base.scss */
 .biblio-separator-bar {
   margin: 1.5em 0 0.5em 0;
   border: none;
@@ -109,50 +111,50 @@ input[type="submit"]:hover {
   color: #d36436;
 }
 
-/* line 121, ../../sass/components/base.scss */
+/* line 123, ../../sass/components/base.scss */
 .biblio-entry {
   margin-top: 0.75em;
 }
 
-/* line 125, ../../sass/components/base.scss */
+/* line 127, ../../sass/components/base.scss */
 .biblio-export {
   float: right;
 }
 
-/* line 129, ../../sass/components/base.scss */
+/* line 131, ../../sass/components/base.scss */
 ul.pager {
   margin-top: 1em;
 }
-/* line 131, ../../sass/components/base.scss */
+/* line 133, ../../sass/components/base.scss */
 ul.pager li {
   display: inline-block;
 }
-/* line 133, ../../sass/components/base.scss */
+/* line 135, ../../sass/components/base.scss */
 ul.pager li.pager-current {
   color: #4d71a2;
   font-weight: 600;
 }
 
-/* line 140, ../../sass/components/base.scss */
+/* line 142, ../../sass/components/base.scss */
 .views-field-citation {
   margin-top: 1em;
 }
 
 /* Footer */
-/* line 146, ../../sass/components/base.scss */
+/* line 148, ../../sass/components/base.scss */
 #footer {
   background-color: whitesmoke;
   padding: 1em;
   margin-top: 2em;
 }
-/* line 151, ../../sass/components/base.scss */
+/* line 153, ../../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
 
 /* Hacks */
-/* line 165, ../../sass/components/base.scss */
+/* line 167, ../../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
