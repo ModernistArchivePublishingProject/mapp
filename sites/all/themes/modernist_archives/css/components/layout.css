@@ -17,9 +17,7 @@ img {
 @media screen and (max-width: 375px) {
   /* line 24, ../../sass/components/layout.scss */
   #main {
-    width: 90%;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 400px) {
@@ -30,59 +28,59 @@ img {
   }
 }
 
-/* line 38, ../../sass/components/layout.scss */
+/* line 36, ../../sass/components/layout.scss */
 #content {
   text-align: left;
   margin: 0 auto;
 }
 @media screen and (max-width: 375px) {
-  /* line 38, ../../sass/components/layout.scss */
+  /* line 36, ../../sass/components/layout.scss */
   #content {
     width: 100%;
     margin: 0;
   }
 }
 
-/* line 48, ../../sass/components/layout.scss */
+/* line 46, ../../sass/components/layout.scss */
 #navigation {
   display: none;
 }
 
-/* line 53, ../../sass/components/layout.scss */
+/* line 51, ../../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
 @media screen and (max-width: 375px) {
-  /* line 53, ../../sass/components/layout.scss */
+  /* line 51, ../../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 60, ../../sass/components/layout.scss */
+/* line 58, ../../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 64, ../../sass/components/layout.scss */
+/* line 62, ../../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 72, ../../sass/components/layout.scss */
+/* line 70, ../../sass/components/layout.scss */
 form#search-block-form div.form-actions {
   display: none;
 }
 
-/* line 77, ../../sass/components/layout.scss */
+/* line 75, ../../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 83, ../../sass/components/layout.scss */
+/* line 81, ../../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }

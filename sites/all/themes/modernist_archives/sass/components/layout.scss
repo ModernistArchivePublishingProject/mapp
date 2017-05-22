@@ -23,9 +23,7 @@ img {
 
 #main {
 	@media screen and (max-width: $break-small) {
-		width: 90%;
-		margin-left: 10px;
-		margin-right: 10px;
+		width: 100%;
 	}
 	@media screen and (min-width: $break-medium) {
 		width: 75%;
