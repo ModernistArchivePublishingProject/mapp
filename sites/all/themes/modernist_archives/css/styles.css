@@ -1878,28 +1878,28 @@ pre {
 }
 
 /* line 100, ../sass/components/typography.scss */
-.view-press-related-objects table thead tr {
+.view-press-related-objects table thead tr, .block-views table thead tr {
   border-bottom: 1px solid #141414;
 }
 /* line 102, ../sass/components/typography.scss */
-.view-press-related-objects table thead tr th {
+.view-press-related-objects table thead tr th, .block-views table thead tr th {
   padding: 0.25em 0.5em 0.25em 0;
   font-weight: 600;
 }
 /* line 109, ../sass/components/typography.scss */
-.view-press-related-objects table tbody tr {
+.view-press-related-objects table tbody tr, .block-views table tbody tr {
   border-bottom: 1px solid #969696;
 }
 /* line 111, ../sass/components/typography.scss */
-.view-press-related-objects table tbody tr td {
+.view-press-related-objects table tbody tr td, .block-views table tbody tr td {
   padding: 0.25em 0;
 }
 /* line 113, ../sass/components/typography.scss */
-.view-press-related-objects table tbody tr td p {
+.view-press-related-objects table tbody tr td p, .block-views table tbody tr td p {
   margin: 0;
 }
 /* line 116, ../sass/components/typography.scss */
-.view-press-related-objects table tbody tr td br {
+.view-press-related-objects table tbody tr td br, .block-views table tbody tr td br {
   display: none;
 }
 
@@ -1934,19 +1934,19 @@ img {
 /* line 24, ../sass/components/layout.scss */
 #main {
   background-color: #fcfcfc;
-  padding-left: .5em;
 }
 @media screen and (max-width: 375px) {
   /* line 24, ../sass/components/layout.scss */
   #main {
     width: 100%;
+    padding-left: .5em;
   }
 }
 @media screen and (min-width: 400px) {
   /* line 24, ../sass/components/layout.scss */
   #main {
-    width: 75%;
-    margin-left: 20%;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -2005,6 +2005,17 @@ form#search-block-form div.form-actions {
 /* line 81, ../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
+}
+
+@media screen and (max-width: 375px) {
+  /* line 85, ../sass/components/layout.scss */
+  #footer {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
 }
 
 /* line 15, ../sass/components/modules.scss */

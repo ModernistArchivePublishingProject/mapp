@@ -12,19 +12,19 @@ img {
 /* line 24, ../../sass/components/layout.scss */
 #main {
   background-color: #fcfcfc;
-  padding-left: .5em;
 }
 @media screen and (max-width: 375px) {
   /* line 24, ../../sass/components/layout.scss */
   #main {
     width: 100%;
+    padding-left: .5em;
   }
 }
 @media screen and (min-width: 400px) {
   /* line 24, ../../sass/components/layout.scss */
   #main {
-    width: 75%;
-    margin-left: 20%;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -83,4 +83,15 @@ form#search-block-form div.form-actions {
 /* line 81, ../../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
+}
+
+@media screen and (max-width: 375px) {
+  /* line 85, ../../sass/components/layout.scss */
+  #footer {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
 }

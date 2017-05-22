@@ -24,13 +24,13 @@ img {
 #main {
 	@media screen and (max-width: $break-small) {
 		width: 100%;
+		padding-left: .5em;
 	}
 	@media screen and (min-width: $break-medium) {
-		width: 75%;
-		margin-left: 20%;
+		width: 100%;
+		margin-left: 0;
 	}
 	background-color: rgb(252, 252, 252);
-	padding-left: .5em;
 }
 
 #content {
@@ -80,4 +80,14 @@ form#search-block-form {
 
 body#tinymce {
   background-color: white;
+}
+
+#footer {
+	@media screen and (max-width: $break-small) {
+		width: 100%;
+		padding: 0;
+		margin-top: 0;
+		margin-left: .5em;
+		margin-right: .5em;
+	}
 }
