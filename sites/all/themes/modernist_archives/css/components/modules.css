@@ -50,74 +50,23 @@ a#enter:hover {
   text-decoration: none;
 }
 
-/* line 43, ../../sass/components/modules.scss */
-.block-title {
-  text-align: center;
-  border-top: 1px solid #58585a;
-  float: left;
-  width: 300%;
-  margin-left: -100%;
-  margin-right: -200%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  float: none;
-}
-
-/* line 50, ../../sass/components/modules.scss */
-article.node {
-  padding: 2em;
-}
-
-/* line 54, ../../sass/components/modules.scss */
-.node-sticky {
-  background-color: rgba(211, 100, 54, 0.1);
-  border: 1px solid #d36436;
-}
-
-/* line 59, ../../sass/components/modules.scss */
+/* line 44, ../../sass/components/modules.scss */
 .view-id-team .view-content .views-row {
   overflow: hidden;
 }
 
-/* line 63, ../../sass/components/modules.scss */
+/* line 51, ../../sass/components/modules.scss */
 .profile-picture {
-  margin: 10px 5px 10px 5px;
-}
-
-/* line 67, ../../sass/components/modules.scss */
-.profile-name {
-  text-align: center;
-  font-size: large;
-  font-weight: bold;
-  display: block;
-}
-
-/* line 74, ../../sass/components/modules.scss */
-.views-row {
-  border-top: 1px solid gray;
-}
-
-/* line 78, ../../sass/components/modules.scss */
-.views-row-odd .profile-picture {
-  float: left;
-}
-
-/* line 82, ../../sass/components/modules.scss */
-.views-row-even .profile-picture {
   float: right;
+  margin: 1em 1em 1em 1em;
 }
 
-/* line 90, ../../sass/components/modules.scss */
+/* line 62, ../../sass/components/modules.scss */
 .view-partners tr {
   vertical-align: top;
 }
 
-/* line 94, ../../sass/components/modules.scss */
+/* line 66, ../../sass/components/modules.scss */
 .view-partners td {
   position: relative;
   padding-left: 10px;
@@ -125,45 +74,40 @@ article.node {
   width: 20%;
 }
 
-/* line 108, ../../sass/components/modules.scss */
+/* line 80, ../../sass/components/modules.scss */
 .view-partners td div.views-field div.field-content img {
   top: 0;
 }
 
-/* line 113, ../../sass/components/modules.scss */
-.view-team p {
-  margin: .2em;
-}
-
-/* line 117, ../../sass/components/modules.scss */
+/* line 86, ../../sass/components/modules.scss */
 article.node-press img {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 124, ../../sass/components/modules.scss */
+/* line 93, ../../sass/components/modules.scss */
 article.node-press h3.field-label {
   clear: left;
 }
 
-/* line 128, ../../sass/components/modules.scss */
+/* line 97, ../../sass/components/modules.scss */
 article.node-press cite {
   margin-top: 50px;
 }
 
-/* line 132, ../../sass/components/modules.scss */
+/* line 101, ../../sass/components/modules.scss */
 div.view-presses div.views-field-title {
   text-align: center;
 }
 
-/* line 136, ../../sass/components/modules.scss */
+/* line 105, ../../sass/components/modules.scss */
 li.comment_forbidden {
   display: block;
   padding-top: 50px;
 }
 
-/* line 141, ../../sass/components/modules.scss */
+/* line 110, ../../sass/components/modules.scss */
 pre {
   font-family: inherit;
 }

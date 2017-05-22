@@ -1,0 +1,141 @@
+p {
+  margin: 0.75em 0 0 0;
+  //max-width: 40em;
+  font-weight: 300;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+h1 { 
+  font-size: 2.074em;
+  font-weight: 900;
+  margin: 1.5em 0 0.75em 0;
+  &.page__title {
+    margin-top: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $brand_color;
+  }
+}
+
+h2 {
+  font-size: 1.728em;
+  font-weight: 600;
+  margin: 1.5em 0 0.75em 0;
+}
+
+h3 {
+  font-size: 1.44em;
+  font-weight: 600;
+  margin: 1.5em 0 0.75em 0;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 1.5em 0 0 0;
+  color: $brand_color;
+}
+
+h5 { 
+  font-size: 1.2em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+  font-weight: 600;
+  margin: 1em 0 0.5em 0;
+  color: $brand_color;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1.25em;
+  margin: 1em 0 0.5em 0;
+}
+
+small {
+  font-size: 0.833em;
+}
+
+a {
+  text-decoration: none;
+  color: $link_color;
+}
+
+a:hover {
+  color: darken($link_color, 20);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  border-color: darken($link_color, 20);
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
+
+.block-title {
+    text-align: left;
+    border-top: 1px dotted rgb(150, 150, 150);
+    width: auto;
+    margin: 2em 0 1em 0;
+    padding: 0.5em 0 0 0;
+    float: none;
+    display: block;
+}
+
+.view-press-related-objects, .block-views {
+
+  table {
+    thead {
+      tr {
+        border-bottom: 1px solid rgb(20, 20, 20);
+        th {
+           padding: 0.25em 0.5em 0.25em 0;
+           font-weight: 600;
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid rgb(150, 150, 150);
+        td {
+          padding: 0.25em 0;
+          p {
+            margin: 0;
+          }
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+fieldset {
+      border: 1px dotted rgb(150, 150, 150);
+      margin: 2em 0 1em 0;
+      padding: 1em;
+      display: block;
+      position: relative;
+
+  legend {
+    font-weight: 600;
+    font-size: 1.2em;
+    display: block;
+    position: relative;
+    padding: 0 1em;
+  }
+}

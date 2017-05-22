@@ -1,5 +1,4 @@
-@import "zen";
-@import "sassy-buttons";
+
 
 $link-color: #4d71a2;
 $highlight-color: #d36436;
@@ -8,86 +7,52 @@ $content-bg-color: white;
 $footer-bg-color: #d1d2d4;
 $logo-color: #d36436;
 
-$break-small: 320px;
-$break-medium: 340px;
-$break-large: 980px;
+$break-small: 375px;
+$break-medium: 400px;
+$break-large: 765px;
 
-#header,
-#main,
-#footer {
-	@include zen-grid-container;
-	font-family: 'Open Sans', sans-serif;
-	padding-right: 4em;
-	padding-left: 0em;
-}
 
 #header,
 #main {
 	background-color: $content-bg-color;
 }
 
-#footer {
-	background-color: $footer-bg-color;
-}
-
-#content {
-	@include zen-grid-item($zen-column-count, 1);
-	text-align: left;
-	// Because we're absolute positioning the sidebar
-	padding-left: 20px;
+img {
+	max-width: 95%;
 }
 
 #main {
-	min-height: 600px;
-}
-
-#main-menu {
-	@media screen and (min-width: $break-large) {
-		@include zen-grid-item(2, $zen-column-count - 2);
-		margin-top: -100px;
-	}
-	@media screen and (max-width: $break-medium) and (min-width: $break-small) {
-		@include zen-grid-item(3, 1);
-	    margin-top: 40px;
-	}
 	@media screen and (max-width: $break-small) {
-		// @include zen-grid-item(1, 1);
-	    position: absolute;
-	    top: 0;
+		width: 100%;
+		padding-left: .5em;
+	}
+	@media screen and (min-width: $break-medium) {
+		width: 100%;
+		margin-left: 0;
+	}
+	background-color: rgb(252, 252, 252);
+}
+
+#content {
+	text-align: left;
+	margin: 0 auto;
+	@media screen and (max-width: $break-small) {
+		width: 100%;
+		margin: 0;
 	}
 }
 
-nav#main-menu ul li a {
-	padding: .2em 1em;
+
+#navigation {
+	display: none;
 }
 
-// style the responsive menu for mobile
-// added by responsive_menus module
-#navigation .responsive-menus.responsified {
-	position: absolute;
-	@include zen-grid-item($zen-column-count, 1);
-	width: 95%;
-	top: 0px;
-}
-
-// #logo img {
-// 	padding-top: 4em;
-// 	@include zen-grid-item(3, 3);
-// 	min-width: 150px;
-// 	@media screen and (max-width: $break-small) {
-// 	    position: absolute;
-// 	    top: 20px;
-// 	    // display: none;
-// 	}
-// }
 
 #site-name {
 	margin-top: 10%;
 	padding-left: 10px;
 	@media screen and (max-width: $break-small) {
-		// position: absolute;
 		display: none;
-		// @include zen-grid-item(3, $zen-column-count - 3);
 	}
 }
 #site-name a span {
@@ -99,7 +64,6 @@ nav#main-menu ul li a {
 }
 
 #edit-actions input {
-	@include sassy-button("matte", 10px, 15px, $logo-color);
 }
 
 form#search-block-form {
@@ -118,6 +82,12 @@ body#tinymce {
   background-color: white;
 }
 
-h1#page-title {
-  text-align: center;
+#footer {
+	@media screen and (max-width: $break-small) {
+		width: 100%;
+		padding: 0;
+		margin-top: 0;
+		margin-left: .5em;
+		margin-right: .5em;
+	}
 }

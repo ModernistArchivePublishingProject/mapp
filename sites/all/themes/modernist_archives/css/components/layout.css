@@ -1,224 +1,97 @@
-/* line 17, ../../sass/components/layout.scss */
-#header,
-#main,
-#footer {
-  font-family: 'Open Sans', sans-serif;
-  padding-right: 4em;
-  padding-left: 0em;
-}
-/* line 46, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:before, #header:after,
-#main:before,
-#main:after,
-#footer:before,
-#footer:after {
-  content: "";
-  display: table;
-}
-/* line 50, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:after,
-#main:after,
-#footer:after {
-  clear: both;
-}
-
-/* line 25, ../../sass/components/layout.scss */
+/* line 16, ../../sass/components/layout.scss */
 #header,
 #main {
   background-color: white;
 }
 
-/* line 29, ../../sass/components/layout.scss */
-#footer {
-  background-color: #d1d2d4;
+/* line 20, ../../sass/components/layout.scss */
+img {
+  max-width: 95%;
 }
 
-/* line 33, ../../sass/components/layout.scss */
-#content {
-  float: left;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: -100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  text-align: left;
-  padding-left: 20px;
-}
-
-/* line 40, ../../sass/components/layout.scss */
+/* line 24, ../../sass/components/layout.scss */
 #main {
-  min-height: 600px;
+  background-color: #fcfcfc;
 }
-
-@media screen and (min-width: 980px) {
-  /* line 44, ../../sass/components/layout.scss */
-  #main-menu {
-    float: left;
-    width: 200%;
-    margin-left: -200%;
-    margin-right: 0%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-top: -100px;
+@media screen and (max-width: 375px) {
+  /* line 24, ../../sass/components/layout.scss */
+  #main {
+    width: 100%;
+    padding-left: .5em;
   }
 }
-@media screen and (max-width: 340px) and (min-width: 320px) {
-  /* line 44, ../../sass/components/layout.scss */
-  #main-menu {
-    float: left;
-    width: 300%;
-    margin-left: 0%;
-    margin-right: -300%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 320px) {
-  /* line 44, ../../sass/components/layout.scss */
-  #main-menu {
-    position: absolute;
-    top: 0;
+@media screen and (min-width: 400px) {
+  /* line 24, ../../sass/components/layout.scss */
+  #main {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
-/* line 60, ../../sass/components/layout.scss */
-nav#main-menu ul li a {
-  padding: .2em 1em;
+/* line 36, ../../sass/components/layout.scss */
+#content {
+  text-align: left;
+  margin: 0 auto;
+}
+@media screen and (max-width: 375px) {
+  /* line 36, ../../sass/components/layout.scss */
+  #content {
+    width: 100%;
+    margin: 0;
+  }
 }
 
-/* line 66, ../../sass/components/layout.scss */
-#navigation .responsive-menus.responsified {
-  position: absolute;
-  float: left;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: -100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  width: 95%;
-  top: 0px;
+/* line 46, ../../sass/components/layout.scss */
+#navigation {
+  display: none;
 }
 
-/* line 84, ../../sass/components/layout.scss */
+/* line 51, ../../sass/components/layout.scss */
 #site-name {
   margin-top: 10%;
   padding-left: 10px;
 }
-@media screen and (max-width: 320px) {
-  /* line 84, ../../sass/components/layout.scss */
+@media screen and (max-width: 375px) {
+  /* line 51, ../../sass/components/layout.scss */
   #site-name {
     display: none;
   }
 }
 
-/* line 93, ../../sass/components/layout.scss */
+/* line 58, ../../sass/components/layout.scss */
 #site-name a span {
   color: #d36436;
 }
 
-/* line 97, ../../sass/components/layout.scss */
+/* line 62, ../../sass/components/layout.scss */
 #site-name a:hover {
   text-decoration: none;
 }
 
-/* line 101, ../../sass/components/layout.scss */
-#edit-actions input {
-  font-size: 15px;
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD36436', endColorstr='#FF863C1D');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e19475), color-stop(70%, #d36436));
-  background: -webkit-linear-gradient(#e19475, #d36436 70%);
-  background: -moz-linear-gradient(#e19475, #d36436 70%);
-  background: -o-linear-gradient(#e19475, #d36436 70%);
-  background: linear-gradient(#e19475, #d36436 70%);
-  -webkit-box-shadow: #eec5b4 0 1px 0 inset;
-  -moz-box-shadow: #eec5b4 0 1px 0 inset;
-  box-shadow: #eec5b4 0 1px 0 inset;
-  border: 1px solid #c4582b;
-  color: white;
-  text-shadow: #a94c25 0 -1px 0;
-}
-/* line 15, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#edit-actions input:hover {
-  text-decoration: none;
-}
-/* line 18, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#edit-actions input:hover {
-  background-color: #c4582b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #dc8460), color-stop(75%, #c4582b));
-  background: -webkit-linear-gradient(#dc8460 3%, #c4582b 75%);
-  background: -moz-linear-gradient(#dc8460 3%, #c4582b 75%);
-  background: -o-linear-gradient(#dc8460 3%, #c4582b 75%);
-  background: linear-gradient(#dc8460 3%, #c4582b 75%);
-}
-/* line 21, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#edit-actions input:active {
-  -webkit-box-shadow: #b85228 0 1px 2px inset;
-  -moz-box-shadow: #b85228 0 1px 2px inset;
-  box-shadow: #b85228 0 1px 2px inset;
-}
-/* line 6, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#edit-actions input.disabled, #edit-actions input[disabled] {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  background: #d36436;
-  cursor: default;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-/* line 74, ../../../../../../../../lib/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
-#edit-actions input::-moz-focus-inner {
-  padding: 0 !important;
-  margin: -1px !important;
-}
-
-/* line 106, ../../sass/components/layout.scss */
+/* line 70, ../../sass/components/layout.scss */
 form#search-block-form div.form-actions {
   display: none;
 }
 
-/* line 111, ../../sass/components/layout.scss */
+/* line 75, ../../sass/components/layout.scss */
 #presses-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 117, ../../sass/components/layout.scss */
+/* line 81, ../../sass/components/layout.scss */
 body#tinymce {
   background-color: white;
 }
 
-/* line 121, ../../sass/components/layout.scss */
-h1#page-title {
-  text-align: center;
+@media screen and (max-width: 375px) {
+  /* line 85, ../../sass/components/layout.scss */
+  #footer {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
 }

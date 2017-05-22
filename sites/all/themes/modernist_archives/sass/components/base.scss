@@ -7,13 +7,11 @@
  *
  **/
 
-@import "zen";
+// @import "zen";
 
-// fonts
-@import url("http://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans");
 
 // Sass for buttons
-@import "sassy-buttons";
+// @import "sassy-buttons";
 
 $zen-column-count: 7; // Set the total number of columns in the grid.
 $zen-gutter-width: 0px;
@@ -24,27 +22,34 @@ $background_color: #58585a;
 $content_bg_color: white;
 $footer_bg_color: #d1d2d4;
 
+div#page {
+  width: 100%;
+  min-width: 30em;
+  overflow-wrap: break-word;
+}
+
+
 body {
-	background-color: $background_color;
+  font-family: "Roboto", sans-serf;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6em;
+  background-color: rgb(252, 252, 252);
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Quattrocento Sans', sans-serif;
+article {
+  margin-bottom: 5em;
 }
 
-a {
-	text-decoration: none;
-	color: $link_color;
+p#skip-link {
+  margin: 0;
+  display: none;
 }
 
-a:hover {
-	color: $highlight_color;
-	text-decoration: underline;
-}
+
 
 .mapp-button {
-	@include sassy-button("simple", 10px, 19px, $highlight_color);
-	text-decoration: none;
+  text-decoration: none;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -57,4 +62,108 @@ a:hover {
     text-decoration: none !important;
     color: transparent !important;
   }
+}
+
+
+
+/* Contact */ 
+
+input, textarea {
+  height: 3em;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: rgb(230, 230 ,230);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.25em;
+  font-family: "Roboto", sans-serf;
+  font-weight: 300;
+}
+
+textarea {
+  height: 6em;
+  resize: vertical;
+}
+
+label {
+  margin-top: 1.5em;
+  display: block;
+}
+
+.form-required {
+  color: red;
+}
+
+input[type="submit"] {
+  margin-top: 3em;
+  color: white;
+  border-radius: 2px;
+  border: 1px solid $highlight_color;
+  background-color: $highlight_color;
+  width: auto;
+  padding: 0.25em 1em;
+  font-size: 1em;
+    &:hover {
+      background-color: darken($highlight_color, 10);
+    }
+}
+
+/* Bibolography */ 
+
+.biblio-separator-bar {
+  margin: 1.5em 0 0.5em 0;
+  border: none;
+  background-color: transparent;
+  border-top: 1px dotted rgb(200,200,200);
+  padding: 0.5em 0 0 0;
+  font-weight: 600;
+  color: $highlight_color;
+} 
+
+.biblio-entry {
+  margin-top: 0.75em;
+}
+
+.biblio-export {
+  float: right;
+}
+
+ul.pager {
+  margin-top: 1em;
+  li {
+    display: inline-block;
+    &.pager-current {
+      color: $link_color;
+      font-weight: 600;
+    }
+  }
+}
+
+.views-field-citation {
+  margin-top: 1em;
+}
+
+/* Footer */ 
+
+#footer {
+  background-color: rgb(245, 245, 245);
+  padding: 1em;
+  margin-top: 2em;
+    block {
+      p {
+      text-align: right !important;
+      margin-top: 0px;
+      }
+    }
+   
+}
+
+
+
+
+
+/* Hacks */
+
+.block-menu .block__title {
+  display: none;
 }
