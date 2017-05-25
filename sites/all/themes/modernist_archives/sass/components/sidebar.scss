@@ -42,17 +42,18 @@ section.region-sidebar-first {
     top: 0;
     height: 100%;
   }
-  //@media only screen and (min-width: $break-medium) and (max-width: $break-large) {
-  //  padding: 1em;
-  //  width: 19%;
-  //}
 
-    background-color: $highlight_color;
-    overflow-y: auto;
+  background-color: $highlight_color;
+  overflow-y: auto;
   img.header__logo-image {
     width: 80%;
     margin-bottom: 24px;
-    @media screen and (max-width: $break-large) {
+    @media only screen and (max-width: $break-large) {
+      display: none;
+    }
+    @media only screen
+    and (min-width: $iphone6plus-min)
+    and (max-width: $iphone6plus-max) {
       display: none;
     }
   }
