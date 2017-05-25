@@ -5,24 +5,34 @@ $content_bg_color: white;
 $footer_bg_color: #d1d2d4;
 
 $break-small: 375px;
-$break-medium: 400px;
+$break-medium: 415px;
 $break-large: 768px;
+
+$iphone6plus-min: 414px;
+$iphone6plus-max: 736px;
 
 // section.region-sidebar-first.column.sidebar {
 section.region-sidebar-first {
   padding: 2em;
   box-sizing: border-box;
-  @media screen and (max-width: $break-small) {
+  @media only screen and (max-width: $break-small) {
     width: 100%;
   }
-  @media screen and (min-width: $break-medium) {
+  // iPhone 6+
+  @media only screen
+  and (min-width: $iphone6plus-min)
+  and (max-width: $iphone6plus-max) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: $break-medium) {
     width: 20%;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
   }
-  @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+  @media only screen and (min-width: $break-medium) and (max-width: $break-large) {
     padding: 1em;
     width: 19%;
   }

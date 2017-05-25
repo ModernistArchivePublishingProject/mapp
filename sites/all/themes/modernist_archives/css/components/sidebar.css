@@ -1,18 +1,24 @@
-/* line 12, ../../sass/components/sidebar.scss */
+/* line 15, ../../sass/components/sidebar.scss */
 section.region-sidebar-first {
   padding: 2em;
   box-sizing: border-box;
   background-color: #d36436;
   overflow-y: auto;
 }
-@media screen and (max-width: 375px) {
-  /* line 12, ../../sass/components/sidebar.scss */
+@media only screen and (max-width: 375px) {
+  /* line 15, ../../sass/components/sidebar.scss */
   section.region-sidebar-first {
     width: 100%;
   }
 }
-@media screen and (min-width: 400px) {
-  /* line 12, ../../sass/components/sidebar.scss */
+@media only screen and (min-width: 414px) and (max-width: 736px) {
+  /* line 15, ../../sass/components/sidebar.scss */
+  section.region-sidebar-first {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 415px) {
+  /* line 15, ../../sass/components/sidebar.scss */
   section.region-sidebar-first {
     width: 20%;
     position: fixed;
@@ -21,33 +27,33 @@ section.region-sidebar-first {
     height: 100%;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 768px) {
-  /* line 12, ../../sass/components/sidebar.scss */
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+  /* line 15, ../../sass/components/sidebar.scss */
   section.region-sidebar-first {
     padding: 1em;
     width: 19%;
   }
 }
-/* line 32, ../../sass/components/sidebar.scss */
+/* line 42, ../../sass/components/sidebar.scss */
 section.region-sidebar-first img.header__logo-image {
   width: 80%;
   margin-bottom: 24px;
 }
 @media screen and (max-width: 375px) {
-  /* line 32, ../../sass/components/sidebar.scss */
+  /* line 42, ../../sass/components/sidebar.scss */
   section.region-sidebar-first img.header__logo-image {
     display: none;
   }
 }
-/* line 39, ../../sass/components/sidebar.scss */
+/* line 49, ../../sass/components/sidebar.scss */
 section.region-sidebar-first a.header__logo:hover {
   border-bottom: none;
 }
-/* line 43, ../../sass/components/sidebar.scss */
+/* line 53, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu {
   list-style-type: none;
 }
-/* line 45, ../../sass/components/sidebar.scss */
+/* line 55, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   list-style-image: none;
   list-style-type: none;
@@ -59,22 +65,22 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
   letter-spacing: 0.1em;
 }
 @media screen and (max-width: 375px) {
-  /* line 45, ../../sass/components/sidebar.scss */
+  /* line 55, ../../sass/components/sidebar.scss */
   section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
     font-size: 2em;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 768px) {
-  /* line 45, ../../sass/components/sidebar.scss */
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  /* line 55, ../../sass/components/sidebar.scss */
   section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item {
     font-size: 1em;
   }
 }
-/* line 61, ../../sass/components/sidebar.scss */
+/* line 71, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a {
   color: white;
 }
-/* line 63, ../../sass/components/sidebar.scss */
+/* line 73, ../../sass/components/sidebar.scss */
 section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a:hover {
   color: #e5a58a;
   text-decoration: none;
