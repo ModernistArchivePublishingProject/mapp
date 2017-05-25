@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Works feature.
+ */
+
+include_once 'mapp_works_view.features.inc';
