@@ -34,16 +34,22 @@ img {
   }
 }
 
-/* line 49, ../../sass/components/layout.scss */
+/* line 44, ../../sass/components/layout.scss */
 #content {
   text-align: left;
   margin: 0 auto;
 }
 @media screen and (max-width: 375px) {
-  /* line 49, ../../sass/components/layout.scss */
+  /* line 44, ../../sass/components/layout.scss */
   #content {
     width: 100%;
     margin: 0;
+  }
+}
+@media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) {
+  /* line 44, ../../sass/components/layout.scss */
+  #content {
+    max-width: 726px;
   }
 }
 

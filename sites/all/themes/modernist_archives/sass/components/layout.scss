@@ -48,6 +48,11 @@ img {
 		width: 100%;
 		margin: 0;
 	}
+	@media only screen and (min-width: $iphone6plus-min)
+	and (max-width: $iphone6plus-max)
+	and (orientation: portrait) {
+		max-width: $iphone6plus-max - 10px;
+	}
 }
 
 
