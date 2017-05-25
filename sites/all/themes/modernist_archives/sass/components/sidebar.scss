@@ -21,28 +21,38 @@ section.region-sidebar-first {
   // iPhone 6+
   @media only screen
   and (min-width: $iphone6plus-min)
-  and (max-width: $iphone6plus-max) {
+  and (max-width: $iphone6plus-max)
+  and (orientation: portrait) {
     width: 100%;
+    font-size: 2em;
   }
 
-  @media only screen and (min-width: $break-medium) {
+  @media only screen
+  and (min-device-width : $iphone6plus-min)
+  and (max-device-width : $iphone6plus-max)
+  and (orientation : landscape) {
+    font-size: smaller;
+    height: $iphone6plus-min;
+  }
+
+  @media only screen and (min-width: $break-large) {
     width: 20%;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
   }
-  @media only screen and (min-width: $break-medium) and (max-width: $break-large) {
-    padding: 1em;
-    width: 19%;
-  }
+  //@media only screen and (min-width: $break-medium) and (max-width: $break-large) {
+  //  padding: 1em;
+  //  width: 19%;
+  //}
 
     background-color: $highlight_color;
-  overflow-y: auto;
+    overflow-y: auto;
   img.header__logo-image {
     width: 80%;
     margin-bottom: 24px;
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: $break-large) {
       display: none;
     }
   }

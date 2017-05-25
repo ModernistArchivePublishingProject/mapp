@@ -11,6 +11,8 @@ $break-small: 375px;
 $break-medium: 400px;
 $break-large: 765px;
 
+$iphone6plus-min: 414px;
+$iphone6plus-max: 736px;
 
 #header,
 #main {
@@ -26,10 +28,16 @@ img {
 		width: 100%;
 		padding-left: .5em;
 	}
-	@media screen and (min-width: $break-medium) {
+	@media screen and (min-width: $break-medium) and (max-width: $iphone6plus-min) {
 		width: 100%;
 		margin-left: 0;
 	}
+	@media only screen
+		and (min-width: $iphone6plus-min)
+		and (max-width: $iphone6plus-max) {
+		max-width: 700px;
+	}
+
 	background-color: rgb(252, 252, 252);
 }
 
