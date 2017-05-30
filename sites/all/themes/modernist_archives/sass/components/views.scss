@@ -58,3 +58,21 @@ div.view-content {
     }
   }
 }
+
+div.view-correspondence {
+  td.people {
+    width: 15%;
+  }
+  td.views-field-title {
+    padding-left: 5px;
+  }
+  td.views-field-view-node {
+    a span {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  span.date-display-single {
+    font-size: smaller;
+  }
+}

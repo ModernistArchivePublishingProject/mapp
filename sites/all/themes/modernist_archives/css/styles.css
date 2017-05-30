@@ -6,8 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-/* @import "font-awesome-sprockets";
-/* @import "font-awesome"; */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -2286,6 +2285,24 @@ div.view-content table {
 /* line 56, ../sass/components/views.scss */
 div.view-content table td {
   padding: 5px;
+}
+
+/* line 63, ../sass/components/views.scss */
+div.view-correspondence td.people {
+  width: 15%;
+}
+/* line 66, ../sass/components/views.scss */
+div.view-correspondence td.views-field-title {
+  padding-left: 5px;
+}
+/* line 70, ../sass/components/views.scss */
+div.view-correspondence td.views-field-view-node a span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 75, ../sass/components/views.scss */
+div.view-correspondence span.date-display-single {
+  font-size: smaller;
 }
 
 /* line 4, ../sass/components/nodes.scss */
