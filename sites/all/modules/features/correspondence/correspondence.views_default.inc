@@ -37,6 +37,51 @@ function correspondence_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'view_node' => 'view_node',
+    'field_author' => 'field_author',
+    'field_recipient' => 'field_recipient',
+    'field_publication_date' => 'field_publication_date',
+    'title' => 'title',
+    'field_correspondence_type' => 'field_correspondence_type',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'view_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_author' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_recipient' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_publication_date' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_correspondence_type' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_author_target_id']['id'] = 'field_author_target_id';
   $handler->display->display_options['relationships']['field_author_target_id']['table'] = 'field_data_field_author';
@@ -56,13 +101,19 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['text'] = 'View';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<span class="fa fa-external-link"></a>';
+  $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_type'] = 'span';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   /* Field: Content: Author */
   $handler->display->display_options['fields']['field_author']['id'] = 'field_author';
   $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
   $handler->display->display_options['fields']['field_author']['field'] = 'field_author';
   $handler->display->display_options['fields']['field_author']['label'] = 'From';
   $handler->display->display_options['fields']['field_author']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_author']['element_class'] = 'people';
   $handler->display->display_options['fields']['field_author']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_author']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_author']['empty'] = 'Unknown';
@@ -76,6 +127,7 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['field_recipient']['field'] = 'field_recipient';
   $handler->display->display_options['fields']['field_recipient']['label'] = 'To';
   $handler->display->display_options['fields']['field_recipient']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_recipient']['element_class'] = 'people';
   $handler->display->display_options['fields']['field_recipient']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_recipient']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_recipient']['empty'] = 'Unknown';
@@ -119,6 +171,10 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['field_correspondence_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_correspondence_type']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_correspondence_type']['field_api_classes'] = TRUE;
+  /* Sort criterion: Field: Date Created (field_publication_date) */
+  $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
+  $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
+  $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
   /* Sort criterion: Content: Author (field_author) */
   $handler->display->display_options['sorts']['field_author_target_id']['id'] = 'field_author_target_id';
   $handler->display->display_options['sorts']['field_author_target_id']['table'] = 'field_data_field_author';
@@ -144,11 +200,13 @@ function correspondence_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'correspondence' => 'correspondence',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
 
   /* Display: Block - Sender */
   $handler = $view->new_display('block', 'Block - Sender', 'block');
