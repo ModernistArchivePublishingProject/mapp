@@ -68,9 +68,9 @@ class WorkNodeMigration extends WorkMigration {
   public function prepareRow($row) {
 
     // Skip manually entered rows
-    if (!empty($row->{"Manually Entered?"})) {
-      return FALSE;
-    }
+//    if (!empty($row->{"Manually Entered?"})) {
+//      return FALSE;
+//    }
 
     parent::prepareRow($row);
 
