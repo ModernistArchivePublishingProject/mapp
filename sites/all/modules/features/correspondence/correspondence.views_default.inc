@@ -65,11 +65,11 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['field_author']['element_type'] = '0';
   $handler->display->display_options['fields']['field_author']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_author']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_author']['empty'] = 'Unknown';
   $handler->display->display_options['fields']['field_author']['settings'] = array(
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_author']['field_api_classes'] = TRUE;
   /* Field: Content: Recipient */
   $handler->display->display_options['fields']['field_recipient']['id'] = 'field_recipient';
   $handler->display->display_options['fields']['field_recipient']['table'] = 'field_data_field_recipient';
@@ -78,11 +78,11 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['field_recipient']['element_type'] = '0';
   $handler->display->display_options['fields']['field_recipient']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_recipient']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_recipient']['empty'] = 'Unknown';
   $handler->display->display_options['fields']['field_recipient']['settings'] = array(
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_recipient']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_recipient']['field_api_classes'] = TRUE;
   /* Field: Field: Date Created */
   $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
