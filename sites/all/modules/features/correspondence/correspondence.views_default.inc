@@ -103,7 +103,7 @@ function correspondence_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<span class="fa fa-external-link"></a>';
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<span class="fa fa-link"></a>';
   $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_type'] = 'span';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
