@@ -2311,6 +2311,11 @@ div.view-people td {
   width: 25%;
 }
 
+/* line 88, ../sass/components/views.scss */
+div.view-works span.work-title {
+  font-style: italic;
+}
+
 /* line 4, ../sass/components/nodes.scss */
 article.node span.field-type-taxonomy-term-reference,
 article.node .field-type-entityreference,

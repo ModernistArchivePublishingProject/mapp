@@ -83,3 +83,8 @@ div.view-works td,
 div.view-people td {
   width: 25%;
 }
+
+/* line 88, ../../sass/components/views.scss */
+div.view-works span.work-title {
+  font-style: italic;
+}
