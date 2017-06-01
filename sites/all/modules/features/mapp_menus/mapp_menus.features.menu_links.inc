@@ -45,7 +45,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -42,
+    'weight' => -40,
     'customized' => 1,
   );
   // Exported menu link: main-menu_blog:blog.
@@ -61,11 +61,11 @@ function mapp_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_blog:blog',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -44,
     'customized' => 1,
   );
   // Exported menu link: main-menu_contact:contact.
@@ -85,7 +85,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -41,
     'customized' => 1,
   );
   // Exported menu link: main-menu_presses:presses.
@@ -98,11 +98,11 @@ function mapp_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_presses:presses',
     ),
     'module' => 'system',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_team:team.
@@ -119,7 +119,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -46,
     'customized' => 1,
   );
 
