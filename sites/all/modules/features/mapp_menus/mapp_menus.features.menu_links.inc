@@ -68,6 +68,24 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -44,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_browse:node/6537.
+  $menu_links['main-menu_browse:node/6537'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/6537',
+    'router_path' => 'node/%',
+    'link_title' => 'Browse',
+    'options' => array(
+      'attributes' => array(),
+      'identifier' => 'main-menu_browse:node/6537',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_contact:contact.
   $menu_links['main-menu_contact:contact'] = array(
     'menu_name' => 'main-menu',
@@ -128,6 +146,7 @@ function mapp_menus_menu_default_menu_links() {
   t('About');
   t('Bibliography');
   t('Blog');
+  t('Browse');
   t('Contact');
   t('Presses');
   t('Team');

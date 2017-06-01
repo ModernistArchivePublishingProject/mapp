@@ -12,6 +12,7 @@ features[menu_custom][] = main-menu
 features[menu_links][] = main-menu_about:node/1
 features[menu_links][] = main-menu_bibliography:biblio
 features[menu_links][] = main-menu_blog:blog
+features[menu_links][] = main-menu_browse:node/6537
 features[menu_links][] = main-menu_contact:contact
 features[menu_links][] = main-menu_presses:presses
 features[menu_links][] = main-menu_team:team
