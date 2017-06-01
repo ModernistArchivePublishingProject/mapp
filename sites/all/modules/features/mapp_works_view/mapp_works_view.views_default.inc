@@ -23,14 +23,16 @@ function mapp_works_view_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Works';
-  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Image(s) (field_fc_images) */
@@ -43,6 +45,22 @@ function mapp_works_view_views_default_views() {
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  /* Field: Global: Base url */
+  $handler->display->display_options['fields']['base_url']['id'] = 'base_url';
+  $handler->display->display_options['fields']['base_url']['table'] = 'views';
+  $handler->display->display_options['fields']['base_url']['field'] = 'base_url';
+  $handler->display->display_options['fields']['base_url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['base_url']['show_link'] = 0;
+  $handler->display->display_options['fields']['base_url']['show_link_options'] = array(
+    'link_path' => '',
+    'link_text' => '',
+    'link_class' => '',
+    'link_title' => '',
+    'link_rel' => '',
+    'link_fragment' => '',
+    'link_query' => '',
+    'link_target' => '',
+  );
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -55,7 +73,7 @@ function mapp_works_view_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="http://mapp.dev/sites/default/files/styles/medium/public/pr6037h7d31922003.jpg?itok=fHLHLScM" />';
+  $handler->display->display_options['fields']['field_image']['empty'] = '<a href="[path]"><img src="[base_url]/sites/default/files/MAPP_Logo_Orange_Compact_small.jpeg" /></a>';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',
@@ -84,6 +102,11 @@ function mapp_works_view_views_default_views() {
   );
   $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_author']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
