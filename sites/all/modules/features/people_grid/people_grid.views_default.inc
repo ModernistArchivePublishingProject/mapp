@@ -31,7 +31,7 @@ function people_grid_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '3';
@@ -44,6 +44,22 @@ function people_grid_views_default_views() {
   $handler->display->display_options['relationships']['field_fc_images_value']['field'] = 'field_fc_images_value';
   $handler->display->display_options['relationships']['field_fc_images_value']['label'] = 'images_fc';
   $handler->display->display_options['relationships']['field_fc_images_value']['delta'] = '-1';
+  /* Field: Global: Base url */
+  $handler->display->display_options['fields']['base_url']['id'] = 'base_url';
+  $handler->display->display_options['fields']['base_url']['table'] = 'views';
+  $handler->display->display_options['fields']['base_url']['field'] = 'base_url';
+  $handler->display->display_options['fields']['base_url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['base_url']['show_link'] = 0;
+  $handler->display->display_options['fields']['base_url']['show_link_options'] = array(
+    'link_path' => '',
+    'link_text' => '',
+    'link_class' => '',
+    'link_title' => '',
+    'link_rel' => '',
+    'link_fragment' => '',
+    'link_query' => '',
+    'link_target' => '',
+  );
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -61,7 +77,7 @@ function people_grid_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['empty'] = '<a href="[path]"><img src="[base_url]/sites/default/files/person.png" /></a>';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',

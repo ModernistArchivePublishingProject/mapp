@@ -78,7 +78,8 @@ div.view-correspondence span.date-display-single {
   font-size: smaller;
 }
 
-/* line 81, ../../sass/components/views.scss */
-div.view-works td {
+/* line 82, ../../sass/components/views.scss */
+div.view-works td,
+div.view-people td {
   width: 25%;
 }
