@@ -2312,6 +2312,11 @@ article.node .field-name-field-name-authority {
   display: block;
 }
 
+/* line 10, ../sass/components/nodes.scss */
+span.user-picture img {
+  border-radius: 50%;
+}
+
 /* @import "print";
 
 /* SMACSS theme rules */
