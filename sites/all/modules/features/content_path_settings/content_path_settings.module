@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Path Settings feature.
+ */
+
+include_once 'content_path_settings.features.inc';
