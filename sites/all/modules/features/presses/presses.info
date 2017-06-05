@@ -1,0 +1,11 @@
+name = Presses
+description = A grid-view of presses
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = mapp_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/features

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Presses feature.
+ */
+
+include_once 'presses.features.inc';
