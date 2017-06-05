@@ -688,7 +688,10 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
-    'roles' => array(),
+    'roles' => array(
+      'Team Member' => 'Team Member',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
