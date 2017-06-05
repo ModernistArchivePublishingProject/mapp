@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OpenLayers Settings feature.
+ */
+
+include_once 'openlayers_settings.features.inc';
