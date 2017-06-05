@@ -1692,9 +1692,11 @@ label {
   color: red;
 }
 
-/* line 97, ../sass/components/base.scss */
-input[type="submit"] {
+/* line 99, ../sass/components/base.scss */
+input[type="submit"],
+div.media-widget a.browse {
   margin-top: 3em;
+  margin-right: 1em;
   color: white;
   border-radius: 2px;
   border: 1px solid #d36436;
@@ -1703,13 +1705,14 @@ input[type="submit"] {
   padding: 0.25em 1em;
   font-size: 1em;
 }
-/* line 106, ../sass/components/base.scss */
-input[type="submit"]:hover {
+/* line 109, ../sass/components/base.scss */
+input[type="submit"]:hover,
+div.media-widget a.browse:hover {
   background-color: #b04f26;
 }
 
 /* Bibolography */
-/* line 113, ../sass/components/base.scss */
+/* line 116, ../sass/components/base.scss */
 .biblio-separator-bar {
   margin: 1.5em 0 0.5em 0;
   border: none;
@@ -1720,52 +1723,58 @@ input[type="submit"]:hover {
   color: #d36436;
 }
 
-/* line 123, ../sass/components/base.scss */
+/* line 126, ../sass/components/base.scss */
 .biblio-entry {
   margin-top: 0.75em;
 }
 
-/* line 127, ../sass/components/base.scss */
+/* line 130, ../sass/components/base.scss */
 .biblio-export {
   float: right;
 }
 
-/* line 131, ../sass/components/base.scss */
+/* line 134, ../sass/components/base.scss */
 ul.pager {
   margin-top: 1em;
 }
-/* line 133, ../sass/components/base.scss */
+/* line 136, ../sass/components/base.scss */
 ul.pager li {
   display: inline-block;
 }
-/* line 135, ../sass/components/base.scss */
+/* line 138, ../sass/components/base.scss */
 ul.pager li.pager-current {
   color: #4d71a2;
   font-weight: 600;
 }
 
-/* line 142, ../sass/components/base.scss */
+/* line 145, ../sass/components/base.scss */
 .views-field-citation {
   margin-top: 1em;
 }
 
 /* Footer */
-/* line 148, ../sass/components/base.scss */
+/* line 151, ../sass/components/base.scss */
 #footer {
   background-color: whitesmoke;
   padding: 1em;
   margin-top: 2em;
 }
-/* line 153, ../sass/components/base.scss */
+/* line 156, ../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
 
 /* Hacks */
-/* line 167, ../sass/components/base.scss */
+/* line 170, ../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
+}
+
+/* line 174, ../sass/components/base.scss */
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
 }
 
 /* line 1, ../sass/components/typography.scss */

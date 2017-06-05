@@ -94,8 +94,11 @@ label {
   color: red;
 }
 
-input[type="submit"] {
+input[type="submit"],
+div.media-widget a.browse
+{
   margin-top: 3em;
+  margin-right: 1em;
   color: white;
   border-radius: 2px;
   border: 1px solid $highlight_color;
@@ -166,4 +169,9 @@ ul.pager {
 
 .block-menu .block__title {
   display: none;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
 }
