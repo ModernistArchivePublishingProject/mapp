@@ -85,25 +85,26 @@ label {
 
 /* line 99, ../../sass/components/base.scss */
 input[type="submit"],
-div.media-widget a.browse {
-  margin-top: 3em;
+div.media-widget a.button {
+  margin-top: 1em;
   margin-right: 1em;
   color: white;
   border-radius: 2px;
   border: 1px solid #d36436;
   background-color: #d36436;
+  -webkit-appearance: none;
   width: auto;
   padding: 0.25em 1em;
   font-size: 1em;
 }
-/* line 109, ../../sass/components/base.scss */
+/* line 110, ../../sass/components/base.scss */
 input[type="submit"]:hover,
-div.media-widget a.browse:hover {
+div.media-widget a.button:hover {
   background-color: #b04f26;
 }
 
 /* Bibolography */
-/* line 116, ../../sass/components/base.scss */
+/* line 117, ../../sass/components/base.scss */
 .biblio-separator-bar {
   margin: 1.5em 0 0.5em 0;
   border: none;
@@ -114,55 +115,55 @@ div.media-widget a.browse:hover {
   color: #d36436;
 }
 
-/* line 126, ../../sass/components/base.scss */
+/* line 127, ../../sass/components/base.scss */
 .biblio-entry {
   margin-top: 0.75em;
 }
 
-/* line 130, ../../sass/components/base.scss */
+/* line 131, ../../sass/components/base.scss */
 .biblio-export {
   float: right;
 }
 
-/* line 134, ../../sass/components/base.scss */
+/* line 135, ../../sass/components/base.scss */
 ul.pager {
   margin-top: 1em;
 }
-/* line 136, ../../sass/components/base.scss */
+/* line 137, ../../sass/components/base.scss */
 ul.pager li {
   display: inline-block;
 }
-/* line 138, ../../sass/components/base.scss */
+/* line 139, ../../sass/components/base.scss */
 ul.pager li.pager-current {
   color: #4d71a2;
   font-weight: 600;
 }
 
-/* line 145, ../../sass/components/base.scss */
+/* line 146, ../../sass/components/base.scss */
 .views-field-citation {
   margin-top: 1em;
 }
 
 /* Footer */
-/* line 151, ../../sass/components/base.scss */
+/* line 152, ../../sass/components/base.scss */
 #footer {
   background-color: whitesmoke;
   padding: 1em;
   margin-top: 2em;
 }
-/* line 156, ../../sass/components/base.scss */
+/* line 157, ../../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
 
 /* Hacks */
-/* line 170, ../../sass/components/base.scss */
+/* line 171, ../../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
 
-/* line 174, ../../sass/components/base.scss */
+/* line 175, ../../sass/components/base.scss */
 input[type="checkbox"] {
   width: auto;
   height: auto;
