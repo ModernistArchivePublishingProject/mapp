@@ -88,3 +88,7 @@ div.view-people td {
 div.view-works span.work-title {
   font-style: italic;
 }
+/* line 91, ../../sass/components/views.scss */
+div.view-works h4 {
+  padding-bottom: 2em;
+}

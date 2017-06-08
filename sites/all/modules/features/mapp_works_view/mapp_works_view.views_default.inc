@@ -42,7 +42,7 @@ function mapp_works_view_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<h3>A random selection from our archive. <a href="/works"><span class="fa fa-refresh"></span> Reload</a> the page for a new set.</h3>
-<a href="/works/list"><span class="fa fa-list"></span> View All Works</a>';
+<h4><a href="/works/list"><span class="fa fa-list"></span> View All Works</a></h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Content: Image(s) (field_fc_images) */
   $handler->display->display_options['relationships']['field_fc_images_value']['id'] = 'field_fc_images_value';
@@ -204,7 +204,7 @@ function mapp_works_view_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/works"><span class="fa fa-table"></span> Works Gallery</a>';
+  $handler->display->display_options['header']['area']['content'] = '<h4><a href="/works"><span class="fa fa-table"></span> Works Gallery</a></h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Path */
