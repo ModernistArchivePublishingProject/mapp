@@ -1,0 +1,28 @@
+name = Entity Merge
+description = Provides tools and helper functions to merge two entities.
+core = 7.x
+
+dependencies[] = entity
+
+; Merge processes.
+files[] = processes/entity_merge.interface.inc
+files[] = processes/entity_merge.base.inc
+files[] = processes/entity_merge.merge_fields.inc
+files[] = processes/entity_merge.invoke_hooks.inc
+files[] = processes/entity_merge.save_target.inc
+files[] = processes/entity_merge.delete_sources.inc
+files[] = processes/entity_merge.entityreference.inc
+files[] = processes/entity_merge.og.inc
+
+; Merge handlers.
+files[] = handlers/entity_merge.interface.inc
+files[] = handlers/entity_merge.base.inc
+files[] = handlers/entity_merge.default.inc
+files[] = handlers/entity_merge.og_membership.inc
+
+; Information added by Drupal.org packaging script on 2017-03-07
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "entity_merge"
+datestamp = "1488902587"
+

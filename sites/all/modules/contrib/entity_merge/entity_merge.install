@@ -1,0 +1,127 @@
+<?php
+/**
+ * @file
+ * Contains schema definition for entity_merge module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function entity_merge_schema() {
+  $schema['entity_merge_semaphore'] = array(
+    'description' => 'Stores when Merge Processes are happening on an entity.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'description' => 'Unique Identifier for this process.',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'entity_type' => array(
+        'description' => 'The entity type that is being merged by this merge process.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'entity_id_1' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The entity id of the first entity being merged.',
+      ),
+      'entity_id_2' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The entity id of the second entity being merged.',
+      ),
+      'start_time' => array(
+        'description' => 'The Unix timestamp when the process was started.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'finish_time' => array(
+        'description' => 'The Unix timestamp when the process was finished.',
+        'type' => 'int',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function entity_merge_uninstall() {
+  variable_del('entity_merge_semaphore_max_age');
+}
+
+/**
+ * Add database table.
+ */
+function entity_merge_update_7001() {
+  $def = array(
+    'description' => 'Stores when Merge Processes are happening on an entity.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'description' => 'Unique Identifier for this process.',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'entity_type' => array(
+        'description' => 'The entity type that is being merged by this merge process.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'entity_id_1' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The entity id of the first entity being merged.',
+      ),
+      'entity_id_2' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The entity id of the second entity being merged.',
+      ),
+      'start_time' => array(
+        'description' => 'The Unix timestamp when the process was started.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'finish_time' => array(
+        'description' => 'The Unix timestamp when the process was finished.',
+        'type' => 'int',
+        'not null' => FALSE,
+      ),
+      'data' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional data.',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  db_create_table('entity_merge_semaphore', $def);
+  drupal_flush_all_caches();
+}
+
+/**
+ * Remove data from semaphore table.
+ */
+function entity_merge_update_7002() {
+  db_drop_field('entity_merge_semaphore', 'data');
+}

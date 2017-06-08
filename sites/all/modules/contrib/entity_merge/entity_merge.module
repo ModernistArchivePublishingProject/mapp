@@ -1,0 +1,111 @@
+<?php
+/**
+ * @file
+ * Helpful functions for merging entities.
+ */
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Allow entity types to choose a different merge callback.
+ */
+function entity_merge_entity_info_alter(&$entity_info) {
+  if (module_exists('og')) {
+    $entity_info['og_membership']['merge handler class'] = 'EntityMergeHandlerOgMembership';
+  }
+
+  foreach ($entity_info as $type => &$info) {
+    if (empty($info['merge handler class'])) {
+      $info['merge handler class'] = 'EntityMergeHandlerDefault';
+    }
+  }
+}
+
+/**
+ * Implements hook_hook_info().
+ */
+function entity_merge_hook_info() {
+  // Process Registration hooks
+  $hooks['entity_merge_register_processes'] = array(
+    'group' => 'entity_merge',
+  );
+
+  // Entity merge hooks.
+  $hooks['entity_merge'] = array(
+    'group' => 'entity_merge',
+  );
+
+  // Field merge hooks.
+  $hooks['entity_merge_field_items_alter'] = array(
+    'group' => 'entity_merge',
+  );
+
+  return $hooks;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function entity_merge_cron() {
+  // Clear out finished merges from the semaphore table.
+  $max_age = variable_get('entity_merge_semaphore_max_age', 60 * 60 * 24 * 7);
+  if ($max_age) {
+    $expiry = time() - $max_age;
+    db_delete('entity_merge_semaphore')
+      ->isNotNull('finish_time')
+      ->condition('finish_time', $expiry, '<')
+      ->execute();
+  }
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ */
+function entity_merge_cron_queue_info() {
+  $queues['entity_merge'] = array(
+    'worker callback' => 'entity_merge_queue_item_process',
+    'time' => 30,
+  );
+
+  return $queues;
+}
+
+/**
+ * Process a queue item,
+ */
+function entity_merge_queue_item_process($process) {
+  $process->prepare()->go();
+}
+
+/**
+ * Merge two entities.
+ *
+ * @param stdClass|Object $entity_1
+ *   The first entity to merge. Fields on this entity will take precedent over
+ *   fields on entity_2.
+ * @param stdClass|Object $entity_2
+ *   The second entity to merge.
+ * @param string $entity_type
+ *   The entity_type of $entity_1 and $entity_2.
+ * @param int $time
+ *   The number of seconds to process the merge for.
+ * @param array $conf
+ *   Configuration for this merge process.
+ *
+ * @return stdClass|Object
+ *   $entity_1 with the $entity_2 merged into it.
+ *
+ * @throws Exception
+ */
+function entity_merge($entity_1, $entity_2, $entity_type, $time = 0, array $conf = array()) {
+  $info = entity_get_info($entity_type);
+  list(,,$bundle) = entity_extract_ids($entity_type, $entity_1);
+
+  if (empty($info['merge handler class']) || !class_exists($info['merge handler class'])) {
+    throw new Exception(t('Merge handler class could not be found for @entity_type.', array('@entity_type' => $entity_type)));
+  }
+
+  $class = $info['merge handler class'];
+  $handler = new $class($entity_type, $entity_1, $entity_2, FALSE, FALSE, FALSE, $conf);
+  $handler->merge($time);
+}
