@@ -10,7 +10,7 @@
 function mapp_base_wysiwyg_default_profiles() {
   $profiles = array();
 
-  // Exported profile: filtered_html
+  // Exported profile: filtered_html.
   $profiles['filtered_html'] = array(
     'format' => 'filtered_html',
     'editor' => 'tinymce',
@@ -84,17 +84,17 @@ function mapp_base_wysiwyg_default_profiles() {
       'theme_advanced_resizing' => 1,
     ),
     'preferences' => array(
-      'add_to_summaries' => NULL,
+      'add_to_summaries' => FALSE,
       'default' => NULL,
       'show_toggle' => NULL,
       'user_choose' => NULL,
-      'version' => NULL,
+      'version' => '3.5.11',
     ),
     'name' => 'formatfiltered_html',
     'rdf_mapping' => array(),
   );
 
-  // Exported profile: full_html
+  // Exported profile: full_html.
   $profiles['full_html'] = array(
     'format' => 'full_html',
     'editor' => 'tinymce',
@@ -170,11 +170,11 @@ function mapp_base_wysiwyg_default_profiles() {
       'theme_advanced_resizing' => 1,
     ),
     'preferences' => array(
-      'add_to_summaries' => NULL,
+      'add_to_summaries' => FALSE,
       'default' => NULL,
       'show_toggle' => NULL,
       'user_choose' => NULL,
-      'version' => NULL,
+      'version' => '3.5.11',
     ),
     'name' => 'formatfull_html',
     'rdf_mapping' => array(),
