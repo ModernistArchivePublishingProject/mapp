@@ -6,6 +6,6 @@ article.node .field-name-field-name-authority {
 }
 
 /* line 10, ../../sass/components/nodes.scss */
-span.user-picture img {
+.user-picture img {
   border-radius: 50%;
 }

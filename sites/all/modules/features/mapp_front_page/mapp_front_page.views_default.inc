@@ -70,7 +70,7 @@ function mapp_front_page_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['created']['alter']['text'] = '[picture] Posted by [realname] on [created]';
+  $handler->display->display_options['fields']['created']['alter']['text'] = '<span class="user-picture">[picture]<span> Posted by [realname] on [created]';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
