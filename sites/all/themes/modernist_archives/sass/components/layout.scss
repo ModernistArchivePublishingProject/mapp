@@ -9,7 +9,7 @@ $logo-color: #d36436;
 
 $break-small: 375px;
 $break-medium: 400px;
-$break-large: 765px;
+$break-large: 768px;
 
 $iphone6plus-min: 414px;
 $iphone6plus-max: 736px;
@@ -32,10 +32,13 @@ img {
 		width: 100%;
 		margin-left: 0;
 	}
-	@media only screen
-		and (min-width: $iphone6plus-min)
-		and (max-width: $iphone6plus-max) {
-		max-width: 700px;
+	@media only screen and (min-width: $iphone6plus-min) and (max-width: $iphone6plus-max) {
+		max-width: $iphone6plus-max - 10px;
+	}
+	@media only screen and (min-width: $iphone6plus-min) and (orientation: portrait) {
+		max-width: 95%;
+		margin-right: 1em;
+		margin-left: 1em;
 	}
 
 	background-color: rgb(252, 252, 252);
@@ -44,9 +47,16 @@ img {
 #content {
 	text-align: left;
 	margin: 0 auto;
+	//width: 80%;
+	margin-left: 20%;
+	padding-left: 1em;
+	padding-right: 1em;
 	@media screen and (max-width: $break-small) {
 		width: 100%;
 		margin: 0;
+	}
+	@media only screen and (max-width: $break-large) {
+		margin-left: 0;
 	}
 	@media only screen and (min-width: $iphone6plus-min)
 	and (max-width: $iphone6plus-max)
