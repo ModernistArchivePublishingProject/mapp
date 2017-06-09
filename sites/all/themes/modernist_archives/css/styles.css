@@ -2194,45 +2194,50 @@ section.region-sidebar-first div#block-system-main-menu ul.menu li.menu__item a:
   border-radius: 15px;
   margin-bottom: 5px;
 }
+/* line 50, ../sass/components/views.scss */
+.view-id-front_page_content_feed .views-row .views-field-created {
+  font-style: italic;
+  font-weight: bold;
+}
 
-/* line 54, ../sass/components/views.scss */
+/* line 58, ../sass/components/views.scss */
 div.view-content table {
   width: 100%;
 }
-/* line 56, ../sass/components/views.scss */
+/* line 60, ../sass/components/views.scss */
 div.view-content table td {
   padding: 5px;
 }
 
-/* line 63, ../sass/components/views.scss */
+/* line 67, ../sass/components/views.scss */
 div.view-correspondence td.people {
   width: 15%;
 }
-/* line 66, ../sass/components/views.scss */
+/* line 70, ../sass/components/views.scss */
 div.view-correspondence td.views-field-title {
   padding-left: 5px;
 }
-/* line 70, ../sass/components/views.scss */
+/* line 74, ../sass/components/views.scss */
 div.view-correspondence td.views-field-view-node a span {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 75, ../sass/components/views.scss */
+/* line 79, ../sass/components/views.scss */
 div.view-correspondence span.date-display-single {
   font-size: smaller;
 }
 
-/* line 82, ../sass/components/views.scss */
+/* line 86, ../sass/components/views.scss */
 div.view-works td,
 div.view-people td {
   width: 25%;
 }
 
-/* line 88, ../sass/components/views.scss */
+/* line 92, ../sass/components/views.scss */
 div.view-works span.work-title {
   font-style: italic;
 }
-/* line 91, ../sass/components/views.scss */
+/* line 95, ../sass/components/views.scss */
 div.view-works h4 {
   padding-bottom: 2em;
 }
@@ -2244,7 +2249,11 @@ article.node .field-name-field-name-authority {
   display: block;
 }
 
-/* line 10, ../sass/components/nodes.scss */
+/* line 9, ../sass/components/nodes.scss */
+.user-picture {
+  float: left;
+}
+/* line 11, ../sass/components/nodes.scss */
 .user-picture img {
   border-radius: 50%;
 }

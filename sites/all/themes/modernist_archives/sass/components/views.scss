@@ -47,6 +47,9 @@
     padding: 10px;
     border-radius: 15px;
     margin-bottom: 5px;
+    .views-field-created {
+      font-style: italic;
+    }
   }
 }
 
@@ -92,3 +95,4 @@ div.view-works {
     padding-bottom: 2em;
   }
 }
+
