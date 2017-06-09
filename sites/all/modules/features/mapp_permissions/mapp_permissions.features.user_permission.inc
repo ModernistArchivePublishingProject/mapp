@@ -430,7 +430,7 @@ function mapp_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
-    'module' => 'openlayers_ui',
+    'module' => 'openlayers',
   );
 
   // Exported permission: 'administer pathauto'.

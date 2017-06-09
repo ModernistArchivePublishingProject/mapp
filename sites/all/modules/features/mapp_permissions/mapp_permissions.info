@@ -33,6 +33,7 @@ dependencies[] = migrate
 dependencies[] = module_filter
 dependencies[] = node
 dependencies[] = og
+dependencies[] = openlayers
 dependencies[] = openlayers_ui
 dependencies[] = path
 dependencies[] = pathauto
