@@ -49,25 +49,25 @@ section.region-sidebar-first {
   }
 }
 /* line 59, ../../sass/components/sidebar.scss */
-section.region-sidebar-first img.header__logo-image {
-  width: 80%;
+section.region-sidebar-first a#logo {
+  width: 100%;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 768px) {
   /* line 59, ../../sass/components/sidebar.scss */
-  section.region-sidebar-first img.header__logo-image {
+  section.region-sidebar-first a#logo {
     display: none;
   }
 }
 @media only screen and (min-width: 415px) and (max-width: 768px) {
   /* line 59, ../../sass/components/sidebar.scss */
-  section.region-sidebar-first img.header__logo-image {
+  section.region-sidebar-first a#logo {
     display: block;
   }
 }
 @media only screen and (min-width: 414px) and (max-width: 736px) {
   /* line 59, ../../sass/components/sidebar.scss */
-  section.region-sidebar-first img.header__logo-image {
+  section.region-sidebar-first a#logo {
     display: none;
   }
 }

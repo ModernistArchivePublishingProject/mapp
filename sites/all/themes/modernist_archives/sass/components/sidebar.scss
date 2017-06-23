@@ -56,8 +56,8 @@ section.region-sidebar-first {
 
   background-color: $highlight_color;
   overflow-y: auto;
-  img.header__logo-image {
-    width: 80%;
+  a#logo {
+    width: 100%;
     margin-bottom: 24px;
     @media only screen and (max-width: $break-large) {
       display: none;
