@@ -17,6 +17,5 @@ features[variable][] = pathauto_node_person_pattern
 features[views_view][] = bibliography
 features[views_view][] = partners
 features[views_view][] = press_related_objects
-features[views_view][] = team
 features_exclude[dependencies][ctools] = ctools
 project path = sites/all/modules/features

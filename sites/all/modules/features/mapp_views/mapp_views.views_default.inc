@@ -106,7 +106,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Library Catalog */
+  /* Field: Content: URL */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
   $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
@@ -384,122 +384,6 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['title'] = 'Editions';
   $handler->display->display_options['display_description'] = 'People';
   $export['press_related_objects'] = $view;
-
-  $view = new view();
-  $view->name = 'team';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'users';
-  $view->human_name = 'Team';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Team';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'access user profiles';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<center><h1>Research Fellows</h1></center>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['text'] = '[picture]
-[name]';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_type'] = 'span';
-  $handler->display->display_options['fields']['name']['element_class'] = 'profile-name';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Picture */
-  $handler->display->display_options['fields']['picture']['id'] = 'picture';
-  $handler->display->display_options['fields']['picture']['table'] = 'users';
-  $handler->display->display_options['fields']['picture']['field'] = 'picture';
-  $handler->display->display_options['fields']['picture']['label'] = '';
-  $handler->display->display_options['fields']['picture']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['picture']['alter']['text'] = '[picture]<br/>
-<span class="profile-name">[name]</span>';
-  $handler->display->display_options['fields']['picture']['element_type'] = 'span';
-  $handler->display->display_options['fields']['picture']['element_class'] = 'profile-picture';
-  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
-  $handler->display->display_options['fields']['picture']['image_style'] = 'medium';
-  /* Field: User: Bio */
-  $handler->display->display_options['fields']['field_bio']['id'] = 'field_bio';
-  $handler->display->display_options['fields']['field_bio']['table'] = 'field_data_field_bio';
-  $handler->display->display_options['fields']['field_bio']['field'] = 'field_bio';
-  $handler->display->display_options['fields']['field_bio']['label'] = '';
-  $handler->display->display_options['fields']['field_bio']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_bio']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_bio']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_bio']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_bio']['field_api_classes'] = TRUE;
-  /* Filter criterion: User: Active */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'users';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Roles */
-  $handler->display->display_options['filters']['rid']['id'] = 'rid';
-  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
-  $handler->display->display_options['filters']['rid']['field'] = 'rid';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    4 => '4',
-  );
-
-  /* Display: Core Team - Page */
-  $handler = $view->new_display('page', 'Core Team - Page', 'page');
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['path'] = 'team';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Team';
-  $handler->display->display_options['menu']['name'] = 'main-menu';
-
-  /* Display: Research Fellows - Attachment */
-  $handler = $view->new_display('attachment', 'Research Fellows - Attachment', 'attachment_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Research Fellows';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'users';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Roles */
-  $handler->display->display_options['filters']['rid']['id'] = 'rid';
-  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
-  $handler->display->display_options['filters']['rid']['field'] = 'rid';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    6 => '6',
-  );
-  $handler->display->display_options['displays'] = array(
-    'page' => 'page',
-    'default' => 0,
-  );
-  $handler->display->display_options['attachment_position'] = 'after';
-  $export['team'] = $view;
 
   return $export;
 }
