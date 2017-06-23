@@ -424,15 +424,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'administer openlayers'.
-  $permissions['administer openlayers'] = array(
-    'name' => 'administer openlayers',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'openlayers',
-  );
-
   // Exported permission: 'administer pathauto'.
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
