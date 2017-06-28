@@ -72,6 +72,12 @@ section.region-sidebar-first {
       display: none;
     }
   }
+  @media only screen and (min-width: $iphone6plus-min) {
+    img.header__logo-image {
+      max-width: 80%;
+    }
+  }
+
   a.header__logo:hover {
     border-bottom: none;
   }
