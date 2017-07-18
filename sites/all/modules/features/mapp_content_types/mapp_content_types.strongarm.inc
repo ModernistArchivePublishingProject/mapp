@@ -583,7 +583,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
