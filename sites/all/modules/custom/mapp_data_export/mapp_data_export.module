@@ -7,42 +7,45 @@ function mapp_data_export_views_pre_render(&$view) {
     if ($view->name == 'people_data_export') {
         foreach ($view->result as $key => $row) {
             $line = array();
-            $last_with = '';
+            $last_person = '';
+            $last_biz = '';
 
             // Personal relationships
             foreach ($view->result[$key]->field_field_relationships as $n =>
                      $collection) {
               $item = current($collection['rendered']['entity']['field_collection_item']);
               if (empty($item['field_relationship_with'])) {
-                $with = $last_with;
+                $person_with = $last_person;
               } else {
-                $with = $item['field_relationship_with'][0]['#label'];
+                $person_with = $item['field_relationship_with'][0]['#label'];
               }
-              if (!empty($with)) {
-                $line[] =  $with .  ': ' . $item['field_relationship_type'][0]['#markup'];
+              if (!empty($person_with)) {
+                $line[] =  $person_with .  ': ' .
+                  $item['field_relationship_type'][0]['#markup'];
               } else {
                 $line[] = $item['field_relationship_type'][0]['#markup'];
               }
-              $last_with = $with;
+              $last_person = $person_with;
               unset($view->result[$key]->field_field_relationships[$n]);
             }
             $view->result[$key]->field_field_relationships[0]['rendered']['#markup'] = implode('|', $line);
 
             // Business relationships
+            $line = array();
             foreach ($view->result[$key]->field_field_business_relationship
                      as $n => $collection) {
               $item = current($collection['rendered']['entity']['field_collection_item']);
               if (empty($item['field_business'])) {
-                $with = $last_with;
+                $biz = $last_biz;
               } else {
-                $with = $item['field_business'][0]['#label'];
+                $biz = $item['field_business'][0]['#label'];
               }
-              $line[] =  $with .  ': ' .
-                $item['field_biz_relationship_type'][0]['#markup'];
-              $last_with = $with;
+              $line[] =  $biz .  ': ' .
+                $item['field_biz_relationship_type'][0]['#title'];
+              $last_biz = $biz;
               unset($view->result[$key]->field_field_business_relationship[$n]);
             }
-          $view->result[$key]->field_field_business_relationship[0]['rendered']['#markup'] = implode('|', $line);
+            $view->result[$key]->field_field_business_relationship[0]['rendered']['#markup'] = implode('|', $line);
         }
     }
 }
