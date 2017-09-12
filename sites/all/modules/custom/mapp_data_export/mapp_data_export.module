@@ -1,0 +1,48 @@
+<?php
+function mapp_data_export_views_pre_render(&$view) {
+
+    // Format the data export of people's relationships
+    // @See: https://drupal.stackexchange.com/a/146105
+
+    if ($view->name == 'people_data_export') {
+        foreach ($view->result as $key => $row) {
+            $line = array();
+            $last_with = '';
+
+            // Personal relationships
+            foreach ($view->result[$key]->field_field_relationships as $n =>
+                     $collection) {
+              $item = current($collection['rendered']['entity']['field_collection_item']);
+              if (empty($item['field_relationship_with'])) {
+                $with = $last_with;
+              } else {
+                $with = $item['field_relationship_with'][0]['#label'];
+              }
+              if (!empty($with)) {
+                $line[] =  $with .  ': ' . $item['field_relationship_type'][0]['#markup'];
+              } else {
+                $line[] = $item['field_relationship_type'][0]['#markup'];
+              }
+              $last_with = $with;
+              unset($view->result[$key]->field_field_relationships[$n]);
+            }
+            $view->result[$key]->field_field_relationships[0]['rendered']['#markup'] = implode('|', $line);
+
+            // Business relationships
+            foreach ($view->result[$key]->field_field_business_relationship
+                     as $n => $collection) {
+              $item = current($collection['rendered']['entity']['field_collection_item']);
+              if (empty($item['field_business'])) {
+                $with = $last_with;
+              } else {
+                $with = $item['field_business'][0]['#label'];
+              }
+              $line[] =  $with .  ': ' .
+                $item['field_biz_relationship_type'][0]['#markup'];
+              $last_with = $with;
+              unset($view->result[$key]->field_field_business_relationship[$n]);
+            }
+          $view->result[$key]->field_field_business_relationship[0]['rendered']['#markup'] = implode('|', $line);
+        }
+    }
+}
