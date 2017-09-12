@@ -36,11 +36,6 @@ function data_export_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Relationship: Content: Biography (field_coll_biography) */
-  $handler->display->display_options['relationships']['field_coll_biography_value']['id'] = 'field_coll_biography_value';
-  $handler->display->display_options['relationships']['field_coll_biography_value']['table'] = 'field_data_field_coll_biography';
-  $handler->display->display_options['relationships']['field_coll_biography_value']['field'] = 'field_coll_biography_value';
-  $handler->display->display_options['relationships']['field_coll_biography_value']['delta'] = '-1';
   /* Relationship: Content: Image(s) (field_fc_images) */
   $handler->display->display_options['relationships']['field_fc_images_value']['id'] = 'field_fc_images_value';
   $handler->display->display_options['relationships']['field_fc_images_value']['table'] = 'field_data_field_fc_images';
@@ -61,34 +56,7 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_other_names']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_other_names']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_other_names']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_other_names']['separator'] = '| ';
-  /* Field: Field collection item: Narrative */
-  $handler->display->display_options['fields']['field_biography']['id'] = 'field_biography';
-  $handler->display->display_options['fields']['field_biography']['table'] = 'field_data_field_biography';
-  $handler->display->display_options['fields']['field_biography']['field'] = 'field_biography';
-  $handler->display->display_options['fields']['field_biography']['relationship'] = 'field_coll_biography_value';
-  $handler->display->display_options['fields']['field_biography']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_biography']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_biography']['type'] = 'text_plain';
-  /* Field: Field: Authored By */
-  $handler->display->display_options['fields']['field_content_authored_by']['id'] = 'field_content_authored_by';
-  $handler->display->display_options['fields']['field_content_authored_by']['table'] = 'field_data_field_content_authored_by';
-  $handler->display->display_options['fields']['field_content_authored_by']['field'] = 'field_content_authored_by';
-  $handler->display->display_options['fields']['field_content_authored_by']['relationship'] = 'field_coll_biography_value';
-  $handler->display->display_options['fields']['field_content_authored_by']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_content_authored_by']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_content_authored_by']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_content_authored_by']['separator'] = '|';
-  /* Field: Field: Edited By */
-  $handler->display->display_options['fields']['field_content_edited_by']['id'] = 'field_content_edited_by';
-  $handler->display->display_options['fields']['field_content_edited_by']['table'] = 'field_data_field_content_edited_by';
-  $handler->display->display_options['fields']['field_content_edited_by']['field'] = 'field_content_edited_by';
-  $handler->display->display_options['fields']['field_content_edited_by']['relationship'] = 'field_coll_biography_value';
-  $handler->display->display_options['fields']['field_content_edited_by']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_content_edited_by']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_content_edited_by']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_content_edited_by']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_content_edited_by']['separator'] = '|';
+  $handler->display->display_options['fields']['field_other_names']['separator'] = '|';
   /* Field: Content: Birth Date */
   $handler->display->display_options['fields']['field_birth_date']['id'] = 'field_birth_date';
   $handler->display->display_options['fields']['field_birth_date']['table'] = 'field_data_field_birth_date';
@@ -277,6 +245,8 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_name_authority']['id'] = 'field_name_authority';
   $handler->display->display_options['fields']['field_name_authority']['table'] = 'field_data_field_name_authority';
   $handler->display->display_options['fields']['field_name_authority']['field'] = 'field_name_authority';
+  $handler->display->display_options['fields']['field_name_authority']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_name_authority']['alter']['text'] = '[field_name_authority-value]';
   $handler->display->display_options['fields']['field_name_authority']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_name_authority']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_name_authority']['settings'] = array(
@@ -411,6 +381,10 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_file_attachments']['type'] = 'file_url_plain';
   $handler->display->display_options['fields']['field_file_attachments']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_file_attachments']['separator'] = '|';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -431,6 +405,14 @@ function data_export_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 1;
   $handler->display->display_options['path'] = 'people.csv';
   $handler->display->display_options['use_batch'] = 'batch';
   $handler->display->display_options['segment_size'] = '100';
