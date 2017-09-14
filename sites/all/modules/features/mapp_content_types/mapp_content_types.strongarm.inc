@@ -583,7 +583,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
@@ -625,7 +625,7 @@ function mapp_content_types_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '12',
         ),
       ),
       'display' => array(),
@@ -1328,9 +1328,9 @@ function mapp_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_work_type_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_type_pattern';
   $strongarm->value = '';
-  $export['pathauto_taxonomy_term_work_type_pattern'] = $strongarm;
+  $export['pathauto_taxonomy_term_type_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
