@@ -1,51 +1,201 @@
 <?php
-function mapp_data_export_views_pre_render(&$view) {
+/*
+ * Export MAPP content types as JSON data.
+ */
 
-    // Format the data export of people's relationships
-    // @See: https://drupal.stackexchange.com/a/146105
 
-    if ($view->name == 'people_data_export') {
-        foreach ($view->result as $key => $row) {
-            $line = array();
-            $last_person = '';
-            $last_biz = '';
+/*
+ * Implements hook_menu().
+ */
+function mapp_data_export_menu() {
+  $items = array();
+  $items['data'] = array(
+    'title' => 'MAPP Data Export',
+    'page callback' => 'mapp_data_export_landing_page',
+    'access arguments' => array('access content'),
+    'file' => 'mapp_data_export.pages.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
 
-            // Personal relationships
-            foreach ($view->result[$key]->field_field_relationships as $n =>
-                     $collection) {
-              $item = current($collection['rendered']['entity']['field_collection_item']);
-              if (empty($item['field_relationship_with'])) {
-                $person_with = $last_person;
-              } else {
-                $person_with = $item['field_relationship_with'][0]['#label'];
-              }
-              if (!empty($person_with)) {
-                $line[] =  $person_with .  ': ' .
-                  $item['field_relationship_type'][0]['#markup'];
-              } else {
-                $line[] = $item['field_relationship_type'][0]['#markup'];
-              }
-              $last_person = $person_with;
-              unset($view->result[$key]->field_field_relationships[$n]);
-            }
-            $view->result[$key]->field_field_relationships[0]['rendered']['#markup'] = implode('|', $line);
+  $items['data/%'] = array(
+    'page callback' => 'mapp_data_export_route',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
 
-            // Business relationships
-            $line = array();
-            foreach ($view->result[$key]->field_field_business_relationship
-                     as $n => $collection) {
-              $item = current($collection['rendered']['entity']['field_collection_item']);
-              if (empty($item['field_business'])) {
-                $biz = $last_biz;
-              } else {
-                $biz = $item['field_business'][0]['#label'];
-              }
-              $line[] =  $biz .  ': ' .
-                $item['field_biz_relationship_type'][0]['#title'];
-              $last_biz = $biz;
-              unset($view->result[$key]->field_field_business_relationship[$n]);
-            }
-            $view->result[$key]->field_field_business_relationship[0]['rendered']['#markup'] = implode('|', $line);
-        }
+  return $items;
+}
+
+/*
+ * Retrieves raw node data for content type
+ */
+function mapp_data_export_get_raw($type) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $type)
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyOrderBy('title');
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $nids = array_keys($result['node']);
+    $nodes = entity_load('node', $nids);
+  }
+  return $nodes;
+}
+
+/*
+ * Generate a JSON of all content of this type
+ */
+function mapp_data_export_prepare($type) {
+  $clean_nodes = array();
+  $raw_nodes = mapp_data_export_get_raw($type);
+  $clean_nodes = $raw_nodes;
+
+  // TODO: Convert all taxonomy fields to term names
+  // TODO: Remove unneeded fields
+  // TODO: Don't grab revision information, just current state
+  // TODO: Remove fields with null values, empty strings, and zeros
+  // TODO: Strip initial field_ prefix
+  // TODO: Collapse complicated Drupal arrays into straight-forward data
+  // TODO: One routine per field type: entity relationship, taxonomy, etc.
+  // TODO: Get data for relationships
+  // TODO: Move nid to a value for "nid" key
+  // TODO: Write these routines so that they're easily reversible, too
+
+  return $clean_nodes;
+}
+
+/*
+ * Routes requests for data export of different content types (or all)
+ */
+function mapp_data_export_route($type) {
+  $data = array();
+  // types of export we support
+  $types = array('person', 'business', 'work', 'edition', 'primary_object', 'correspondence', 'related_materials');
+  if (!in_array($type, $types) && $type != 'all') {
+    drupal_goto('/data'); // Not a valid request; go to the landing page
+  } else {
+    // Is a content type or all; run through all export options
+    if ($type == 'all') {
+      foreach ($types as $type) {
+        $data[$type] = mapp_data_export_prepare($type);
+      }
+    } else {
+      $data = mapp_data_export_prepare($type);
     }
+    drupal_json_output($data);
+  }
+  drupal_exit();
+}
+
+
+// Helper functions for dealing with different field collections
+// Could be abstracted more, but lots of specific data types to account for
+function _mapp_data_export_personal_relationship($view, $key) {
+  $line = array();
+  $last = '';
+  foreach ($view->result[$key]->field_field_relationships as $n =>
+           $collection) {
+    $item = current($collection['rendered']['entity']['field_collection_item']);
+    if (empty($item['field_relationship_with'])) {
+      $person_with = $last;
+    } else {
+      $person_with = $item['field_relationship_with'][0]['#label'];
+    }
+    $line['relationship_with'] = $person_with;
+    $line['relationship_type'] = $item['field_relationship_type'][0]['#markup'];
+    dpm($line);
+    $last = $person_with;
+    unset($view->result[$key]->field_field_relationships[$n]);
+  }
+  $view->result[$key]->field_field_relationships[0]['rendered']['#markup'] = json_encode($line);
+}
+
+function _mapp_data_export_business_relationships($view, $key) {
+  $line = array();
+  $last = '';
+  foreach ($view->result[$key]->field_field_business_relationship
+           as $n => $collection) {
+    $item = current($collection['rendered']['entity']['field_collection_item']);
+    if (empty($item['field_business'])) {
+      $biz = $last;
+    } else {
+      $biz = $item['field_business'][0]['#label'];
+    }
+    $line['business'] = $biz;
+    $line['biz_relationship_type'] = $item['field_biz_relationship_type'][0]['#title'];
+    $last = $biz;
+    unset($view->result[$key]->field_field_business_relationship[$n]);
+  }
+  $view->result[$key]->field_field_business_relationship[0]['rendered']['#markup'] = json_encode($line, JSON_HEX_APOS);
+}
+
+function _mapp_data_export_business_history($view, $key) {
+  $entry = array();
+  foreach ($view->result[$key]->field_field_business_history as $n =>
+           $collection) {
+    $entry = array();
+    $item = current($collection['rendered']['entity']['field_collection_item']);
+
+    // Owners
+    if (key_exists('field_owned_by', $item)) {
+      $owners = array();
+      foreach ($item['field_owned_by']['#items'] as $owner) {
+        $wrapper = entity_metadata_wrapper('node', $owner['target_id']);
+        $owners[] = $wrapper->title->value();
+      }
+      $entry['owned_by'] = $owners;
+    }
+
+    if (key_exists('field_date_opened', $item)) {
+      $entry['date_opened'] = $item['field_date_opened']['#items'][0]['value'];
+    }
+
+    if (key_exists('field_date_closed', $item)) {
+      $entry['date_closed'] =  $item['field_date_closed']['#items'][0]['value'];
+    }
+
+    if (key_exists('field_address', $item)) {
+      $address_field = $item['field_address'][0]['#address'];
+      $address = array();
+      foreach ($address_field as $k => $v) {
+        if ($v != NULL) {
+          $address[$k] = $v;
+        }
+      }
+      $entry['address'] = $address;
+    }
+    unset($view->result[$key]->field_field_business_history[$n]);
+//    $view->result[$key]->field_field_business_history[$n] = json_encode($entry);
+  }
+}
+
+function mapp_data_export_views_pre_render(&$view) {
+  return;
+
+  // Format the data export of our content
+  // @See: https://drupal.stackexchange.com/a/146105
+
+  // People data
+  if ($view->name == 'people_data_export') {
+    foreach ($view->result as $key => $row) {
+      // Personal relationships
+      _mapp_data_export_personal_relationship($view, $key);
+
+      // Business relationships
+      _mapp_data_export_business_relationships($view, $key);
+
+    }
+  }
+  // Businesses data
+  elseif ($view->name == 'businesses_data_export') {
+    foreach ($view->result as $key => $row) {
+      // Complicated business history fc
+      _mapp_data_export_business_history($view, $key);
+
+      // Business relationships
+      _mapp_data_export_business_relationships($view, $key);
+    }
+  }
 }
