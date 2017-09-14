@@ -262,6 +262,29 @@ function mapp_content_types_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'paper_type' => array(
+      'name' => 'Paper Type',
+      'machine_name' => 'paper_type',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'partner_type' => array(
       'name' => 'Partner Type',
       'machine_name' => 'partner_type',
@@ -354,10 +377,10 @@ function mapp_content_types_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'work_type' => array(
-      'name' => 'Work Type',
-      'machine_name' => 'work_type',
-      'description' => '',
+    'type' => array(
+      'name' => 'Related Materials Type',
+      'machine_name' => 'type',
+      'description' => 'The type of a material',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

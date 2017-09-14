@@ -598,27 +598,6 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_call_number'.
-  $field_bases['field_call_number'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_call_number',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_caption'.
   $field_bases['field_caption'] = array(
     'active' => 1,
@@ -788,29 +767,6 @@ function mapp_content_types_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_cover_image'.
-  $field_bases['field_cover_image'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_cover_image',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'file',
-    'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 0,
-    'type' => 'file',
-  );
-
   // Exported field_base: 'field_damage'.
   $field_bases['field_damage'] = array(
     'active' => 1,
@@ -893,32 +849,6 @@ function mapp_content_types_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'date',
-  );
-
-  // Exported field_base: 'field_date_variable'.
-  $field_bases['field_date_variable'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_date_variable',
-    'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'hide_initial_item' => FALSE,
-      'path' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'field_collection',
   );
 
   // Exported field_base: 'field_death_date'.
@@ -1309,7 +1239,7 @@ function mapp_content_types_field_default_field_bases() {
   // Exported field_base: 'field_genre'.
   $field_bases['field_genre'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_genre',
@@ -1323,7 +1253,7 @@ function mapp_content_types_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'genre',
+          'vocabulary' => 'type',
           'parent' => 0,
         ),
       ),
@@ -2022,6 +1952,32 @@ function mapp_content_types_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_paper_type'.
+  $field_bases['field_paper_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paper_type',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'paper_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_partner_type'.
@@ -2933,7 +2889,7 @@ function mapp_content_types_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'work_type',
+          'vocabulary' => 'genre',
           'parent' => 0,
         ),
       ),

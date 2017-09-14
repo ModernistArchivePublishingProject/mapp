@@ -151,7 +151,7 @@ function mapp_content_types_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Type */
+  /* Field: Content: Genre */
   $handler->display->display_options['fields']['field_work_type']['id'] = 'field_work_type';
   $handler->display->display_options['fields']['field_work_type']['table'] = 'field_data_field_work_type';
   $handler->display->display_options['fields']['field_work_type']['field'] = 'field_work_type';
