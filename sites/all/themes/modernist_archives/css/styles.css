@@ -2297,6 +2297,11 @@ article.node .field-name-field-name-authority {
   text-align: center;
 }
 
+/* line 43, ../sass/components/nodes.scss */
+.field-name-field-other-names {
+  display: block;
+}
+
 /* @import "print";
 
 /* SMACSS theme rules */

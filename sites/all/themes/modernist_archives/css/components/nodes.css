@@ -42,3 +42,8 @@ article.node .field-name-field-name-authority {
 .field-name-field-fc-images .field-name-field-source {
   text-align: center;
 }
+
+/* line 43, ../../sass/components/nodes.scss */
+.field-name-field-other-names {
+  display: block;
+}
