@@ -172,6 +172,12 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Field: Description */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_description']['element_default_classes'] = FALSE;
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -563,11 +569,10 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_work_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_work_type']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_work_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Language */
+  /* Field: Content: Original Language */
   $handler->display->display_options['fields']['field_language']['id'] = 'field_language';
   $handler->display->display_options['fields']['field_language']['table'] = 'field_data_field_language';
   $handler->display->display_options['fields']['field_language']['field'] = 'field_language';
-  $handler->display->display_options['fields']['field_language']['label'] = 'Original Language';
   $handler->display->display_options['fields']['field_language']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_language']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_language']['type'] = 'taxonomy_term_reference_plain';
@@ -1572,11 +1577,10 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_work_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_work_type']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_work_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Language */
+  /* Field: Content: Original Language */
   $handler->display->display_options['fields']['field_language']['id'] = 'field_language';
   $handler->display->display_options['fields']['field_language']['table'] = 'field_data_field_language';
   $handler->display->display_options['fields']['field_language']['field'] = 'field_language';
-  $handler->display->display_options['fields']['field_language']['label'] = 'Original Language';
   $handler->display->display_options['fields']['field_language']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_language']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_language']['type'] = 'taxonomy_term_reference_plain';
