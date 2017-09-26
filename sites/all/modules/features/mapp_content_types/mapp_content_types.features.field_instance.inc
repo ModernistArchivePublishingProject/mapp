@@ -1675,51 +1675,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-business-field_person_involved'.
-  $field_instances['node-business-field_person_involved'] = array(
-    'bundle' => 'business',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'cite',
-    'field_name' => 'field_person_involved',
-    'label' => 'People Involved',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-business-field_website'.
   $field_instances['node-business-field_website'] = array(
     'bundle' => 'business',
@@ -4810,61 +4765,6 @@ function mapp_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-primary_object-field_images'.
-  $field_instances['node-primary_object-field_images'] = array(
-    'bundle' => 'primary_object',
-    'deleted' => 0,
-    'description' => 'Any images of the book.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'default',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'figure',
-    'field_name' => 'field_images',
-    'label' => 'Image(s)',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'jpg jpeg png',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-primary_object-field_impression'.
   $field_instances['node-primary_object-field_impression'] = array(
     'bundle' => 'primary_object',
@@ -6247,7 +6147,6 @@ function mapp_content_types_field_default_field_instances() {
   t('Address');
   t('An object to which this letter refers. May be a person, library, book, work, publisher, etc.');
   t('Annotations');
-  t('Any images of the book.');
   t('Approximate Date');
   t('Attachments');
   t('Author');
@@ -6314,7 +6213,6 @@ function mapp_content_types_field_default_field_instances() {
   t('Owner');
   t('Paper Type');
   t('Partner Type');
-  t('People Involved');
   t('Price');
   t('Print run');
   t('Printer');
