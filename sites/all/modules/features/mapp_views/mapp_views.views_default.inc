@@ -293,7 +293,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Content: Image(s) */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_images']['id'] = 'field_images';
   $handler->display->display_options['fields']['field_images']['table'] = 'field_data_field_images';
   $handler->display->display_options['fields']['field_images']['field'] = 'field_images';
@@ -306,14 +306,6 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['field_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_images']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_images']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_images']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_images']['type'] = 'file_rendered';
-  $handler->display->display_options['fields']['field_images']['settings'] = array(
-    'file_view_mode' => 'media_preview',
-  );
-  $handler->display->display_options['fields']['field_images']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_images']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_images']['field_api_classes'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -332,7 +324,7 @@ function mapp_views_views_default_views() {
   $handler->display->display_options['fields']['title_1']['relationship'] = 'field_author_target_id';
   $handler->display->display_options['fields']['title_1']['label'] = 'Author';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  /* Field: Field: Date Created */
+  /* Field: Content: Date Written */
   $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
@@ -350,7 +342,7 @@ function mapp_views_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_publication_date']['field_api_classes'] = TRUE;
-  /* Sort criterion: Field: Date Created (field_publication_date) */
+  /* Sort criterion: Content: Date Written (field_publication_date) */
   $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
   $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
