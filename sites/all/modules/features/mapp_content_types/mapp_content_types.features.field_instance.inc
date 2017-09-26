@@ -4354,7 +4354,7 @@ function mapp_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_other_names',
     'label' => 'Other Names',
     'required' => 0,
