@@ -14,15 +14,18 @@ article.node .field-name-field-name-authority {
   border-radius: 50%;
 }
 
-/* line 16, ../../sass/components/nodes.scss */
-.field-name-field-relationships {
+/* line 17, ../../sass/components/nodes.scss */
+.field-name-field-relationships,
+.field-name-field-business-relationship {
   display: flex;
 }
-/* line 19, ../../sass/components/nodes.scss */
-.field-name-field-relationships .field-name-field-relationship-with::after {
+/* line 20, ../../sass/components/nodes.scss */
+.field-name-field-relationships .field-type-entityreference::after,
+.field-name-field-business-relationship .field-type-entityreference::after {
   content: ":";
 }
-/* line 23, ../../sass/components/nodes.scss */
-.field-name-field-relationships .field-name-field-relationship-type {
+/* line 24, ../../sass/components/nodes.scss */
+.field-name-field-relationships .field-type-taxonomy-term-reference,
+.field-name-field-business-relationship .field-type-taxonomy-term-reference {
   padding-left: 5px;
 }

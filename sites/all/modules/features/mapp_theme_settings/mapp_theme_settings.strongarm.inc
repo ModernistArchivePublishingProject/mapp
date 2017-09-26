@@ -43,7 +43,7 @@ function mapp_theme_settings_strongarm() {
     'default_favicon' => 1,
     'favicon_path' => '',
     'favicon_upload' => '',
-    'zen_breadcrumb' => 'yes',
+    'zen_breadcrumb' => 'admin',
     'zen_breadcrumb_separator' => ' › ',
     'zen_breadcrumb_home' => 0,
     'zen_breadcrumb_trailing' => 0,

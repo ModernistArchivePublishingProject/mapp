@@ -17,7 +17,7 @@ h1 {
   font-weight: 900;
   margin: 1.5em 0 0.75em 0;
   &.page__title {
-    margin-top: 1em;
+    margin: 1em 0 0.75em 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: $brand_color;
@@ -138,4 +138,8 @@ fieldset {
     position: relative;
     padding: 0 1em;
   }
+}
+
+.group-footer {
+  padding-top: .5em;
 }
