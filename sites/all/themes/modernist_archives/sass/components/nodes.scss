@@ -12,3 +12,15 @@ article.node {
     border-radius: 50%;
   }
 }
+
+.field-name-field-relationships {
+  display: flex;
+
+  .field-name-field-relationship-with::after {
+    content: ":"
+  }
+
+  .field-name-field-relationship-type {
+    padding-left: 5px;
+  }
+}

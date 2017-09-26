@@ -1676,7 +1676,7 @@ h2 {
 h3 {
   font-size: 1.44em;
   font-weight: 600;
-  margin: 1.5em 0 0.75em 0;
+  margin: 1em 0 0.5em 0;
 }
 
 /* line 39, ../sass/components/typography.scss */
@@ -2261,6 +2261,19 @@ article.node .field-name-field-name-authority {
 /* line 11, ../sass/components/nodes.scss */
 .user-picture img {
   border-radius: 50%;
+}
+
+/* line 16, ../sass/components/nodes.scss */
+.field-name-field-relationships {
+  display: flex;
+}
+/* line 19, ../sass/components/nodes.scss */
+.field-name-field-relationships .field-name-field-relationship-with::after {
+  content: ":";
+}
+/* line 23, ../sass/components/nodes.scss */
+.field-name-field-relationships .field-name-field-relationship-type {
+  padding-left: 5px;
 }
 
 /* @import "print";
