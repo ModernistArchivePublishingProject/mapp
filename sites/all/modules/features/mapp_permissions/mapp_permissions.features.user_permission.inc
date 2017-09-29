@@ -1306,16 +1306,6 @@ function mapp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in work_type'.
-  $permissions['delete terms in work_type'] = array(
-    'name' => 'delete terms in work_type',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'display drupal links'.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
@@ -1937,16 +1927,6 @@ function mapp_permissions_user_default_permissions() {
   // Exported permission: 'edit terms in tags'.
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
-    'roles' => array(
-      'Team Member' => 'Team Member',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in work_type'.
-  $permissions['edit terms in work_type'] = array(
-    'name' => 'edit terms in work_type',
     'roles' => array(
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
