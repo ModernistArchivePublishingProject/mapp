@@ -20,11 +20,11 @@ function student_projects_menu_default_menu_links() {
       'identifier' => 'main-menu_student-projects:student-projects',
     ),
     'module' => 'system',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -43,
+    'weight' => -40,
     'customized' => 1,
   );
 
