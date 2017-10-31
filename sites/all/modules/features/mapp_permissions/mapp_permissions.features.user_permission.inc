@@ -87,6 +87,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
@@ -626,6 +627,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create biblio content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -637,6 +639,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create blog content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -648,6 +651,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create business content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -659,6 +663,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create correspondence content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -670,6 +675,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create edition content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -691,6 +697,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create library content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -722,6 +729,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create person content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -733,6 +741,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create primary_object content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -744,6 +753,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create related_materials content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -764,6 +774,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'create work content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -982,6 +993,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own biblio content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -993,6 +1005,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own blog content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1015,6 +1028,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own correspondence content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1036,6 +1050,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own edition content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1057,6 +1072,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own library content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1088,6 +1104,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own person content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1099,6 +1116,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own primary_object content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1110,6 +1128,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own related_materials content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1131,6 +1150,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'delete own work content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1419,6 +1439,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any biblio content'] = array(
     'name' => 'edit any biblio content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1439,6 +1460,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any business content'] = array(
     'name' => 'edit any business content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1449,6 +1471,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any correspondence content'] = array(
     'name' => 'edit any correspondence content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1469,6 +1492,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any edition content'] = array(
     'name' => 'edit any edition content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1489,6 +1513,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any library content'] = array(
     'name' => 'edit any library content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1520,6 +1545,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit any person content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1530,6 +1556,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any primary_object content'] = array(
     'name' => 'edit any primary_object content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1540,6 +1567,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any related_materials content'] = array(
     'name' => 'edit any related_materials content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1560,6 +1588,7 @@ function mapp_permissions_user_default_permissions() {
   $permissions['edit any work content'] = array(
     'name' => 'edit any work content',
     'roles' => array(
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1610,6 +1639,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own biblio content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1621,6 +1651,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own blog content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1632,6 +1663,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own business content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1653,6 +1685,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own correspondence content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1674,6 +1707,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own edition content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1695,6 +1729,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own library content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1726,6 +1761,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own person content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1737,6 +1773,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own primary_object content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1748,6 +1785,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own related_materials content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -1769,6 +1807,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'edit own work content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -2380,6 +2419,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
@@ -2398,6 +2438,7 @@ function mapp_permissions_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
     ),
