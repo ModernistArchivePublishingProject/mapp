@@ -150,7 +150,7 @@ ul.pager li.pager-current {
   background-color: whitesmoke;
   padding: 1em;
   margin-left: 20%;
-  padding-left: 20%;
+  text-align: center;
   margin-top: 2em;
 }
 /* line 159, ../../sass/components/base.scss */
