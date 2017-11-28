@@ -28,6 +28,10 @@ div#page {
   overflow-wrap: break-word;
 }
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Roboto", sans-serf;
@@ -35,17 +39,19 @@ body {
   font-weight: 300;
   line-height: 1.6em;
   background-color: rgb(252, 252, 252);
+  min-height: 93%;
+  position: relative;
+  padding-bottom: 2em;
 }
 
-article {
-  margin-bottom: 5em;
+#page {
+  padding-bottom: 2em;
 }
 
 p#skip-link {
   margin: 0;
   display: none;
 }
-
 
 
 .mapp-button {
@@ -151,10 +157,14 @@ ul.pager {
 
 #footer {
   background-color: rgb(245, 245, 245);
-  padding: 1em;
   margin-left: 20%;
-  text-align: center;
   margin-top: 2em;
+  padding: 1em 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 2em;
     block {
       p {
       text-align: right !important;
