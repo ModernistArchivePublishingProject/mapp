@@ -152,6 +152,8 @@ ul.pager {
 #footer {
   background-color: rgb(245, 245, 245);
   padding: 1em;
+  margin-left: 20%;
+  padding-left: 30%;
   margin-top: 2em;
     block {
       p {
@@ -159,8 +161,14 @@ ul.pager {
       margin-top: 0px;
       }
     }
-   
+  #block-menu-menu-footer-menu {
+    ul li {
+      list-style: none;
+    }
+  }
 }
+
+
 
 
 

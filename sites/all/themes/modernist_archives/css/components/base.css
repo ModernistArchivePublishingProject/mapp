@@ -149,21 +149,27 @@ ul.pager li.pager-current {
 #footer {
   background-color: whitesmoke;
   padding: 1em;
+  margin-left: 20%;
+  padding-left: 30%;
   margin-top: 2em;
 }
-/* line 157, ../../sass/components/base.scss */
+/* line 159, ../../sass/components/base.scss */
 #footer block p {
   text-align: right !important;
   margin-top: 0px;
 }
+/* line 165, ../../sass/components/base.scss */
+#footer #block-menu-menu-footer-menu ul li {
+  list-style: none;
+}
 
 /* Hacks */
-/* line 171, ../../sass/components/base.scss */
+/* line 179, ../../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
 
-/* line 175, ../../sass/components/base.scss */
+/* line 183, ../../sass/components/base.scss */
 input[type="checkbox"] {
   width: auto;
   height: auto;
