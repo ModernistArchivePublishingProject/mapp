@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Teaching Materials feature.
+ */
+
+include_once 'teaching_materials.features.inc';
