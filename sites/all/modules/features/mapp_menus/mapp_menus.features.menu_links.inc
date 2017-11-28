@@ -28,26 +28,6 @@ function mapp_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_bibliography:biblio.
-  $menu_links['main-menu_bibliography:biblio'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'biblio',
-    'router_path' => 'biblio',
-    'link_title' => 'Bibliography',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_bibliography:biblio',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -39,
-    'customized' => 1,
-  );
   // Exported menu link: main-menu_blog:blog.
   $menu_links['main-menu_blog:blog'] = array(
     'menu_name' => 'main-menu',
@@ -65,7 +45,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -41,
+    'weight' => -44,
     'customized' => 1,
   );
   // Exported menu link: main-menu_browse:node/4682.
@@ -103,27 +83,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -38,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_funders--partners:node/205.
-  $menu_links['main-menu_funders--partners:node/205'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/205',
-    'router_path' => 'node/%',
-    'link_title' => 'Funders & Partners',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_funders--partners:node/205',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -43,
+    'weight' => -41,
     'customized' => 1,
   );
   // Exported menu link: main-menu_presses:presses.
@@ -140,24 +100,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -42,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_publications--presentations:node/7488.
-  $menu_links['main-menu_publications--presentations:node/7488'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/7488',
-    'router_path' => 'node/%',
-    'link_title' => 'Publications & Presentations',
-    'options' => array(
-      'identifier' => 'main-menu_publications--presentations:node/7488',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_search:search.
@@ -178,23 +121,6 @@ function mapp_menus_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -47,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_student-projects:student-projects.
-  $menu_links['main-menu_student-projects:student-projects'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'student-projects',
-    'router_path' => 'student-projects',
-    'link_title' => 'Student Projects',
-    'options' => array(
-      'identifier' => 'main-menu_student-projects:student-projects',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -40,
     'customized' => 1,
   );
   // Exported menu link: main-menu_team:node/7489.
@@ -218,15 +144,11 @@ function mapp_menus_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
-  t('Bibliography');
   t('Blog');
   t('Browse');
   t('Contact');
-  t('Funders & Partners');
   t('Presses');
-  t('Publications & Presentations');
   t('Search');
-  t('Student Projects');
   t('Team');
 
   return $menu_links;
