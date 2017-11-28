@@ -45,7 +45,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -42,
     'customized' => 1,
   );
   // Exported menu link: main-menu_browse:node/4682.
@@ -100,7 +100,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -43,
     'customized' => 1,
   );
   // Exported menu link: main-menu_team:node/7489.
@@ -117,7 +117,7 @@ function mapp_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -44,
     'customized' => 1,
   );
 
