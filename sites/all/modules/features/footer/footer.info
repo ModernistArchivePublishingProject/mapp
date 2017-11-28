@@ -1,0 +1,14 @@
+name = Footer
+core = 7.x
+package = MAPP
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = menu-footer-menu
+features[menu_links][] = menu-footer-menu_bibliography:biblio
+features[menu_links][] = menu-footer-menu_funders--partners:node/205
+features[menu_links][] = menu-footer-menu_login:user/login
+features[menu_links][] = menu-footer-menu_publications--presentations:node/7488
+features[menu_links][] = menu-footer-menu_terms--conditions:node/197
+project path = sites/all/modules/features
