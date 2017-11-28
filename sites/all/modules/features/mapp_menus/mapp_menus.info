@@ -14,6 +14,5 @@ features[menu_links][] = main-menu_blog:blog
 features[menu_links][] = main-menu_browse:node/4682
 features[menu_links][] = main-menu_contact:contact
 features[menu_links][] = main-menu_presses:presses
-features[menu_links][] = main-menu_search:search
 features[menu_links][] = main-menu_team:node/7489
 project path = sites/all/modules/features
