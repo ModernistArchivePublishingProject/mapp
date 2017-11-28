@@ -501,3 +501,23 @@ function addressfield_tokens_webform_validator_alter(&$validators) {
   $validators['oneoftwo']['component_types'][] = 'addressfield';
   $validators['oneofseveral']['component_types'][] = 'addressfield';
 }
+
+/**
+ * Implements hook_webform_hints_element_alter().
+ */
+function addressfield_tokens_webform_hints_element_alter(&$element, &$required_label)
+{
+  if ($element['#type'] == 'addressfield_container' || $element['#type'] == 'fieldset') {
+    $addressfield_tokens_fields_info = addressfield_tokens_field_formatter_info();
+    foreach ($addressfield_tokens_fields_info['addressfield_components']['settings']['components'] as $component) {
+      if (isset($element[$component])) {
+        if (isset($element[$component]['#options'])) {
+          $element[$component]['#empty_option'] = '- ' . $element[$component]['#title'] . $required_label . ' -';
+        }
+
+        $element[$component]['#attributes']['placeholder'] = $element[$component]['#title'] . $required_label;
+        $element[$component]['#title_display'] = 'invisible';
+      }
+    }
+  }
+}

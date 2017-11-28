@@ -97,17 +97,19 @@ function addressfield_tokens_token_info_alter(&$info) {
   }
 
   // Add extra text to webform submission values help.
-  $info['tokens']['submission']['values']['description'] .= '
-    <div>
-    ' . t('For addressfield components you can also choose individual elements of the address using the syntax field_key:element, For example:') . '
-    <ul>
-      <li>[submission:values:address:thoroughfare]</li>
-      <li>[submission:values:address:locality]</li>
-      <li>[submission:values:address:administrative_area]</li>
-      <li>[submission:values:address:postal_code]</li>
-      <li>[submission:values:address:country]</li>
-    </ul>
-  </div>';
+  if (array_key_exists('submission', $info['tokens'])) {
+    $info['tokens']['submission']['values']['description'] .= '
+      <div>
+      ' . t('For addressfield components you can also choose individual elements of the address using the syntax field_key:element, For example:') . '
+      <ul>
+        <li>[submission:values:address:thoroughfare]</li>
+        <li>[submission:values:address:locality]</li>
+        <li>[submission:values:address:administrative_area]</li>
+        <li>[submission:values:address:postal_code]</li>
+        <li>[submission:values:address:country]</li>
+      </ul>
+    </div>';
+  }
 
   // Attach tokens to all address fields.
   $valid_types = entity_token_types();

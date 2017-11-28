@@ -144,10 +144,18 @@ function _webform_render_addressfield($component, $value = NULL, $filter = TRUE)
   // Generate the address form.
   $context = array(
     'mode' => 'form',
+    'instance' => array(
+      'required' => $component['required'],
+    ),
     'form_key' => $component['form_key'],
   );
   $handlers = !empty($component['extra']['format_handlers']) ? $component['extra']['format_handlers'] : array('address');
   $element += addressfield_generate($address, $handlers, $context);
+
+  if (empty($address['country'])) {
+    $element['street_block']['#access'] = FALSE;
+    $element['locality_block']['#access'] = FALSE;
+  }
 
   if (isset($element['country'])) {
     if (!empty($available)) {
@@ -160,6 +168,7 @@ function _webform_render_addressfield($component, $value = NULL, $filter = TRUE)
         $element['country']['#access'] =  FALSE;
       }
     }
+    $element['country']['#default_value'] = $address['country'];
     $element['country']['#element_validate'] = array('_webform_addressfield_country_validate');
     $element['country']['#cid'] = $component['cid'];
     $element['country']['#limit_validation_errors'] = array();
@@ -360,7 +369,7 @@ function _webform_analysis_addressfield($component, $sids = array(), $single = F
     t('User entered value'),
     $non_blanks,
   );
-  return $rows;
+  return array('table_rows' => $rows);
 }
 
 /**
