@@ -150,7 +150,7 @@ ul.pager li.pager-current {
   background-color: whitesmoke;
   padding: 1em;
   margin-left: 20%;
-  padding-left: 30%;
+  padding-left: 20%;
   margin-top: 2em;
 }
 /* line 159, ../../sass/components/base.scss */
@@ -161,15 +161,21 @@ ul.pager li.pager-current {
 /* line 165, ../../sass/components/base.scss */
 #footer #block-menu-menu-footer-menu ul li {
   list-style: none;
+  font-size: smaller;
+  display: inline-block;
+}
+/* line 170, ../../sass/components/base.scss */
+#footer #block-menu-menu-footer-menu li:not(:last-child)::after {
+  content: " |";
 }
 
 /* Hacks */
-/* line 179, ../../sass/components/base.scss */
+/* line 184, ../../sass/components/base.scss */
 .block-menu .block__title {
   display: none;
 }
 
-/* line 183, ../../sass/components/base.scss */
+/* line 188, ../../sass/components/base.scss */
 input[type="checkbox"] {
   width: auto;
   height: auto;
