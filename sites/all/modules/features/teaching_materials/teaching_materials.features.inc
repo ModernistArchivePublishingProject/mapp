@@ -25,10 +25,10 @@ function teaching_materials_views_api($module = NULL, $api = NULL) {
  */
 function teaching_materials_node_info() {
   $items = array(
-    'page' => array(
-      'name' => t('Basic page'),
+    'teaching_materials' => array(
+      'name' => t('Teaching Materials'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
