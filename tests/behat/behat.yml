@@ -33,5 +33,9 @@ default:
         Main Menu: "#block-system-main-menu"
         Content: "#content"
         Footer Menu: "#block-menu-menu-footer-menu"
+        Page Title: "#page-title"
+        Right Group:  "div.group-right"
+        Left Group:   "div.group-left"
+        Works Authored: "div.view-id-works_authored"
 
 
