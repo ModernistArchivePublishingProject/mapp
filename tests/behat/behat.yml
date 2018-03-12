@@ -1,0 +1,37 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://mapp.dev
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: "drupal"
+      drush:
+        alias: "local"
+        root: /var/www/lacuna
+      drupal:
+        drupal_root: "/var/www/mapp"
+      text:
+        log_out: "Log Out"
+        log_in: "Log in"
+      selectors:
+        success_message_selector: "div.messages.status"
+        message_selector: "div.messages"
+      region_map:
+        header: "#header"
+        Course Selected: "#subtitle"
+        main: "#main"
+        Main Menu: "#block-system-main-menu"
+        Content: "#content"
+        Footer Menu: "#block-menu-menu-footer-menu"
+
+
