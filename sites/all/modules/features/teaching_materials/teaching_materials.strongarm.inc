@@ -114,17 +114,11 @@ function teaching_materials_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '-5',
-        ),
-        'path' => array(
-          'weight' => '30',
         ),
       ),
       'display' => array(),
