@@ -26,6 +26,7 @@ default:
       selectors:
         success_message_selector: "div.messages.status"
         message_selector: "div.messages"
+        error_message_selector: "div.messages.error"
       region_map:
         header: "#header"
         Course Selected: "#subtitle"
