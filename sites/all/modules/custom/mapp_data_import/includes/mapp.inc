@@ -28,16 +28,6 @@ abstract class MAPPMigration extends Migration {
         $row->{$row_prop_name} = $row_prop2;
       }
     }
-
-    // For entity references to CSV row numbers, substract one from the row number since the migration does not count the header row.
-    if (isset ($this->entity_reference_fields)) {
-      foreach ($this->entity_reference_fields as $source_field => $target_field) {
-        if (is_numeric ($row->{$source_field})) {
-          $row->{$source_field}-=1;
-        }
-      }
-    }
-
   }
 
   public function prepare($entity, $row) {
@@ -89,12 +79,21 @@ abstract class MAPPMigration extends Migration {
         $source_values = explode('|', $row->{$source_field});
         foreach ($source_values as $source_value_index => $source_value) {
           $query = new EntityFieldQuery();
-          $target_entities = $query->entityCondition('entity_type', 'node')
-            ->propertyCondition('type', $target_types)
-            ->propertyCondition('title', $source_value)
-            ->propertyCondition('status', 1)
-            ->execute();
+
           $match_count = 0;
+          // If numeric, assume this is an NID, not a node title
+          if (is_numeric($source_value)) {
+            $match_count = 1;
+            // Just give the switches the data structure they already expect
+            $target_entities['node'] = array($source_value => $source_value);
+          } else {
+            $target_entities = $query->entityCondition('entity_type', 'node')
+              ->propertyCondition('type', $target_types)
+              ->propertyCondition('title', $source_value)
+              ->propertyCondition('status', 1)
+              ->execute();
+          }
+
           if (isset($target_entities['node'])) {
             $match_count = count($target_entities['node']);
           }
