@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * mapp_content_types.field_group.inc

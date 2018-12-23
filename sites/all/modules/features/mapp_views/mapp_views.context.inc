@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * mapp_views.context.inc
@@ -47,7 +48,7 @@ function mapp_views_context_default_contexts() {
   $export['bibliography'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'press_editions';
   $context->description = 'Show editions related to a press';

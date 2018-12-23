@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * mapp_permissions.features.user_permission.inc
@@ -1345,9 +1346,12 @@ function mapp_permissions_user_default_permissions() {
   $permissions['download any audio files'] = array(
     'name' => 'download any audio files',
     'roles' => array(
+      'Affiliate Member' => 'Affiliate Member',
       'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -1356,9 +1360,12 @@ function mapp_permissions_user_default_permissions() {
   $permissions['download any document files'] = array(
     'name' => 'download any document files',
     'roles' => array(
+      'Affiliate Member' => 'Affiliate Member',
       'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -1367,9 +1374,12 @@ function mapp_permissions_user_default_permissions() {
   $permissions['download any image files'] = array(
     'name' => 'download any image files',
     'roles' => array(
+      'Affiliate Member' => 'Affiliate Member',
       'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -1378,9 +1388,12 @@ function mapp_permissions_user_default_permissions() {
   $permissions['download any video files'] = array(
     'name' => 'download any video files',
     'roles' => array(
+      'Affiliate Member' => 'Affiliate Member',
       'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -2406,6 +2419,8 @@ function mapp_permissions_user_default_permissions() {
   $permissions['view files'] = array(
     'name' => 'view files',
     'roles' => array(
+      'Affiliate Member' => 'Affiliate Member',
+      'Research Fellow' => 'Research Fellow',
       'Team Member' => 'Team Member',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',

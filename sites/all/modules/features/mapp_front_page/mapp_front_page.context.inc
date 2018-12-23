@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * mapp_front_page.context.inc
@@ -32,17 +33,17 @@ function mapp_front_page_context_default_contexts() {
           'region' => 'highlighted',
           'weight' => '-10',
         ),
-        'block-1' => array(
-          'module' => 'block',
-          'delta' => '1',
-          'region' => 'highlighted',
-          'weight' => '-9',
-        ),
         'views-front_page_content_feed-block' => array(
           'module' => 'views',
           'delta' => 'front_page_content_feed-block',
           'region' => 'content',
           'weight' => '-10',
+        ),
+        'views-latest_biographies-block' => array(
+          'module' => 'views',
+          'delta' => 'latest_biographies-block',
+          'region' => 'content',
+          'weight' => '-9',
         ),
       ),
     ),

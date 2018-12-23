@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * mapp_content_types.strongarm.inc
@@ -553,6 +554,9 @@ function mapp_content_types_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1387,7 +1391,7 @@ function mapp_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'node';
+  $strongarm->value = 'node/8343';
   $export['site_frontpage'] = $strongarm;
 
   return $export;

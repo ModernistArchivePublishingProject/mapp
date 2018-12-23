@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * presses.views_default.inc
@@ -79,7 +80,9 @@ function presses_views_default_views() {
     'image_style' => 'square_icons',
     'image_link' => '',
   );
+  $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_image']['separator'] = '';
   $handler->display->display_options['fields']['field_image']['field_api_classes'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * data_export.views_default.inc
@@ -238,7 +239,7 @@ function data_export_views_default_views() {
   $handler->display->display_options['fields']['field_image_url']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_image_url']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_image_url']['type'] = 'link_plain';
-  /* Field: Content: Date Written */
+  /* Field: Field: Date Created */
   $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
@@ -1327,11 +1328,10 @@ function data_export_views_default_views() {
   );
   $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_author']['separator'] = '|';
-  /* Field: Content: Date Written */
+  /* Field: Field: Date Created */
   $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
-  $handler->display->display_options['fields']['field_publication_date']['label'] = 'Date Created';
   $handler->display->display_options['fields']['field_publication_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_publication_date']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_publication_date']['settings'] = array(
@@ -1343,11 +1343,10 @@ function data_export_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Type */
+  /* Field: Content: Genre */
   $handler->display->display_options['fields']['field_genre']['id'] = 'field_genre';
   $handler->display->display_options['fields']['field_genre']['table'] = 'field_data_field_genre';
   $handler->display->display_options['fields']['field_genre']['field'] = 'field_genre';
-  $handler->display->display_options['fields']['field_genre']['label'] = 'Genre';
   $handler->display->display_options['fields']['field_genre']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_genre']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_genre']['type'] = 'taxonomy_term_reference_plain';
